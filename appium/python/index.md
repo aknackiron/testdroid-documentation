@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Appium Python Prerequisites
+title: 1.0 Appium Python Prerequisites
 ---
 
-# Installing Neded Tools
+# Installing Needed Tools
 
 This explains how to use Python to run Appium tests again Testdroid Cloud.
 
