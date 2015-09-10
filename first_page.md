@@ -3,7 +3,7 @@ layout: default
 title: First Page
 ---
 
-# This is my first post or documentation page for using Testdroid Cloud service.
+# First page in root
 
 This is paragraph that has some content.
 
