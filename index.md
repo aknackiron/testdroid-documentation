@@ -14,15 +14,15 @@ lower level chapters aren't included into the TOC either.
 Page's title is defined in the yml-script at the beginning of the
 page source.
 
-### Example of link to page in root
+## Example of link to page in root
 
 Here is the link to the [first page]({{ site.baseurl }}/first_page.html).
 
-### Example of link to page in sub-folder
+## Example of link to page in sub-folder
 
 Linking to some [appium documentation]({{ site.baseurl }}/appium/python/index.html).
 
-### Example of linking to  an image
+## Example of linking to  an image
 
 Below is a screenshot image about a settings dialog.
 
