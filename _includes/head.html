@@ -10,9 +10,14 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<!-- minimal style -->
+	<link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/styles.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/pygment_trac.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- end minimal style -->
+
+	
+        <script src="{{ site.baseurl }}/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -24,10 +29,10 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-	<script src="js/toc.js" ></script>
+        <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="{{ site.baseurl }}/js/plugins.js"></script>
+        <script src="{{ site.baseurl }}/js/main.js"></script>
+	<script src="{{ site.baseurl }}/js/toc.js" ></script>
 	
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -45,5 +50,4 @@
       });
     </script>
 
-    <div id="toc"></div>
-
+<!--    <div id="toc"></div> -->
