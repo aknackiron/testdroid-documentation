@@ -3,14 +3,19 @@ layout: default
 title: Home
 ---
 
-index.html or index.md is the default landing page when pointing to base url.
+Welcome to Testdroid's online help pages.
 
-The table of contents is created only when the page has at least one
-top level chapter ('#' in md). If this is missing then none of the
-lower level chapters aren't included into the TOC either.
+In addition to the documentation on these page, check [our
+available](https://github.com/bitbar/testdroid-samples/) code on
+Github. There are samples, code snippets and guides.
 
-Page's title is defined in the yml-script at the beginning of the
-page source.
+
+If you have any feedback on how to improve these guides, please leave
+us a note at <feedback@bitbar.com> so we can improve these.
+
+
+
+{% include nav.html %}
 
 # Example of link to page in root
 
