@@ -17,25 +17,36 @@ computer. This is the way that you typically run your tests when your
 test device is connected to your computer.
 
 The downsides with this approach is that you are running your tests
-sequencially against various devices in the cloud. Any network error
-can brake your test run.
+sequencially against single devices in the cloud. This approach is
+slow and fragile to any network error.
 
-## [Appium with Python](python/)
+## Appium with Python
 
-## [Appium with Java](java/)
+[Example Python Appium test script](python/) that can be executed with minimal
+editing.
+
+## Running Local Tests In Cloud
+
+Typically you would start mobile app testing by first developing tests
+on your localhost against your own device. Once you have tests you
+would start executing these against multiple devices in the cloud.
+
+[Moving your tests for testing against cloud devices.](moving-tests-to-cloud.html)
+
+## Appium with Java
+
+[Example Appium project in Java](java/) that can be executed from your machine
+against the cloud with minimal changes.
 
 # Running Appium in Testdroid Cloud
 
 You also run your test in the cloud. You need to upload your app to
 Testdroid Cloud and leave Testdroid execute your tests. Tests are run
 in parallel against all the chosen devices. Once the test are executed
-results are stored in lcoud and you are notified by email. 
+results are stored in cloud and you are notified by email. 
 
-## [Moving to cloud testing](moving-tests-to-cloud.html)
+## [Running tests in Testdroid Cloud (Python).]({{site.baseurl}}/appium/python/server-side-appium-in-tc.html)
 
-Typically one would start developing test on localhost and then move
-these tests to the cloud.
-
-[Update your tests for cloud execution.](moving-tests-to-cloud.html)
+## [Running tests in Testdroid Cloud (Java).]({{site.baseurl}}/appium/java/server-side-appium-in-tc.html)
 
 # [Frequently Asked Questions (FAQ)](faq.html)
