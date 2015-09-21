@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Appium with Testdroid Cloud
+title: Appium Test Framework
 ---
 
 Testdroid Cloud allows testers to use various testing frameworks to
