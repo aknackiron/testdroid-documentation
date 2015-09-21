@@ -13,9 +13,7 @@ https://github.com/bitbar/testdroid-samples/tree/master/calabash
 Calabash Android versions from 0.5.2 to 0.5.8 are supported. If you
 need specific version of the gem provide it in Gemfile:
 
-```
-gem 'calabash-android', '= 0.5.2'
-```
+    gem 'calabash-android', '= 0.5.2'
 
 If there is no Gemfile the latest calabash-android gem will be used.
 More information how to use Gemfiles at
@@ -32,13 +30,13 @@ cucumber.yml file.
 Add config folder with cucumber.yml to your zip file. This example
 will only run tests marked with smoke tag
 
-```
-# config/cucumber.yml
-##YAML Template
----
-default: >
-  --tags @smoke
-```
+
+    # config/cucumber.yml
+    ##YAML Template
+    ---
+    default: >
+      --tags @smoke
+
 
 Currently only default profile is supported. If you have other
 profiles locally you need to edit cucumber.yml to use default profile

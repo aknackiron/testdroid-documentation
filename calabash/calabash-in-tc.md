@@ -45,30 +45,28 @@ required:
 
 Here is an example Calabash test: 
 
-```
-Feature: Click items
-  Scenario: Run whole app
-   When I press view with id "radio0"
-   Then I wait
-   Then I press view with id "radio1"
-   Then I wait
-   Then I press view with id "radio2"
-   Then I take a screenshot
-   Then I wait
-   Then I enter text "Hello Calabash" into field with id "editText1"
-   Then I take a screenshot
-   Then I wait
-   Then I press view with id "button1"
-   Then I wait
-   Then I take a screenshot
-   Then I go back
-   Then I wait
-   Then I press view with id "radio1"
-   Then I wait
-   Then I press view with id "button1"
-   Then I wait
-   Then I take a screenshot
-```
+    Feature: Click items
+      Scenario: Run whole app
+       When I press view with id "radio0"
+       Then I wait
+       Then I press view with id "radio1"
+       Then I wait
+       Then I press view with id "radio2"
+       Then I take a screenshot
+       Then I wait
+       Then I enter text "Hello Calabash" into field with id "editText1"
+       Then I take a screenshot
+       Then I wait
+       Then I press view with id "button1"
+       Then I wait
+       Then I take a screenshot
+       Then I go back
+       Then I wait
+       Then I press view with id "radio1"
+       Then I wait
+       Then I press view with id "button1"
+       Then I wait
+       Then I take a screenshot
 
 **NOTE**: Calabash requires the application to have INTERNET
   permission enabled in the AndroidManifest.xml
@@ -83,35 +81,33 @@ Now you should be ready to run Calabash test locally. Go to *new-calabash-test-d
 
 Output should look something like this:
 
-```
- Feature: Click items
-  Scenario: Run whole app # features/my_first.feature:3
-   2485 KB/s (554161 bytes in 0.217s)
-   2282 KB/s (100963 bytes in 0.043s)
-   When I press view with id "radio0" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I press view with id "radio1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I press view with id "radio2" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
-   Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I enter text "Hello Calabash" into field with id "editText1" # calabash-android-0.4.14/lib/calabash-android/steps/enter_text_steps.rb:25
-   Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I press view with id "button1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
-   Then I go back # calabash-android-0.4.14/lib/calabash-android/steps/navigation_steps.rb:1
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I press view with id "radio1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I press view with id "button1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
-   Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
-   Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
-   1 scenario (1 passed)
-   20 steps (20 passed)
-   0m47.002s
-```
+     Feature: Click items
+      Scenario: Run whole app # features/my_first.feature:3
+       2485 KB/s (554161 bytes in 0.217s)
+       2282 KB/s (100963 bytes in 0.043s)
+       When I press view with id "radio0" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I press view with id "radio1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I press view with id "radio2" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
+       Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I enter text "Hello Calabash" into field with id "editText1" # calabash-android-0.4.14/lib/calabash-android/steps/enter_text_steps.rb:25
+       Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I press view with id "button1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
+       Then I go back # calabash-android-0.4.14/lib/calabash-android/steps/navigation_steps.rb:1
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I press view with id "radio1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I press view with id "button1" # calabash-android-0.4.14/lib/calabash-android/steps/press_button_steps.rb:13
+       Then I wait # calabash-android-0.4.14/lib/calabash-android/steps/progress_steps.rb:5
+       Then I take a screenshot # calabash-android-0.4.14/lib/calabash-android/steps/screenshot_steps.rb:9
+       1 scenario (1 passed)
+       20 steps (20 passed)
+       0m47.002s
 
 If your test takes screenshots they should be as png-files in *new-calabash-test-directory*.
 
