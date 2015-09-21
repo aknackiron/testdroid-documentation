@@ -49,4 +49,9 @@ results are stored in cloud and you are notified by email.
 
 ## [Running tests in Testdroid Cloud (Java).]({{site.baseurl}}/appium/java/server-side-appium-in-tc.html)
 
+# Requirements for .ipa
+
+[Here is the procedure](requirements-for-ipa.html) to create your iOS
+mobile application (.ipa files) to run your app in Testdroid Cloud.
+
 # [Frequently Asked Questions (FAQ)](faq.html)
