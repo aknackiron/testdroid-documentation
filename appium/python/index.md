@@ -102,6 +102,6 @@ Windows application from http://windows.github.com.  Next check out
 our step by step guides on how to test native, hybrid or web apps on
 Android or iOS using Appium.
 
-# [Testing Your Native, Hybrid or Web App](native-hybrid-web-app-testing.html)
-
 # [Running a Test Script](running-the-test-script.html)
+
+# [Testing Your Native, Hybrid or Web App](native-hybrid-web-app-testing.html)

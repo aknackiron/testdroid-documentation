@@ -35,7 +35,7 @@ for now you can use the default values.
 
 The output should look something like this:
 
-![ios test output]({{ site.baseurl }}/assets/test-script-output.png "Testdroid iOS output")
+![ios test output]({{ site.baseurl }}/assets/appium/test-script-output.png "Testdroid iOS output")
 
 # Step 3 (optional): Upload your Test Suite output to Cloud
 
