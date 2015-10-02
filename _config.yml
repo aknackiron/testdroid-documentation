@@ -1,0 +1,4 @@
+name: Testdroid User Documentation
+markdown: kramdown
+highlighter: pygments
+baseurl: /testdroid-docs
