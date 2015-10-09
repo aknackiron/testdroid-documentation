@@ -1,11 +1,12 @@
 - title: "Home"
   href: ""
-  
-- title: "Appium"
-  href: "appium"
 
-- title: "Calabash"
-  href: "calabash"
+- title: "Technical docs"
+  subcategories:
+    - subtitle: "Appium"
+      subhref: "appium"
+    - subtitle: "Calabash"
+      subhref: "calabash"
 
 - title: "Testdroid Cloud"
   href: "testdroidCloudUI"
