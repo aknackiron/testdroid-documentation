@@ -12,6 +12,12 @@ title: Testdroid Desired Capabilities
    _Mandatory_: yes  
    _Description_: The password for your Testdroid Cloud account  
 
+1. **testdroid_apiKey**  
+   _Mandatory_: no  
+   _Description_: You can use API key to authentication instead of user name and password. This is available in "My Accounts" -view.  
+   _Default_: none  
+   _Example_: e4f86ac5b94e39810f33ad4ab71850a6  
+
 1. **testdroid_target**  
    _Mandatory_: yes  
    _Description_: The target test type. Use one of the following value. android and ios are for native apps, selendroid when testing a hybrid app and chrome and safari for web testing using the respective web browsers.  
@@ -58,6 +64,13 @@ title: Testdroid Desired Capabilities
   _Default_: 0
   _Legal_ range: 0~300
   _Example_: 120
+
+1. **testdroid_testrunId**  
+  _Scope_: Private Cloud & Enterprise only  
+  _Mandatory_: no
+  _Description_: You can add a new Appium run as a new device run to an existing testrun by providing a testrunid. Note! New testrun is created, if there's already a run for similar device.
+  _Default_: none
+  _Example_: 12345678
 
 1. **testdroid_testTimeout**  
   _Mandatory_: no  
