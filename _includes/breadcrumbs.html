@@ -1,0 +1,24 @@
+<div class="breadcrumbs">
+                
+    <!-- Process url into proper format for crumbs -->
+    {% assign trimmedUrl = page.url %}
+    {% if page.url | slice: 0 == "/" %}
+        {% capture trimmedUrl %}{{trimmedUrl | remove_first: "/"}}{% endcapture %}
+    {% endif %}
+
+    {% assign pageUrlSplit = page.url | split: '/' %}
+    {% if pageUrlSplit.last == "index.html" %}
+        {% capture trimmedUrl %}{{trimmedUrl | replace: "/index.html"}}{% endcapture %}
+    {% endif %}              
+     <!-- Process url into proper format for crumbs -->
+
+    {% assign crumbs = trimmedUrl | split: '/' %}
+    {% if crumbs.size > 1 %}
+        {% assign previousCrumbs = '' %}
+        {% for crumb in crumbs %} 
+            <a href="{{ site.baseurl }}{{previousCrumbs}}/{{crumb}}">{{crumb}}</a> 
+            {% unless forloop.rindex < 2%}/{% endunless %}
+            {% capture previousCrumbs %}{{previousCrumbs}}/{{crumb}}{% endcapture %}
+        {% endfor %}
+    {% endif %}
+</div>
