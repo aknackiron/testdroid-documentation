@@ -135,7 +135,7 @@ body{
                     margin: 0;
                 }
                 li{  
-                    height: $navigation-element-height;
+                    min-height: $navigation-element-height;
                     line-height: $navigation-element-height;
                     border-left: 3px solid $white;
                     border-bottom: 1px solid $grey;
