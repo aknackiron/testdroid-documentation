@@ -184,6 +184,9 @@ footer {
   bottom:50px;
 }
 
+/*
+  Commented out as testdroid.scss should be the one handling reponsiveness if such 
+  is required!
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -254,3 +257,4 @@ footer {
     color:#444;
   }
 }
+*/

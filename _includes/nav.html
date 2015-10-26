@@ -1,32 +1,32 @@
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
   <div class="container">
     <div class="navbar-header">
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
-	
-	{% for entry in site.data.nav %}
-	
-	<!-- check to see if the data file has a submenu, and if so display it -->
-	{% if entry.subcategories != null %}
-	<li class="dropdown">
-	  <a href="{{ site.baseurl }}/{{ entry.url }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">{{ entry.title }}<i class="fa fa-angle-down"></i></a>
-	  <ul class="dropdown-menu">
-	    {% for subcategory in entry.subcategories %}
-	    <li><a href="{{ site.baseurl }}/{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-	    {% endfor %}
-	  </ul>
-	  {% else %}
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
 	  
-	  <!-- display the top level navigation for items that don't have a submenu -->
-	<li>
-	  <a href="{{ site.baseurl }}/{{ entry.href }}">{{ entry.title }}</a>
-	  {% endif %}
-	</li>
-	{% endfor %}
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
+	  {% for entry in site.data.nav %}
+	  
+	  <!-- check to see if the data file has a submenu, and if so display it -->
+	  {% if entry.subcategories != null %}
+	  <li class="dropdown">
+	    <a href="{{ site.baseurl }}/{{ entry.url }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">{{ entry.title }}<i class="fa fa-angle-down"></i></a>
+	    <ul class="dropdown-menu">
+	      {% for subcategory in entry.subcategories %}
+	      <li><a href="{{ site.baseurl }}/{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+	      {% endfor %}
+	    </ul>
+	    {% else %}
+	    
+	    <!-- display the top level navigation for items that don't have a submenu -->
+	  <li>
+	    <a href="{{ site.baseurl }}/{{ entry.href }}">{{ entry.title }}</a>
+	    {% endif %}
+	  </li>
+	  {% endfor %}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
 </nav>
 
