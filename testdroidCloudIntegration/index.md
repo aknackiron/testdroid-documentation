@@ -8,8 +8,11 @@ Testdroid cloud to your continuous integration environment and run
 your tests through API rather than manually uploading and configuring
 your test projects.
 
+# Testdroid Cloud API
+
+[Testdroid Cloud API](api/index.html)
+
 # Testdroid Run In Cloud Jenkins Plugin
 
 [Jenkins plugin enabling you to lauch your test runs directly from Jenkins.](jenkins-plugin.html)
-
 

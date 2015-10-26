@@ -11,5 +11,9 @@
 - title: "Testdroid Cloud"
   href: "testdroidCloudUI"
 
-- title: "Integration to Testdroid Cloud"
-  href: "testdroidCloudIntegration"
+- title: "Integrations to Cloud"
+  subcategories:
+    - subtitle: "Cloud API"
+      subhref: "testdroidCloudIntegration/api/index.html"
+    - subtitle: "Jenkins"
+      subhref: "testdroidCloudIntegration/jenkins-plugin.html"
