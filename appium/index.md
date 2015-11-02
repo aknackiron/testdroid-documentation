@@ -38,6 +38,9 @@ would start executing these against multiple devices in the cloud.
 [Example Appium project in Java](java/) that can be executed from your machine
 against the cloud with minimal changes.
 
+
+# [Appium Desired Capabilities](testdroid-desired-caps.html)
+
 # Running Appium in Testdroid Cloud
 
 You also run your test in the cloud. You need to upload your app to
