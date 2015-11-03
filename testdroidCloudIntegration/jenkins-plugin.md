@@ -12,13 +12,13 @@ directly from your Jenkins job.
 
 ## Configuration Instructions
 
-[Download Testdroid Run In Cloud
-Plugin](https://github.com/bitbar/testdroid-run-in-cloud/blob/master/bin/testdroid-run-in-cloud-1.0.8.hpi)
-and open your Jenkins main page. Then navigate to: Manage
-Jenkins->Manage plugins -> Advanced->Upload plugin. After installing
-and restarting Jenkins you can configure plugin from Jenkins
-Configuration page. The plugin adds a new build step what can be used
-in any Jenkins job to launch builds in Testdroid cloud
+Download the latest version of out [Testdroid Run In Cloud
+Plugin](https://github.com/bitbar/testdroid-run-in-cloud/) and open
+your Jenkins main page. In Jenkins navigate to: Manage Jenkins ->
+Manage plugins -> Advanced -> Upload plugin. After installing and
+restarting Jenkins you can configure plugin from Jenkins Configuration
+page. The plugin adds a new build step what can be used in any Jenkins
+job to launch builds in Testdroid cloud
 
 ## Configure
 
