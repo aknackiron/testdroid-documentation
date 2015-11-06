@@ -12,7 +12,7 @@ Testdrdoid Cloud.
 
 # Running Appium from Localhost
 
-The first is to run your tests as Appium client from your locale
+The first is to run your tests as Appium client from your local
 computer. This is the way that you typically run your tests when your
 test device is connected to your computer.
 
