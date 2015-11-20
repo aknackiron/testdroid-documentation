@@ -29,9 +29,9 @@ You can also just upload the app using curl:
 
     $ curl -s --user 'user.name@cloudaccount.com:password' -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/upload
 
-or using the api key from under *My account* from the cloud:
+or rather using the api key from under *My account* from the cloud:
 
-    $curl -s --user <api key>: -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/
+    $ curl -s --user <api key>: -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/upload
 
 Note, be sure to save the app identifier received as upload
 response. Let's call it \<myAppFile\> in this guide.
@@ -41,7 +41,7 @@ response. Let's call it \<myAppFile\> in this guide.
 Log into {{ page.webui }}, select a device you want to run your tests
 on, and copy its name (example: iPhone 5c 7.0.4 A1532)
 
-# Step 3: Add Testdroid_ Desired Capabilities in your test script
+# Step 2: Add Testdroid_ Desired Capabilities in your test script
 
 Add the Testdroid_ Desired Capabilities in your TestScript. You would
 now need the \<myAppFile\> and the device name from the two previous
@@ -52,18 +52,18 @@ test script should look like before and after this Step.
 
 ![Desired capabilities]({{ site.baseurl }}/assets/appium/desired-caps-for-cloud.png)
 
-# Step 4: Change the WebDriver address
+# Step 3: Change the WebDriver address
 
 Point the WebDriver address to {{ page.webdriver }}/wd/hub.
 
 
-# Step 5: Run the Test Script
+# Step 4: Run the Test Script
 
 After making the above changes in your test script, you can proceed
 with running it exactly the same way as you would do with Appium
 Server running on your localhost.
  
-# Step 6: Get results from Cloud
+# Step 5: Get results from Cloud
 
 Get the screenshots, Appium.log and Logcat (Android) or Trace (iOS)
 output from {{ page.webui }}.
