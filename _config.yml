@@ -4,3 +4,4 @@ highlighter: pygments
 baseurl: /testdroid-documentation
 gems:
   - jekyll-sitemap
+  

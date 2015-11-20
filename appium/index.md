@@ -12,9 +12,9 @@ Testdrdoid Cloud.
 
 # Running Appium from Localhost
 
-The first is to run your tests as Appium client from your local
-computer. This is the way that you typically run your tests when your
-test device is connected to your computer.
+The first thing is to run your tests as Appium client on your local
+computer. This is the way you typically run your tests when your test
+device is connected to your computer.
 
 The downsides with this approach is that you are running your tests
 sequencially against single devices in the cloud. This approach is
@@ -25,11 +25,11 @@ slow and fragile to any network error.
 [Example Python Appium test script](python/) that can be executed with minimal
 editing.
 
-## Running Local Tests In Cloud
+## Moving Your Tests To Cloud
 
 Typically you would start mobile app testing by first developing tests
-on your localhost against your own device. Once you have tests you
-would start executing these against multiple devices in the cloud.
+on your localhost against your device. Once you have tests you would
+start executing these against multiple devices in the cloud.
 
 [Moving your tests for testing against cloud devices.](moving-tests-to-cloud.html)
 
