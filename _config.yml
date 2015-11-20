@@ -2,3 +2,5 @@ name: Testdroid User Documentation
 markdown: kramdown
 highlighter: pygments
 baseurl: /testdroid-documentation
+gems:
+  - jekyll-sitemap
