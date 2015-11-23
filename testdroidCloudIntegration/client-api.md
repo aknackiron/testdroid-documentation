@@ -1,7 +1,17 @@
 ---
 layout: default
 title: Testdroid Cloud API
+
+ISO_639-1: <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1</a>
+ISO_3166-1: <a href="http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html">ISO 3166-1</a>
+docs_oracle_com: <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Locale.html">docs.oracle.com</a>
+codenomicon: <a href="https://fuzzomatic.codenomicon.com/">Condenomicon</a>
+Compatibility_Test_Suite: <a href="http://source.android.com/compatibility/cts-intro.html">Compatibility Test Suite</a>
+Android_UIAutomator_Framework: <a href="http://developer.android.com/tools/help/uiautomator/index.html">Android UIAutomator Framework</a>
+InstrumentationTestRunner: <a href="http://developer.android.com/reference/android/test/InstrumentationTestRunner.html">InstrumentationTestRunner</a>
 ---
+
+
 
 **Note**: This documentation is still **under development**.  We
  apologize for the inconvenience and appreciate your patience.
@@ -20,7 +30,7 @@ API v2 uses [OAuth 2.0](http://oauth.net/2/)_ - an open standard for authorizati
 
 ## Request
 
-  GET /oauth/token
+    GET /oauth/token
 
 Request body:
 
@@ -81,8 +91,8 @@ Response body:
 
 ### Starting new session
  
-Request::
-   
+Request:
+
     GET /oauth/token?client_id=testdroid-cloud-api&grant_type=password&username=example@bitbar.com&password=P4s$w0rd
    
 Response
@@ -98,11 +108,11 @@ Response
 
 ### Refreshing existing session
  
-Request::
+Request:
    
     GET /oauth/token?client_id=testdroid-cloud-api&grant_type=refresh_token&refresh_token=f1bc0a64-a4bd-46c0-b230-d8977b1d0cbb
    
-Response::
+Response:
  
     {  
      "access_token":"59f0ca4c-f56a-433f-80c7-242290ab206b",  
@@ -180,11 +190,11 @@ Request body:
  
 ### Example
  
-Request::
+Request:
    
-   POST /api/v2/me/projects?name=Hello+world&type=ANDROID
+    POST /api/v2/me/projects?name=Hello+world&type=ANDROID
    
-Response::
+Response:
  
     {  
      "id": 31945182,  
@@ -240,11 +250,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
     GET /api/v2/me/projects/31945182
    
-Response::
+Response:
  
     {  
      "id": 31945182,  
@@ -258,9 +268,9 @@ Response::
  
 ## Update user project
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectID}  
+    POST /api/v2/me/projects/{projectID}  
   
 Request body:
 
@@ -306,11 +316,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182?name=Great+project
+    POST /api/v2/me/projects/31945182?name=Great+project
    
-Response::
+Response:
  
     {  
      "id": 31945182,  
@@ -324,9 +334,9 @@ Response::
  
 ## Delete user project
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/projects/{projectID}  
+    DELETE /api/v2/me/projects/{projectID}  
   
 Request body:
 
@@ -352,7 +362,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -364,20 +374,20 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/projects/31945182
+    DELETE /api/v2/me/projects/31945182
    
-Response::
+Response:
  
  (empty string)
  
  
 ## Get list of user projects
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects
+    GET /api/v2/me/projects
   
 Request body:
 
@@ -421,11 +431,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects
+    GET /api/v2/me/projects
    
-Response::
+Response:
  
    {  
     "next": null,  
@@ -447,9 +457,9 @@ Get project icon
 
 Icon extracted from uploaded application
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectID}/icon
+    GET /api/v2/me/projects/{projectID}/icon
   
 Request body:
 
@@ -475,7 +485,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  respurce
  
@@ -487,25 +497,25 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/icon
+    GET /api/v2/me/projects/31945182/icon
    
-Response::
+Response:
  
  resource
 
  
 ## Project config
 
-.. note:: Please remember to put your **access_token** to HTTP **request URL**
+**note:** Please remember to put your **access_token** to HTTP **request URL**
 
 ### Update project config
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/config
+    POST /api/v2/me/projects/{projectId}/config
  
   
 Request body:
@@ -528,9 +538,9 @@ Request body:
  |                        |         |         |----------------|-------------------------------------------------------|
  |                        |         |          | APP_CRAWLER    | *Android only* Using our app crawler                  |
  |                        |         |         |----------------|-------------------------------------------------------|
- |                        |         |          | CTS            | *Android only* Using `Compatibility Test Suite`_      |
+ |                        |         |          | CTS            | *Android only* Using {{ page.Compatibility_Test_Suite }}      |
  |                        |         |         |----------------|-------------------------------------------------------|
- |                        |         |          | UIAUTOMATOR    | *Android only* Using `Android UIAutomator Framework`_ |
+ |                        |         |          | UIAUTOMATOR    | *Android only* Using {{ page.Android_UIAutomator_Framework }} |
  |                        |         |         |----------------|-------------------------------------------------------|
  |                        |         |          | IOS            | *IOS only* *Default* iOS test                         |
 |------------------------|---------|----------|----------------|-------------------------------------------------------|
@@ -564,9 +574,9 @@ Request body:
  | usedDeviceGroupId      | Number  |    no    | Device group ID used to test run. (by default *Free devices* group id) |
 |------------------------|---------|----------|------------------------------------------------------------------------|
  | deviceLanguageCode     | String  |    no    | | Language code set to the devices during tests in format *xx_YY*.     |
- |                        |         |          | | *xx* - is ISO Language Code (`ISO 639-1`_)                           |
- |                        |         |          | | *YY* - is ISO Country Code (`ISO 3166-1`_)                           |
- |                        |         |          | | See more on `docs.oracle.com`_                                       |
+ |                        |         |          | | *xx* - is ISO Language Code ({{ page.ISO_639-1 }})                           |
+ |                        |         |          | | *YY* - is ISO Country Code ({{ page.ISO_3166-1 }})                           |
+ |                        |         |          | | See more on {{ page.docs_oracle_com }}                                       |
  |                        |         |          | | (by default *en_US*)                                                 |
 |------------------------|---------|----------|------------------------------------------------------------------------|
  | hookURL                | String  |    no    | Page URL which should be notified when test has been completed         |
@@ -579,21 +589,13 @@ Request body:
  |                        |         |          | (default *false*)                                                      |
 |------------------------|---------|----------|------------------------------------------------------------------------|
  | instrumentationRunner  | String  |    no    | *FULL_RUN mode only:* Your class which extends                         |
- |                        |         |          | `InstrumentationTestRunner`_ (by default *empty string*)               |
+ |                        |         |          | {{ page.InstrumentationTestRunner }} (by default *empty string*)               |
 |------------------------|---------|----------|------------------------------------------------------------------------|
- | checkApp               | Boolean |    no    | Should application be verified by `Codenomicon`_ (by default *false*)  |
+ | checkApp               | Boolean |    no    | Should application be verified by {{ page.codenomicon }} (by default *false*)  |
 |------------------------|---------|----------|------------------------------------------------------------------------|
 
  | * - only for *UIAUTOMATOR* mode
  
-.. _ISO 639-1: http://www.loc.gov/standards/iso639-2/php/code_list.php
-.. _ISO 3166-1: http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html
-.. _docs.oracle.com: http://docs.oracle.com/javase/6/docs/api/java/util/Locale.html
-.. _Codenomicon: https://fuzzomatic.codenomicon.com/
-.. _Compatibility Test Suite: http://source.android.com/compatibility/cts-intro.html
-.. _Android UIAutomator Framework: http://developer.android.com/tools/help/uiautomator/index.html
-.. _InstrumentationTestRunner: http://developer.android.com/reference/android/test/InstrumentationTestRunner.html
-
  
 **Response status codes:**
 
@@ -624,11 +626,11 @@ projectConfig Object
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/config?usedDeviceGroupId=4148
+    POST /api/v2/me/projects/31945182/config?usedDeviceGroupId=4148
    
-Response::
+Response:
  
     {  
     "id": 31425,
@@ -656,9 +658,9 @@ Response::
 
 ### Get project config
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/config
+    GET /api/v2/me/projects/{projectId}/config
  
   
 Request body:
@@ -697,11 +699,11 @@ projectConfig Object
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/config
+    GET /api/v2/me/projects/31945182/config
    
-Response::
+Response:
  
     {  
     "id": 31425,  
@@ -731,9 +733,9 @@ Response::
 Add user defined config parameter to project
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/config/parameters
+    POST /api/v2/me/projects/{projectId}/config/parameters
  
   
 Request body:
@@ -780,11 +782,11 @@ projectConfigParameter Object
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/config/parameters?key=devel&value=true
+    POST /api/v2/me/projects/31945182/config/parameters?key=devel&value=true
    
-Response::
+Response:
  
     {  
     "id": 1,  
@@ -794,9 +796,9 @@ Response::
 
 ## Get list of user defined config parameters for project
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/config/parameters
+    GET /api/v2/me/projects/{projectId}/config/parameters
   
 Request body:
 
@@ -841,11 +843,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/config/parameters
+    GET /api/v2/me/projects/31945182/config/parameters
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -864,9 +866,9 @@ Response::
 
 ### Get user defined config parameter for project
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/config/parameters/{parameterId}  
+    GET /api/v2/me/projects/{projectId}/config/parameters/{parameterId}  
  
   
 Request body:
@@ -907,11 +909,11 @@ projectConfigParameter Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/config/parameters/1
+    GET /api/v2/me/projects/31945182/config/parameters/1
    
-Response::
+Response:
  
     {  
     "id": 1,  
@@ -923,9 +925,9 @@ Response::
 Delete user defined config parameter for project
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/projects/{projectId}/config/parameters/{parameterId}  
+    DELETE /api/v2/me/projects/{projectId}/config/parameters/{parameterId}  
  
   
 Request body:
@@ -966,27 +968,27 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/projects/31945182/config/parameters/1
+    DELETE /api/v2/me/projects/31945182/config/parameters/1
    
-Response::
+Response:
  
  (empty string)
  
  
 ## Project files
 
-.. note:: Please remember to put your **access_token** to HTTP **request URL**
+**note:** Please remember to put your **access_token** to HTTP **request URL**
  
 Upload application file
 
 
-.. note:: Resources which are used for uploading files must have HTTP header set *Content-Type: multipart/form-data*
+**note:** Resources which are used for uploading files must have HTTP header set *Content-Type: multipart/form-data*
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/files/application
+    POST /api/v2/me/projects/{projectId}/files/application
   
 Request body:
 
@@ -1026,11 +1028,11 @@ file Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/files/application
+    POST /api/v2/me/projects/31945182/files/application
    
-Response::
+Response:
  
     {  
     "id": 27170,  
@@ -1042,9 +1044,9 @@ Response::
  
 ### Download application file
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/files/application
+    GET /api/v2/me/projects/{projectId}/files/application
   
 Request body:
 
@@ -1082,11 +1084,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/files/application
+    GET /api/v2/me/projects/31945182/files/application
    
-Response::
+Response:
  
  resource
  
@@ -1094,13 +1096,13 @@ Response::
 Upload data file
 
 
-.. note:: Resources which are used for uploading files must have HTTP header set *Content-Type: multipart/form-data*
+**note:** Resources which are used for uploading files must have HTTP header set *Content-Type: multipart/form-data*
 
 Data file should be ZIP package. Data from package will be extraced to device SD card.
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/files/data
+    POST /api/v2/me/projects/{projectId}/files/data
   
 Request body:
 
@@ -1141,11 +1143,11 @@ file Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/files/application
+    POST /api/v2/me/projects/31945182/files/application
    
-Response::
+Response:
  
     {  
     "id": 27212,  
@@ -1157,9 +1159,9 @@ Response::
  
 ### Download data file
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/files/data
+    GET /api/v2/me/projects/{projectId}/files/data
   
 Request body:
 
@@ -1197,11 +1199,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/files/data
+    GET /api/v2/me/projects/31945182/files/data
    
-Response::
+Response:
  
  resource`
  
@@ -1209,11 +1211,11 @@ Response::
 Upload test file
 
 
-.. note:: Resources which are used for uploading files must have HTTP header set *Content-Type: multipart/form-data*
+**note:** Resources which are used for uploading files must have HTTP header set *Content-Type: multipart/form-data*
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/files/test
+    POST /api/v2/me/projects/{projectId}/files/test
   
 Request body:
 
@@ -1255,11 +1257,11 @@ fileTest Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/files/test
+    POST /api/v2/me/projects/31945182/files/test
    
-Response::
+Response:
  
     {  
     "id": 27171,  
@@ -1274,9 +1276,9 @@ Response::
  
 ### Download test file
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/files/test
+    GET /api/v2/me/projects/{projectId}/files/test
   
 Request body:
 
@@ -1314,11 +1316,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/files/test
+    GET /api/v2/me/projects/31945182/files/test
    
-Response::
+Response:
  
  resource
  
@@ -1326,9 +1328,9 @@ Response::
 Download all uploaded files
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/files.zip
+    GET /api/v2/me/projects/{projectId}/files.zip
   
 Request body:
 
@@ -1366,11 +1368,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/files.zip
+    GET /api/v2/me/projects/31945182/files.zip
    
-Response::
+Response:
  
  resource
 
@@ -1379,14 +1381,14 @@ Response::
 
 This feature allows you to share your project with another Testdroid Cloud user.
 
-.. note:: Please remember to put your **access_token** to HTTP **request URL**
+**note:** Please remember to put your **access_token** to HTTP **request URL**
 
 Create new share 
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/sharings
+    POST /api/v2/me/projects/{projectId}/sharings
   
 Request body:
 
@@ -1427,11 +1429,11 @@ share Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/sharings?email=example@bitbar.com
+    POST /api/v2/me/projects/31945182/sharings?email=example@bitbar.com
    
-Response::
+Response:
  
     {  
     "id": 173,  
@@ -1442,9 +1444,9 @@ Response::
 
 ## Get list of project sharings
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/sharings
+    GET /api/v2/me/projects/{projectId}/sharings
   
 Request body:
 
@@ -1490,11 +1492,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/sharings
+    GET /api/v2/me/projects/31945182/sharings
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -1513,9 +1515,9 @@ Response::
 
 ### Get project share
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/sharings/{sharingId}  
+    GET /api/v2/me/projects/{projectId}/sharings/{sharingId}  
   
 Request body:
 
@@ -1554,11 +1556,11 @@ share Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31981820/sharings/173
+    GET /api/v2/me/projects/31981820/sharings/173
    
-Response::
+Response:
  
     {  
     "id": 173,  
@@ -1570,9 +1572,9 @@ Response::
 Delete project share
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/projects/{projectId}/sharings/{sharingId}  
+    DELETE /api/v2/me/projects/{projectId}/sharings/{sharingId}  
   
 Request body:
 
@@ -1599,7 +1601,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -1611,24 +1613,24 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/projects/31981820/sharings/173
+    DELETE /api/v2/me/projects/31981820/sharings/173
    
-Response::
+Response:
  
  (empty string)
 
 
 ## Test run basics
 
-.. note:: Please remember to put your **access_token** to HTTP **request URL**
+**note:** Please remember to put your **access_token** to HTTP **request URL**
  
 ### Start new test run
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/runs
+    POST /api/v2/me/projects/{projectId}/runs
   
 Request body:
 
@@ -1667,11 +1669,11 @@ testRun Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/runs
+    POST /api/v2/me/projects/31945182/runs
    
-Response::
+Response:
  
     {  
     "id": 31945210,  
@@ -1688,9 +1690,9 @@ Response::
  
 ### Get user test run
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}  
   
 Request body:
 
@@ -1730,11 +1732,11 @@ testRun Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210
+    GET /api/v2/me/projects/31945182/runs/31945210
    
-Response::
+Response:
  
     {  
     "id": 31945210,  
@@ -1752,9 +1754,9 @@ Response::
 Update user test run
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/runs/{runId}  
+    POST /api/v2/me/projects/{projectId}/runs/{runId}  
   
 Request body:
 
@@ -1797,11 +1799,11 @@ testRun Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/runs/31949792?name=New+run+name
+    POST /api/v2/me/projects/31945182/runs/31949792?name=New+run+name
    
-Response::
+Response:
  
     {  
     "id": 31945210,  
@@ -1819,9 +1821,9 @@ Response::
 Delete user test run
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/projects/{projectId}/runs/{runId}  
+    DELETE /api/v2/me/projects/{projectId}/runs/{runId}  
   
 Request body:
 
@@ -1849,7 +1851,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
 
@@ -1861,20 +1863,20 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/projects/31945182/runs/31949792
+    DELETE /api/v2/me/projects/31945182/runs/31949792
    
-Response::
+Response:
  
  (empty string)
 
  
 ## Get list of user test runs
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/runs
+    GET /api/v2/me/runs
   
 Request body:
 
@@ -1917,11 +1919,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/runs
+    GET /api/v2/me/runs
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -1945,9 +1947,9 @@ Response::
  
 ## Get list of user test runs in project
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs
+    GET /api/v2/me/projects/{projectId}/runs
   
 Request body:
 
@@ -1992,11 +1994,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs
+    GET /api/v2/me/projects/31945182/runs
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -2011,7 +2013,7 @@ Response::
     "total": 3,  
     "search": "",  
     "sort": "",  
-.*  
+    "empty": false  
     }  
 
  
@@ -2022,9 +2024,9 @@ Response::
   
 ## Get list of device runs in test run
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs
   
 Request body:
 
@@ -2071,11 +2073,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -2091,15 +2093,15 @@ Response::
     "total": 4,  
     "search": "",  
     "sort": "",  
-.*  
+    "empty": false  
     }  
 
 
 ### Get device run in test run
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}  
   
 Request body:
 
@@ -2140,11 +2142,11 @@ deviceRun Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802
    
-Response::
+Response:
  
     {  
     "id": 31949802,  
@@ -2164,9 +2166,9 @@ Response::
  
 ### Download device run junit.xml file
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/junit.xml
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/junit.xml
   
 Request body:
 
@@ -2208,20 +2210,20 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/junit.xml
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/junit.xml
    
-Response::
+Response:
  
  (resource)
 
 
 ### Download device run logs file
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/logs
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/logs
   
 Request body:
 
@@ -2263,20 +2265,20 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/logs
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/logs
    
-Response::
+Response:
  
  (resource)
 
  
 ## Get list of device run performance
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/performance
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/performance
   
 Request body:
 
@@ -2317,11 +2319,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/performance
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/performance
    
-Response::
+Response:
  
  [
   performanceItem Object,
@@ -2333,9 +2335,9 @@ Response::
 
 ## Get list of device run screenshots
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/screenshots
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/screenshots
   
 Request body:
 
@@ -2384,11 +2386,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/screenshots
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/screenshots
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -2409,9 +2411,9 @@ Response::
 
 ### Get device run screenshot
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/screenshots/{screenshotId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/screenshots/{screenshotId}  
   
 Request body:
 
@@ -2454,11 +2456,11 @@ screenshot Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/screenshots/31950177
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/screenshots/31950177
    
-Response::
+Response:
  
     {  
     "id": 31950177,  
@@ -2470,9 +2472,9 @@ Response::
  
 ## Get list of device run states
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/states
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/states
   
 Request body:
 
@@ -2521,11 +2523,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/states
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/states
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -2551,9 +2553,9 @@ Response::
 Get device run state
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/states/{stateId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/states/{stateId}  
   
 Request body:
 
@@ -2596,11 +2598,11 @@ state Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/states/4717188
+    GET /api/v2/me/projects/31945182/runs/31945210/device-runs/31949802/states/4717188
    
-Response::
+Response:
  
     {  
     "id": 4717188,  
@@ -2621,9 +2623,9 @@ Response::
 Get test run config
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/config
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/config
  
   
 Request body:
@@ -2664,11 +2666,11 @@ projectConfig Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/config
+    GET /api/v2/me/projects/31945182/runs/31949792/config
    
-Response::
+Response:
  
     {  
     "id": 31425,  
@@ -2697,9 +2699,9 @@ Response::
 
 ## Get list of user defined config parameters used in test run
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/config/parameters
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/config/parameters
   
 Request body:
 
@@ -2746,11 +2748,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/config/parameters
+    GET /api/v2/me/projects/31945182/runs/31949792/config/parameters
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -2769,9 +2771,9 @@ Response::
 
 ### Get user defined config parameter used in test run
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/config/parameters/{parameterId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/config/parameters/{parameterId}  
  
   
 Request body:
@@ -2814,11 +2816,11 @@ projectConfigParameter Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/config/parameters/1
+    GET /api/v2/me/projects/31945182/runs/31949792/config/parameters/1
    
-Response::
+Response:
  
     {  
     "id": 1,  
@@ -2833,9 +2835,9 @@ Response::
 
 ### Download test run application file
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/files/application
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/files/application
   
 Request body:
 
@@ -2875,11 +2877,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/files/application
+    GET /api/v2/me/projects/31945182/runs/31949792/files/application
    
-Response::
+Response:
  
  resource
 
@@ -2887,9 +2889,9 @@ Response::
 Download test run data file
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/files/data
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/files/data
   
 Request body:
 
@@ -2929,11 +2931,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/files/data
+    GET /api/v2/me/projects/31945182/runs/31949792/files/data
    
-Response::
+Response:
  
  resource`
  
@@ -2941,9 +2943,9 @@ Response::
 Download test run test file
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/files/test
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/files/test
   
 Request body:
 
@@ -2983,11 +2985,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/files/test
+    GET /api/v2/me/projects/31945182/runs/31949792/files/test
    
-Response::
+Response:
  
  resource
  
@@ -2995,9 +2997,9 @@ Response::
 Download all test run files
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/files.zip
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/files.zip
   
 Request body:
 
@@ -3037,11 +3039,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/files.zip
+    GET /api/v2/me/projects/31945182/runs/31949792/files.zip
    
-Response::
+Response:
  
  resource
  
@@ -3055,9 +3057,9 @@ and speed up finding tests.
 
 ### Create new tag
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/runs/{runId}/tags
+    POST /api/v2/me/projects/{projectId}/runs/{runId}/tags
   
 Request body:
 
@@ -3100,11 +3102,11 @@ tag Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/runs/31949792/tags?name=important
+    POST /api/v2/me/projects/31945182/runs/31949792/tags?name=important
    
-Response::
+Response:
  
     {  
     "id": 32058490,  
@@ -3114,9 +3116,9 @@ Response::
 
 ## Get list of test run tags
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/tags
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/tags
   
 Request body:
 
@@ -3164,11 +3166,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/tags
+    GET /api/v2/me/projects/31945182/runs/31949792/tags
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -3188,9 +3190,9 @@ Response::
 Get test run tag
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runId}/tags/{tagId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/tags/{tagId}  
   
 Request body:
 
@@ -3231,11 +3233,11 @@ tag Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31981820/runs/31949792/tags/32058490
+    GET /api/v2/me/projects/31981820/runs/31949792/tags/32058490
    
-Response::
+Response:
  
     {  
     "id": 32058490,  
@@ -3246,9 +3248,9 @@ Response::
 Delete test run tag
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/projects/{projectId}/runs/{runId}/tags/{tagId}  
+    DELETE /api/v2/me/projects/{projectId}/runs/{runId}/tags/{tagId}  
   
 Request body:
 
@@ -3277,7 +3279,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -3289,11 +3291,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/projects/31981820/runs/31949792/tags/32058490
+    DELETE /api/v2/me/projects/31981820/runs/31949792/tags/32058490
    
-Response::
+Response:
  
  (empty string)
  
@@ -3304,9 +3306,9 @@ Response::
  
 ### Get summary report
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runID}/reports/summary
+    GET /api/v2/me/projects/{projectId}/runs/{runID}/reports/summary
   
 Request body:
 
@@ -3346,7 +3348,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  File according to the selected *type*
  
@@ -3358,11 +3360,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/reports/summary?type=PDF
+    GET /api/v2/me/projects/31945182/runs/31949792/reports/summary?type=PDF
    
-Response::
+Response:
  
  PDF file
  
@@ -3370,9 +3372,9 @@ Response::
 Get summary report for whole project
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/reports/summary
+    GET /api/v2/me/projects/{projectId}/reports/summary
   
 Request body:
 
@@ -3410,7 +3412,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  File according to the selected *type*
  
@@ -3422,11 +3424,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/reports/summary?type=PDF
+    GET /api/v2/me/projects/31945182/reports/summary?type=PDF
    
-Response::
+Response:
  
  PDF file
 
@@ -3434,9 +3436,9 @@ Response::
 Get failures report
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runID}/reports/failures
+    GET /api/v2/me/projects/{projectId}/runs/{runID}/reports/failures
   
 Request body:
 
@@ -3476,7 +3478,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  File according to the selected *type*
  
@@ -3488,11 +3490,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/reports/failures?type=PDF
+    GET /api/v2/me/projects/31945182/runs/31949792/reports/failures?type=PDF
    
-Response::
+Response:
  
  PDF file
 
@@ -3500,9 +3502,9 @@ Response::
 Get detailed failures report
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runID}/reports/detail-failures
+    GET /api/v2/me/projects/{projectId}/runs/{runID}/reports/detail-failures
   
 Request body:
 
@@ -3542,7 +3544,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  File according to the selected *type*
  
@@ -3554,11 +3556,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/reports/detail-failures?type=PDF
+    GET /api/v2/me/projects/31945182/runs/31949792/reports/detail-failures?type=PDF
    
-Response::
+Response:
  
  PDF file
 
@@ -3566,9 +3568,9 @@ Response::
 Request generate screenshots 
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/runs/{runID}/screenshots.zip
+    POST /api/v2/me/projects/{projectId}/runs/{runID}/screenshots.zip
   
 Request body:
 
@@ -3596,11 +3598,11 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-.. seealso::
-   Please check *screenshotZipState* property of `test run`
+**See also:**
+   Please check *screenshotZipState* property of [test run](client-api.html#get-user-test-run)
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -3612,11 +3614,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/runs/31949792/screenshots.zip
+    POST /api/v2/me/projects/31945182/runs/31949792/screenshots.zip
    
-Response::
+Response:
  
  (empty string) 
 
@@ -3624,9 +3626,9 @@ Response::
 Get screenshots
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/runs/{runID}/screenshots.zip
+    GET /api/v2/me/projects/{projectId}/runs/{runID}/screenshots.zip
   
 Request body:
 
@@ -3654,7 +3656,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (resource)
  
@@ -3666,11 +3668,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/runs/31949792/screenshots.zip
+    GET /api/v2/me/projects/31945182/runs/31949792/screenshots.zip
    
-Response::
+Response:
  
  (resource)
  
@@ -3683,9 +3685,9 @@ Response::
 Create new user device group
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/device-groups
+    POST /api/v2/me/device-groups
   
 Request body:
 
@@ -3730,11 +3732,11 @@ deviceGroup Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/device-groups?name=Crash+test+group&osType=ANDROID
+    POST /api/v2/me/device-groups?name=Crash+test+group&osType=ANDROID
    
-Response::
+Response:
  
     {  
     "id": 4148,  
@@ -3749,9 +3751,9 @@ Response::
  
 ## Get list of user device groups
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/device-groups
+    GET /api/v2/me/device-groups
   
 Request body:
 
@@ -3795,11 +3797,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/device-groups
+    GET /api/v2/me/device-groups
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -3820,9 +3822,9 @@ Response::
  
 ## Get list of user device groups for project
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/device-groups
+    GET /api/v2/me/projects/{projectId}/device-groups
   
 Request body:
 
@@ -3868,11 +3870,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/device-groups
+    GET /api/v2/me/projects/31945182/device-groups
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -3893,9 +3895,9 @@ Response::
  
 ## Get list of public device groups for project
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/public-device-groups
+    GET /api/v2/me/projects/{projectId}/public-device-groups
   
 Request body:
 
@@ -3941,11 +3943,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/public-device-groups
+    GET /api/v2/me/projects/31945182/public-device-groups
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -3966,9 +3968,9 @@ Response::
  
 ### Get user device group
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/device-groups/{deviceGroupId}  
+    GET /api/v2/me/device-groups/{deviceGroupId}  
   
 Request body:
 
@@ -4005,11 +4007,11 @@ deviceGroup Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/device-groups/4148
+    GET /api/v2/me/device-groups/4148
    
-Response::
+Response:
  
     {  
     "id": 4148,  
@@ -4025,9 +4027,9 @@ Response::
 Update user device group
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/device-groups/{deviceGroupId}  
+    POST /api/v2/me/device-groups/{deviceGroupId}  
   
 Request body:
 
@@ -4074,11 +4076,11 @@ deviceGroup Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/device-groups/4148?name=New+group+name
+    POST /api/v2/me/device-groups/4148?name=New+group+name
    
-Response::
+Response:
  
     {  
     "id": 4148,  
@@ -4094,9 +4096,9 @@ Response::
 Delete user device group
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/device-groups/{deviceGroupId}  
+    DELETE /api/v2/me/device-groups/{deviceGroupId}  
   
 Request body:
 
@@ -4121,7 +4123,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -4133,11 +4135,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/device-groups/4148
+    DELETE /api/v2/me/device-groups/4148
    
-Response::
+Response:
  
  (empty string)
  
@@ -4145,9 +4147,9 @@ Response::
 Add device to user device group
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/device-groups/{deviceGroupId}/devices
+    POST /api/v2/me/device-groups/{deviceGroupId}/devices
   
 Request body:
 
@@ -4160,8 +4162,8 @@ Request body:
 |---------------|--------|----------|----------------------------------------------|
 
  
-.. seealso:: 
-   `Get list of all devices` to check out devices ID
+**See also:** 
+   [Get list of all devices](client-api.html#get-list-of-all-devices) to check out devices ID
 
  
 **Response status codes:**
@@ -4183,7 +4185,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -4195,11 +4197,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/device-groups/4148/devices?id=337
+    POST /api/v2/me/device-groups/4148/devices?id=337
    
-Response::
+Response:
  
  (empty string)
 
@@ -4207,9 +4209,9 @@ Response::
 ## Get list of devices in user device group
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/device-groups/{deviceGroupId}/devices
+    GET /api/v2/me/device-groups/{deviceGroupId}/devices
  
 Request body:
 
@@ -4254,11 +4256,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/device-groups/4148/devices
+    GET /api/v2/me/device-groups/4148/devices
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -4278,9 +4280,9 @@ Response::
 Remove device from user device group
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/device-groups/{deviceGroupId}/devices/{deviceId}  
+    DELETE /api/v2/me/device-groups/{deviceGroupId}/devices/{deviceId}  
   
 Request body:
 
@@ -4307,7 +4309,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -4319,11 +4321,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- DELETE /api/v2/me/device-groups/4148/devices/337
+    DELETE /api/v2/me/device-groups/4148/devices/337
    
-Response::
+Response:
  
  (empty string)
  
@@ -4334,9 +4336,9 @@ Response::
  
 ### Add new user notification
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/notifications
+    POST /api/v2/me/notifications
   
 Request body:
 
@@ -4382,11 +4384,11 @@ notification Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/notifications?email=example@bitbar.com&type=ALWAYS
+    POST /api/v2/me/notifications?email=example@bitbar.com&type=ALWAYS
    
-Response::
+Response:
  
     {  
     "id": 31981820,  
@@ -4398,9 +4400,9 @@ Response::
 
 ### Add new user notification for project
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/projects/{projectId}/notifications
+    POST /api/v2/me/projects/{projectId}/notifications
   
 Request body:
 
@@ -4448,11 +4450,11 @@ notification Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/projects/31945182/notifications?email=example@bitbar.com&type=ALWAYS
+    POST /api/v2/me/projects/31945182/notifications?email=example@bitbar.com&type=ALWAYS
    
-Response::
+Response:
  
     {  
     "id": 31981820,  
@@ -4464,9 +4466,9 @@ Response::
  
 ## Get list of user notifications
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/notifications
+    GET /api/v2/me/notifications
   
 Request body:
 
@@ -4510,11 +4512,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/notifications
+    GET /api/v2/me/notifications
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -4534,9 +4536,9 @@ Response::
 
 ## Get list of user notifications for project
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/projects/{projectId}/notifications
+    GET /api/v2/me/projects/{projectId}/notifications
   
 Request body:
 
@@ -4582,11 +4584,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/projects/31945182/notifications
+    GET /api/v2/me/projects/31945182/notifications
    
-Response::
+Response:
  
     {  
     "next": null,  
@@ -4606,9 +4608,9 @@ Response::
 
 ### Get user notification
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/me/notification/{id}  
+    GET /api/v2/me/notification/{id}  
   
 Request body:
 
@@ -4645,11 +4647,11 @@ notification Object *
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/me/notification/31981820
+    GET /api/v2/me/notification/31981820
    
-Response::
+Response:
  
     {  
     "id": 31981820,  
@@ -4662,9 +4664,9 @@ Response::
 Update user notification
 
 
-**Request:** ::
+**Request:**
 
- POST /api/v2/me/notification/{id}  
+    POST /api/v2/me/notification/{id}  
   
 Request body:
 
@@ -4709,11 +4711,11 @@ notification Object *
  
 **Example:**
  
-Request::
+Request:
    
- POST /api/v2/me/notification/31981820?type=ON_FAILURE
+    POST /api/v2/me/notification/31981820?type=ON_FAILURE
    
-Response::
+Response:
  
     {  
     "id": 31981820,  
@@ -4726,9 +4728,9 @@ Response::
 Delete user notification
 
 
-**Request:** ::
+**Request:**
 
- DELETE /api/v2/me/notification/{id}  
+    DELETE /api/v2/me/notification/{id}  
   
 Request body:
 
@@ -4753,7 +4755,7 @@ Request body:
 |-----------------------|----------------------------------------------------------|
  
 
-**Success response:** ::
+**Success response:**
 
  (empty string)
  
@@ -4765,24 +4767,24 @@ Request body:
  
 **Example:**
  
-Request::
-   
- DELETE /api/v2/me/notification/31981820
-   
-Response::
+Request:
+
+    DELETE /api/v2/me/notification/31981820
+
+Response:
  
  (empty string)
 
  
-# Calls available without Authorization**
+# Calls available without Authorization
 
  
 ## Get list of all devices
 
 
-**Request:** ::
+**Request:**
 
- GET /api/v2/devices
+    GET /api/v2/devices
   
 Request body:
 
@@ -4826,11 +4828,11 @@ Request body:
  
 **Example:**
  
-Request::
+Request:
    
- GET /api/v2/devices?search=Sony
+    GET /api/v2/devices?search=Sony
    
-Response::
+Response:
  
     {  
      "next": "https://cloud.testdroid.com/api/v2/devices?offset=20&limit=20&search=Sony&sort=",  
@@ -4878,7 +4880,7 @@ API Objects
 | To switch to `JSON`_ format send header *Accept: application/json*.
 | **This documentation is using JSON format in examples.**
    
-.. _JSON: http://json.org/
+[JSON: http://json.org/](http://json.org/)
 
 # device
 
@@ -4925,9 +4927,8 @@ API Objects
  | frame400Url      | String             | URL to device image (400px height)                      |
 |------------------|--------------------|---------------------------------------------------------|
  
-.. _softwareVersion: #softwareversion
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 304,    
@@ -4970,7 +4971,7 @@ API Objects
  | osType        | String  | Device group OS type                                      |
 |---------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 4148,    
@@ -5031,12 +5032,8 @@ API Objects
  |                    |                    | SUCCEEDED | Completed: Succeeded                             |
 |--------------------|--------------------|-----------|--------------------------------------------------|
 
-.. _device: #device
-.. _softwareVersion: #softwareversion
-.. _state: #id125 
- 
- 
-**Example:** ::
+
+**Example:**
 
     {  
     "id": 31949802,    
@@ -5068,7 +5065,7 @@ API Objects
  | message       | String  | Error message                                             |
 |---------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "statusCode": 401,    
@@ -5092,7 +5089,7 @@ API Objects
  | uploadTime    | Number  | File upload time in timestamp in milliseconds             |
 |---------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 27170,    
@@ -5128,7 +5125,7 @@ API Objects
  | bundleIdentifier | String  | *iOS only:* Bundle identifier                             |
 |------------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 27171,    
@@ -5167,7 +5164,7 @@ API Objects
  | empty     | Boolean                | *True* if there are no items in results (by default *false*)   |
 |-----------|------------------------|----------------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "next": null,    
@@ -5208,7 +5205,7 @@ API Objects
  |              |          |          | ON_FAILURE | Send notification only on failure |
 |--------------|----------|----------|------------|-----------------------------------| 
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 31981820,    
@@ -5235,7 +5232,7 @@ API Objects
 |---------------|---------|--------------------------------------------------------------|
  
  
-**Example:** ::
+**Example:**
 
     {  
     "packageName": "com.bitbar.movies",    
@@ -5265,7 +5262,7 @@ API Objects
  | sharedById    | Number  | User ID sharing project (by default *null*)                  |
 |---------------|---------|--------------------------------------------------------------| 
 
-**Example:** ::
+**Example:**
 
     {  
     "id": 31945182,    
@@ -5300,9 +5297,9 @@ API Objects
  |                        |        |----------------|-------------------------------------------------------|
  |                        |         | APP_CRAWLER    | *Android only* Using our app crawler                  |
  |                        |        |----------------|-------------------------------------------------------|
- |                        |         | CTS            | *Android only* Using `Compatibility Test Suite`_      |
+ |                        |         | CTS            | *Android only* Using {{ page.Compatibility_Test_Suite }}      |
  |                        |        |----------------|-------------------------------------------------------|
- |                        |         | UIAUTOMATOR    | *Android only* Using `Android UIAutomator Framework`_ |
+ |                        |         | UIAUTOMATOR    | *Android only* Using {{ page.Android_UIAutomator_Framework }} |
  |                        |        |----------------|-------------------------------------------------------|
  |                        |         | IOS            | *IOS only* *Default* iOS test                         |
 |------------------------|---------|----------------|-------------------------------------------------------|
@@ -5338,9 +5335,9 @@ API Objects
  | usedDeviceGroupId      | Number  | Device group ID used to test run. (by default *Free devices* group id) |
 |------------------------|---------|------------------------------------------------------------------------|
  | deviceLanguageCode     | String  | | Language code set to the devices during tests in format *xx_YY*.     |
- |                        |         | | *xx* - is ISO Language Code (`ISO 639-1`_)                           |
- |                        |         | | *YY* - is ISO Country Code (`ISO 3166-1`_)                           |
- |                        |         | | See more on `docs.oracle.com`_                                       |
+ |                        |         | | *xx* - is ISO Language Code ({{ page.ISO_639-1 }})                           |
+ |                        |         | | *YY* - is ISO Country Code ({{ page.ISO_3166-1 }})                           |
+ |                        |         | | See more on {{ page.docs_oracle_com }}                                       |
  |                        |         | | (by default *en_US*)                                                 |
 |------------------------|---------|------------------------------------------------------------------------|
  | hookURL                | String  | Page URL which should be notified when test has been completed         |
@@ -5353,22 +5350,15 @@ API Objects
  |                        |         | (default *false*)                                                      |
 |------------------------|---------|------------------------------------------------------------------------|
  | instrumentationRunner  | String  | *FULL_RUN mode only:* Your class which extends                         |
- |                        |         | `InstrumentationTestRunner`_ (by default *empty string*)               |
+ |                        |         | {{ page.InstrumentationTestRunner }} (by default *empty string*)               |
 |------------------------|---------|------------------------------------------------------------------------|
- | checkApp               | Boolean | Should application be verified by `Codenomicon`_ (by default *false*)  |
+ | checkApp               | Boolean | Should application be verified by {{ page.codenomicon }} (by default *false*)  |
 |------------------------|---------|------------------------------------------------------------------------|
 
  | * - only for *UIAUTOMATOR* mode
  
-.. _ISO 639-1: http://www.loc.gov/standards/iso639-2/php/code_list.php
-.. _ISO 3166-1: http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html
-.. _docs.oracle.com: http://docs.oracle.com/javase/6/docs/api/java/util/Locale.html
-.. _Codenomicon: https://fuzzomatic.codenomicon.com/
-.. _Compatibility Test Suite: http://source.android.com/compatibility/cts-intro.html
-.. _Android UIAutomator Framework: http://developer.android.com/tools/help/uiautomator/index.html
-.. _InstrumentationTestRunner: http://developer.android.com/reference/android/test/InstrumentationTestRunner.html
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 31425,    
@@ -5409,7 +5399,7 @@ API Objects
  | value        | String  | Parameter value                              |
 |--------------|---------|----------------------------------------------|
 
-**Example:** ::
+**Example:**
 
     {  
     "id": 1,    
@@ -5438,7 +5428,7 @@ API Objects
  |               |         | LANDSCAPE       | Landscape (horizontal) orientation         |
 |---------------|---------|-----------------|--------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 31950177,    
@@ -5462,7 +5452,7 @@ API Objects
  | userEmail        | String  | Testdroid Cloud user e-mail address                       |
 |------------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 173,    
@@ -5485,7 +5475,7 @@ API Objects
  | apiLevel         | Number  | API level                                                 |
 |------------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 20,    
@@ -5570,7 +5560,7 @@ API Objects
  |                    |         | ADB_SHELL_COMMAND            | ADB shell command                   |
 |--------------------|---------|------------------------------|-------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 4711467,    
@@ -5596,7 +5586,7 @@ API Objects
  | name             | String  | Tag name                                                  |
 |------------------|---------|-----------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 32058490,    
@@ -5645,7 +5635,7 @@ API Objects
  |                      |         |          |  /api/v2/me/projects/{projectId}/runs/{runId}/screenshots.zip    |
 |----------------------|---------|----------|------------------------------------------------------------------|
  
-**Example:** ::
+**Example:**
 
     {  
     "id": 31945210,    
@@ -5662,9 +5652,8 @@ API Objects
  
 API Sources
 -----------
-Testdroid API`_
 
-.. _Testdroid API: http://github.com/bitbar/testdroid-api
+[Testdroid API](http://github.com/bitbar/testdroid-api)
 
 
 Swagger
@@ -5674,6 +5663,5 @@ Swagger
    Swagger is available **only for enterprise** customers
    
 Swagger is a tool which allows developers testing API in real-time.
-Open Swagger`_
 
-.. _Open Swagger: https://cloud.testdroid.com/swagger
+[Open Swagger](https://cloud.testdroid.com/swagger)
