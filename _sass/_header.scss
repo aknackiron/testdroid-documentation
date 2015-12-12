@@ -1,0 +1,111 @@
+    header{       
+        height: $header-height;
+               
+        a{
+            margin: 10px 20px 0 20px;
+            display: inline-block;
+        }
+        img{
+            max-height: 40px;
+        }
+        
+        /*User tools and such, straight copy from cloud. Rewrite if need*/
+        span.user-tools {
+            position: relative;
+            float: right;
+            margin-right: 10px;
+            padding: 10px 10px;
+            cursor: default;
+
+            &:hover{
+              .tools {
+                opacity: 1;
+                height: auto;
+                border: 1px solid #448BA0;
+                border-radius: 3px;
+              }
+            }
+
+            & > * {
+              display: inline-block;
+            }
+
+            .user {
+              display: block;
+              z-index: 1010;
+              position: relative;
+              padding-right: 50px;
+              & > span {
+                display: block;
+                height: 20px;
+                line-height: 20px;
+              }
+              .name{
+                opacity: 1;
+                transition: opacity .3s, height 0s linear .3s ;
+                -webkit-transition: opacity .3s, height 0s linear .3s;
+              }
+              .avatar {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 40px;
+                width: 40px;
+                border: 1px solid #448BA0;
+                border-radius: 3px;
+                overflow: hidden;
+                &:empty:after {
+                  display: block;
+                  font-family: 'FontAwesome';
+                  -webkit-font-smoothing: antialiased;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 20px;
+                  text-align: center;
+                  line-height: 40px;
+                  color: #448BA0;
+                  content: "\f007";
+                }
+              }
+            }
+            .tools {
+              padding: 50px 10px 5px 10px;
+              z-index: 1000;
+              position: absolute;
+              top: 5px;
+              right:0;
+              opacity: 0;
+              height: 0;
+              width: 100%;
+              overflow: hidden;
+              background-color: $night;
+              box-shadow: 0 1px 5px #448BA0;
+              min-width: 180px;
+
+              transition: opacity .3s, height 0s linear .3s ;
+              -webkit-transition: opacity .3s, height 0s linear .3s;
+              li {
+                line-height: 30px;
+                list-style: none;
+                a{
+                    margin: 0;
+                    color: white;
+                    &:hover{
+                        color: #4DB3CC;
+                    }
+                }
+              }
+            }
+        }
+        /* Not a copy from cloud */
+        #site-search{
+            width: 200px;
+            line-height: 16px;
+            padding: 3px 5px;
+            margin-top: 20px;
+            background-color: $testdroidcomgrey;
+            border-color: $testdroidcomgrey;
+            color: $searchtext;
+        }
+    }

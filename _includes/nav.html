@@ -4,28 +4,34 @@
 
     {% for nav in site.data.nav %}
 
-    {% assign navHref = nav.href | downcase%}
+        {% assign navHref = nav.href | downcase %}
 
-    {% if nav.subcategories != null %}
-    <li>
-      <a href="{{ site.url }}{{ nav.url }}">{{ nav.title }} &#x25BC;</a>
-      <ul>
-        {% for subcategory in nav.subcategories %}
-        <li><a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-        {% endfor %}
-      </ul>
-    </li>
+        {% if nav.subcategories != null %}
+        <li class="navigation-closed">
+            <a href="{{ site.url }}{{ nav.url }}">{{ nav.title }}</a><span class="navigation-icon float-right"></span>
+          <ul>
+            {% for subcategory in nav.subcategories %}
+            {% if current[1] == subcategory.subhref %}
+            <li class="active">
+            {% else %}    
+            <li>
+            {% endif %}
+                <a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
 
-    {% elsif nav.title == page.title or navHref == current[1] %}
-    <li class="active">
-      <a href="{{ nav.url }}">{{ nav.title }}</a>
-    </li>
+        {% elsif nav.title == page.title or navHref == current[1] %}
+        <li class="active">
+          <a href="{{ nav.url }}">{{ nav.title }}</a>
+        </li>
 
-    {% else %}
-    <li>
-      <a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
-    </li>
-    {% endif %}
+        {% else %}
+        <li>
+          <a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+        </li>
+        {% endif %}
     {% endfor %}
   </ul>
 </nav>

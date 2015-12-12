@@ -1,0 +1,159 @@
+    section{
+        
+        /* Test */
+        /*min-height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2));*/
+        height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2));
+        /* Test */
+        
+        padding: $section-padding-top-and-bottom $section-padding-left-and-right;
+        float: none;
+        width: calc(100% - (#{$section-padding-left-and-right} * 2));
+        background-color: $section-background-color;
+        .wrapper{
+            display: block;
+            /*Should be maybe min-height? consider using vh instead of %*/
+            /*Test*/
+            /*min-height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2));*/
+            height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2));
+            /*overflow-y: auto;*/
+            /*Test*/
+            margin: 0 auto;
+            /*padding: 0 $wrapper-padding $wrapper-padding 0;
+            max-width: 1170px;
+            width: calc(100% - (#{$section-padding-left-and-right} * 2));*/
+            width: 100%;
+            background-color: $content-background-color;
+            border: 1px solid $content-border-color;
+            
+            .navigation, .content{
+                /*display: inline-block;*/
+                
+                display: block;
+            }
+            .navigation{
+                width: $navigation-width;
+                /*border-right: $navigation-border-right solid $content-border-color;*/
+                background-color: $navigation-background;
+                
+                height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2));
+                overflow-y: auto;
+                
+                position: relative;
+                /*padding-right: $navigation-and-content-padding;*/
+                
+                .navigation-control{
+                    position: absolute;
+                    right: 0px;
+                    width: 10px;
+                    height: 40px;
+                    top: 50%;
+                    z-index: 1000000;
+                }
+                
+                nav{
+                    border-right: $navigation-border-right solid $content-border-color;
+                    min-height: 100%;
+                }
+                
+                ul, li{
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                li{  
+                    min-height: $navigation-element-height;
+                    line-height: $navigation-element-height;
+                    /*border-left: 3px solid $white;*/
+                    /*border-bottom: 1px solid $grey;*/
+                    /*padding-left: 2px;*/
+                    /*padding-right: $navigation-and-content-padding;*/
+                    a{
+                        color: $default-text-color;
+                        display: inline-block;
+                        padding-left: $navigation-level-padding;
+                        width: calc(100% - (#{$navigation-level-padding} * 2));
+                        
+                        &:hover{
+                            background-color: $silver;
+                            /*border-left: 3px solid $blue;*/
+                        }
+                    }
+                    
+                    &.active{
+                        a{
+                            color: $blue;
+                            border-right: $navigation-border-right solid $blue;
+                            margin-right: -$navigation-border-right;
+                        }
+                        /*background-color: $light-grey;
+                        border-left: 3px solid $green;*/
+                    }
+                    
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    
+                    /* Different levels*/
+                    ul li a{
+                        padding-left: calc(#{$navigation-level-padding} * 2);
+                    }
+                    
+                    ul li ul li a{
+                        padding-left: calc(#{$navigation-level-padding} * 3);
+                    }
+                }
+                /* Navigation icon and visibility handling */
+                .navigation-closed, .navigation-open{
+                    span{
+                        cursor: pointer;
+                        width: $navigation-level-padding;
+                        text-align: center;
+                        &:after{
+                            font-family: "FontAwesome";
+                        }
+                    }
+                }
+                .navigation-closed{
+                    span{
+                        &:after{
+                            content: "\f104";
+                        }
+                    }
+                    ul{
+                        display: none;
+                    }
+                }
+                .navigation-open{
+                    span{
+                        &:after{
+                            content: "\f107";
+                        }
+                    }
+                }
+            }
+            .title{
+                border-bottom: 1px solid $content-border-color;
+                padding-bottom: $title-padding;
+                text-align: center;
+                /*margin-left: $wrapper-padding;*/
+            }
+            .breadcrumbs{
+                margin: $breadcrumbs-margin 0;
+            }
+            .content{
+                /*width: calc(100% - #{$navigation-width} - (#{$navigation-and-content-padding} * 2) - #{$navigation-border-right});*/
+                
+                
+                /*padding-left: $navigation-and-content-padding;  */
+                padding: $navigation-and-content-padding; 
+                /*Testing*/
+                height: calc(100% - (#{$navigation-and-content-padding} * 2));
+                overflow-y: auto;
+            }
+            &:after {
+              clear: both;
+              content: '';
+              display: block;
+            }
+        }
+    }

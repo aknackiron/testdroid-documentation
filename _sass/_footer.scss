@@ -1,0 +1,38 @@
+    footer{
+        bottom: 0;
+        min-height: $footer-height;
+        text-align: center;
+        color: $footer-text-color;
+        line-height: 30px;
+        
+        a{
+            color: $footer-text-color;
+            text-decoration: none;
+            &:hover{
+                color: $white;
+            }
+        }
+        
+        #footer-wrapper{
+            max-width: 792px;
+            margin: 0 auto;
+            padding: 0 70px;
+            #top-box{
+                font-size: $footer-link-font-size;
+                *{
+                    margin: 0 10px;
+
+                }
+                border-bottom: 1px solid $footer-border-color;
+            }
+            #bottom-box{
+                font-size: $footer-copyright-font-size;
+                margin-top: 10px;
+                
+                i{
+                    font-size: 24px;
+                }
+                
+            }
+        }
+    }
