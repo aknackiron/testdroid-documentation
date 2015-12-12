@@ -1,13 +1,14 @@
 {% include head.html %}
 <section>
     <div class="wrapper">
-        <h1 class="title">{{ page.title }}</h1>
+  
         <div class="navigation float-left">
             {% include nav.html %}
+            <button class="navigation-control">< < <</button>
         </div>
         
         <div class="content float-right">
-            
+            <h1 class="title">{{ page.title }}</h1>
             {% include breadcrumbs.html %}
             <div id="toc"></div>
             {{ content }}
