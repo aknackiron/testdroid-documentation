@@ -15,4 +15,9 @@ $(document).ready(function(){
             parent.addClass("navigation-closed").removeClass("navigation-open");
         }
     }); 
+    
+    $( "#resizable-navigation" ).resizable({
+        handles: 'e',
+        maxWidth: 350
+    });
 });

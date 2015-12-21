@@ -1,45 +1,36 @@
     section{
+        h1, h2, h3, h4, h5, p, ul{
+            margin-bottom: $default-content-spacing;
+        }
+        ul{
+            padding-left: $default-content-spacing;
+        }
         
-        /* Test */
-        /*min-height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2));*/
-        height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2));
-        /* Test */
-        
+        height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2) - 15px);        
         padding: $section-padding-top-and-bottom $section-padding-left-and-right;
         float: none;
         width: calc(100% - (#{$section-padding-left-and-right} * 2));
         background-color: $section-background-color;
         .wrapper{
             display: block;
-            /*Should be maybe min-height? consider using vh instead of %*/
-            /*Test*/
-            /*min-height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2));*/
-            height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2));
-            /*overflow-y: auto;*/
-            /*Test*/
+            height: 100%;
             margin: 0 auto;
-            /*padding: 0 $wrapper-padding $wrapper-padding 0;
-            max-width: 1170px;
-            width: calc(100% - (#{$section-padding-left-and-right} * 2));*/
             width: 100%;
             background-color: $content-background-color;
             border: 1px solid $content-border-color;
             
-            .navigation, .content{
-                /*display: inline-block;*/
-                
+            .navigation, .content{              
                 display: block;
             }
             .navigation{
                 width: $navigation-width;
-                /*border-right: $navigation-border-right solid $content-border-color;*/
                 background-color: $navigation-background;
                 
-                height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2));
+                /* 1px fix for border movement */
+                height: calc(100% - 1px);
                 overflow-y: auto;
-                
+                overflow-x: hidden;
                 position: relative;
-                /*padding-right: $navigation-and-content-padding;*/
                 
                 .navigation-control{
                     position: absolute;
@@ -61,32 +52,26 @@
                     margin: 0;
                 }
                 li{  
-                    min-height: $navigation-element-height;
+                    /* FF has problems with line-height and element size being same 
+                    overcome by taking borders into account*/
+                    min-height: calc(#{$navigation-element-height} + 2px);
                     line-height: $navigation-element-height;
-                    /*border-left: 3px solid $white;*/
-                    /*border-bottom: 1px solid $grey;*/
-                    /*padding-left: 2px;*/
-                    /*padding-right: $navigation-and-content-padding;*/
+                    padding-left: $navigation-level-padding;
+                    
                     a{
                         color: $default-text-color;
-                        display: inline-block;
-                        padding-left: $navigation-level-padding;
-                        width: calc(100% - (#{$navigation-level-padding} * 2));
+                        display: inline-block;                      
+                        width: calc(100% - (#{$navigation-level-padding}));
                         
                         &:hover{
                             background-color: $silver;
-                            /*border-left: 3px solid $blue;*/
                         }
                     }
                     
                     &.active{
                         a{
-                            color: $blue;
-                            border-right: $navigation-border-right solid $blue;
-                            margin-right: -$navigation-border-right;
+                            font-weight: bold;
                         }
-                        /*background-color: $light-grey;
-                        border-left: 3px solid $green;*/
                     }
                     
                     &:last-child{
@@ -116,7 +101,7 @@
                 .navigation-closed{
                     span{
                         &:after{
-                            content: "\f104";
+                            content: "\f0da";
                         }
                     }
                     ul{
@@ -126,27 +111,25 @@
                 .navigation-open{
                     span{
                         &:after{
-                            content: "\f107";
+                            content: "\f0d7";
                         }
                     }
+                }
+                .navigation-icon-placeholder{
+                    width: $navigation-level-padding;
+                    height: $navigation-element-height;
                 }
             }
             .title{
                 border-bottom: 1px solid $content-border-color;
                 padding-bottom: $title-padding;
                 text-align: center;
-                /*margin-left: $wrapper-padding;*/
             }
             .breadcrumbs{
                 margin: $breadcrumbs-margin 0;
             }
             .content{
-                /*width: calc(100% - #{$navigation-width} - (#{$navigation-and-content-padding} * 2) - #{$navigation-border-right});*/
-                
-                
-                /*padding-left: $navigation-and-content-padding;  */
                 padding: $navigation-and-content-padding; 
-                /*Testing*/
                 height: calc(100% - (#{$navigation-and-content-padding} * 2));
                 overflow-y: auto;
             }

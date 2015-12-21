@@ -1,18 +1,26 @@
-$header-height: 61px;
-$footer-height: 76px;
+$body-min-width: 776px;
+
+$header-height: 38px;
+$site-search-width: 250px;
+
+$footer-height: 38px;
+$footer-copyright-font-size: 12px;
+
+$section-padding-top-and-bottom: 0px;/*20px;*/
+$section-padding-left-and-right: 0px;/*40px;*/
+$wrapper-padding: 0px;/*20px;*/
+
+$navigation-width: 300px;
+$navigation-and-content-padding: 10px;
+$navigation-element-height: 34px;
+$navigation-border-right: 1px;
+$navigation-level-padding: 20px;
+
+/* section element margin-bottom, and ul padding-left */
+$default-content-spacing: 20px;
+
+$title-padding: 10px;
+$breadcrumbs-margin: 10px;
 
 $default-font-size: 16px;
-$footer-link-font-size: 14px;
-$footer-copyright-font-size: 12px;
 $default-font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-$navigation-width: 300px;
-$section-padding-top-and-bottom: 20px;
-$section-padding-left-and-right: 40px;
-$navigation-and-content-padding: 10px;
-$wrapper-padding: 20px;
-$navigation-element-height: 34px;
-$breadcrumbs-margin: 10px;
-$body-min-width: 776px;
-$title-padding: 10px;
-$navigation-border-right: 8px;
-$navigation-level-padding: 20px;
