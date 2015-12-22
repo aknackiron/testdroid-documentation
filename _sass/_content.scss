@@ -6,6 +6,20 @@
             padding-left: $default-content-spacing;
         }
         
+        code, pre {
+            font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+            color:#333;
+            font-size:12px;
+        }
+
+        pre {
+            padding:8px 15px;
+            background: #f8f8f8;
+            border-radius:5px;
+            border:1px solid #e5e5e5;
+            overflow-x: auto;
+        }
+        
         height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2) - 15px);        
         padding: $section-padding-top-and-bottom $section-padding-left-and-right;
         float: none;
@@ -69,7 +83,7 @@
                     }
                     
                     &.active{
-                        a{
+                        > a{
                             font-weight: bold;
                         }
                     }
@@ -79,12 +93,18 @@
                     }
                     
                     /* Different levels*/
-                    ul li a{
+                    ul li{
                         padding-left: calc(#{$navigation-level-padding} * 2);
+                        /*a{
+                            width: calc(100% - (#{$navigation-level-padding} * 2));
+                        }*/
                     }
                     
-                    ul li ul li a{
+                    ul li ul li{
                         padding-left: calc(#{$navigation-level-padding} * 3);
+                        a{
+                            width: 100%;
+                        }
                     }
                 }
                 /* Navigation icon and visibility handling */
@@ -99,17 +119,17 @@
                     }
                 }
                 .navigation-closed{
-                    span{
+                    > span{
                         &:after{
                             content: "\f0da";
                         }
                     }
-                    ul{
+                    > ul{
                         display: none;
                     }
                 }
                 .navigation-open{
-                    span{
+                    > span{
                         &:after{
                             content: "\f0d7";
                         }

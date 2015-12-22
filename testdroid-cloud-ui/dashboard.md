@@ -49,7 +49,7 @@ The main menu at Testdroid Cloud provides its users a quick way to
 navigate through Testdroid Cloud and access the main features of
 it. Currently, the following items are available on menu:
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/dashboard_main_menu.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/dashboard_main_menu.png)
 
 **Dashboard** links back the landing page where summary of projects, test
 runs as well as update of recent changes in Testdroid Cloud will be
@@ -66,7 +66,7 @@ device groups.
 **Interactive** opens Testdroid Cloud's Interactive feature wherein user
 can manually access any Testdroid Cloud device.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/dashboard_main_menu_2.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/dashboard_main_menu_2.png)
 
 ## Test Success Summary
 
@@ -76,7 +76,7 @@ glance of their test run success as percentages and use the view as an
 instant link to the test runs. By clicking the specific test run chart
 user will be redirected to the test run view.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/dashboard_summary_success.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/dashboard_summary_success.png)
  
 ## Overall Success
 
@@ -84,7 +84,7 @@ The **Overall success** view presents the success of projects combining
 all test runs in the context of time.  The execution date is shown on
 X axis and success ratio on Y axis.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/dashboard_overall_success.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/dashboard_overall_success.png)
 
 Users can filter out certain projects by clicking the project name
 below the chart. The chart will automatically scale accordingly
@@ -96,4 +96,4 @@ The **New devices** view shows the latest devices added in Testdroid Cloud
 device selection. By clicking any of devices shown in this view, user
 will be instantly directed to the Device group creation view.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/dashboard_new_devices.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/dashboard_new_devices.png)

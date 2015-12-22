@@ -14,7 +14,7 @@ iOS.
 detected by Testdroid Cloud. These projects cannot be created manually
 in this view.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_projects.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_projects.png)
 
 On the right hand side, users can create project specific test runs,
 reports or share projects with other valid Testdroid Cloud user
@@ -36,7 +36,7 @@ Upload your application
   	local harddisk. For further configuration, click *Next* (either
   	on bottom or top of the view).
 
-	![]({{site.baseurl}}/assets/testdroidCloudUI/projects_choose_file.png)
+	![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_choose_file.png)
 	
 
 1. Select the test type
@@ -54,7 +54,7 @@ Upload your application
    When proper test method has been selected, click *Next* (either
    on bottom or arrow on top).
 
-   ![]({{site.baseurl}}/assets/testdroidCloudUI/projects_choose_file_2.png)
+   ![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_choose_file_2.png)
 
 1. Select devices for the test run
  
@@ -65,7 +65,7 @@ Upload your application
  
 	**NOTE!** Device groups can include only Android or iOS devices.
 
-	![]({{site.baseurl}}/assets/testdroidCloudUI/projects_device_groups.png)
+	![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_device_groups.png)
 
 1. Advanced options for the test run
 
@@ -88,7 +88,7 @@ Upload your application
    this option is used, the POST call will be performed when test run
    is finished.
 
-   ![]({{site.baseurl}}/assets/testdroidCloudUI/projects_advanced_options.png)
+   ![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_advanced_options.png)
 
 
    Start the test run by clicking Start button. User will now
@@ -107,7 +107,7 @@ devices), followed by installation and launch of the app and tests.
 
 The first widget in Test Run View is summary.
 
-![Picture. Test run view summary -widget]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_overview.png)
+![Picture. Test run view summary -widget]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_overview.png)
 
 Overall statuses
 
@@ -122,7 +122,7 @@ Test Case and Screenshots comparison views from the Summary widget.
 
 Test run view details -widget contains summary information for each device.
 
-![Picture. Test run view details -widget]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_details.png)
+![Picture. Test run view details -widget]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_details.png)
 
 On the top-right of the test run widget, user can filter data shown in
 widget. For example, user can filter passed, failed, excluded, and not
@@ -133,7 +133,7 @@ clicking the device row.  User can open all device runs by clicking
 Show all X devices where X indicated the number of used devices in the
 test run.  User can also retry the test run for visible devices.
 
-![Picture. Retry.]({{site.baseurl}}/assets/testdroidCloudUI/projects_retry_listed.png)
+![Picture. Retry.]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_retry_listed.png)
 
 **Note!** Previous test run information for the device will be
   overwritten!
@@ -146,7 +146,7 @@ test (presented either as green/success of red/failure) the test steps
 will be shown. User can also filter successful test runs by clicking
 the eye icon on the top-right corner.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_test_steps.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_test_steps.png)
 
 ## Device run details / Screenshots
  
@@ -157,7 +157,7 @@ may have 22 steps. Each step will include a screenshot and if the step
 includes multiple screenshots, those are named as <number of
 step>.<sub-number>.  (e.g. 6.1, 6.2).
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_details_screenshots.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_details_screenshots.png)
 
 User can download all captured screenshots by clicking Download
 screenshots on the top right-corner of the widget.
@@ -168,7 +168,7 @@ The Performance view provides details of the test run for CPU and
 memory usage.  User can click any given step/time to get more specific
 information about resource consumption.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_details_performance.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_details_performance.png)
 
 The performance log can be also downloaded by clicking the Download
 performance log button on the top right-corner of the widget.
@@ -181,7 +181,7 @@ can be configured with types of information user wants to investigate
 and show in Logs view. Available configurations are: Info, Debug,
 Warning, Error, Assert and Verbose.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_details_logs.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_details_logs.png)
 
 ## Device run details / Device files
  
@@ -190,7 +190,7 @@ reviewed and download from this view. For example, if test run
 generates additional logs, users can get those files through this view
 after the test run is completed.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_details_device_files.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_details_device_files.png)
 
 All additional files can be downloaded by clicking Download all files
 button on the top right-corner of the widget.
@@ -206,4 +206,4 @@ browsed also with arrow button on the top right-corner of the
 widget. For full-screen mode, user can click Full screen button and
 for downloading all screenshot Download screenshots button.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/projects_run_details_sc_comparision.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/projects_run_details_sc_comparision.png)

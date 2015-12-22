@@ -18,17 +18,17 @@ You can add a subaccount user following these steps.
  
 ## Go to subscription menu
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/subscriptions_link.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/subscriptions_link.png)
 
 ## Select Account users -icon
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/subscriptions_select_account.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/subscriptions_select_account.png)
  
 ## Create a new user as a subaccount user
 
 New user will receive an email in order to activate his account.
 
-![]({{site.baseurl}}/assets/testdroidCloudUI/subscriptions_create_new_user.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-ui/subscriptions_create_new_user.png)
 
 **Note!** You cannot add an existing user from the UI. Contact
   support@bitbar.com for adding an existing user.
