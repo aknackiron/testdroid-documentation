@@ -13,8 +13,6 @@
             <span class="navigation-icon float-left"></span><a href="{{ site.url }}{{ nav.url }}">{{ nav.title }}</a>
           <ul>
             {% for subcategory in nav.subcategories %}
-                <!-- Check that current[3] is index? -->
-                <!--<p>{{current[3]}}</p>-->
                 {% if current[3] contains '.' %}
                     {% capture currentSub %}{{current[1]}}/{{current[2]}}{% endcapture %}
                 {% endif %}
