@@ -95,6 +95,13 @@
       subhref: "bugs"
     - subtitle: "FAQ"
       subhref: "faq"
+    - subtitle: "Appium"
+      subhref: "technical-docs/appium"
+    - subtitle: "Calabash"
+      subhref: "technical-docs/calabash"
+
+- title: "Testdroid Cloud"
+  href: "testdroid-cloud-ui"
 
 - title: "Useful Links"
   subcategories:
@@ -103,3 +110,17 @@
     - subtitle: "Github Repository"
     - subtitle: "Official Appium Documentation"
     - subtitle: "Official Calabash Documentation"
+    - subtitle: "Cloud API"
+      subhref: "testdroid-cloud-integration/api/index.html"
+    - subtitle: "Jenkins"
+      subhref: "testdroid-cloud-integration/jenkins-plugin.html"
+
+- title: "Example Test"
+  href: "example-test"
+  subcategories: 
+    - subtitle: "Example Test Subpage"
+      subhref: "example-test/example-test-subpage"
+      subcategories:
+        - subtitle: "Example Test Subpage's Subpage"
+          subhref: "example-test/example-test-subpage/example-test-subpages-subpage"
+          

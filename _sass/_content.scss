@@ -1,0 +1,163 @@
+    section{
+        h1, h2, h3, h4, h5, p, ul{
+            margin-bottom: $default-content-spacing;
+        }
+        ul{
+            padding-left: $default-content-spacing;
+        }
+        
+        code, pre {
+            font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+            color:#333;
+            font-size:12px;
+        }
+
+        pre {
+            padding:8px 15px;
+            background: #f8f8f8;
+            border-radius:5px;
+            border:1px solid #e5e5e5;
+            overflow-x: auto;
+        }
+        
+        height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2) - 15px);        
+        padding: $section-padding-top-and-bottom $section-padding-left-and-right;
+        float: none;
+        width: calc(100% - (#{$section-padding-left-and-right} * 2));
+        background-color: $section-background-color;
+        .wrapper{
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            width: 100%;
+            background-color: $content-background-color;
+            border: 1px solid $content-border-color;
+            
+            .navigation, .content{              
+                display: block;
+            }
+            .navigation{
+                width: $navigation-width;
+                background-color: $navigation-background;
+                
+                /* 1px fix for border movement */
+                height: calc(100% - 1px);
+                overflow-y: auto;
+                overflow-x: hidden;
+                position: relative;
+                
+                .navigation-control{
+                    position: absolute;
+                    right: 0px;
+                    width: 10px;
+                    height: 40px;
+                    top: 50%;
+                    z-index: 1000000;
+                }
+                
+                nav{
+                    border-right: $navigation-border-right solid $content-border-color;
+                    min-height: 100%;
+                }
+                
+                ul, li{
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                li{  
+                    /* FF has problems with line-height and element size being same 
+                    overcome by taking borders into account*/
+                    min-height: calc(#{$navigation-element-height} + 2px);
+                    line-height: $navigation-element-height;
+                    padding-left: $navigation-level-padding;
+                    
+                    a{
+                        color: $default-text-color;
+                        display: inline-block;                      
+                        width: calc(100% - (#{$navigation-level-padding}));
+                        
+                        &:hover{
+                            background-color: $silver;
+                        }
+                    }
+                    
+                    &.active{
+                        > a{
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    
+                    /* Different levels*/
+                    ul li{
+                        padding-left: calc(#{$navigation-level-padding} * 2);
+                        /*a{
+                            width: calc(100% - (#{$navigation-level-padding} * 2));
+                        }*/
+                    }
+                    
+                    ul li ul li{
+                        padding-left: calc(#{$navigation-level-padding} * 3);
+                        a{
+                            width: 100%;
+                        }
+                    }
+                }
+                /* Navigation icon and visibility handling */
+                .navigation-closed, .navigation-open{
+                    span{
+                        cursor: pointer;
+                        width: $navigation-level-padding;
+                        text-align: center;
+                        &:after{
+                            font-family: "FontAwesome";
+                        }
+                    }
+                }
+                .navigation-closed{
+                    > span{
+                        &:after{
+                            content: "\f0da";
+                        }
+                    }
+                    > ul{
+                        display: none;
+                    }
+                }
+                .navigation-open{
+                    > span{
+                        &:after{
+                            content: "\f0d7";
+                        }
+                    }
+                }
+                .navigation-icon-placeholder{
+                    width: $navigation-level-padding;
+                    height: $navigation-element-height;
+                }
+            }
+            .title{
+                border-bottom: 1px solid $content-border-color;
+                padding-bottom: $title-padding;
+                text-align: center;
+            }
+            .breadcrumbs{
+                margin: $breadcrumbs-margin 0;
+            }
+            .content{
+                padding: $navigation-and-content-padding; 
+                height: calc(100% - (#{$navigation-and-content-padding} * 2));
+                overflow-y: auto;
+            }
+            &:after {
+              clear: both;
+              content: '';
+              display: block;
+            }
+        }
+    }
+    

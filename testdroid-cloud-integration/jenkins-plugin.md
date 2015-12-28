@@ -27,7 +27,7 @@ and there is Testdroid Cloud section where you can fill out your
 Testdroid account details. Press *Authorize* button to validate your
 account details.
 
-![]({{site.baseurl}}/assets/testdroidCloudIntegration/ric-main-config.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-main-config.png)
 
 
 ## Run In Cloud - Build Step
@@ -44,7 +44,7 @@ open Cloud webpage.
 group* dropdown list. Create your device group(s) first before
 continuing creating the build step.
 
-![]({{site.baseurl}}/assets/testdroidCloudIntegration/ric-build-step.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-build-step.png)
 
 You can configure annotations in the following section. [Here's a good
 blog
@@ -52,7 +52,7 @@ post](http://help.testdroid.com/customer/portal/articles/1256803-using-annotatio
 how to use annotations with Run-in-cloud plugin to execute subsets of
 tests.
 
-![]({{site.baseurl}}/assets/testdroidCloudIntegration/ric-build-step-2.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-build-step-2.png)
 
 There's 2 ways to get notification from Testdroid about your test runs
 being finished.
@@ -62,7 +62,7 @@ being finished.
 Jenkins is polling Testdroid for the results. Test results are copied
 from Testdroid to Jenkins workspace after the tests are finished.
 
-![]({{site.baseurl}}/assets/testdroidCloudIntegration/ric-api-call.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-api-call.png)
 
 ### HOOK URL
 
@@ -74,5 +74,5 @@ POST message body: testRunId=%s&projectId=%s&status=FINISHED Note!
 This requires your HOOK URL is reachable from Internet eg. Jenkins
 instance can be reached from Testdroid Cloud.
 
-![]({{site.baseurl}}/assets/testdroidCloudIntegration/ric-hook-url.png)
+![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-hook-url.png)
 
