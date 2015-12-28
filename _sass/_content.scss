@@ -158,6 +158,35 @@
               content: '';
               display: block;
             }
+            
+            /* Search styling */
+            .search-result{
+                list-style: none;
+                padding: 0 20px;
+                /*text-overflow: ellipsis;*/
+                
+                /*Testing*/
+                p{
+                    $lines-to-show: 2;
+
+                    /* http://codepen.io/martinwolf/pen/qlFdp */
+                    display: block; /* Fallback for non-webkit */
+                    display: -webkit-box;
+                    /*max-width: 400px;*/
+                    /* max-width: calc(100% - 50px);*/
+                    /*height: $font-size*$line-height*$lines-to-show;*/ /* Fallback for non-webkit */
+                    /* replace by a function like above */
+                    height: 44px;
+
+                    /*margin: 0 auto;*/
+                    /*font-size: $font-size;
+                    line-height: $line-height;*/
+                    -webkit-line-clamp: $lines-to-show;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
         }
     }
     
