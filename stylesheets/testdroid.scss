@@ -1,22 +1,17 @@
 ---
 ---
 @import "colors";
-/*Stylistical constants, can be moved to own file. Left here for quick reference*/
-$header-height: 61px;
-$footer-height: 76px;
 
-$default-font-size: 16px;
-$footer-link-font-size: 14px;
-$footer-copyright-font-size: 12px;
-$default-font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-$navigation-width: 200px;
-$section-padding-top-and-bottom: 20px;
-$section-padding-left-and-right: 40px;
-$navigation-and-content-padding: 10px;
-$wrapper-padding: 20px;
-$navigation-element-height: 34px;
-$breadcrumbs-margin: 10px;
-$body-min-width: 776px;
+@import "constants";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
 
 html, body{
     font-size: $default-font-size;
@@ -24,21 +19,21 @@ html, body{
     color: $default-text-color;
     min-width: $body-min-width;
     
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
     h1, h2, h3, h4, h5, h6{
         margin: 0;
         color: $default-text-color;
     }
     
     a{
-        colort: $link-blue;
+        color: $link-blue;
     }
 }
 
 body{
-    
-    padding: 0;
-    margin: 0;
-    
     /*                      COMBINED    STYLES  START                         */
     header, footer{
         position: static;
@@ -48,142 +43,13 @@ body{
     }
     /*                      COMBINED    STYLES  END                           */
     
-    /*                        HEADER    START                                 */
-    header{       
-        height: $header-height;
-               
-        a{
-            margin: 10px 20px 0 20px;
-            display: inline-block;
-            max-width: 40%;
-        }
-        img{
-            max-height: 40px;
-        }
-    }
-    /*                          HEADER  END                                   */
+    @import "header";
     
-    /*                          FOOTER  START                                 */
-    footer{
-        bottom: 0;
-        min-height: $footer-height;
-        text-align: center;
-        color: $footer-text-color;
-        line-height: 30px;
-        
-        a{
-            color: $footer-text-color;
-            text-decoration: none;
-            &:hover{
-                color: $white;
-            }
-        }
-        
-        #footer-wrapper{
-            max-width: 792px;
-            margin: 0 auto;
-            padding: 0 70px;
-            #top-box{
-                font-size: $footer-link-font-size;
-                *{
-                    margin: 0 10px;
-
-                }
-                border-bottom: 1px solid $footer-border-color;
-            }
-            #bottom-box{
-                font-size: $footer-copyright-font-size;
-                margin-top: 10px;
-                
-                i{
-                    font-size: 24px;
-                }
-                
-            }
-        }
-    }
-    /*                          FOOTER  END                                   */
+    @import "footer";
     
-    /*                      CONTENT   START                                   */
-    section{
-        padding: $section-padding-top-and-bottom $section-padding-left-and-right;
-        float: none;
-        width: calc(100% - (#{$section-padding-left-and-right} * 2));
-        background-color: $section-background-color;
-        .wrapper{
-            display: block;
-            /*Should be maybe min-height? consider using vh instead of %*/
-            min-height: calc(100vh - #{$footer-height} - #{$header-height} - (#{$section-padding-top-and-bottom} * 2) - 42px);
-            margin: 0 auto;
-            padding: $wrapper-padding $wrapper-padding $wrapper-padding 0;
-            max-width: 1170px;
-            width: calc(100% - (#{$section-padding-left-and-right} * 2));
-            background-color: $content-background-color;
-            border: 1px solid $content-border-color;
-            
-            .navigation, .content{
-                display: inline-block;
-            }
-            .navigation{
-                width: $navigation-width;
-                border-right: 1px solid $content-border-color;
-                /*padding-right: $navigation-and-content-padding;*/
-                
-                ul, li{
-                    list-style-type: none;
-                    padding: 0;
-                    margin: 0;
-                }
-                li{  
-                    min-height: $navigation-element-height;
-                    line-height: $navigation-element-height;
-                    border-left: 3px solid $white;
-                    border-bottom: 1px solid $grey;
-                    padding-left: 2px;
-                    padding-right: $navigation-and-content-padding;
-                    a{
-                        color: $default-text-color;
-                        display: block;
-                    }
-                    
-                    &:hover{
-                        background-color: $silver;
-                        border-left: 3px solid $blue;
-                    }
-                    
-                    &.active{
-                        background-color: $light-grey;
-                        border-left: 3px solid $green;
-                    }
-                    
-                    &:last-child{
-                        border-bottom: none;
-                    }
-                }
-            }
-            .title{
-                border-bottom: 1px solid $content-border-color;
-                padding-bottom: 10px;
-                text-align: center;
-                margin-left: $wrapper-padding;
-            }
-            .breadcrumbs{
-                margin: $breadcrumbs-margin 0;
-            }
-            .content{
-                width: calc(100% - #{$navigation-width} - (#{$navigation-and-content-padding} * 2) - 1px);
-                padding-left: $navigation-and-content-padding;  
-            }
-            &:after {
-              clear: both;
-              content: '';
-              display: block;
-            }
-        }
-    }
-    /*                          CONTENT END                                   */
+    @import "content";
     
-    /*                      GENERAL STYLES  START                             */
+    /*                      GENERAL STYLES                                    */
     .float-left{
         float: left;
     }
