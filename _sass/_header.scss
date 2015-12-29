@@ -10,14 +10,46 @@
             margin-top: 4px;
         }
         
-        #site-search{
-            width: $site-search-width;
-            line-height: 16px;
-            padding: 3px 5px;
+        #site-search{     
             margin: 6px 20px 0px 0px;
-            background-color: $testdroidcom-grey;
-            border-color: $testdroidcom-grey;
-            color: $search-text;
+            position: relative;
+            .search-box{
+                width: $site-search-width;
+                line-height: 16px;
+                padding: 3px 5px;
+                background-color: $testdroidcom-grey;
+                border-color: $testdroidcom-grey;
+                color: $search-text;
+            }
+            .search-button{
+                position: absolute;
+                display: block;
+                width: 22px;
+                height: 22px;
+                line-height: 24px;
+                top: 2px;
+                right: 2px;
+                background: transparent;
+                border-color: transparent;              
+                cursor: pointer;
+            }
+            .search-icon{
+                position: absolute;
+                display: block;
+                width: 22px;
+                height: 22px;
+                line-height: 24px;
+                text-align: center;
+                top: 2px;
+                right: 2px;
+                background-color: $testdroidcom-grey;
+                color: $search-text;
+                
+                &:after{
+                    font-family: "FontAwesome";
+                    content: "\f002";
+                }
+            }
         }
     }
     

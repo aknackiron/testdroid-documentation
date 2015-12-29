@@ -109,6 +109,17 @@ $(document).ready(function(){
                         return "<b>"+matchCase(queryWords[index], match)+"</b>";
                     });
                 }
+                
+                // html decode result content
+                // Thanks to lucascaro & Mark Amery http://stackoverflow.com/questions/1147359/how-to-decode-html-entities-using-jquery
+                function decodeEntities(encodedString) {
+                    var textArea = document.createElement('textarea');
+                    textArea.innerHTML = encodedString;
+                    return textArea.value;
+                }
+
+                contentString = decodeEntities(contentString);
+                
                 return contentString;
             };
 
