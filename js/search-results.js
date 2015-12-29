@@ -1,3 +1,4 @@
+//Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam
 $(document).ready(function(){
     // results.js
     $(function(Query,utils) {
@@ -73,15 +74,62 @@ $(document).ready(function(){
                 
                 console.log('results');
                 console.log(results.length);
+                
+                //Default page
+                //var pageNumber = 1;
+                
+                /* Test pagination */
+                console.log(window.location.href);
+                var params = window.location.search.substring(1);
+                console.log(params);
+                var vars = params.split("&");
+                console.log(vars);
+                var pageParam = {};
+                var queryParam = "";
+                for (var i=0;i<vars.length;i++) {
+                    var helper = vars[i].split("=");
+                    if (helper[0] == "page"){
+                        //var keyValue = {};
+                        pageParam[helper[0]] = parseInt(helper[1]);
+                        //pageParam.push(keyValue);
+                        //pageNumber = helper[1];
+                    }
+                    if (helper[0] == "query"){
+                        queryParam = helper.join("=");
+                    }
+                }
+                console.log("pageParam");
+                console.log(pageParam);
+                
+                //var startingIndex = function(){
+                //    $.each(pairs, function(pair)){
+                //        
+                //    }
+                //}
 
                 // append each result link, with a border that corresponds to a color with a strength equal to its percentage
                 // of the total score
-                $.each(results, function(i,result) {
+        //        $.each(results, function(i,result) {
+        
+                var startingIndex = 0;
+                //var endingIndex = visibleResults;
+                if (pageParam.page && !isNaN(pageParam.page)){                    
+                    startingIndex = pageParam.page;
+                }
+                startingIndex = (startingIndex - 1) * visibleResults;
+                var endingIndex = startingIndex * visibleResults + visibleResults;
+                
+        
+                for (var i = startingIndex; i <= endingIndex; i++){
+                    var result = results[i];
                         /*console.log('result: ');
                         console.log(result);*/
                     
-                    /* Test pagination */
-                    if (i < visibleResults){
+                    if (i >= results.length){
+                        break;
+                    }
+                    
+                    if (i < endingIndex){
                     
                         percentOfTotal = result.score/totalScore;
 
@@ -90,7 +138,7 @@ $(document).ready(function(){
                                 'border-left': '20px solid '+utils.shade('#ffffff',-percentOfTotal)
                         });
                     }
-                    else{
+                    /*else{
                         var amountOfPages = Math.ceil(results.length / visibleResults);
                         
                         console.log(amountOfPages);
@@ -100,7 +148,6 @@ $(document).ready(function(){
                                 if (element.length){
                                     element += " / ";
                                 }
-                                /*element += "<a onclick='cspc(this);'>"+j+"</a>";*/
                                 element += "<a onclick='cspc(this);'>"+j+"</a>";
                             }
                             return element;
@@ -108,9 +155,28 @@ $(document).ready(function(){
                         
                         $results.append(pages());
                         // break each loop
-                        return false;
+                        //return false;
+                    }*/
+                }
+                var amountOfPages = Math.ceil(results.length / visibleResults);
+
+                console.log(amountOfPages);
+                if (amountOfPages > 1){
+                    pages = function(){
+                        element = "";
+                        for (var j = 1; j <= amountOfPages; j++){
+                            if (element.length){
+                                element += " / ";
+                            }
+                            /*element += "<a onclick='cspc(this);'>"+j+"</a>";*/
+                            //element += "<a href='"+site+"/search"+queryParam+"page="+j'>"+j+"</a>";
+                            element += "<a href='"+baseURL+"/search?"+queryParam+"&page="+j+"'>"+j+"</a>";
+                        }
+                        return element;
                     }
-                });		
+
+                    $results.append(pages());
+                }
         });
     }(Query,utils));
 });
