@@ -98,6 +98,8 @@ $(document).ready(function(){
         parents.removeClass("navigation-closed").addClass("navigation-open");
     }
     
+    console.log(activeNavigationElement);
+    
     $("section .navigation .navigation-icon").click(function(){
         parent = $(this).parent("li");
         if (parent.hasClass("navigation-closed")){

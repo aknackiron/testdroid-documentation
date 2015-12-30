@@ -52,8 +52,10 @@
             /* FF has problems with line-height and element size being same 
             overcome by taking borders into account*/
             min-height: calc(#{$navigation-element-height} + 2px);
-            line-height: $navigation-element-height;
-            padding-left: $navigation-level-padding;
+            
+            line-height: $navigation-element-height; 
+            
+            padding-left: $navigation-level-padding;  
 
             a{
                 color: $default-text-color;
@@ -82,10 +84,16 @@
                 a:only-child{
                     padding-left: $navigation-level-padding;
                 }
+                a{
+                    font-size: $navigation-2nd-lvl-font-size;
+                }
             }
 
             ul li ul li{
                 padding-left: $navigation-level-padding;
+                a{
+                    font-size: $navigation-3rd-lvl-font-size;
+                }
             }
         }
         /* Navigation icon and visibility handling */
