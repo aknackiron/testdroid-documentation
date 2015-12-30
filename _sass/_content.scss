@@ -40,15 +40,22 @@
                 .navigation-control{
                     /*position: fixed;*/
                     position: absolute;
-                    right: 0px;
                     /*left: 292px;*/
                     width: 16px;
                     /*height: 40px;*/
                     top: 50%;
-                    z-index: 1000000;
+                    /*z-index: 1000000;*/
+                    
+                    /*click through fix*/
+                    /*right: 0px;*/
+                    right: 17px;
+                    height: 0px;
+                    width: 0px;
+                    z-index: 1;
                     &:after{
                         font-family: "FontAwesome";
                         content: "\f07e";
+                        /*cursor: e-resize;*/
                     }
                     
                 }
