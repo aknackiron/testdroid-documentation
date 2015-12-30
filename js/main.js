@@ -91,7 +91,7 @@ $(document).ready(function(){
     
     /* End of search related code */
     
-    /* Open navigation element if sub element is active */
+    /* Open navigation element if sub element is active, also open sub navigation if exists */
     activeNavigationElement = $("section .navigation .navigation-closed .active");
     if (activeNavigationElement.length == 1){
         parents = $(activeNavigationElement).parents(".navigation-closed");

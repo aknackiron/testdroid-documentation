@@ -1,0 +1,123 @@
+    .navigation-control-placeholder{
+        position: relative;
+        height: 100%;
+        width: $navigation-width;
+        .navigation-control{
+            position: absolute;
+            width: 16px;
+            top: 50%;
+
+            /*click through fix*/
+            right: 17px;
+            height: 0px;
+            width: 0px;
+            z-index: 1;
+            &:after{
+                font-family: "FontAwesome";
+                content: "\f07e";
+            }
+
+        }
+        /* override jquery UI default resize handle width */
+        .ui-resizable-e{
+            width: 12px;
+            right: 0;
+        }
+    }
+
+    .navigation, .content{              
+        display: block;
+    }
+    .navigation{
+
+        width: calc(100% - 8px);    
+        /* 1px fix for border movement */
+        height: calc(100% - 1px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+
+        nav{
+            border-right: $navigation-border-right solid $content-border-color;
+            min-height: 100%;
+            background-color: $navigation-background;
+        }
+
+        ul, li{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li{  
+            /* FF has problems with line-height and element size being same 
+            overcome by taking borders into account*/
+            min-height: calc(#{$navigation-element-height} + 2px);
+            line-height: $navigation-element-height;
+            padding-left: $navigation-level-padding;
+
+            a{
+                color: $default-text-color;
+                display: inline-block;                      
+                width: calc(100% - (#{$navigation-level-padding}));
+
+                &:hover{
+                    background-color: $silver;
+                }
+            }
+
+            &.active{
+                > a{
+                    font-weight: bold;
+                }
+            }
+
+            &:last-child{
+                border-bottom: none;
+            }
+
+            /* Different levels*/
+            ul li{
+                padding-left: $navigation-level-padding;
+
+                a:only-child{
+                    padding-left: $navigation-level-padding;
+                }
+            }
+
+            ul li ul li{
+                padding-left: $navigation-level-padding;
+            }
+        }
+        /* Navigation icon and visibility handling */
+        .navigation-closed, .navigation-open{
+            span{
+                cursor: pointer;
+                width: $navigation-level-padding;
+                text-align: center;
+                &:after{
+                    font-family: "FontAwesome";
+                }
+            }
+        }
+        .navigation-closed{
+            > span{
+                &:after{
+                    content: "\f0da";
+                }
+            }
+            > ul{
+                display: none;
+            }
+        }
+        .navigation-open{
+            > span{
+                &:after{
+                    content: "\f0d7";
+                }
+            }
+        }
+        .navigation-icon-placeholder{
+            width: $navigation-level-padding;
+            height: $navigation-element-height;
+        }
+    }

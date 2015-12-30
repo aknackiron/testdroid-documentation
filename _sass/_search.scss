@@ -1,0 +1,24 @@
+    .search-results{  
+        padding: 0px;
+        .search-result{
+            list-style: none;
+            padding: 0px 20px;
+            p{
+                $lines-to-show: 2;
+
+                /* http://codepen.io/martinwolf/pen/qlFdp */
+                display: block; /* Fallback for non-webkit */
+                display: -webkit-box;
+                height: 44px;
+
+                -webkit-line-clamp: $lines-to-show;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    /* hide search result count from lunr */
+    .search-results-count{
+        display: none;
+    }

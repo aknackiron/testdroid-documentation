@@ -9,8 +9,12 @@
         {% assign navHref = nav.href %}
 
         {% if nav.subcategories != null %}
+            {% if nav.title == page.title or navHref == current[1] %}
+        <li class="navigation-open {% if current[2] contains '.' %} active {% endif %}">
+            {% else %}   
         <li class="navigation-closed">
-            <span class="navigation-icon float-left"></span><a href="{{ site.url }}{{ nav.url }}">{{ nav.title }}</a>
+            {% endif %}
+            <span class="navigation-icon float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
           <ul>
             {% for subcategory in nav.subcategories %}
                 {% if current[3] contains '.' %}
@@ -18,7 +22,7 @@
                 {% endif %}
                 {% if currentSub == subcategory.subhref %}
                     {% if subcategory.subcategories != null %}
-                    <li class="navigation-closed active">
+                    <li class="navigation-open active">
                         <span class="navigation-icon float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
                         <ul>
                         {% for subsubcategory in subcategory.subcategories %}
@@ -69,7 +73,7 @@
 
         {% elsif nav.title == page.title or navHref == current[1] %}
         <li class="active">
-          <span class="navigation-icon-placeholder float-left"></span><a href="{{ nav.url }}">{{ nav.title }}</a>
+          <span class="navigation-icon-placeholder float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
         </li>
 
         {% else %}
