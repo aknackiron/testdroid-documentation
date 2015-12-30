@@ -125,14 +125,19 @@
                         /*a{
                             width: calc(100% - (#{$navigation-level-padding} * 2));
                         }*/
+                        
+                        /*a:not(.navigation-icon + a)*/
+                        a:only-child{
+                            padding-left: $navigation-level-padding;
+                        }
                     }
                     
                     ul li ul li{
                         padding-left: $navigation-level-padding;
-                        a{
+                        /*a{
                             margin-left: $navigation-level-padding;
                             width: calc(100% - #{$navigation-level-padding});
-                        }
+                        }*/
                     }
                 }
                 /* Navigation icon and visibility handling */
