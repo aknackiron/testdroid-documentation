@@ -98,8 +98,6 @@ $(document).ready(function(){
         parents.removeClass("navigation-closed").addClass("navigation-open");
     }
     
-    console.log(activeNavigationElement);
-    
     $("section .navigation .navigation-icon").click(function(){
         parent = $(this).parent("li");
         if (parent.hasClass("navigation-closed")){
@@ -114,5 +112,9 @@ $(document).ready(function(){
         handles: 'e',
         maxWidth: 350
     });
+    
+    // hide resize icon if not touch device
+    if (!Modernizr.touch){
+        $(".navigation-control-placeholder .navigation-control").hide();
+    }
 });
-
