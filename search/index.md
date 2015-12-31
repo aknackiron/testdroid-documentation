@@ -8,3 +8,14 @@ title: Search results
 <ul class="search-results"></ul>
 <div class="search-spinner"></div>
 <script src="{{ site.baseurl }}/js/search-results.js"></script>
+
+<!--<script>
+
+    var w;
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(w) == "undefined") {
+            w = new Worker("{{ site.baseurl }}/js/search-results.js");
+        }
+    } 
+
+</script>-->

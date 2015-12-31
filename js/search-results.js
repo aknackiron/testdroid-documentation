@@ -2,7 +2,7 @@
 $(document).ready(function(){
     // results.js
     /*$(function(Query,utils) {*/
-    setTimeout(function() {$(function(Query) {
+    $(function(Query) {
         // Max lenght of content snippet
         var contentMaxLength = 400;
         // Results per page
@@ -13,11 +13,13 @@ $(document).ready(function(){
                 // some utility functions
                 utils = utils;*/
 
+        console.log('here1 ' + new Date().getTime()); 
         /* NOTICE: getJSON url needs to be fixed */      
         query
         .setFromURL('query')
         .getJSON(baseURL + '/search.json')
         .done(function(data) {
+            console.log('here2 ' + new Date().getTime()); 
             var searchIndex,
                     results,
                     //$resultsCount = $('.search-results-count'),
@@ -34,11 +36,14 @@ $(document).ready(function(){
                     this.field('date');
             });
 
+            console.log('here3 ' + new Date().getTime()); 
+            /* THIS IS THE HEAVIES STEP */
             // add each item from posts.json to the index
             $.each(data,function(i,item) {
                     searchIndex.add(item);
             });
 
+            console.log('here4 ' + new Date().getTime()); 
             // search for the query and store the results as an array
             results = searchIndex.search(query.get());
 
@@ -51,7 +56,7 @@ $(document).ready(function(){
                     }
                 }
             }
-
+            console.log('here5 ' + new Date().getTime()); 
             // show how many results there were, in the DOM
             //$resultsCount.append(results.length + (results.length === 1 ? ' result' : ' results') + ' for "' + query.get() +'"');
 
@@ -123,7 +128,7 @@ $(document).ready(function(){
                 
                 return contentString;
             };
-
+            console.log('here6 ' + new Date().getTime()); 
             for (var i = startingIndex; i <= endingIndex; i++){
                 var result = results[i];
 
@@ -147,7 +152,7 @@ $(document).ready(function(){
                 }
             }
             var amountOfPages = Math.ceil(results.length / visibleResults);
-
+            console.log('here7 ' + new Date().getTime()); 
             if (amountOfPages > 1){
                 pages = function(){
                     element = "";
@@ -167,11 +172,22 @@ $(document).ready(function(){
 
                 $results.append(pages());
             }
+            console.log('here8 ' + new Date().getTime()); 
             $(".content .title").append(' for "'+decodeURI(queryParam.query)+'"');
             if (!results.length){
                 $results.append('<li class="search-result"><p>No results for "'+decodeURI(queryParam.query)+'".</p></li>');
             }
         });
     /*}(Query,utils));*/
-    }(Query));}, 0);
+    }(Query));
+    
+    /* Process results */
+    
+    /* TODO:
+     * 1. Separate search possible results get and processiing
+     * 2. Defer results creation into web worker, it is currently the heaviest step and freezes the thread for ~1,3s
+     * 3. Push results to browser cookie in case of page change or new query with the same term
+     * 4. Modify script to fetch results from cookie if such exists
+     *   */
+    
 });
