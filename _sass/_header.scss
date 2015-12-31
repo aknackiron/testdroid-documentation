@@ -19,7 +19,12 @@
                 padding: 3px 5px;
                 background-color: $testdroidcom-grey;
                 border-color: $testdroidcom-grey;
-                color: $search-text;
+                color: $search-text;       
+            }
+            @media screen and (max-width: 480px) {
+                .search-box{
+                    width: $site-search-width-sm;
+                }
             }
             .search-button, .search-icon{
                 position: absolute;
@@ -45,4 +50,3 @@
             }
         }
     }
-    
