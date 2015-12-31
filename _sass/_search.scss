@@ -17,4 +17,17 @@
                 text-overflow: ellipsis;
             }
         }
+        
+    }
+    .search-results:empty + .search-spinner{
+        width: 100px;
+        margin: 0 auto;
+        &:after{
+            content: "\f013";
+            font-family: 'FontAwesome';
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 2s linear infinite;
+            text-align: center;
+            font-size: 100px;
+        }
     }
