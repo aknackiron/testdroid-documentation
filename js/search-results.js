@@ -2,7 +2,7 @@
 $(document).ready(function(){
     // results.js
     /*$(function(Query,utils) {*/
-    $(function(Query) {
+    setTimeout(function() {$(function(Query) {
         // Max lenght of content snippet
         var contentMaxLength = 400;
         // Results per page
@@ -168,7 +168,10 @@ $(document).ready(function(){
                 $results.append(pages());
             }
             $(".content .title").append(' for "'+decodeURI(queryParam.query)+'"');
+            if (!results.length){
+                $results.append('<li class="search-result"><p>No results for "'+decodeURI(queryParam.query)+'".</p></li>');
+            }
         });
     /*}(Query,utils));*/
-    }(Query));
+    }(Query));}, 0);
 });
