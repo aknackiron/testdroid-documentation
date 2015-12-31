@@ -5,5 +5,5 @@ title: Search results
 <!-- Test lunr.js for search results -->
 <script src="{{ site.baseurl }}/js/lunr.min.js"></script>
 <script src="{{ site.baseurl }}/js/search-results.js"></script>
-<div class="search-results-count"></div>
+<!--<div class="search-results-count"></div>-->
 <ul class="search-results"></ul>

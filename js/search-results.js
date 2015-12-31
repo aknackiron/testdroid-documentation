@@ -1,16 +1,17 @@
 //Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam
 $(document).ready(function(){
     // results.js
-    $(function(Query,utils) {
+    /*$(function(Query,utils) {*/
+    $(function(Query) {
         // Max lenght of content snippet
         var contentMaxLength = 400;
         // Results per page
         var visibleResults = 10;
 
         var query = new Query(),
-                site = location.protocol + "//" + location.host,
+                site = location.protocol + "//" + location.host /*,
                 // some utility functions
-                utils = utils;
+                utils = utils;*/
 
         /* NOTICE: getJSON url needs to be fixed */      
         query
@@ -19,7 +20,7 @@ $(document).ready(function(){
         .done(function(data) {
             var searchIndex,
                     results,
-                    $resultsCount = $('.search-results-count'),
+                    //$resultsCount = $('.search-results-count'),
                     $results = $('.search-results'),
                     totalScore = 0,
                     percentOfTotal;
@@ -52,7 +53,7 @@ $(document).ready(function(){
             }
 
             // show how many results there were, in the DOM
-            $resultsCount.append(results.length + (results.length === 1 ? ' result' : ' results') + ' for "' + query.get() +'"');
+            //$resultsCount.append(results.length + (results.length === 1 ? ' result' : ' results') + ' for "' + query.get() +'"');
 
             // get the total score of all items, so that we can divide each result into it, giving us a percentage
             $.each(results, function(i, result) {
@@ -140,9 +141,9 @@ $(document).ready(function(){
                     }
 
                     $results.append('<li class="search-result"><a href="'+ site + result.ref +'">'+result.title+'</a><p>'+decodeURI(result.content)+'</p></li>');
-                    $results.children('li').last().css({
+                    /*$results.children('li').last().css({
                             'border-left': '20px solid '+utils.shade('#ffffff',-percentOfTotal)
-                    });
+                    });*/
                 }
             }
             var amountOfPages = Math.ceil(results.length / visibleResults);
@@ -168,5 +169,6 @@ $(document).ready(function(){
             }
             $(".content .title").append(' for "'+decodeURI(queryParam.query)+'"');
         });
-    }(Query,utils));
+    /*}(Query,utils));*/
+    }(Query));
 });

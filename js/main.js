@@ -55,7 +55,7 @@ baseURL = location.protocol + "//" + location.host + "/testdroid-documentation";
 })(this,$);
 
 // utils.js
-;(function(global) {
+/*;(function(global) {
         'use strict';
 
         var utils = {
@@ -69,7 +69,7 @@ baseURL = location.protocol + "//" + location.host + "/testdroid-documentation";
         }
 
         global.utils = utils;
-})(this);
+})(this);*/
 
 $(document).ready(function(){
     // search.js
