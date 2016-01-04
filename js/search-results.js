@@ -1,16 +1,12 @@
 //Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam
 $(document).ready(function(){
-    // results.js
-    /*$(function(Query,utils) {*/
+
     $(function(Query) {
 
         var query = new Query(),
             site = location.protocol + "//" + location.host
-            params = window.location.search.substring(1); /*,
-                // some utility functions
-                utils = utils;*/
+            params = window.location.search.substring(1); 
 
-        console.log('here1 ' + new Date().getTime()); 
         /* NOTICE: getJSON url needs to be fixed */      
         query
         .setFromURL('query')
@@ -18,25 +14,15 @@ $(document).ready(function(){
         .done(function(data) {
             vars = {data: data, query: query, site: site, params: params};
             if(typeof(Worker) !== "undefined") {
-                console.log('Worker supported');
-                /*if(typeof(w) == "undefined") {
-                    console.log("w is undefined");
-                    console.log(site);
-                    
-                    w = new Worker("search-worker.js");
-                }
-                w.postMessage(params);*/
                 // call worker function from search index, easier to have it there to modify script url by liquid
                 useSearchWorker();
                 w.postMessage(vars);
             }
             else{
-                console.log("No web worker available");
                 processResults(vars);
             }
             
         });
-    /*}(Query,utils));*/
     }(Query));
     
     /* Process results */
@@ -54,17 +40,12 @@ function processResults(vars){
     var data = vars.data,
         query = vars.query,
         site = vars.site,
-        params = vars.params;
+        params = vars.params,
+        contentMaxLength = 400, // Max lenght of content snippet
+		visibleResults = 10; // Results per page
 
-    // Max lenght of content snippet
-    var contentMaxLength = 400;
-    // Results per page
-    var visibleResults = 10;
-
-    console.log('here2 ' + new Date().getTime()); 
     var searchIndex,
             results,
-            //$resultsCount = $('.search-results-count'),
             $results = $('.search-results'),
             totalScore = 0,
             percentOfTotal;
@@ -78,14 +59,12 @@ function processResults(vars){
             //this.field('date');
     });
 
-    console.log('here3 ' + new Date().getTime()); 
     /* THIS IS THE HEAVIES STEP */
     // add each item from posts.json to the index
     $.each(data,function(i,item) {
             searchIndex.add(item);
     });
-
-    console.log('here4 ' + new Date().getTime()); 
+; 
     // search for the query and store the results as an array
     results = searchIndex.search(query.get());
 
@@ -98,21 +77,17 @@ function processResults(vars){
             }
         }
     }
-    console.log('here5 ' + new Date().getTime()); 
-    // show how many results there were, in the DOM
-    //$resultsCount.append(results.length + (results.length === 1 ? ' result' : ' results') + ' for "' + query.get() +'"');
-
+   
     // get the total score of all items, so that we can divide each result into it, giving us a percentage
     $.each(results, function(i, result) {
             totalScore+=result.score;
     });
-    //var params = window.location.search.substring(1);
 
     var vars = params.split("&");
 
-    var pageParam = {};
-    var queryParam = {};
-    var queryWords = [];
+    var pageParam = {},
+		queryParam = {},
+		queryWords = [];
     for (var i=0;i<vars.length;i++) {
         var helper = vars[i].split("=");
         if (helper[0] == "page"){
@@ -170,7 +145,7 @@ function processResults(vars){
 
         return contentString;
     };
-    console.log('here6 ' + new Date().getTime()); 
+
     for (var i = startingIndex; i <= endingIndex; i++){
         var result = results[i];
 
@@ -188,13 +163,10 @@ function processResults(vars){
             }
 
             $results.append('<li class="search-result"><a href="'+ site + result.ref +'">'+result.title+'</a><p>'+decodeURI(result.content)+'</p></li>');
-            /*$results.children('li').last().css({
-                    'border-left': '20px solid '+utils.shade('#ffffff',-percentOfTotal)
-            });*/
         }
     }
     var amountOfPages = Math.ceil(results.length / visibleResults);
-    console.log('here7 ' + new Date().getTime()); 
+
     if (amountOfPages > 1){
         pages = function(){
             element = "";
@@ -214,7 +186,7 @@ function processResults(vars){
 
         $results.append(pages());
     }
-    console.log('here8 ' + new Date().getTime()); 
+ 
     $(".content .title").append(' for "'+decodeURI(queryParam.query)+'"');
     if (!results.length){
         $results.append('<li class="search-result"><p>No results for "'+decodeURI(queryParam.query)+'".</p></li>');
@@ -222,8 +194,6 @@ function processResults(vars){
 }
 
 function handleWorkerMessage(data){
-    console.log("handleWorkerMessage fired");
-    console.log(data);
     
     function decodeEntities(encodedString) {
         var textArea = document.createElement('textarea');
@@ -251,9 +221,8 @@ function handleWorkerMessage(data){
     var emptyResult = true;
     
     var $results = $('.search-results');
-    console.log(data.length);
+
     for(var i = 0; i <= data.length; i++){
-        console.log('here');
         var result = data[i];
         if (typeof result == "object"){
             emptyResult = false;
@@ -261,8 +230,7 @@ function handleWorkerMessage(data){
             $results.append('<li class="search-result"><a href="'+ site + result.ref +'">'+result.title+'</a><p>'+decodeURI(result.content)+'</p></li>');
         }
         else{
-            if (typeof result == "number" && result > 1){
-                
+            if (typeof result == "number" && result > 1){       
                 pages = function(){
                     element = "";
                     for (var j = 1; j <= result; j++){

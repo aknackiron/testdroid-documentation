@@ -12,8 +12,6 @@ importScripts('lunr.min.js');
     
 onmessage = function(e) {
     // the passed-in data is available via e.data
-    console.log('in worker e');
-    console.log(e);
     processResultsInWorker(e.data);
 };
     
@@ -22,42 +20,27 @@ function processResultsInWorker(vars){
     var data = vars.data,
         query = vars.query,
         site = vars.site,
-        params = vars.params;
-    // Max lenght of content snippet
-    var contentMaxLength = 400;
-    // Results per page
-    var visibleResults = 10;
+        params = vars.params,
+        contentMaxLength = 400, // Max lenght of content snippet
+		visibleResults = 10; // Results per page
 
-    console.log('here2 ' + new Date().getTime()); 
     var searchIndex,
-            results,
-            //$resultsCount = $('.search-results-count'),
-            totalScore = 0,
-            percentOfTotal;
+		results,
+		totalScore = 0,
+		percentOfTotal;
 
     // set up the allowable fields
     searchIndex = lunr(function() {
             this.field('title');
-            //this.field('category');
             this.field('content');
             this.ref('url');
-            //this.field('date');
     });
-
-    console.log('here3 ' + new Date().getTime()); 
-    /* THIS IS THE HEAVIES STEP */
-    // add each item from posts.json to the index
-    //$.each(data,function(i,item) {
-    //        searchIndex.add(item);
-    //});
-    
+  
     for(var i = 0; i < data.length; i++){
         searchIndex.add(data[i]); 
     }
 
-    console.log('here4 ' + new Date().getTime()); 
     // search for the query and store the results as an array
-    //results = searchIndex.search(query.get());
     results = searchIndex.search(query.q);
 
     // add the title of each post into each result, too (this doesn't come standard with lunr.js)
@@ -68,21 +51,11 @@ function processResultsInWorker(vars){
                 results[result].content = data[dataIndex].content.substr(0, contentMaxLength);
             }
         }
-    }
-    console.log('here5 ' + new Date().getTime()); 
-    // show how many results there were, in the DOM
-    //$resultsCount.append(results.length + (results.length === 1 ? ' result' : ' results') + ' for "' + query.get() +'"');
+    } 
 
-    // get the total score of all items, so that we can divide each result into it, giving us a percentage
-    //$.each(results, function(i, result) {
-    //        totalScore+=result.score;
-    //});
     for(var i = 0; i < results.length; i++){
         totalScore+=results[i].score;
-    }
-    
-    
-    //var params = window.location.search.substring(1);
+    }  
 
     var vars = params.split("&");
 
@@ -126,7 +99,6 @@ function processResultsInWorker(vars){
             return result;
         }        
 
-        // queryWords
         for (var index in queryWords){
             r = new RegExp( "(" + queryWords[index] + ")" , 'gi' );
             contentString = contentString.replace(r, function(match) {
@@ -134,21 +106,8 @@ function processResultsInWorker(vars){
             });
         }
 
-        // html decode result content
-        // Thanks to lucascaro & Mark Amery http://stackoverflow.com/questions/1147359/how-to-decode-html-entities-using-jquery
-        
-        // TODO NEED TO DECODE SOMEWHERE ELSE AS WORKER HAS NO ACCESS TO DOM
-        /*function decodeEntities(encodedString) {
-            var textArea = document.createElement('textarea');
-            textArea.innerHTML = encodedString;
-            return textArea.value;
-        }
-
-        contentString = decodeEntities(contentString);*/
-
         return contentString;
     };
-    console.log('here6 ' + new Date().getTime()); 
     
     searchResults = [];
     for (var i = startingIndex; i <= endingIndex; i++){
@@ -160,27 +119,16 @@ function processResultsInWorker(vars){
 
         if (i < endingIndex){
 
-            //percentOfTotal = result.score/totalScore;
-
             //Process keywords
             if (queryWords.length){
                 result.content = processKeywords(result.content);
             }
             
             searchResults.push(result);
-//            $results.append('<li class="search-result"><a href="'+ site + result.ref +'">'+result.title+'</a><p>'+decodeURI(result.content)+'</p></li>');
-            /*$results.children('li').last().css({
-                    'border-left': '20px solid '+utils.shade('#ffffff',-percentOfTotal)
-            });*/
         }
     }
     var amountOfPages = Math.ceil(results.length / visibleResults);
     searchResults.push(amountOfPages);
     searchResults.push(queryParam.query);
     postMessage(searchResults);
-    
-    console.log('here7 ' + new Date().getTime()); 
-    
-    console.log('here8 ' + new Date().getTime()); 
-    
 }
