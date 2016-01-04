@@ -30,10 +30,10 @@ $(document).ready(function(){
             // set up the allowable fields
             searchIndex = lunr(function() {
                     this.field('title');
-                    this.field('category');
+                    //this.field('category');
                     this.field('content');
                     this.ref('url');
-                    this.field('date');
+                    //this.field('date');
             });
 
             console.log('here3 ' + new Date().getTime()); 
