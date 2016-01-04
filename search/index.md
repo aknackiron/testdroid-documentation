@@ -7,15 +7,19 @@ title: Search results
 <!--<div class="search-results-count"></div>-->
 <ul class="search-results"></ul>
 <div class="search-spinner"></div>
-<script src="{{ site.baseurl }}/js/search-results.js"></script>
 
-<!--<script>
-
+<script>
     var w;
-    if(typeof(Worker) !== "undefined") {
+    function useSearchWorker(){       
         if(typeof(w) == "undefined") {
-            w = new Worker("{{ site.baseurl }}/js/search-results.js");
+            w = new Worker("{{ site.baseurl }}/js/search-worker.js");
+        }
+        w.onmessage = function(e){
+            console.log('message from worker');
+            console.log(e);
+            handleWorkerMessage(e.data);
         }
     } 
+</script>
 
-</script>-->
+<script src="{{ site.baseurl }}/js/search-results.js"></script>
