@@ -11,18 +11,30 @@
 importScripts('lunr.min.js');
     
 onmessage = function(e) {
+	console.log("search-worker onmessage");
+	console.log(e.data);
+	
+	
     // the passed-in data is available via e.data
-    processResultsInWorker(e.data);
+
+    //processResultsInWorker(e.data);
+    /* New query returs object data, read from memory returns results */
+    if (e.data.data){
+		processQueryInWorker(e.data);
+	}
+	else{
+		processResultsInWorker(e.data);
+	}
 };
     
 
-function processResultsInWorker(vars){
+function processQueryInWorker(vars){
     var data = vars.data,
         query = vars.query,
         site = vars.site,
         params = vars.params,
-        contentMaxLength = 400, // Max lenght of content snippet
-		visibleResults = 10; // Results per page
+        contentMaxLength = 400; // Max lenght of content snippet
+		
 
     var searchIndex,
 		results,
@@ -59,9 +71,9 @@ function processResultsInWorker(vars){
 
     var vars = params.split("&");
 
-    var pageParam = {};
-    var queryParam = {};
-    var queryWords = [];
+    var pageParam = {},
+		queryParam = {},
+		queryWords = [];
     for (var i=0;i<vars.length;i++) {
         var helper = vars[i].split("=");
         if (helper[0] == "page"){
@@ -72,8 +84,31 @@ function processResultsInWorker(vars){
             queryWords = decodeURI(helper[1]).split(" ");
         }
     }
+    
+    var processData = {pageParam: pageParam, results: results, 
+		queryWords: queryWords, queryParam: queryParam};
+    
+    processResultsInWorker(processData);
+    
+    // Save results to local storage or cookie, so no need to refetch and process
+    postMessage({query: decodeURI(queryParam.query), results: results});
+}
 
-    var startingIndex = 1;
+function processResultsInWorker(data){
+	
+	console.warn("processResultsInWorker");
+	console.log(data.pageParam);
+	console.log(data.results);
+	console.log(data.queryWords);
+	console.log(data.queryParam);
+
+    var pageParam = data.pageParam,
+		results = data.results,
+		queryWords = data.queryWords,
+		queryParam = data.queryParam,
+		startingIndex = 1,
+		visibleResults = 10; // Results per page
+    
     if (pageParam.page && !isNaN(pageParam.page)){                    
         startingIndex = pageParam.page;
     }
@@ -109,7 +144,7 @@ function processResultsInWorker(vars){
         return contentString;
     };
     
-    searchResults = [];
+    var searchResults = [];
     for (var i = startingIndex; i <= endingIndex; i++){
         var result = results[i];
 
@@ -130,5 +165,9 @@ function processResultsInWorker(vars){
     var amountOfPages = Math.ceil(results.length / visibleResults);
     searchResults.push(amountOfPages);
     searchResults.push(queryParam.query);
-    postMessage(searchResults);
+    
+    postableData = {displayableResults: searchResults};
+    postMessage(postableData);
+    
+    //postMessage(searchResults);
 }

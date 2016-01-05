@@ -1,3 +1,11 @@
+/* TODO NEW 
+ * 1. Code cleanup
+ * 2. Remove unneccessary code repeation
+ * 3. Use worker js also when web worker isn't available
+ *  Just don't use it as a worker, but as regular js script
+ * */
+
+
 //Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam
 $(document).ready(function(){
 
@@ -5,24 +13,65 @@ $(document).ready(function(){
 
         var query = new Query(),
             site = location.protocol + "//" + location.host
-            params = window.location.search.substring(1); 
+            params = window.location.search.substring(1);  
+		
+		/* NOTICE: getJSON url needs to be fixed */      
+		query.setFromURL('query');
+		
+		/* Check if specific query has been made previously */
+		console.log("HEREEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		console.log(params);
+		console.log(query);
+		vars = {query: query, site: site, params: params};
+		//var queryWords = q
+		var readResult = readSearchResults(query.q);
+		console.log("readResult");
+		console.log(readResult);
+		if (!readResult){
+			query.getJSON(baseURL + '/search.json').done(function(data) {
+				console.log("READ FAILED!!!!!!!!!!!!!!!!!!!");
+				console.log(data);
+				vars.data = data;
+				handleResults(vars);
+			});
+		}
+		else {
+			console.log("READ SUCCESSFUL!!!!!!!!!!!!!!!!!!!!");
+			
+			//vars.data = readResult;
+			
+			/*pageParam = data.pageParam,
+			results = data.results,
+			queryWords = data.queryWords,
+			queryParam = data.queryParam,*/
+			
+			/* copy from beneath */
+			var anotherHelper = params.split("&");
 
-        /* NOTICE: getJSON url needs to be fixed */      
-        query
-        .setFromURL('query')
-        .getJSON(baseURL + '/search.json')
-        .done(function(data) {
-            vars = {data: data, query: query, site: site, params: params};
-            if(typeof(Worker) !== "undefined") {
-                // call worker function from search index, easier to have it there to modify script url by liquid
-                useSearchWorker();
-                w.postMessage(vars);
-            }
-            else{
-                processResults(vars);
-            }
-            
-        });
+			var pageParam = {},
+				queryParam = {},
+				queryWords = [];
+			for (var i=0;i<anotherHelper.length;i++) {
+				var helper = anotherHelper[i].split("=");
+				if (helper[0] == "page"){
+					pageParam[helper[0]] = parseInt(helper[1]);
+				}
+				if (helper[0] == "query"){
+					queryParam[helper[0]] = helper[1];
+					queryWords = decodeURI(helper[1]).split(" ");
+				}
+			}
+			/* copy from beneath */
+			
+			vars.results = readResult;
+			vars.pageParam = pageParam;
+			vars.queryWords = queryWords;
+			vars.queryParam = queryParam;
+			
+			
+			handleResults(vars);
+		}
+		
     }(Query));
     
     /* Process results */
@@ -35,6 +84,19 @@ $(document).ready(function(){
      *   */
     
 });
+
+function handleResults(vars){
+	if(typeof(Worker) !== "undefined") {
+		// call worker function from search index, easier to have it there to modify script url by liquid
+		useSearchWorker();
+		console.warn("THIS HERE");
+		console.log(vars);
+		w.postMessage(vars);
+	}
+	else{
+		processResults(vars);
+	}
+}
 
 function processResults(vars){
     var data = vars.data,
@@ -194,8 +256,79 @@ function processResults(vars){
 }
 
 function handleWorkerMessage(data){
+	
+	console.log("handleWorkerMessage data");
+	console.log(data);
     
-    function decodeEntities(encodedString) {
+    if (data.displayableResults){		
+		displayWorkerResults(data.displayableResults); 
+	}
+	else if (data.query && data.results){
+		writeSearchResults(data);
+	}
+}
+
+function writeSearchResults(data){
+	if (typeof(Storage) !== "undefined"){
+		writeResultsToSessionStorage(data);
+	}
+	else{
+		writeResultsToCookie(data);
+	}
+}
+
+function readSearchResults(query){
+	console.log("readSearchResults fired!");
+	console.log(query);
+
+	if (typeof(Storage) !== "undefined"){
+		readResult = readResultsFromSessionStorage(query);
+		return readResult;
+	}
+	return false;
+}
+
+function writeResultsToSessionStorage(data){
+	console.log("writeResultsToSessionStorage");
+	console.log(data);
+	
+	console.log(data.query);
+	console.log(JSON.stringify(data.results));
+	
+	sessionStorage.setItem(data.query, JSON.stringify(data.results));
+	
+	//Test functionality
+	//readResultsFromSessionStorage();
+}
+
+function writeResultsToCookie(data){
+	console.log("writeResultsToCookie");
+	console.log(data);
+	
+	
+}
+
+function readResultsFromSessionStorage(query){
+	console.log("readResultsFromSessionStorage");
+	console.log(query);
+	
+	var data = JSON.parse(sessionStorage.getItem(query));
+	
+	console.log("this!!!!!!!!!! data");
+	console.log(data);
+	
+	if (data != null){
+		return data;
+	}
+	return false;
+}
+
+function readResultsFromCookie(){
+	
+}
+
+function displayWorkerResults(data){
+	function decodeEntities(encodedString) {
         var textArea = document.createElement('textarea');
         textArea.innerHTML = encodedString;
         return textArea.value;
@@ -204,8 +337,8 @@ function handleWorkerMessage(data){
     var params = window.location.search.substring(1);
     var vars = params.split("&");
 
-    var pageParam = {};
-    var queryParam = {};
+    var pageParam = {}, 
+		queryParam = {};
     for (var k=0;k<vars.length;k++) {
         var helper = vars[k].split("=");
         if (helper[0] == "page"){
@@ -255,7 +388,6 @@ function handleWorkerMessage(data){
                     $results.append('<li class="search-result"><p>No results for "'+decodeURI(queryParam.query)+'".</p></li>');
                 }
             }
-        }
-        
-    }   
+        }   
+    }  
 }
