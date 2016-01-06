@@ -8,14 +8,13 @@
      * 3. Push results to browser cookie in case of page change or new query with the same term
      * 4. Modify script to fetch results from cookie if such exists
      *   */
-importScripts('lunr.min.js');
+var isWorker = true;
     
 onmessage = function(e) {
 	console.log("search-worker onmessage");
 	console.log(e.data);
 	
-	
-    // the passed-in data is available via e.data
+	importScripts('lunr.min.js');
 
     //processResultsInWorker(e.data);
     /* New query returs object data, read from memory returns results */
@@ -26,6 +25,21 @@ onmessage = function(e) {
 		processResultsInWorker(e.data);
 	}
 };
+
+function launchOutsideWorker(vars){
+	
+	isWorker = false;
+	
+	console.log("launchOutsideWorker fired!");
+	console.log(vars);
+	/* New query returs object data, read from memory returns results */
+    if (vars.data){
+		processQueryInWorker(vars);
+	}
+	else{
+		processResultsInWorker(vars);
+	}
+}
     
 
 function processQueryInWorker(vars){
@@ -91,16 +105,15 @@ function processQueryInWorker(vars){
     processResultsInWorker(processData);
     
     // Save results to local storage or cookie, so no need to refetch and process
-    postMessage({query: decodeURI(queryParam.query), results: results});
+    if (isWorker){
+		postMessage({query: decodeURI(queryParam.query), results: results});
+	}
+	else{
+		notWorkerPostMessage({query: decodeURI(queryParam.query), results: results});
+	}
 }
 
 function processResultsInWorker(data){
-	
-	console.warn("processResultsInWorker");
-	console.log(data.pageParam);
-	console.log(data.results);
-	console.log(data.queryWords);
-	console.log(data.queryParam);
 
     var pageParam = data.pageParam,
 		results = data.results,
@@ -167,7 +180,10 @@ function processResultsInWorker(data){
     searchResults.push(queryParam.query);
     
     postableData = {displayableResults: searchResults};
-    postMessage(postableData);
-    
-    //postMessage(searchResults);
+    if (isWorker){
+		postMessage(postableData);
+	}
+	else{
+		notWorkerPostMessage(postableData);
+	}
 }

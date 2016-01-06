@@ -3,6 +3,7 @@
  * 2. Remove unneccessary code repeation
  * 3. Use worker js also when web worker isn't available
  *  Just don't use it as a worker, but as regular js script
+ * 4. Implement cookie based data save as a backup
  * */
 
 
@@ -14,36 +15,25 @@ $(document).ready(function(){
         var query = new Query(),
             site = location.protocol + "//" + location.host
             params = window.location.search.substring(1);  
-		
-		/* NOTICE: getJSON url needs to be fixed */      
+		   
 		query.setFromURL('query');
-		
-		/* Check if specific query has been made previously */
-		console.log("HEREEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-		console.log(params);
-		console.log(query);
 		vars = {query: query, site: site, params: params};
-		//var queryWords = q
+		/* Check if specific query has been made previously */
 		var readResult = readSearchResults(query.q);
-		console.log("readResult");
-		console.log(readResult);
+		
+		/* DEBUGGING, REMOVE */
+		
+		/* DEBUGGING, REMOVE */
+		
 		if (!readResult){
+			/* NOTICE: getJSON url needs to be fixed */   
 			query.getJSON(baseURL + '/search.json').done(function(data) {
-				console.log("READ FAILED!!!!!!!!!!!!!!!!!!!");
-				console.log(data);
 				vars.data = data;
 				handleResults(vars);
 			});
 		}
 		else {
 			console.log("READ SUCCESSFUL!!!!!!!!!!!!!!!!!!!!");
-			
-			//vars.data = readResult;
-			
-			/*pageParam = data.pageParam,
-			results = data.results,
-			queryWords = data.queryWords,
-			queryParam = data.queryParam,*/
 			
 			/* copy from beneath */
 			var anotherHelper = params.split("&");
@@ -74,8 +64,6 @@ $(document).ready(function(){
 		
     }(Query));
     
-    /* Process results */
-    
     /* TODO:
      * 1. Separate search possible results get and processiing
      * 2. Defer results creation into web worker, it is currently the heaviest step and freezes the thread for ~1,3s
@@ -86,16 +74,39 @@ $(document).ready(function(){
 });
 
 function handleResults(vars){
+	/* Use search-worker.js also without worker available, use just as a normal script */
+	/* DEBUGGIN, REMOVE */
+	workerFallback(vars);
+	/*$(document).ready(function(){
+		launchOutsideWorker(vars);
+	});*/
+	return;
+	/*DEBUGGING, REMOVE*/
+	
 	if(typeof(Worker) !== "undefined") {
 		// call worker function from search index, easier to have it there to modify script url by liquid
 		useSearchWorker();
-		console.warn("THIS HERE");
-		console.log(vars);
 		w.postMessage(vars);
 	}
 	else{
 		processResults(vars);
 	}
+}
+
+// http://stackoverflow.com/questions/8586446/dynamically-load-external-javascript-file-and-wait-for-it-to-load-without-usi thanks to Jason Sebring
+//function getScript(src, callback, vars) {
+function getScript(src, callback) {
+	var s = document.createElement('script');
+	s.src = src;
+	s.async = true;
+	s.onreadystatechange = s.onload = function() {
+		if (!callback.done && (!s.readyState || /loaded|complete/.test(s.readyState))) {
+			callback.done = true;
+//			callback(vars);
+			callback();
+		}
+	};
+	document.querySelector('head').appendChild(s);
 }
 
 function processResults(vars){
@@ -253,6 +264,10 @@ function processResults(vars){
     if (!results.length){
         $results.append('<li class="search-result"><p>No results for "'+decodeURI(queryParam.query)+'".</p></li>');
     }
+}
+
+function notWorkerPostMessage(data){
+	handleWorkerMessage(data);
 }
 
 function handleWorkerMessage(data){
