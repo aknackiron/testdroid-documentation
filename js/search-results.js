@@ -1,13 +1,12 @@
-/* TODO NEW 
- * 1. Code cleanup
- * 2. Remove unneccessary code repeation
- * 3. Use worker js also when web worker isn't available
- *  Just don't use it as a worker, but as regular js script
+/* Script logic
+ * 1. Do search in a worker not to block script main thread
+ * 2. If worker isn't available fallback to just run the functions outside worker, will block main thread
+ * 3. Save results into sessionStorage to lessen the re-prosessing
+ * 4. If sessionStorage isn't available or is empty process everything between each load (heavy)
  * */
 
 //Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam    
 var globalVariables = {
-	params: "",
 	pageParam: "",
 	queryParam: "",
 	site: "",
@@ -19,15 +18,10 @@ $(document).ready(function(){
 	setGlobalVariables();
 
     $(function(Query) {
-		
-		console.log("globalVariables");
-		console.log(globalVariables);
-
         var query = new Query();
 		   
 		query.setFromURL('query');
 		var vars = {query: query, site: globalVariables.site, 
-				params: globalVariables.params, 
 				pageParam: globalVariables.pageParam, 
 				queryWords: globalVariables.queryWords, 
 				queryParam: globalVariables.queryParam};
@@ -43,13 +37,9 @@ $(document).ready(function(){
 			});
 		}
 		else {
-			console.log("READ SUCCESSFUL!!!!!!!!!!!!!!!!!!!!");
-				
-			$.extend(vars, {results: readResult});
-			
+			$.extend(vars, {results: readResult});			
 			handleResults(vars);
-		}
-		
+		}		
     }(Query));
 });
 
@@ -158,7 +148,6 @@ function setGlobalVariables(){
     var site = location.protocol + "//" + location.host;
     
     globalVariables = {
-		params: params,
 		pageParam: pageParam,
 		queryParam: queryParam,
 		site: site,
@@ -181,9 +170,6 @@ function writeSearchResults(data){
  * No point to see the extra effort to create a cookie fallback */
 
 function readSearchResults(query){
-	console.log("readSearchResults fired!");
-	console.log(query);
-
 	if (typeof(Storage) !== "undefined"){
 		var data = JSON.parse(sessionStorage.getItem(query));
 		

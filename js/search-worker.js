@@ -2,9 +2,6 @@
 var isWorker = true;
     
 onmessage = function(e) {
-	console.log("search-worker onmessage");
-	console.log(e.data);
-	
 	importScripts('lunr.min.js');
 
     /* New query returs object data, read from memory returns results */
@@ -16,12 +13,9 @@ onmessage = function(e) {
 	}
 };
 
-function launchOutsideWorker(vars){
-	
+function launchOutsideWorker(vars){	
 	isWorker = false;
-	
-	console.log("launchOutsideWorker fired!");
-	console.log(vars);
+
 	/* New query returs object data, read from memory returns results */
     if (vars.data){
 		processQueryInWorker(vars);
@@ -36,14 +30,11 @@ function processQueryInWorker(vars){
     var data = vars.data,
         query = vars.query,
         site = vars.site,
-        params = vars.params,
         contentMaxLength = 400, // Max lenght of content snippet
         pageParam = vars.pageParam,
 		queryParam = vars.queryParam,
-		queryWords = vars.queryWords; 
-		
-
-    var searchIndex,
+		queryWords = vars.queryWords,
+		searchIndex,
 		results,
 		totalScore = 0,
 		percentOfTotal;

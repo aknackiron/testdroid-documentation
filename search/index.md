@@ -14,8 +14,6 @@ title: Search results
             w = new Worker("{{ site.baseurl }}/js/search-worker.js");
         }
         w.onmessage = function(e){
-			console.log("e");
-			console.log(e);
             handleWorkerMessage(e.data);
         }
     } 
