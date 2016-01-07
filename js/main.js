@@ -54,23 +54,6 @@ baseURL = location.protocol + "//" + location.host + "/testdroid-documentation";
   global.Query = Query;
 })(this,$);
 
-// utils.js
-/*;(function(global) {
-        'use strict';
-
-        var utils = {
-                shade: shade
-        };
-
-        function shade(color,percent) {
-                //Comes from: http://stackoverflow.com/a/13542669/2714730
-                var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
-                return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
-        }
-
-        global.utils = utils;
-})(this);*/
-
 $(document).ready(function(){
     // search.js
     $(function(Query) {
@@ -92,14 +75,14 @@ $(document).ready(function(){
     /* End of search related code */
     
     /* Open navigation element if sub element is active, also open sub navigation if exists */
-    activeNavigationElement = $("section .navigation .navigation-closed .active");
+    var activeNavigationElement = $("section .navigation .navigation-closed .active");
     if (activeNavigationElement.length == 1){
-        parents = $(activeNavigationElement).parents(".navigation-closed");
+        var parents = $(activeNavigationElement).parents(".navigation-closed");
         parents.removeClass("navigation-closed").addClass("navigation-open");
     }
     
     $("section .navigation .navigation-icon").click(function(){
-        parent = $(this).parent("li");
+        var parent = $(this).parent("li");
         if (parent.hasClass("navigation-closed")){
             parent.removeClass("navigation-closed").addClass("navigation-open");
         }
