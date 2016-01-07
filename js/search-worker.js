@@ -95,7 +95,7 @@ function processResultsInWorker(data){
     }
 
     startingIndex = (startingIndex - 1) * visibleResults;
-    var endingIndex = startingIndex * visibleResults + visibleResults;
+    var endingIndex = startingIndex + visibleResults;
 
     var processKeywords = function(contentString){
         // Thanks to Ryan O'Hara http://stackoverflow.com/questions/17264639/replace-text-but-keep-case
