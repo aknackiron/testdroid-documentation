@@ -1,13 +1,4 @@
 //Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam
-    
-    /* Process results */
-    
-    /* TODO:
-     * 1. Separate search possible results get and processing
-     * 2. Defer results creation into web worker, it is currently the heaviest step and freezes the thread for ~1,3s
-     * 3. Push results to browser cookie in case of page change or new query with the same term
-     * 4. Modify script to fetch results from cookie if such exists
-     *   */
 var isWorker = true;
     
 onmessage = function(e) {
@@ -16,7 +7,6 @@ onmessage = function(e) {
 	
 	importScripts('lunr.min.js');
 
-    //processResultsInWorker(e.data);
     /* New query returs object data, read from memory returns results */
     if (e.data.data){
 		processQueryInWorker(e.data);
@@ -47,7 +37,10 @@ function processQueryInWorker(vars){
         query = vars.query,
         site = vars.site,
         params = vars.params,
-        contentMaxLength = 400; // Max lenght of content snippet
+        contentMaxLength = 400, // Max lenght of content snippet
+        pageParam = vars.pageParam,
+		queryParam = vars.queryParam,
+		queryWords = vars.queryWords; 
 		
 
     var searchIndex,
@@ -83,22 +76,6 @@ function processQueryInWorker(vars){
         totalScore+=results[i].score;
     }  
 
-    var vars = params.split("&");
-
-    var pageParam = {},
-		queryParam = {},
-		queryWords = [];
-    for (var i=0;i<vars.length;i++) {
-        var helper = vars[i].split("=");
-        if (helper[0] == "page"){
-            pageParam[helper[0]] = parseInt(helper[1]);
-        }
-        if (helper[0] == "query"){
-            queryParam[helper[0]] = helper[1];
-            queryWords = decodeURI(helper[1]).split(" ");
-        }
-    }
-    
     var processData = {pageParam: pageParam, results: results, 
 		queryWords: queryWords, queryParam: queryParam};
     
@@ -106,10 +83,10 @@ function processQueryInWorker(vars){
     
     // Save results to local storage or cookie, so no need to refetch and process
     if (isWorker){
-		postMessage({query: decodeURI(queryParam.query), results: results});
+		postMessage({query: decodeURI(queryParam), results: results});
 	}
 	else{
-		notWorkerPostMessage({query: decodeURI(queryParam.query), results: results});
+		notWorkerPostMessage({query: decodeURI(queryParam), results: results});
 	}
 }
 
@@ -122,9 +99,10 @@ function processResultsInWorker(data){
 		startingIndex = 1,
 		visibleResults = 10; // Results per page
     
-    if (pageParam.page && !isNaN(pageParam.page)){                    
-        startingIndex = pageParam.page;
+    if (pageParam && !isNaN(pageParam)){                    
+        startingIndex = pageParam;
     }
+
     startingIndex = (startingIndex - 1) * visibleResults;
     var endingIndex = startingIndex * visibleResults + visibleResults;
 
@@ -177,7 +155,7 @@ function processResultsInWorker(data){
     }
     var amountOfPages = Math.ceil(results.length / visibleResults);
     searchResults.push(amountOfPages);
-    searchResults.push(queryParam.query);
+    searchResults.push(queryParam);
     
     postableData = {displayableResults: searchResults};
     if (isWorker){

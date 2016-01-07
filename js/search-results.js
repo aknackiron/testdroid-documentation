@@ -3,20 +3,34 @@
  * 2. Remove unneccessary code repeation
  * 3. Use worker js also when web worker isn't available
  *  Just don't use it as a worker, but as regular js script
- * 4. Implement cookie based data save as a backup
  * */
 
-//Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam
+//Modification of http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html by Josh Beam    
+var globalVariables = {
+	params: "",
+	pageParam: "",
+	queryParam: "",
+	site: "",
+	queryWords: ""
+}    
+
 $(document).ready(function(){
+	
+	setGlobalVariables();
 
     $(function(Query) {
+		
+		console.log("globalVariables");
+		console.log(globalVariables);
 
-        var query = new Query(),
-            site = location.protocol + "//" + location.host
-            params = window.location.search.substring(1);  
+        var query = new Query();
 		   
 		query.setFromURL('query');
-		vars = {query: query, site: site, params: params};
+		var vars = {query: query, site: globalVariables.site, 
+				params: globalVariables.params, 
+				pageParam: globalVariables.pageParam, 
+				queryWords: globalVariables.queryWords, 
+				queryParam: globalVariables.queryParam};
 		
 		/* Check if specific query has been made previously */
 		var readResult = readSearchResults(query.q);
@@ -30,30 +44,8 @@ $(document).ready(function(){
 		}
 		else {
 			console.log("READ SUCCESSFUL!!!!!!!!!!!!!!!!!!!!");
-			
-			/* copy from beneath */
-			var anotherHelper = params.split("&");
-
-			var pageParam = {},
-				queryParam = {},
-				queryWords = [];
-			for (var i=0;i<anotherHelper.length;i++) {
-				var helper = anotherHelper[i].split("=");
-				if (helper[0] == "page"){
-					pageParam[helper[0]] = parseInt(helper[1]);
-				}
-				if (helper[0] == "query"){
-					queryParam[helper[0]] = helper[1];
-					queryWords = decodeURI(helper[1]).split(" ");
-				}
-			}
-			/* copy from beneath */
-			
-			vars.results = readResult;
-			vars.pageParam = pageParam;
-			vars.queryWords = queryWords;
-			vars.queryParam = queryParam;
-			
+				
+			$.extend(vars, {results: readResult});
 			
 			handleResults(vars);
 		}
@@ -82,11 +74,7 @@ function notWorkerPostMessage(data){
 	handleWorkerMessage(data);
 }
 
-function handleWorkerMessage(data){
-	
-	console.log("handleWorkerMessage data");
-	console.log(data);
-    
+function handleWorkerMessage(data){    
     if (data.displayableResults){		
 		displayWorkerResults(data.displayableResults); 
 	}
@@ -105,23 +93,6 @@ function displayWorkerResults(data){
         return textArea.value;
     }
     
-    var params = window.location.search.substring(1);
-    var vars = params.split("&");
-
-    var pageParam = {}, 
-		queryParam = {};
-    for (var k=0;k<vars.length;k++) {
-        var helper = vars[k].split("=");
-        if (helper[0] == "page"){
-            pageParam[helper[0]] = parseInt(helper[1]);
-        }
-        if (helper[0] == "query"){
-            queryParam[helper[0]] = helper[1];
-        }
-    }
-    
-    var site = location.protocol + "//" + location.host;
-    
     var emptyResult = true;
     
     var $results = $('.search-results');
@@ -131,7 +102,7 @@ function displayWorkerResults(data){
         if (typeof result == "object"){
             emptyResult = false;
             result.content = decodeEntities(result.content);
-            $results.append('<li class="search-result"><a href="'+ site + result.ref +'">'+result.title+'</a><p>'+decodeURI(result.content)+'</p></li>');
+            $results.append('<li class="search-result"><a href="'+ globalVariables.site + result.ref +'">'+result.title+'</a><p>'+decodeURI(result.content)+'</p></li>');
         }
         else{
             if (typeof result == "number" && result > 1){       
@@ -141,11 +112,11 @@ function displayWorkerResults(data){
                         if (element.length){
                             element += " / ";
                         }
-                        if (j == pageParam.page || (j == 1 && typeof pageParam.page === "undefined") ){
+                        if (j == globalVariables.pageParam || (j == 1 && typeof globalVariables.pageParam === "undefined") ){
                             element += "<span>"+j+"</span>";
                         }
                         else{
-                            element += "<a href='"+baseURL+"/search?query="+queryParam.query+"&page="+j+"'>"+j+"</a>";
+                            element += "<a href='"+baseURL+"/search?query="+globalVariables.queryParam+"&page="+j+"'>"+j+"</a>";
                         }
                     }
                     return element;
@@ -154,13 +125,45 @@ function displayWorkerResults(data){
                 $results.append(pages());
             }
             else if (typeof result == "string"){
-                $(".content .title").append(' for "'+decodeURI(queryParam.query)+'"');
+                $(".content .title").append(' for "'+decodeURI(globalVariables.queryParam)+'"');
                 if (emptyResult){
-                    $results.append('<li class="search-result"><p>No results for "'+decodeURI(queryParam.query)+'".</p></li>');
+                    $results.append('<li class="search-result"><p>No results for "'+decodeURI(globalVariables.queryParam)+'".</p></li>');
                 }
             }
         }   
     }  
+}
+
+/* Helper functions */
+
+function setGlobalVariables(){
+	var params = window.location.search.substring(1);
+    var vars = params.split("&");
+
+    var pageParam = 1, 
+		queryParam = "",
+		queryWords = [];
+		
+    for (var k=0;k<vars.length;k++) {
+        var helper = vars[k].split("=");
+        if (helper[0] == "page"){
+            pageParam = parseInt(helper[1]);
+        }
+        if (helper[0] == "query"){
+            queryParam = helper[1];
+            queryWords = decodeURI(helper[1]).split(" ");
+        }
+    }
+    
+    var site = location.protocol + "//" + location.host;
+    
+    globalVariables = {
+		params: params,
+		pageParam: pageParam,
+		queryParam: queryParam,
+		site: site,
+		queryWords: queryWords
+	} 
 }
 
 /* Write results functionalities:
