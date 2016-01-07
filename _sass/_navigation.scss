@@ -67,7 +67,8 @@
                 width: calc(100% - (#{$navigation-level-padding}));
 
                 &:hover{
-                    background-color: $silver;
+                    /*background-color: $silver;*/
+                    font-weight: bold;
                 }
             }
 
