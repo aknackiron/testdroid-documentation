@@ -44,6 +44,8 @@
         <!-- Resize testing -->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <!-- Resize touch fix -->
+        <script src="{{ site.baseurl }}/js/jquery.ui.touch-punch.min.js"></script>
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -70,8 +72,9 @@
                 <img src="{{ site.baseurl }}/images/brand/testdroid_logo_small.png">
             </a>
             <!--<input id="site-search" class="float-right" type="text" placeholder="Search">-->
-            <form class="search">
+            <form id="site-search" class="search float-right">
                 <input type="text" class="search-box" id="search" />
-                <input type="submit" class="search-button" value="Search" />
+                <span class="search-icon"></span>
+                <input type="submit" class="search-button" value="" />
             </form>
         </header>

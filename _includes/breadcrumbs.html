@@ -16,8 +16,11 @@
     {% if crumbs.size > 1 %}
         {% assign previousCrumbs = '' %}
         {% for crumb in crumbs %} 
-            <a href="{{ site.baseurl }}{{previousCrumbs}}/{{crumb}}">{{crumb}}</a> 
-            {% unless forloop.rindex < 2%}/{% endunless %}
+			{% if forloop.last == true %}
+				<span>{{crumb}}</span> 
+			{% else %}   
+				<a href="{{ site.baseurl }}{{previousCrumbs}}/{{crumb}}">{{crumb}}</a> / 
+			{% endif %}
             {% capture previousCrumbs %}{{previousCrumbs}}/{{crumb}}{% endcapture %}
         {% endfor %}
     {% endif %}
