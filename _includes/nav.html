@@ -1,83 +1,49 @@
-<!--{% assign current = page.url | downcase | split: '/' %}-->
 {% assign current = page.url | split: '/' %}
 <nav>
   <ul>
 
     {% for nav in site.data.nav %}
 
-        <!--{% assign navHref = nav.href | downcase %}-->
         {% assign navHref = nav.href %}
 
         {% if nav.subcategories != null %}
+            {% if nav.title == page.title or navHref == current[1] %}
+        <li class="navigation-open {% if current[2] contains '.' %} active {% endif %}">
+            {% else %}   
         <li class="navigation-closed">
-            <span class="navigation-icon float-left"></span><a href="{{ site.url }}{{ nav.url }}">{{ nav.title }}</a>
+            {% endif %}
+            <span class="navigation-icon float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
           <ul>
             {% for subcategory in nav.subcategories %}
                 {% if current[3] contains '.' %}
                     {% capture currentSub %}{{current[1]}}/{{current[2]}}{% endcapture %}
-                {% endif %}
-                {% if currentSub == subcategory.subhref %}
-                    {% if subcategory.subcategories != null %}
-                    <li class="navigation-closed active">
-                        <span class="navigation-icon float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
-                        <ul>
-                        {% for subsubcategory in subcategory.subcategories %}
-                            {% capture currentSubSub %}{{current[1]}}/{{current[2]}}/{{current[3]}}{% endcapture %}
-                            
-                            {% if currentSubSub == subsubcategory.subhref %}
-                            <li class="active">
-                            {% else %}    
-                            <li>
-                            {% endif %}
-                                <a href="{{ site.baseurl }}/{{ site.url }}{{ subsubcategory.subhref }}">{{ subsubcategory.subtitle }}</a>
-                            </li>
-                        {% endfor %}
-                        </ul>
-                    </li>
-                    {% else %}
-                    <li class="active">
-                        <a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
-                    {% endif %}
-                {% else %}    
-                    {% if subcategory.subcategories != null %}
-                        <li class="navigation-closed">
-                            <span class="navigation-icon float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
-                            <ul>
-                            {% for subsubcategory in subcategory.subcategories %}
-                                {% capture currentSubSub %}{{current[1]}}/{{current[2]}}/{{current[3]}}{% endcapture %}
-                                
-                                {% if currentSubSub == subsubcategory.subhref %}
-                                <li class="active">
-                                {% else %}    
-                                <li>
-                                {% endif %}
-                                    <a href="{{ site.baseurl }}/{{ site.url }}{{ subsubcategory.subhref }}">{{ subsubcategory.subtitle }}</a>
-                                </li>
-                            {% endfor %}
-                            </ul>
+                {% endif %}               
+                {% if subcategory.subcategories != null %}
+                <li class="{% if currentSub == subcategory.subhref %} navigation-open active {% else %} navigation-closed {% endif %} ">
+                    <span class="navigation-icon float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
+                    <ul>
+                    {% for subsubcategory in subcategory.subcategories %}
+                        {% capture currentSubSub %}{{current[1]}}/{{current[2]}}/{{current[3]}}{% endcapture %}
+                        <li {% if currentSubSub == subsubcategory.subhref %} class="active" {% endif %} >                           
+                            <a href="{{ site.baseurl }}/{{ site.url }}{{ subsubcategory.subhref }}">{{ subsubcategory.subtitle }}</a>
                         </li>
-                    {% else %}
-                        <li>
-                            <a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
-                    {% endif %}
-                {% endif %}
-
-            </li>
+                    {% endfor %}
+                    </ul>
+                </li>
+                {% else %}
+                <li class="{% if currentSub == subcategory.subhref %} active {% endif %}" >
+                    <a href="{{ site.baseurl }}/{{ site.url }}{{ subcategory.subhref }}" > {{ subcategory.subtitle }}</a>
+                {% endif %}                   
+                </li>
             {% endfor %}
           </ul>
         </li>
 
-        {% elsif nav.title == page.title or navHref == current[1] %}
-        <li class="active">
-          <span class="navigation-icon-placeholder float-left"></span><a href="{{ nav.url }}">{{ nav.title }}</a>
-        </li>
-
         {% else %}
-        <li>
-          <span class="navigation-icon-placeholder float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
-        </li>
+            <li {% if nav.title == page.title or navHref == current[1] %} class="active" {% endif %}>
+              <span class="navigation-icon-placeholder float-left"></span><a href="{{ site.baseurl }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+            </li>
         {% endif %}
     {% endfor %}
   </ul>
 </nav>
-

@@ -3,13 +3,19 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    < Toni Vaakanainen > 	-- < (FE) developer > 	-- < toni.vaakanainen@bitbar.com >
+    < Teemu Toropainen > 	-- < UX designer > 		-- < teemu.toropainen@bitbar.com >
+    < Ilkka Lassila > 		-- < Graphic artist >	-- < ilkka.lassila@bitbar.com >
 
 # THANKS
 
-    <name>
+    < Josh Beam > 		< http://frontendcollisionblog.com/javascript/jekyll/tutorial/2015/03/26/getting-started-with-a-search-engine-for-your-site-no-server-required.html >
+    < Jason Sebring > 	< http://stackoverflow.com/questions/8586446/dynamically-load-external-javascript-file-and-wait-for-it-to-load-without-usi thanks >
+    < Ryan O'Hara > 	< http://stackoverflow.com/questions/17264639/replace-text-but-keep-case >
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
     Apache Server Configs, jQuery, Modernizr, Normalize.css
+    
+    Liquid, JavaScript, SCSS, lunrjs

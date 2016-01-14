@@ -1,7 +1,8 @@
-$body-min-width: 776px;
+$body-min-width: 380px;
 
 $header-height: 38px;
 $site-search-width: 250px;
+$site-search-width-sm: 150px;
 
 $footer-height: 38px;
 $footer-copyright-font-size: 12px;
@@ -11,10 +12,13 @@ $section-padding-left-and-right: 0px;/*40px;*/
 $wrapper-padding: 0px;/*20px;*/
 
 $navigation-width: 300px;
-$navigation-and-content-padding: 10px;
+$content-padding-top-bottom: 10px;
+$content-padding-left-right: 20px;
 $navigation-element-height: 34px;
 $navigation-border-right: 1px;
-$navigation-level-padding: 20px;
+$navigation-level-padding: 14px;
+$navigation-2nd-lvl-font-size: 14px;
+$navigation-3rd-lvl-font-size: 12px;
 
 /* section element margin-bottom, and ul padding-left */
 $default-content-spacing: 20px;
