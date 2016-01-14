@@ -4,8 +4,11 @@
 - title: "About Testdroid"
   subcategories:
     - subtitle: "Testdroid Cloud"
+      subhref: "products/testdroid-cloud.html"        
     - subtitle: "Testdroid Privatecloud"
+      subhref: "products/testdroid-privatecloud.html"        
     - subtitle: "Testdroid Enterprise"
+      subhref: "products/testdroid-enterprise.html"        
 
 - title: "Prerequisites & Concepts"
   subcategories:
@@ -81,7 +84,14 @@
 
 - title: "How-To Articles"
   href: "how-tos/index.html"
-
+  
+- title: "User Manuals"
+  subcategories:
+    - subtitle: "Testdroid Cloud"
+      subhref: "testdroid-cloud-ui"
+    - subtitle: "Testdroid Enterprise"
+      subhref: "testdroid-enterprise"
+  
 - title: "Testdroid API"
   subcategories:
     - subtitle: "API reference"
@@ -99,9 +109,6 @@
       subhref: "technical-docs/appium"
     - subtitle: "Calabash"
       subhref: "technical-docs/calabash"
-
-- title: "Testdroid Cloud"
-  href: "testdroid-cloud-ui"
 
 - title: "Useful Links"
   subcategories:
