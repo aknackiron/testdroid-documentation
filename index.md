@@ -4,7 +4,7 @@ title: Home
 ---
 
 
-<h1>Welcome to Testdroid Online Documentation!</h1>
+<h1>Welcome to Testdroid Cloud Online Documentation!</h1>
 
 In addition to the documentation on these page, check [our
 available](https://github.com/bitbar/testdroid-samples/) code on

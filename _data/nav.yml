@@ -2,6 +2,7 @@
   href: ""
 
 - title: "About Testdroid"
+  href: "products"
   subcategories:
     - subtitle: "Testdroid Cloud"
       subhref: "products/testdroid-cloud.html"        
@@ -11,6 +12,7 @@
       subhref: "products/testdroid-enterprise.html"        
 
 - title: "Prerequisites & Concepts"
+  href: "prereq-and-concepts"
   subcategories:
     - subtitle: "Account"
       subhref: "prereq-and-concepts/account.html"    
@@ -28,6 +30,7 @@
       subhref: "prereq-and-concepts/supported.html"      
 
 - title: "Appium Tutorial"
+  href: "appium"
   subcategories:
     - subtitle: "Introduction & Prerequisites"
       subhref: "appium/introduction.html"        
@@ -41,13 +44,14 @@
       subhref: "appium/environment.html"     
     - subtitle: "Getting Started - First Test"
       subhref: "appium/getting-started.html"      
-    - subtitle: "Using the API"
-      subhref: "appium/appium-API.html"      
-    - subtitle: "Appium FAQ"
-      subhref: "appium/faq.html"        
+#    - subtitle: "Using the API"
+#      subhref: "appium/appium-API.html"      
+#    - subtitle: "Appium FAQ"
+#      subhref: "appium/faq.html"        
     - subtitle: "Examples"
 
 - title: "Calabash Tutorial"
+  href: "calabash"
   subcategories:
     - subtitle: "Introduction & Prerequisites"
       subhref: "calabash/introduction.html"
@@ -55,79 +59,82 @@
       subhref: "calabash/features-steps-scenarios.html"           
     - subtitle: "Getting Started"
       subhref: "calabash/getting-started.html"
-    - subtitle: "Calabash Android Details"
-      subhref: "calabash/details-of-calabash-android-support.html"
+#    - subtitle: "Calabash Android Details"
+#      subhref: "calabash/details-of-calabash-android-support.html"
     - subtitle: "Creating Calabash Tests"
       subhref: "calabash/creating-calabash-tests.html"         
-    - subtitle: "Calabash FAQ"
-      subhref: "calabash/calabash-faq.html"      
-    - subtitle: "Examples"
-    
-- title: "Robotium Tutorial"
-  subcategories:
-    - subtitle: "Introduction & Prerequisites"
-    - subtitle: "ExtSolo"
-    - subtitle: "Getting Started"
-    - subtitle: "Robotium FAQ"
-    - subtitle: "Examples"
+#    - subtitle: "Calabash FAQ"
+#      subhref: "calabash/calabash-faq.html"      
+#    - subtitle: "Examples"
 
-- title: "Tools & Plugins"
-  subcategories:
-    - subtitle: "Gradle"
-      subhref: "gradle"
-    - subtitle: "Jenkins CI"
-      subhref: "jenkins"
-    - subtitle: "JIRA"
-      subhref: "jira"      
-    - subtitle: "Xcode"
-      subhref: "xcode"
+#- title: "Robotium Tutorial"
+#  href: "robotium"
+#  subcategories:
+#    - subtitle: "Introduction & Prerequisites"
+#    - subtitle: "ExtSolo"
+#    - subtitle: "Getting Started"
+#    - subtitle: "Robotium FAQ"
+#    - subtitle: "Examples"
+
+#- title: "Tools & Plugins"
+#  subcategories:
+#    - subtitle: "Gradle"
+#      subhref: "gradle"
+#    - subtitle: "Jenkins CI"
+#      subhref: "jenkins"
+#    - subtitle: "JIRA"
+#      subhref: "jira"      
+#    - subtitle: "Xcode"
+#      subhref: "xcode"
 
 - title: "How-To Articles"
-  href: "how-tos/index.html"
+  href: "how-tos"
   
 - title: "User Manuals"
+  href: "testdroid-cloud-ui"
   subcategories:
     - subtitle: "Testdroid Cloud"
       subhref: "testdroid-cloud-ui"
     - subtitle: "Testdroid Enterprise"
       subhref: "testdroid-enterprise"
   
-- title: "Testdroid API"
-  subcategories:
-    - subtitle: "API reference"
-      subhref: "api"
-    - subtitle: "Examples"
-      subhref: "api/examples"
+#- title: "Testdroid API"
+#  subcategories:
+#    - subtitle: "API reference"
+#      subhref: "api/apidocs/"
+#    - subtitle: "Examples"
+#      subhref: "api/examples"
 
-- title: "Troubleshooting"
-  subcategories:
-    - subtitle: "Bugs & Known Issues"
-      subhref: "bugs"
-    - subtitle: "FAQ"
-      subhref: "faq"
-    - subtitle: "Appium"
-      subhref: "technical-docs/appium"
-    - subtitle: "Calabash"
-      subhref: "technical-docs/calabash"
+#- title: "Troubleshooting"
+#  href: ""
+#  subcategories:
+#    - subtitle: "Bugs & Known Issues"
+#      subhref: "bugs"
+#    - subtitle: "FAQ"
+#      subhref: "faq"
+#    - subtitle: "Appium"
+#      subhref: "technical-docs/appium"
+#    - subtitle: "Calabash"
+#      subhref: "technical-docs/calabash"
 
-- title: "Useful Links"
-  subcategories:
-    - subtitle: "Testdroid Blog"
-    - subtitle: "Testdroid Resource Library"
-    - subtitle: "Github Repository"
-    - subtitle: "Official Appium Documentation"
-    - subtitle: "Official Calabash Documentation"
-    - subtitle: "Cloud API"
-      subhref: "testdroid-cloud-integration/api/index.html"
-    - subtitle: "Jenkins"
-      subhref: "testdroid-cloud-integration/jenkins-plugin.html"
+#- title: "Useful Links"
+#  subcategories:
+#    - subtitle: "Testdroid Blog"
+#    - subtitle: "Testdroid Resource Library"
+#    - subtitle: "Github Repository"
+#    - subtitle: "Official Appium Documentation"
+#    - subtitle: "Official Calabash Documentation"
+#    - subtitle: "Cloud API"
+#      subhref: "testdroid-cloud-integration/api/index.html"
+#    - subtitle: "Jenkins"
+#      subhref: "testdroid-cloud-integration/jenkins-plugin.html"
 
-- title: "Example Test"
-  href: "example-test"
-  subcategories: 
-    - subtitle: "Example Test Subpage"
-      subhref: "example-test/example-test-subpage"
-      subcategories:
-        - subtitle: "Example Test Subpage's Subpage"
-          subhref: "example-test/example-test-subpage/example-test-subpages-subpage"
+#- title: "Example Test"
+#  href: "example-test"
+#  subcategories: 
+#    - subtitle: "Example Test Subpage"
+#      subhref: "example-test/example-test-subpage"
+#      subcategories:
+#        - subtitle: "Example Test Subpage's Subpage"
+#          subhref: "example-test/example-test-subpage/example-test-subpages-subpage"
           

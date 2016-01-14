@@ -1,17 +1,25 @@
 ---
 layout: default
-title: Account
+title: Prerequisites
 ---
 
 
-<h1>Welcome to Testdroid Online Documentation!</h1>
+<h1>Good to Know Before Starting</h1>
 
-In addition to the documentation on these page, check [our
-available](https://github.com/bitbar/testdroid-samples/) code on
-Github. There are samples, code snippets and guides.
+* [Account](account.html)
+
+* [Devices](devices.html)
+
+* [Terminology](terminology.html)      
+
+* [Test Automation](testautomation.html)      
+
+* [Remote Manual Access](remote.html)        
+
+* [REST API](rest-api.html)      
+
+* [Supported Technologies](supported.html)      
 
 
-If you have any feedback on how to improve these guides, please leave
-us a note at <feedback@bitbar.com> so we can improve these.
 
 For any technical feedback get in touch through <support@bitbar.com>.

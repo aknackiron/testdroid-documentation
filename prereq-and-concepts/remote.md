@@ -6,34 +6,58 @@ title: Remote Manual Access
 
 ## Remote Manual Access
 
-Remote manual access allows you to start a session on any mobile device we host at Testdroid Cloud. This provides a comprehensive way to manually test your mobile apps, games and web-related products. As all these devices are real you can install other applications, use available browsers, internet access, and also Google Play / App Store to download and configure your device session. 
+Remote manual access allows you to start a session on any mobile
+device we host at Testdroid Cloud. This provides a comprehensive way
+to manually test your mobile apps, games and web-related products. As
+all these devices are real you can install other applications, use
+available browsers, internet access, and also Google Play / App Store
+to download and configure your device session.
 
-The feature is called Testdroid Interactive. By clicking Interactive in the main menu, user will be directed to the Interactive setup view.
+The feature is called Testdroid Interactive. By clicking *Manual testing*
+in the main menu, user will be directed to the *Manual testing* setup view.
 
-Users can upload their applications by clicking Upload file on top of the widget and then select application for a manual session.
+Users can upload their applications by clicking *Upload file* on top of
+the widget and then select application for a manual session.
 
-Step #1: Select application for the session
+1. Select application for the session
 
-The interactive session gets started by clicking the application. More applications can be uploaded and all will shown in this view. If you don't have or don't want to upload app you can also proceed without it.
+   The interactive session gets started by clicking the
+   application. More applications can be uploaded and all are shown in
+   this view. If you don't have or don't want to upload any app you can
+   also proceed without it.
 
-Step #2: Select a device for the session
+2. Select a device for the session
 
-User can pick up the device and use filters on the left-hand side to quickly browse desired device. NOTE! If certain device is not available (used by some other user) it will be shown with grayed lock picture on top of it.
+   User can pick up the device and use filters on the left-hand side
+   to quickly browse desired device. NOTE! If certain device is not
+   available (used by some other user) it will be shown with grayed
+   lock picture on top of it.
 
-After this the Interactive session will be opened with the selected application installed on device.
+   After this the Interactive session will be opened with the selected
+   application installed on device.
 
-During the session, users can use external buttons to do the following adjustments for the device, session and tests:
+3. Use selected device
 
-Power – Switch the device off / end session.
+   During the session, users can use external buttons to do the
+   following adjustments for the device, session and tests:
 
-Volume – speaker volume can be turned up or down.
+   *Power* – Switch the device off / end session.
 
-Rotate – the device under session can be switched to portrait and landscape mode.
+   *Volume* – speaker volume can be turned up or down.
 
-Screenshot – Take a screenshot of device session. The screenshot will be shown  in Taken screenshots widget next to the Interactive widget.
+   *Rotate* – the device under session can be switched to portrait and landscape mode.
 
-Users can also change the file (application), device or restart the session with current device using buttons on top of the widget.
+   *Screenshot* – Take a screenshot of device session. The screenshot
+   will be shown in Taken screenshots widget next to the Interactive
+   widget.
 
-Device logs
+   *Device logs* - The device logs for Interactive session will show
+   live log details next to the Interactive session widget.
 
-The device logs for Interactive session will show live log details next to the Interactive session widget.
+4. Stop or Restart
+
+   User can also stop the manual testing session by clicking on the
+   timer button on top of the widget.
+
+   To restart the session user should click on the restart arrow also
+   on top of widget.
