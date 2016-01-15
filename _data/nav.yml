@@ -48,7 +48,7 @@
 #      subhref: "appium/appium-API.html"      
 #    - subtitle: "Appium FAQ"
 #      subhref: "appium/faq.html"        
-    - subtitle: "Examples"
+#    - subtitle: "Examples"
 
 - title: "Calabash Tutorial"
   href: "calabash"
