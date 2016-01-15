@@ -4,16 +4,26 @@
 - title: "Technical docs"
   subcategories:
     - subtitle: "Appium"
-      subhref: "appium"
+      subhref: "technical-docs/appium"
     - subtitle: "Calabash"
-      subhref: "calabash"
+      subhref: "technical-docs/calabash"
 
 - title: "Testdroid Cloud"
-  href: "testdroidCloudUI"
+  href: "testdroid-cloud-ui"
 
 - title: "Integrations to Cloud"
   subcategories:
     - subtitle: "Cloud API"
-      subhref: "testdroidCloudIntegration/api/index.html"
+      subhref: "testdroid-cloud-integration/api/index.html"
     - subtitle: "Jenkins"
-      subhref: "testdroidCloudIntegration/jenkins-plugin.html"
+      subhref: "testdroid-cloud-integration/jenkins-plugin.html"
+
+- title: "Example Test"
+  href: "example-test"
+  subcategories: 
+    - subtitle: "Example Test Subpage"
+      subhref: "example-test/example-test-subpage"
+      subcategories:
+        - subtitle: "Example Test Subpage's Subpage"
+          subhref: "example-test/example-test-subpage/example-test-subpages-subpage"
+          

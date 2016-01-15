@@ -11,8 +11,8 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel='shortcut icon' type='image/x-icon' href='{{ site.baseurl }}/favicon.ico' />
 
-	<!-- minimal style -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/styles.css">
+	<!-- minimal style   TO BE REMOVED AS INTERFERES WITH OUR CUSTOM STYLES -->
+	<!--<link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/styles.css">--!
 	<!-- commented out, no such file <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/pygment_trac.css">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<!-- end minimal style -->
@@ -35,12 +35,18 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/vendor/jquery-1.11.3.min.js"><\/script>')</script> 
+        
         <script src="{{ site.baseurl }}/js/plugins.js"></script>
         <script src="{{ site.baseurl }}/js/main.js"></script>
 	<script src="{{ site.baseurl }}/js/toc.js" ></script>
 	
-	
+        <!-- Resize testing -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <!-- Resize touch fix -->
+        <script src="{{ site.baseurl }}/js/jquery.ui.touch-punch.min.js"></script>
+        
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -63,9 +69,12 @@
     <!--    <div id="toc"></div> -->
         <header>
             <a href="http://cloud.testdroid.com" class="float-left">
-                <img src="{{ site.baseurl }}/images/brand/cloud_horizontal.png">
+                <img src="{{ site.baseurl }}/images/brand/testdroid_logo_small.png">
             </a>
-            <a href="http://testdroid.com" class="float-right">
-                <img src="{{ site.baseurl }}/images/brand/testdroid_logo.png">
-            </a>
+            <!--<input id="site-search" class="float-right" type="text" placeholder="Search">-->
+            <form id="site-search" class="search float-right">
+                <input type="text" class="search-box" id="search" />
+                <span class="search-icon"></span>
+                <input type="submit" class="search-button" value="" />
+            </form>
         </header>
