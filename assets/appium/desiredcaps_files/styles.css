@@ -1,4 +1,4 @@
-/*@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
   padding:50px;
@@ -106,7 +106,7 @@ header {
   width:270px;
   float:left;
   position:fixed;
-}*/
+}
 
 /* header ul { */
 /*   list-style:none; */
@@ -146,10 +146,10 @@ header {
 /*   height:40px; */
 /* } */
 
-/*strong {
+strong {
   color:#222;
   font-weight:700;
-}*/
+}
 
 /* header ul li + li { */
 /*   width:88px; */
@@ -167,7 +167,7 @@ header {
 /*   color:#222; */
 /* } */
 
-/*section {
+section {
   width:500px;
   float:right;
   padding-bottom:50px;
@@ -179,9 +179,9 @@ small {
 
 hr {
   border:0;
-  background:#e5e5e5;*/
+  background:#e5e5e5;
   /* height:1px; */
-  /*margin:0 0 20px;
+  margin:0 0 20px;
 }
 
 footer {
@@ -189,7 +189,7 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
-}*/
+}
 
 /*
   Commented out as testdroid.scss should be the one handling reponsiveness if such 
