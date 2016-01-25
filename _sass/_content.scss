@@ -46,6 +46,14 @@
                 padding: $content-padding-top-bottom $content-padding-left-right; 
                 height: calc(100% - (#{$content-padding-top-bottom} * 2));
                 overflow-y: auto;
+                /* Fix for content growing too wide */
+                *{
+					max-width: 1000px;
+					/* Set only margins for left and right, not to override
+					inherited top and bottom margin values */
+					margin-left: auto;
+					margin-right: auto;
+                }
             }
             &:after {
               clear: both;
