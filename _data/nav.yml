@@ -76,12 +76,14 @@
 #    - subtitle: "Robotium FAQ"
 #    - subtitle: "Examples"
 
-#- title: "Tools & Plugins"
-#  subcategories:
+- title: "Tools & Plugins"
+  href: "testdroid-tools-plugins"
+  subcategories:
+    - subtitle: "Jenkins CI"
+      subhref: "testdroid-tools-plugins/jenkins-plugin"
+
 #    - subtitle: "Gradle"
 #      subhref: "gradle"
-#    - subtitle: "Jenkins CI"
-#      subhref: "jenkins"
 #    - subtitle: "JIRA"
 #      subhref: "jira"      
 #    - subtitle: "Xcode"
