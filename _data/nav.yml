@@ -76,11 +76,13 @@
 #    - subtitle: "Robotium FAQ"
 #    - subtitle: "Examples"
 
-- title: "Tools & Plugins"
-  href: "testdroid-tools-plugins"
+- title: "Integrations"
+  href: "testdroid-clound-integration"
   subcategories:
     - subtitle: "Jenkins CI"
-      subhref: "testdroid-tools-plugins/jenkins-plugin"
+      subhref: "testdroid-cloud-integration/jenkins-plugin"
+    - subtitle: "Rest API"
+      subhref: "testdroid-cloud-integration/api/"
 
 #    - subtitle: "Gradle"
 #      subhref: "gradle"
