@@ -54,6 +54,12 @@
 					margin-left: auto;
 					margin-right: auto;
                 }
+                .image-404{
+					float: right; 
+					margin-left: 30px; 
+					max-width: 50%; 
+					height: auto;
+                }
             }
             &:after {
               clear: both;
