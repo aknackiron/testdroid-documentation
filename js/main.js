@@ -55,6 +55,8 @@ baseURL = location.protocol + "//" + location.host + "/testdroid-documentation";
 })(this,$);
 
 $(document).ready(function(){
+	var $pageObject = $("section > .wrapper");
+	
     // search.js
     $(function(Query) {
             'use strict';
@@ -100,4 +102,21 @@ $(document).ready(function(){
     if (!Modernizr.touch){
         $(".navigation-control-placeholder .navigation-control").hide();
     }
+    
+    // Hide image-404 if breaks layout
+    if($pageObject.hasClass("page-title-404")){
+		var $contentObject = $($pageObject).find(".content");
+		var $image404 = $($contentObject).find(".image-404");		
+		function hideShowImage404(){
+			if ($contentObject.width() < 440)
+				$image404.hide();
+			else
+				$image404.show();
+		}
+		/* window resize fires also on navigation resize */
+		$(window).resize(function(){
+			hideShowImage404();
+		});
+		hideShowImage404();
+	}
 });
