@@ -1,0 +1,4 @@
+@mixin layoutStructure($headerHeight: $header-height, $footerHeight: 
+	$footer-height, $sectionPaddingTopBottom: $section-padding-top-and-bottom){
+		height: calc(100vh - #{$headerHeight} - #{$footerHeight} - (#{$sectionPaddingTopBottom} * 2)) !important;
+}
