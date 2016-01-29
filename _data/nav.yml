@@ -77,12 +77,14 @@
 #    - subtitle: "Examples"
 
 - title: "Integrations"
-  href: "testdroid-clound-integration"
+  href: "testdroid-cloud-integration"
   subcategories:
     - subtitle: "Jenkins CI"
       subhref: "testdroid-cloud-integration/jenkins-plugin"
     - subtitle: "Rest API"
       subhref: "testdroid-cloud-integration/api/"
+    - subtitle: "ExtSolo"
+      subhref: "testdroid-cloud-integration/ext-solo/"
 
 #    - subtitle: "Gradle"
 #      subhref: "gradle"
