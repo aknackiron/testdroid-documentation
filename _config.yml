@@ -4,4 +4,6 @@ highlighter: pygments
 baseurl: /testdroid-documentation
 gems:
   - jekyll-sitemap
-  
+td_link: "[Testdroid](http://testdroid.com/)"
+td_cloud: "[Testdroid Cloud](http://cloud.testdroid.com/)"
+
