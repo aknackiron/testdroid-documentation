@@ -1,4 +1,4 @@
-baseURL = location.protocol + "//" + location.host + "/testdroid-documentation";
+baseURL = location.protocol + "//" + location.host;
 //Create a module using an IIFE
 /* Search code novelty of Josh Beam */
 
@@ -55,6 +55,7 @@ baseURL = location.protocol + "//" + location.host + "/testdroid-documentation";
 })(this,$);
 
 $(document).ready(function(){
+	baseURL += $('#baseUrl').text();
 	var $pageObject = $("section > .wrapper");
 	
     // search.js
@@ -93,9 +94,11 @@ $(document).ready(function(){
         }
     }); 
     
+    var navigationMaxWidth = $( window ).width() < 370 ? $( window ).width() - 20 : 350;
+    
     $( "#resizable-navigation" ).resizable({
         handles: 'e',
-        maxWidth: 350
+        maxWidth: navigationMaxWidth
     });
     
     // hide resize icon if not touch device
