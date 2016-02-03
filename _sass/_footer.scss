@@ -25,8 +25,20 @@
                 i{
                     font-size: 24px;
                 }
-                
+                .copyright-placeholder{
+					max-width: calc(100% - 170px);
+                }
             }
         }
+        @media screen and (max-width: 660px) {
+			#footer-wrapper{
+				padding: 0 5px;
+			}
+		}		
     }
+    @media screen and (max-width: 520px) {
+		.content-section{
+			@include layoutStructure($footerHeight: ($footer-height * 2 + 10px));
+		}
+	}
     
