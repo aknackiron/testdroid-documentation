@@ -56,7 +56,6 @@ baseURL = location.protocol + "//" + location.host;
 
 $(document).ready(function(){
 	baseURL += $('#baseUrl').text();
-	console.log(baseURL);
 	var $pageObject = $("section > .wrapper");
 	
     // search.js
