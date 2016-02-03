@@ -83,6 +83,11 @@
       subhref: "testdroid-cloud-integration/jenkins-plugin"
     - subtitle: "Rest API"
       subhref: "testdroid-cloud-integration/api/"
+      subcategories:
+        - subtitle: "API"
+          subhref: "testdroid-cloud-integration/api/rest-api/"
+        - subtitle: "API Examples"
+          subhref: "testdroid-cloud-integration/api/examples/"
     - subtitle: "ExtSolo"
       subhref: "testdroid-cloud-integration/ext-solo/"
 
