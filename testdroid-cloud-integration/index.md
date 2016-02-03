@@ -14,5 +14,5 @@ your test projects.
 
 # Testdroid Run In Cloud Jenkins Plugin
 
-[Jenkins plugin enabling you to lauch your test runs directly from Jenkins.](jenkins-plugin.html)
+[Jenkins plugin enabling you to launch your test runs directly from Jenkins.](jenkins-plugin/index.html)
 
