@@ -1,4 +1,4 @@
-baseURL = location.protocol.indexOf(':') === -1 ? location.protocol + "://" + location.host : location.protocol + "//" + location.host;
+baseURL = (location.protocol.indexOf(':') > -1) ? (location.protocol + "//" + location.host) : (location.protocol + "://" + location.host);
 //Create a module using an IIFE
 /* Search code novelty of Josh Beam */
 
