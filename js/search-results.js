@@ -145,9 +145,6 @@ function setGlobalVariables(){
         }
     }
     
-   // baseURL = $('#baseUrl').text();
-	//if(!baseURL.length){baseURL = location.protocol + "//" + location.host;}
-    
     var site = $('#baseUrl').text();
     if(!site.length){site = location.protocol + "//" + location.host;}
     
