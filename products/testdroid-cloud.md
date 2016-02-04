@@ -6,7 +6,7 @@ title: Testdroid Cloud
 
 ## Testdroid Cloud
 
-![]({{site.baseurl}}/assets/logos/Testdroid_CLOUD_logo-HORIZONTAL_800px.png)
+![]({{site.github.url}}/assets/logos/Testdroid_CLOUD_logo-HORIZONTAL_800px.png)
 
 [Testdroid Cloud](https://cloud.testdroid.com/) provides the largest
 device farm of real mobile devices, gathered from different regions

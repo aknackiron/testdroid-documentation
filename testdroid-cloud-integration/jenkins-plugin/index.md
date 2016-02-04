@@ -25,7 +25,7 @@ and there is Testdroid Cloud section where you can fill out your
 Testdroid account details. Press Authorize button to validate your
 account details.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-main-config.png)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-main-config.png)
 
 
 ## Run In Cloud - Build step
@@ -38,13 +38,13 @@ in corresponding field. If you need to customize projects settings
 click the "Edit project on Testdroid Cloud website" button and it will
 open Cloud webpage.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-build-step.png)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-build-step.png)
 
 You can configure annotations in the following section. [Here is more
 information on how to use annotations](using-annotations) to execute subsets of tests.
 
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-build-step-2.png)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-build-step-2.png)
 
 There's 2 ways to get notification from Testdroid your test runs are finished.
  
@@ -53,7 +53,7 @@ There's 2 ways to get notification from Testdroid your test runs are finished.
 Jenkins is polling Testdroid for the results. Test results are copied
 from Testdroid to Jenkins workspace after the tests are finished.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-api-call.png)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-api-call.png)
 
 ### HOOK URL
 
@@ -68,5 +68,5 @@ POST message body:
 **Note!** This requires your HOOK URL is reachable from Internet
 eg. Jenkins instance can be reached from Testdroid Cloud.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/ric-hook-url.png)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-hook-url.png)
 

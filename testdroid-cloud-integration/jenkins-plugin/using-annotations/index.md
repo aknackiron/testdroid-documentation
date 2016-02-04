@@ -49,5 +49,5 @@ also available from Testdroid Run in Cloud plug-in with Jenkins
 
 ## Example
 
-[Here]({{site.baseurl}}/assets/testdroid-cloud-integration/annotations.zip) is an example Eclipse project with annotations in use.
+[Here]({{site.github.url}}/assets/testdroid-cloud-integration/annotations.zip) is an example Eclipse project with annotations in use.
 

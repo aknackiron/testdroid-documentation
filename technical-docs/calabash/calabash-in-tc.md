@@ -9,7 +9,7 @@ contact us at <sales@bitbar.com> and we’ll be happy to enable it for
 you. Here are some basic details of Calabash and how to use it in
 Testdroid.
 
-![Calabash]({{site.baseurl}}/assets/calabash/calabash.png)
+![Calabash]({{site.github.url}}/assets/calabash/calabash.png)
 
 # Getting Calabash for Android
 
@@ -119,15 +119,15 @@ on over 250 Android devices:
  
 1. Login to Testdroid Cloud
 1. Create a new project
-   ![create new project]({{site.baseurl}}/assets/calabash/calabash-android-new-project.png)
+   ![create new project]({{site.github.url}}/assets/calabash/calabash-android-new-project.png)
 1. Upload your application (.APK)
-   ![upload apk]({{site.baseurl}}/assets/calabash/calabash-android-upload-application.png)
+   ![upload apk]({{site.github.url}}/assets/calabash/calabash-android-upload-application.png)
 1. Create zip-package from your features-directory
 1. Upload test zip-package
-   ![upload zip]({{site.baseurl}}/assets/calabash/calabash-android-upload-test.png)
+   ![upload zip]({{site.github.url}}/assets/calabash/calabash-android-upload-test.png)
 
 1. Select devices
-   ![select devices]({{site.baseurl}}/assets/calabash/calabash-android-select-devices.png)
+   ![select devices]({{site.github.url}}/assets/calabash/calabash-android-select-devices.png)
 
 1. Check advanced configurations
 1. Run the project
