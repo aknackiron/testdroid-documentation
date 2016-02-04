@@ -1,4 +1,4 @@
-baseURL = (location.protocol.indexOf(':') > -1) ? (location.protocol + "//" + location.host) : (location.protocol + "://" + location.host);
+var baseURL = "";
 //Create a module using an IIFE
 /* Search code novelty of Josh Beam */
 
@@ -55,7 +55,10 @@ baseURL = (location.protocol.indexOf(':') > -1) ? (location.protocol + "//" + lo
 })(this,$);
 
 $(document).ready(function(){
-	baseURL += $('#baseUrl').text();
+	baseURL = $('#baseUrl').text();
+	if(!baseURL.length){baseURL = location.protocol + "//" + location.host;}
+	console.log('baseURL');
+	console.log(baseURL);
 	var $pageObject = $("section > .wrapper");
 	
     // search.js
