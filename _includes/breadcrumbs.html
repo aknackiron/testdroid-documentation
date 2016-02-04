@@ -19,7 +19,7 @@
 			{% if forloop.last == true %}
 				<span>{{crumb}}</span> 
 			{% else %}   
-				<a href="{{ site.baseurl }}{{previousCrumbs}}/{{crumb}}">{{crumb}}</a> / 
+				<a href="{{ site.github.url }}{{previousCrumbs}}/{{crumb}}">{{crumb}}</a> / 
 			{% endif %}
             {% capture previousCrumbs %}{{previousCrumbs}}/{{crumb}}{% endcapture %}
         {% endfor %}
