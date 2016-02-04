@@ -57,8 +57,6 @@ var baseURL = "";
 $(document).ready(function(){
 	baseURL = $('#baseUrl').text();
 	if(!baseURL.length){baseURL = location.protocol + "//" + location.host;}
-	console.log('baseURL');
-	console.log(baseURL);
 	var $pageObject = $("section > .wrapper");
 	
     // search.js
