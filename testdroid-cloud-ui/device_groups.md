@@ -21,7 +21,7 @@ right-hand side.  The filter options on the left-hand side, for
 example, OS versions, API levels, CPUs and so on can be used to browse
 specific devices for selection.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-ui/device_groups.png)
+![]({{site.github.url}}/assets/testdroid-cloud-ui/device_groups.png)
 
 The other alternative for creating device groups is to select all
 desired devices on the left-hand side widget and clicking '+' on top

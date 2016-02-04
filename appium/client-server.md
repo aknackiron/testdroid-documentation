@@ -16,11 +16,11 @@ When using server-side Appium execution, you can run standard Appium tests on hu
 
 The following picture illustrates the difference between these two approaches:
 
-![]({{site.baseurl}}/assets/appium/appium_server_side_concept.jpg)
+![]({{site.github.url}}/assets/appium/appium_server_side_concept.jpg)
 
 Despite the usability is much more smooth with server-side Appium, from the infrastructural point of view both are pretty similar. The picture below illustrates what happens behind the scenes regardless of which way user is using it.
 
-![]({{site.baseurl}}/assets/appium/appium-behind-the-scene.png)
+![]({{site.github.url}}/assets/appium/appium-behind-the-scene.png)
 
 The things behind the scene are pretty much the same regardless of which approach you take. If you use client-side execution, you must configure those desired caps and our Appium Broker together with Appium Server takes care of running tests one by one on those devices. With server-side Appium execution, our system takes care of simultaneous test runs on those devices you have selected. There aren’t any limitation of how many devices you can use simultaneously so even hundreds of different variants if you want.
 

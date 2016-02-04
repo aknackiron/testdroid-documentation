@@ -25,7 +25,7 @@ title: Testdroid Desired Capabilities
  
 1. **testdroid_project**  
    _Mandatory_: yes  
-   _Description_: The project name that will be displayed on Web UI. See [FAQ]({{site.baseurl}}/appium/faq.html) for more details.  
+   _Description_: The project name that will be displayed on Web UI. See [FAQ]({{site.github.url}}/appium/faq.html) for more details.  
    _Example_: Appium iOS Project  
 
 1. **testdroid_description**  
@@ -35,7 +35,7 @@ title: Testdroid Desired Capabilities
  
 1. **testdroid_testrun**  
   _Mandatory_: yes  
-  _Description_: The name given to each Test Run under a Project. See [FAQ]({{site.baseurl}}/appium/faq.html) for more details.  
+  _Description_: The name given to each Test Run under a Project. See [FAQ]({{site.github.url}}/appium/faq.html) for more details.  
   _Example_: Test Run 1
 
 1. **testdroid_device**  
@@ -43,7 +43,7 @@ title: Testdroid Desired Capabilities
   _Description_: The device name that uniquely identifies a device on Testdroid Cloud. (Copy the name from Web UI, as shown in the snapshot). Alternatively you can use a script to query for free devices (eg. a [python example](https://github.com/bitbar/testdroid-samples/blob/master/appium/sample-scripts/python/device_finder.py)).  
   _Example_: iPhone 5c 7.0.4 A1532
 
-      ![Browse devices in Cloud]({{site.baseurl}}/assets/browse-devices.png)
+      ![Browse devices in Cloud]({{site.github.url}}/assets/browse-devices.png)
 
 1. **testdroid_app**  
   _Mandatory_: yes - when not using "browserName" capability for browser automation  

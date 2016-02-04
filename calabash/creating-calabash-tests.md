@@ -12,7 +12,7 @@ Before we can start writing tests, we need to create the proper directory struct
 
 The executed command automatically creates the directory structure as follows:
 
-![Calabash]({{site.baseurl}}/assets/calabash/feature-folder-structure.png)
+![Calabash]({{site.github.url}}/assets/calabash/feature-folder-structure.png)
 
 Furthermore, <code>calabash-ios</code> creates the features folder, a sample <code>my_first.feature</code> file, and the folders <code>step_definitions</code> and <code>support</code>. The tests can be then written in a plain text editor.
 

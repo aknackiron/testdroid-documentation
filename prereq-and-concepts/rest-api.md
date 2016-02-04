@@ -13,5 +13,5 @@ our real Android and iOS devices on Testdroid Cloud and Testdroid
 Privatecloud services.
 
 This [Testdroid API Reference
-Guide]({{site.baseurl}}/testdroid-cloud-integration/api/) includes the
+Guide]({{site.github.url}}/testdroid-cloud-integration/api/) includes the
 full reference guide to our integration API.

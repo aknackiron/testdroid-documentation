@@ -50,7 +50,7 @@ steps to be placed as values against relevant Desired Capability.
 Here is a comparison of how the Desired Capabilities part of the
 test script should look like before and after this Step.
 
-![Desired capabilities]({{ site.baseurl }}/assets/appium/desired-caps-for-cloud.png)
+![Desired capabilities]({{ site.github.url }}/assets/appium/desired-caps-for-cloud.png)
 
 # Step 3: Change the WebDriver address
 

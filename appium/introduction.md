@@ -16,7 +16,7 @@ Appium enables users to execute tests on mobile devices regardless of OS. This i
 
 For Android, this is how Appium compares to other test automation frameworks:
 
-![]({{site.baseurl}}/assets/appium/10-framework-families-opt.png)
+![]({{site.github.url}}/assets/appium/10-framework-families-opt.png)
 
 Android test suites are based on JUnit. In addition, Android provides an architecture and fully integrated testing capabilities with its standard tools, which help developers to test at every level, from unit to framework. Android instrumentation is a set of control methods in the Android system. These methods control an Android component independently of its normal life cycle.
 

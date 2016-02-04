@@ -14,4 +14,4 @@ Behavior Driven Development (BDD) is a philosophy of Outside-in Development in w
 
 The essential idea here isn’t very different from the practice of creating functional specifications for software and then building to the spec, but it takes functional specifications and makes them Executable, by providing a means in which to test the actual specifications. And just as typical with specification creation, BDD is meant to be a process in which multiple stakeholders weigh in to create a common understanding of what is to be built. The benefit of the BDD approach is that it helps ensure that the right software is built (as opposed to the software being built right). The intent is that the software is designed from the perspective of the business owner. That way, there is little interpretation required as to how the software should behave.
 
-![]({{site.baseurl}}/assets/appium/10-framework-families-opt.png)
+![]({{site.github.url}}/assets/appium/10-framework-families-opt.png)
