@@ -5,15 +5,13 @@ title: Testdroid Run In Cloud Plugin
 
 
 Testdroid Run In Cloud Jenkins plugin can be used to launch test runs
-directly from your Jenkins job.
-
-<!-- or have a look at its [source](https://github.com/bitbar/testdroid-run-in-cloud). -->
+directly from your Jenkins job. It is an open source project [available](https://github.com/jenkinsci/testdroid-run-in-cloud-plugin) on Github.
 
 
 ## Configuration Instructions
 
 [Download Testdroid Run In Cloud
-Plugin](https://github.com/jenkinsci/testdroid-run-in-cloud-plugin/blob/master/bin/testdroid-run-in-cloud-1.0.9.hpi)
+Plugin](https://github.com/jenkinsci/testdroid-run-in-cloud-plugin/bin/testdroid-run-in-cloud-1.0.9.hpi)
 and open your Jenkins main page. Then navigate to: *Manage Jenkins ->
 Manage plugins -> Advanced -> Upload plugin*. After installing and
 restarting Jenkins you can configure plugin from Jenkins Configuration
