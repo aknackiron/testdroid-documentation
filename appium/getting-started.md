@@ -31,11 +31,15 @@ Parameter Value: File (.ipa/.apk)
 
 You can also just upload the app using curl:
 
+```
 $ curl -s --user 'user.name@cloudaccount.com:password' -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/upload
+```
 
 or rather using the api key from under *My account* from the cloud:
 
+```
 $ curl -s --user <api key>: -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/upload
+```
 
 Note, be sure to save the app identifier received as upload
 response. Let's call it \<myAppFile\> in this guide.
