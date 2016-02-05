@@ -6,7 +6,7 @@ title: Testdroid Cloud
 
 ## Testdroid Cloud
 
-![]({{site.baseurl}}/assets/logos/Testdroid_PRIVATECLOUD_logo-HORIZONTAL_800px.png)
+![]({{site.github.url}}/assets/logos/Testdroid_PRIVATECLOUD_logo-HORIZONTAL_800px.png)
 
 Testdroid PrivateCloud provides dedicated and reserved devices and are hosted by Testdroid team in our facilities. This dedicated device access provides easy and handy way to make sure devices are 24/7 accessible by any of your teams. The typical user is a company who wants/needs access to devices any time and typically for vertically distributed teams, and does not want to host their own devices either.
 

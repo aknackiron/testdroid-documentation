@@ -12,19 +12,19 @@ In order to run your .IPA on Testdroid Cloud iOS devices, it must be Ad Hoc Dist
 
 1. Select target and click Archive from product menu:
 
-![]({{site.baseurl}}/assets/appium/ipa-requirements-archive.png)
+![]({{site.github.url}}/assets/appium/ipa-requirements-archive.png)
 
 2. Click Distribute.
 
-![]({{site.baseurl}}/assets/appium/ipa-requirements-distribute.png)
+![]({{site.github.url}}/assets/appium/ipa-requirements-distribute.png)
 
 3. Select option Ad Hoc Deployment.
 
-![]({{site.baseurl}}/assets/appium/ipa-requirements-adhoc-deployment.png)
+![]({{site.github.url}}/assets/appium/ipa-requirements-adhoc-deployment.png)
 
 4. Select the Provisioning Profile and click Next.
 
-![]({{site.baseurl}}/assets/appium/ipa-requirements-provisioning-profile.png)
+![]({{site.github.url}}/assets/appium/ipa-requirements-provisioning-profile.png)
 
 Your IPA should be now compatible with iOS devices on Testdroid Cloud. In order to ensure everything is properly set up and to validata that your IPA is properly built, you can do as follows:
 
@@ -39,7 +39,7 @@ Now, Testdroid Cloud will instantly notify if the test run cannot be started due
 
 To verify that all of Appium's dependencies are met you can use appium-doctor. Run appium-doctor and supply the --ios or --android flags to verify that all of the dependencies are set up correctly. If running from source, you may have to use ./bin/appium-doctor.js or node bin/appium-doctor.js.
 
-![]({{site.baseurl}}/assets/appium/appium-behind-the-scene.png)
+![]({{site.github.url}}/assets/appium/appium-behind-the-scene.png)
 
 
 

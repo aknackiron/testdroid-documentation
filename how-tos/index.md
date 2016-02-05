@@ -45,9 +45,9 @@ Testdroid Cloud and leave Testdroid execute your tests. Tests are run
 in parallel against all the chosen devices. Once the test are executed
 results are stored in cloud and you are notified by email. 
 
-### [Running tests in Testdroid Cloud (Python).]({{site.baseurl}}/appium/python/server-side-appium-in-tc.html)
+### [Running tests in Testdroid Cloud (Python).]({{site.github.url}}/appium/python/server-side-appium-in-tc.html)
 
-### [Running tests in Testdroid Cloud (Java).]({{site.baseurl}}/appium/java/server-side-appium-in-tc.html)
+### [Running tests in Testdroid Cloud (Java).]({{site.github.url}}/appium/java/server-side-appium-in-tc.html)
 
 ### Requirements for .ipa
 

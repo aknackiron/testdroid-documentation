@@ -145,7 +145,8 @@ function setGlobalVariables(){
         }
     }
     
-    var site = location.protocol + "//" + location.host;
+    var site = $('#baseUrl').text();
+    if(!site.length){site = location.protocol + "//" + location.host;}
     
     globalVariables = {
 		pageParam: pageParam,

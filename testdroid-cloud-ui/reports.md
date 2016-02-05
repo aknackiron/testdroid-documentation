@@ -12,7 +12,7 @@ report format, and the report will be automatically generated for
 user. It is also possible to download the report in different formats
 (PDF, HTML, CSV).
 
-![]({{site.baseurl}}/assets/testdroid-cloud-ui/reports.png)
+![]({{site.github.url}}/assets/testdroid-cloud-ui/reports.png)
 
 The following steps will help users to create reports regarding their
 needs:

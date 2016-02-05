@@ -1,4 +1,4 @@
-baseURL = location.protocol + "//" + location.host;
+var baseURL = "";
 //Create a module using an IIFE
 /* Search code novelty of Josh Beam */
 
@@ -55,7 +55,8 @@ baseURL = location.protocol + "//" + location.host;
 })(this,$);
 
 $(document).ready(function(){
-	baseURL += $('#baseUrl').text();
+	baseURL = $('#baseUrl').text();
+	if(!baseURL.length){baseURL = location.protocol + "//" + location.host;}
 	var $pageObject = $("section > .wrapper");
 	
     // search.js

@@ -11,7 +11,7 @@ automatically. The API allows access our device farm, manage projects,
 test runs and results, plus many other things that make mobile app,
 game and web testing smoother, faster and less stressful.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/api/testdroid_api.jpg)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/api/testdroid_api.jpg)
 
 Testdroid API is an easy-to-use gateway for managing development and
 testing effort on real Android and iOS devices. The API provides all
@@ -29,9 +29,9 @@ hosts and clients and supports a variety of network
 configurations. The communication usually takes place over TCP/IP, but
 any reliable transport can be used.
 
-![]({{site.baseurl}}/assets/testdroid-cloud-integration/api/http-req-resp.png)
+![]({{site.github.url}}/assets/testdroid-cloud-integration/api/http-req-resp.png)
 
-Full API documentation is available [here.]({{site.baseurl}}/testdroid-cloud-integration/api/rest-api/)
+Full API documentation is available [here.]({{site.github.url}}/testdroid-cloud-integration/api/rest-api/)
 
 ### HTTP Request - Response
 

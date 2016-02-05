@@ -6,7 +6,7 @@ title: Testdroid Cloud
 
 ## Testdroid Cloud
 
-![]({{site.baseurl}}/assets/logos/Testdroid_ENTERPRISE_logo-HORIZONTAL_800px.png)
+![]({{site.github.url}}/assets/logos/Testdroid_ENTERPRISE_logo-HORIZONTAL_800px.png)
 
 Testdroid Enterprise is an on-premises software that connects with your own devices and provides “in-house cloud” for your development and testing needs. Typical user of Testdroid Enterprise is a company that cannot use public cloud service(s) or wants to build an internal device farm. Also, Testdroid Enterprise is a great option for any app/game developers if they have invested in devices already and are willing to operate their own in-house development and testing lab.
 

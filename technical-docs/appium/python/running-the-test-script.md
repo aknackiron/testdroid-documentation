@@ -3,7 +3,7 @@ layout: default
 title: Running a Test Script
 ---
 
-Make sure you have setup your machine following the [prerequisite guide]({{site.baseurl}}/appium/python/).
+Make sure you have setup your machine following the [prerequisite guide]({{site.github.url}}/appium/python/).
 
 Clone the [Testdroid Appium
 Sample](https://github.com/bitbar/testdroid-samples) TestScripts from
@@ -25,7 +25,7 @@ your machine.  Set your credentials to /testdroid_username/ and
 /testdroid_password/ in the desired capabilities.  Set the myAppFile
 identifier from [Step 0](#step-0-upload-your-app-to-cloud) against testdroid_app desired capability.
 
-Check the explanation of all [testdroid_ Desired Capabilities]({{ site.baseurl }}/appium/testdroid-desired-caps.html), but
+Check the explanation of all [testdroid_ Desired Capabilities]({{ site.github.url }}/appium/testdroid-desired-caps.html), but
 for now you can use the default values.
 
 # Step 2: Run the TestScript
@@ -35,7 +35,7 @@ for now you can use the default values.
 
 The output should look something like this:
 
-![ios test output]({{ site.baseurl }}/assets/appium/test-script-output.png "Testdroid iOS output")
+![ios test output]({{ site.github.url }}/assets/appium/test-script-output.png "Testdroid iOS output")
 
 # Step 3 (optional): Upload your Test Suite output to Cloud
 
@@ -45,7 +45,7 @@ test cases their run statuses on the web UI, and let you download test
 reports in various formats.
 
 1. Add the
-[testdroid_junitWaitTime]({{site.baseurl}}/appium/testdroid-desired-caps.htm)
+[testdroid_junitWaitTime]({{site.github.url}}/appium/testdroid-desired-caps.htm)
 Desired Capability in your TestScript.
 
 1. Get Appium sessionId from your script (after the WebDriver connection

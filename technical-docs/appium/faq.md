@@ -133,4 +133,4 @@ repo (https://github.com/bitbar/testdroid-samples).
 
 # Testdroid Desired Capabilities
 
-Testdroid specific Appium desired capabilities are [described here]({{ site.baseurl }}/appium/testdroid-desired-caps.html).
+Testdroid specific Appium desired capabilities are [described here]({{ site.github.url }}/appium/testdroid-desired-caps.html).
