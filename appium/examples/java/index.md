@@ -13,7 +13,7 @@ Java, check out [our
 tutorial](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/java)
 on Github.
 
-A guide on the various Appium test setup configurations, the desired
-capabilities, if found
+An interesting blog post on various Appium test setup configurations
+with desired capabilities, can be found
 [here](http://help.testdroid.com/customer/portal/articles/1507074-testdroid_-desired-capabilities).
  

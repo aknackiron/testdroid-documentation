@@ -4,9 +4,8 @@ title: Appium Setup
 ---
 
 
-## Appium Setup
 
-To get started, you can first download our Appium examples from Github. These examples are available in C#, Python, Java and Ruby, and we’ll be using these as a basis for some of these tutorials. Depending on which programming language you will be using, select the appropriate client library as listed below.
+To get started, you can first download our [Appium examples from Github](https://github.com/bitbar/testdroid-samples.git). These examples are available in C#, Python, Java and Ruby, and we’ll be using these as a basis for some of these tutorials. Depending on which programming language you will be using, select the appropriate client library as listed below.
 
 There are different examples available for regular app testing, game testing and some web-related testing using Appium. To make most out of the existing samples you should have Git installed. If you are new to Git, there is a very good guide on how to install Git on popular operating system here. 
 

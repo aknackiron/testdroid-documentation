@@ -1,37 +1,37 @@
 ---
 layout: default
-title: Getting Started
+title: Convert Appium Test To Testdroid Cloud
+webui: <a href="https://cloud.testdroid.com">\<WebUI\></a>
+webdriver: <a href="http://appium.testdroid.com">\<WebDriver\></a>
 ---
 
 
-## Getting Started
+Converting existing Appium tests to run against {{site.td_cloud}} is
+straight forward and explained here. Testdroid samples are available
+from [Github](https://github.com/bitbar/testdroid-samples). To
+continue all necessary tools and environment should be set up as
+described [here]({{site.github.url}}/appium/setup/).
 
-To get started with a fully working example, please clone this repository to your local environment.
+The addresses that are needed below are defined as such:
 
+{{ page.webui }}: https://cloud.testdroid.com    
+{{ page.webdriver }}: http://appium.testdroid.com 
 
-| {{ page.webui }}	 | {{ page.webdriver }} |
-|-----------------|---------------|
-| https://cloud.testdroid.com | http://appium.testdroid.com |
-
-
-To switch from using Appium at your localhost to using Appium @
-Testdroid Cloud, you need to make only a couple of minor changes in
-your test scripts.
 
 # Step 0: Upload you app to Testdroid Cloud
 
 The app has to uploaded to Testdroid Cloud via command line using a
 POST request.
 
-POST: \<WebDriver\>/upload
-Authentication: Basic Auth
-Multipart: True
-Parameter Name: any
-Parameter Value: File (.ipa/.apk)
+    POST: \<WebDriver\>/upload  
+    Authentication: Basic Auth  
+    Multipart: True  
+    Parameter Name: any  
+    Parameter Value: File (.ipa/.apk)  
 
 You can also just upload the app using curl:
 
-```
+``` 
 $ curl -s --user 'user.name@cloudaccount.com:password' -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/upload
 ```
 

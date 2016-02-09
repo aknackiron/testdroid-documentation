@@ -1,15 +1,13 @@
 ---
 layout: default
-title: Calabash
+title: Calabash Testing Framework
 ---
 
-
-<h1>Calabash Testing Framework</h1>
-
-* [Introduction & Prerequisites](introduction.html)
-* [Features, Steps and Scenarios](features-steps-scenarios.html)           
-* [Getting Started](getting-started.html)
-* [Creating Calabash Tests](creating-calabash-tests.html)         
+* [Introduction & Prerequisites](introduction)
+* [Features, Steps and Scenarios](features-steps-scenarios)           
+* [Getting Started](getting-started)
+* [Creating Calabash Tests](creating-calabash-tests)
+* [Examples](examples)
 
 
 For any technical feedback get in touch through <support@bitbar.com>.
