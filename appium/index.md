@@ -34,7 +34,7 @@ run your first tests.
 # Running Appium in Testdroid Cloud
 
 [Tests can also be run in parallel in
-cloud]({{site.github.url}}/technical-docs/appium/moving-tests-to-cloud.md). The
+cloud]({{site.github.url}}/appium/examples/moving-tests-to-cloud). The
 app to test needs to be uploaded with associated tests to
 {{site.td_cloud}}. Tests are run in parallel against all the chosen
 devices as soon as they become available. Test results are stored in
@@ -42,11 +42,12 @@ cloud once they are executed and user is notified by email.
 
 ## Appium with Python
 
-[Running tests in Testdroid Cloud (Python).]({{site.github.url}}/appium/python/server-side-appium-in-tc)
+[Running tests in Testdroid Cloud (Python).]({{site.github.url}}/appium/examples/python/server-side-appium-in-tc)
 
 ## Appium with Java
 
-[Running tests in Testdroid Cloud (Java).]({{site.github.url}}/appium/java/server-side-appium-in-tc)
+[Running tests in Testdroid Cloud
+(Java).]({{site.github.url}}/appium/examples/java/server-side-appium-in-tc)
 
 # Testdroid Cloud Desired Capabilities
 
@@ -54,6 +55,6 @@ cloud once they are executed and user is notified by email.
 
 # Requirements for .ipa
 
-[Here is the procedure](requirements-for-ipa.html) to create your iOS
+[Here is the procedure]({{site.github.url}}/how-tos/ipa-requirements) to create your iOS
 mobile application (.ipa files) to run your app in Testdroid Cloud.
 

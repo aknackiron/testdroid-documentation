@@ -12,29 +12,29 @@ custom Java annotations in your test methods to filter tests runs.
 All you have to do is to create class like this:
 
 
-```java
- package com.testdroid.test.annotations;
- 
- import java.lang.annotation.*;  
 
- @Retention(RetentionPolicy.RUNTIME)  
+    package com.testdroid.test.annotations;  
+    
+    import java.lang.annotation.*;  
+   
+    @Retention(RetentionPolicy.RUNTIME)  
+   
+    @Target(ElementType.METHOD)  
+   
+    public @interface MyAnnotation {  
+    }
 
- @Target(ElementType.METHOD)  
-
- public @interface MyAnnotation {  
- }
-```
 
 Then annotate your test method:
 
-```
-@MyAnnotation
-public void testButtonClick() throws Exception {
-    /*
-    test code
-    */
-} 
-```
+
+    @MyAnnotation
+    public void testButtonClick() throws Exception {
+        /*
+        test code
+        */
+    } 
+
 
 When running your tests in Testdroid Cloud, open the run's *Advanced
 options -> Test case options* and define your annotation class in the
@@ -49,5 +49,6 @@ also available from Testdroid Run in Cloud plug-in with Jenkins
 
 ## Example
 
-[Here]({{site.github.url}}/assets/testdroid-cloud-integration/annotations.zip) is an example Eclipse project with annotations in use.
+[Here]({{site.github.url}}/assets/testdroid-cloud-integration/annotations.zip)
+is an example Eclipse project with annotations in use.
 

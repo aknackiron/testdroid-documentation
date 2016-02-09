@@ -155,7 +155,7 @@ Or alternatively, you can edit <code>testdroid_username</code> and <code>testdro
 <pre><code>capabilities.setCapability("testdroid_username", 'john.doe@bitbar.com');
 capabilities.setCapability("testdroid_password", 'secretPassword123');</code></pre>
 
-If you are new with desired capabilities or if you are looking for more information on how to use those efficiently, take a look at [Testdroid Desired Capabilities]({{ site.github.url }}/appium/desiredcaps.html).
+If you are new with desired capabilities or if you are looking for more information on how to use those efficiently, take a look at [Testdroid Desired Capabilities]({{ site.github.url }}/appium/testdroid-desired-caps).
 
 Also, if you want to run tests against your application, make sure to change a file path to your application binary (whether you are running against APK or IPA):
 
