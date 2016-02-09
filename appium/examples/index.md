@@ -3,7 +3,8 @@ layout: default
 title: Examples For Using Appium
 ---
 
-* [Convert Appium Test To Testdroid Cloud](getting-started)
+* [Moving Appium Test To Testdroid Cloud](getting-started)
+* [IPA Requirements](ipa-requirements)
 * [Python](python)
 * [Java](java)
 

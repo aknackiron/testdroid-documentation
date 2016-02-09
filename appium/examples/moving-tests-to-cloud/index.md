@@ -1,16 +1,18 @@
 ---
 layout: default
-title: Convert Appium Test To Testdroid Cloud
+title: Moving Appium Test To Testdroid Cloud
 webui: <a href="https://cloud.testdroid.com">\<WebUI\></a>
 webdriver: <a href="http://appium.testdroid.com">\<WebDriver\></a>
 ---
 
+To switch from using Appium on localhost to using Appium at
+{{site.td_cloud}}, a couple of minor changes in your test scripts need
+to be made.
 
-Converting existing Appium tests to run against {{site.td_cloud}} is
-straight forward and explained here. Testdroid samples are available
-from [Github](https://github.com/bitbar/testdroid-samples). To
-continue all necessary tools and environment should be set up as
-described [here]({{site.github.url}}/appium/setup/).
+Testdroid samples are available from
+[Github](https://github.com/bitbar/testdroid-samples). To continue
+environment should be set up as described
+[here]({{site.github.url}}/appium/setup/).
 
 The addresses that are needed below are defined as such:
 

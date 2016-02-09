@@ -48,7 +48,7 @@
       subhref: "appium/examples"
       subcategories:
         - subtitle: "Getting Started"
-          subhref: "appium/examples/getting-started"      
+          subhref: "appium/examples/moving-tests-to-cloud"      
         - subtitle: "Python"
           subhref: "appium/examples/python"
         - subtitle: "Java"
@@ -93,6 +93,9 @@
 
 - title: "How-To Articles"
   href: "how-tos"
+  subcategories:
+  - subtitle: "IPA Requirements"
+    subhref: "how-tos/ipa-requirements"      
   
 - title: "User Manuals"
   href: "testdroid-cloud-ui"
