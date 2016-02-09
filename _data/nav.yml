@@ -47,7 +47,7 @@
     - subtitle: "Examples"
       subhref: "appium/examples"
       subcategories:
-        - subtitle: "Getting Started"
+        - subtitle: "Moving Tests To Cloud"
           subhref: "appium/examples/moving-tests-to-cloud"      
         - subtitle: "Python"
           subhref: "appium/examples/python"
