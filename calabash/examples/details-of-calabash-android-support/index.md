@@ -6,8 +6,8 @@ title: Calabash Android Support
 
 # Examples
 
-https://github.com/bitbar/testdroid-samples/tree/master/calabash
- 
+[https://github.com/bitbar/testdroid-samples/tree/master/calabash](https://github.com/bitbar/testdroid-samples/tree/master/calabash)
+         
 # Supported Calabash Android versions
 
 Calabash Android versions from 0.5.2 to 0.5.8 are supported. If you

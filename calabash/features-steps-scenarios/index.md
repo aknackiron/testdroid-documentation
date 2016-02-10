@@ -47,4 +47,4 @@ Scenario: As a valid user I can start using the app
 
 Step definitions are like code-behind for the scenarios defined in step definition scrips. They provide the glue that makes them runnable in the application. Their function is to translate readable texts into runnable actions.
 
-![]({{site.github.url}}/assets/appium/10-framework-families-opt.png)
+

@@ -7,7 +7,7 @@ title: Appium Python App Testing
 So far you should have the necessary environment set up. The
 prerequisite documentation for running Appium tests with Python can be
 found at [Appium
-Prerequisite]({{ site.github.url }}/appium/python).
+Prerequisite]({{ site.github.url }}/appium/setup).
 
 You'll find information here how to run your Appium tests against your
 native, hybrid or web-applications. Most of the documentation here
@@ -52,7 +52,7 @@ be saved on your machine. Also update your credentials
 capabilities.
 
 Details on all testdroid_ desired capabilities can be [found
-here]({{site.github.url}}/appium/testdroid-desired-caps.html), but you
+here]({{site.github.url}}/appium/testdroid-desired-caps), but you
 can use default values for now.
 
 ## Run the TestScript

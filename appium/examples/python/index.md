@@ -18,7 +18,7 @@ explained how to run your Python scripts locally from your machine.
 
 Ensure you have Python 2.7.x or later is installed (should be pre-installed on OS X)​.
 
-```shell
+```
 $ python --version​
 ```
 
@@ -26,7 +26,7 @@ $ python --version​
 
 You can Install Python on Linux as follows
 
-```shell
+```
 $ sudo apt-get install python2.7
 ```
 
@@ -44,12 +44,12 @@ prompt for new environment variables to come in effect.
 
 Check if Python's package installer 'pip' is already installed.
 
-```shell
+```
 $ pip --version
 ```
 
 ### OSX
-```shell
+```
 $ curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py > get-pip.py
 $ sudo python get-pip.py
 $ rm get-pip.py
@@ -57,12 +57,12 @@ $ rm get-pip.py
 
 ### Linux
 
-```shell
+```
 $ sudo apt-get install python-pip
 ```
 
 ### Windows
-```shell
+```
 $ curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py > get-pip.py
 $ python get-pip.py
 $ del get-pip.py
@@ -70,7 +70,7 @@ $ del get-pip.py
 
 ## Install Python 'selenium' module
 
-```shell
+```
 $ pip install selenium
 ```
 
@@ -91,7 +91,7 @@ installation procedure.
 
 ### Linux (Debian based distros)
 
-```shell
+```
 $ sudo apt-get install git
 ```
 
@@ -102,6 +102,10 @@ Windows application from http://windows.github.com.  Next check out
 our step by step guides on how to test native, hybrid or web apps on
 Android or iOS using Appium.
 
-# [Running a Test Script](running-the-test-script.html)
+# Running a Test Script 
 
-# [Testing Your Native, Hybrid or Web App](native-hybrid-web-app-testing.html)
+A basic step by step example on [running a test script](running-the-test-script) from the command line using Python.
+
+# Testing Your Native, Hybrid or Web App
+
+A step by step example on [testing your native, hybrid or web app](native-hybrid-web-app-testing)

@@ -3595,7 +3595,7 @@ Request body:
  
 
 **See also:**
-   Please check *screenshotZipState* property of [test run](client-api.html#get-user-test-run)
+   Please check *screenshotZipState* property of test run.
  
 
 **Success response:**
@@ -4159,7 +4159,7 @@ Request body:
 
  
 **See also:** 
-   [Get list of all devices](client-api.html#get-list-of-all-devices) to check out devices ID
+   Get list of all devices to check out devices ID
 
  
 **Response status codes:**
