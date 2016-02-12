@@ -2,12 +2,25 @@
 ---
 [
   {% for page in site.pages %}
-	{
-      "title"    : "{{ page.title | escape }}",
-      "category" : "{{ page.categories | join: ' ' }}",
-      "content"	 : "{{ page.content | strip_html | strip_newlines | remove:  "	" | escape | remove: "\"}}",
-      "url"      : "{{ page.url }}",
-      "date"     : "{{ page.date }}"
-    }{% unless forloop.last %},{% endunless %}
+	{% unless forloop.last %}
+		{% unless page.url contains ".css" or page.url contains ".json" or page.url contains ".js" %}{
+		  "title"    : "{{ page.title | escape }}",
+		  "content"	 : "{{ page.content | strip_html | strip_newlines | remove:  "	" | escape | remove: "\"}}",
+		  "url"      : "{{ page.url }}"
+		},
+    {% endunless %}{% endunless %}
+    {% if forloop.last %}
+		{% if page.url contains ".css" or page.url contains ".json" or page.url contains ".js"%}{
+		  "title"    : "",
+		  "content"	 : "",
+		  "url"      : ""
+		}
+		{% else %}{
+		  "title"    : "{{ page.title | escape }}",
+		  "content"	 : "{{ page.content | strip_html | strip_newlines | remove:  "	" | escape | remove: "\"}}",
+		  "url"      : "{{ page.url }}"
+		}
+		{% endif %}		
+    {% endif %}
   {% endfor %}
 ]
