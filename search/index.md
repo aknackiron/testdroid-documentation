@@ -4,6 +4,10 @@ title: Search results
 ---
 <!-- Test lunr.js for search results -->
 <script src="{{ site.github.url }}/js/lunr.min.js"></script>
+<div class="search-message">
+	<p>Unfortunately the page you tried to access has moved. We took the 
+	liberty to do an automatic search for you to help you find the information you need.</p>
+</div>
 <ul class="search-results"></ul>
 <div class="search-spinner"></div>
 
