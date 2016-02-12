@@ -129,7 +129,7 @@ $(document).ready(function(){
 			var pathname = window.location.pathname;
 			var pathend = pathname.substr(pathname.lastIndexOf("/")+1);
 			var pathendwords = pathend.split("-");
-			var words = [];
+			var words = [];			
 			for (i in pathendwords){
 				i = pathendwords[i].split(/(?=[A-Z])/);
 				if ($.isArray(i)){
@@ -140,7 +140,7 @@ $(document).ready(function(){
 					}
 				}
 			}
-			window.location.assign("/search/?query="+encodeURI(words.join(" "))+"&autosearch=true");
+			window.location.assign(baseURL+"/search/?query="+encodeURI(words.join(" "))+"&autosearch=true");
 		}
 	}
 	// Search-page specific code 
