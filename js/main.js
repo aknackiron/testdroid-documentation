@@ -164,8 +164,8 @@ $(document).ready(function(){
 	
 	//Next and previous links
 	var $currentPage = $("nav .active");
-	var $prevPage = $currentPage.prev().find("a").clone();
-	var $nextPage = $currentPage.next().find("a").clone();
+	var $prevPage = $currentPage.prev().children("a").clone();
+	var $nextPage = $currentPage.next().children("a").clone();
 	var $prevNextPlaceholder = $(".content #previousNextPage");
 	if ($prevPage.length){
 		$prevNextPlaceholder.append($prevPage.addClass("previous-page"));
