@@ -64,6 +64,25 @@
 					max-width: 50%; 
 					height: auto;
                 }
+                #previousNextPage{
+					overflow-y: auto;
+					.previous-page{
+						float: left;
+						&:before{
+							font-family: "FontAwesome";
+							content: "\f060";
+							padding-right: 5px;
+						}
+					}
+					.next-page{
+						float: right;
+						&:after{
+							font-family: "FontAwesome";
+							content: "\f061";
+							padding-left: 5px;
+						}
+					}
+                }
             }
             &:after {
               clear: both;

@@ -161,4 +161,16 @@ $(document).ready(function(){
 			$(".search-message").show();
 		}
 	}
+	
+	//Next and previous links
+	var $currentPage = $("nav .active");
+	var $prevPage = $currentPage.prev().find("a").clone();
+	var $nextPage = $currentPage.next().find("a").clone();
+	var $prevNextPlaceholder = $(".content #previousNextPage");
+	if ($prevPage.length){
+		$prevNextPlaceholder.append($prevPage.addClass("previous-page"));
+	}
+	if ($nextPage.length){
+		$prevNextPlaceholder.append($nextPage.addClass("next-page"));
+	}
 });
