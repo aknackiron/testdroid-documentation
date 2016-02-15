@@ -34,6 +34,7 @@
 				border-right: $navigation-border-right solid $orange;
 				border-color: $orange;
 				box-shadow: 5px 0 5px 0 $orange;
+				-webkit-animation: border-pulsate 4s infinite;
 				animation: border-pulsate 4s infinite;
 			}
 			
