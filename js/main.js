@@ -107,8 +107,9 @@ $(document).ready(function(){
         $(".navigation-control-placeholder .navigation-control").hide();
     }
     
-    // Hide image-404 if breaks layout
+    // page-404 specific code
     if($pageObject.hasClass("page-title-404")){
+		// Hide image-404 if breaks layout
 		var $contentObject = $($pageObject).find(".content");
 		var $image404 = $($contentObject).find(".image-404");		
 		function hideShowImage404(){
@@ -117,10 +118,36 @@ $(document).ready(function(){
 			else
 				$image404.show();
 		}
-		/* window resize fires also on navigation resize */
+		// window resize fires also on navigation resize 
 		$(window).resize(function(){
 			hideShowImage404();
 		});
 		hideShowImage404();
+		// Check if should do an automatic search
+		if (document.referrer.indexOf("docs.testdroid.com") < 0 && document.referrer.indexOf("testdroid.com") > -1){
+			// redirect to search 
+			var pathname = window.location.pathname;
+			var pathend = pathname.substr(pathname.lastIndexOf("/")+1);
+			var pathendwords = pathend.split("-");
+			var words = [];			
+			for (i in pathendwords){
+				i = pathendwords[i].split(/(?=[A-Z])/);
+				if ($.isArray(i)){
+					for (j in i){
+						if (!$.isNumeric(i[j])){
+							words.push(i[j].toLowerCase());
+						}
+					}
+				}
+			}
+			window.location.assign(baseURL+"/search/?query="+encodeURI(words.join(" "))+"&autosearch=true");
+		}
+	}
+	// Search-page specific code 
+	if($pageObject.hasClass("page-title-Search")){
+		var queryParam = window.location.search;
+		if (queryParam.indexOf("autosearch=true") > -1){
+			$(".search-message").show();
+		}
 	}
 });

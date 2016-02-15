@@ -16,4 +16,3 @@ us a note at <feedback@bitbar.com> so we can improve these.
 Support forum related to technical questions is available [here](http://stackoverflow.com/questions/tagged/testdroid) on Stackoverflow.
 
 For any technical feedback get in touch through <support@bitbar.com>.
-
