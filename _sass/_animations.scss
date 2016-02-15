@@ -14,3 +14,21 @@
         transform: rotate(360deg);
     }
 }
+
+@-webkit-keyframes border-pulsate {
+    0%   { border-color: rgba(248, 149, 29, 0); 
+			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 0);}
+    50%  { border-color: rgba(248, 149, 29, 1); 
+			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 1);}
+    100% { border-color: rgba(248, 149, 29, 0); 
+			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 0);}
+}
+
+@keyframes border-pulsate {
+    0%   { border-color: rgba(248, 149, 29, 0); 
+			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 0);}
+    50%  { border-color: rgba(248, 149, 29, 1); 
+			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 1);}
+    100% { border-color: rgba(248, 149, 29, 0); 
+			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 0);}
+}

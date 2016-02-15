@@ -29,6 +29,15 @@
             width: 20px;
             right: -10px;
         }
+        &.resizing{
+			.navigation{
+				border-right: $navigation-border-right solid $orange;
+				border-color: $orange;
+				box-shadow: 5px 0 5px 0 $orange;
+				animation: border-pulsate 4s infinite;
+			}
+			
+        }
     }
 
     .navigation, .content{              

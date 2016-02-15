@@ -97,9 +97,20 @@ $(document).ready(function(){
     
     var navigationMaxWidth = $( window ).width() < 370 ? $( window ).width() - 20 : 350;
     
+    //Element being resized
+    var resizing = function(event, ui){
+		$(ui.element[0]).addClass('resizing');
+	}
+    //Element stopped resizing
+    var stoppedResizing = function(event, ui){
+		$(ui.element[0]).removeClass('resizing');
+	}
+    
     $( "#resizable-navigation" ).resizable({
         handles: 'e',
-        maxWidth: navigationMaxWidth
+        maxWidth: navigationMaxWidth,
+        start: resizing,
+        stop: stoppedResizing
     });
     
     // hide resize icon if not touch device
