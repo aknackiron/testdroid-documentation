@@ -14,7 +14,7 @@
         transform: rotate(360deg);
     }
 }
-
+/*Animation color is $orange*/
 @-webkit-keyframes border-pulsate {
     0%   { border-color: rgba(248, 149, 29, 0); 
 			box-shadow: 5px 0 5px 0 rgba(248, 149, 29, 0);}
