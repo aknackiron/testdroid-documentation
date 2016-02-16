@@ -68,7 +68,7 @@
     - subtitle: "Creating Calabash Tests"
       subhref: "calabash/creating-calabash-tests"         
     - subtitle: "Examples"
-      subhref: "calabash/examples/"
+      subhref: "calabash/examples"
 
 - title: "Integrations"
   href: "testdroid-cloud-integration"
