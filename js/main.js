@@ -95,11 +95,28 @@ $(document).ready(function(){
         }
     }); 
     
-    var navigationMaxWidth = $( window ).width() < 370 ? $( window ).width() - 20 : 350;
+    var $resizableNavigation = $( "#resizable-navigation" );
+    var windowWidth = $( window ).width();
     
-    $( "#resizable-navigation" ).resizable({
+    var navigationMaxWidth = windowWidth < 370 ? $( window ).width() - 20 : 350;
+    
+    // set navigation default width to half if a small screen otherwise default
+    $resizableNavigation.width(windowWidth / 2 < navigationMaxWidth ? windowWidth / 2 : 300);
+    
+    //Element being resized
+    var resizing = function(event, ui){
+		$(ui.element[0]).addClass('resizing');
+	}
+    //Element stopped resizing
+    var stoppedResizing = function(event, ui){
+		$(ui.element[0]).removeClass('resizing');
+	}
+    
+    $resizableNavigation.resizable({
         handles: 'e',
-        maxWidth: navigationMaxWidth
+        maxWidth: navigationMaxWidth,
+        start: resizing,
+        stop: stoppedResizing
     });
     
     // hide resize icon if not touch device
@@ -149,5 +166,17 @@ $(document).ready(function(){
 		if (queryParam.indexOf("autosearch=true") > -1){
 			$(".search-message").show();
 		}
+	}
+	
+	//Next and previous links
+	var $currentPage = $("nav .active");
+	var $prevPage = $currentPage.prev().children("a").clone();
+	var $nextPage = $currentPage.next().children("a").clone();
+	var $prevNextPlaceholder = $(".content #previousNextPage");
+	if ($prevPage.length){
+		$prevNextPlaceholder.append($prevPage.addClass("previous-page"));
+	}
+	if ($nextPage.length){
+		$prevNextPlaceholder.append($nextPage.addClass("next-page"));
 	}
 });

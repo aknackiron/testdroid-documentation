@@ -31,13 +31,13 @@
         
     }
     .search-results:empty + .search-spinner{
-        width: 100px;
+        width: 85px;
         margin: 0 auto;
+        -webkit-animation: spin 2s linear infinite;
+		animation: spin 2s linear infinite;
         &:after{
             content: "\f013";
-            font-family: 'FontAwesome';
-            -webkit-animation: spin 1s linear infinite;
-            animation: spin 2s linear infinite;
+            font-family: 'FontAwesome';  
             text-align: center;
             font-size: 100px;
         }
