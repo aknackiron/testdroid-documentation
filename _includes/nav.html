@@ -8,7 +8,7 @@
 
         {% if nav.subcategories != null %}
             {% if nav.title == page.title or navHref == current[1] %}
-        <li class="navigation-open {% if current[2] contains 'index.html' or  current[2] == "" %} active {% endif %}">
+        <li class="navigation-open {% if current[2] contains 'index.html' or page.url == nav.href %} active {% endif %}">
             {% else %}   
         <li class="navigation-closed">
             {% endif %}
