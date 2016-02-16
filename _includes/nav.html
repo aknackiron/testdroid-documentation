@@ -6,17 +6,6 @@
 
         {% assign navHref = nav.href %}
 
-		{{current[2]}}
-		{% if current[2] == empty %}
-			<p>EMPTY!</p>
-		{% endif %}
-		{% if current[2] == nil %}
-			<p>NIL!</p>
-		{% endif %}
-		{% if current[2] == blank %}
-			<p>BLANK!</p>
-		{% endif %}
-
         {% if nav.subcategories != null %}
             {% if nav.title == page.title or navHref == current[1] %}  
         <li class="navigation-open {% if current[2] contains 'index.html' or current[2] == nil %} active {% endif %}">
