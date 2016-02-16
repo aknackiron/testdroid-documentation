@@ -17,10 +17,10 @@
             <span class="navigation-icon float-left"></span><a href="{{ site.github.url }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
           <ul>
             {% for subcategory in nav.subcategories %}
-				{% unless current[3]%}
+				{% unless current[3] %}
                     {% capture currentSub %}{{current[1]}}/{{current[2]}}{% endcapture %}
                 {% endunless %}  
-                {% if current[3] contains '.' or current[2] contains '.html'%}
+                {% if current[3] contains '.' or current[2] contains '.html' %}
                     {% capture currentSub %}{{current[1]}}/{{current[2]}}{% endcapture %}
                 {% endif %}                             
                 {% if subcategory.subcategories != null %}
