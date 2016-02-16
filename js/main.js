@@ -95,7 +95,13 @@ $(document).ready(function(){
         }
     }); 
     
-    var navigationMaxWidth = $( window ).width() < 370 ? $( window ).width() - 20 : 350;
+    var $resizableNavigation = $( "#resizable-navigation" );
+    var windowWidth = $( window ).width();
+    
+    var navigationMaxWidth = windowWidth < 370 ? $( window ).width() - 20 : 350;
+    
+    // set navigation default width to half if a small screen otherwise default
+    $resizableNavigation.width(windowWidth / 2 < navigationMaxWidth ? windowWidth / 2 : 300);
     
     //Element being resized
     var resizing = function(event, ui){
@@ -106,7 +112,7 @@ $(document).ready(function(){
 		$(ui.element[0]).removeClass('resizing');
 	}
     
-    $( "#resizable-navigation" ).resizable({
+    $resizableNavigation.resizable({
         handles: 'e',
         maxWidth: navigationMaxWidth,
         start: resizing,
