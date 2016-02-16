@@ -26,6 +26,11 @@
                     width: $site-search-width-sm;
                 }
             }
+            @media screen and (max-width: 440px) {
+                .search-box{
+                    width: $site-search-width-xsm;
+                }
+            }
             .search-button, .search-icon{
                 position: absolute;
                 display: block;

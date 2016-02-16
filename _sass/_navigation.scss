@@ -1,7 +1,7 @@
     .navigation-control-placeholder{
         position: relative;
         height: calc(100% - 1px);
-        width: $navigation-width;
+        /*width: $navigation-width;*/
         .navigation-control{
             position: absolute;
             width: 16px;
@@ -28,6 +28,15 @@
             right: 0;*/
             width: 20px;
             right: -10px;
+        }
+        &.resizing{
+			.navigation{
+				border-right: $navigation-border-right solid $blue;
+				box-shadow: 5px 0 5px 0 $blue;
+				-webkit-animation: border-pulsate 4s infinite;
+				animation: border-pulsate 4s infinite;
+			}
+			
         }
     }
 
