@@ -145,8 +145,8 @@
 #    - subtitle: "Jenkins"
 #      subhref: "testdroid-cloud-integration/jenkins-plugin.html"
 
-#- title: "Example Test"
-#  href: "example-test"
+- title: "Example Test"
+  href: "example-test"
 #  subcategories: 
 #    - subtitle: "Example Test Subpage"
 #      subhref: "example-test/example-test-subpage"
