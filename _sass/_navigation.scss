@@ -31,9 +31,8 @@
         }
         &.resizing{
 			.navigation{
-				border-right: $navigation-border-right solid $orange;
-				border-color: $orange;
-				box-shadow: 5px 0 5px 0 $orange;
+				border-right: $navigation-border-right solid $blue;
+				box-shadow: 5px 0 5px 0 $blue;
 				-webkit-animation: border-pulsate 4s infinite;
 				animation: border-pulsate 4s infinite;
 			}
