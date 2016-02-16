@@ -1,8 +1,6 @@
 {% assign current = page.url | split: '/' %}
 <nav>
   <ul>
-	  current length: {{current.size}}
-	  current join: {{current | join: '-'}}
 
     {% for nav in site.data.nav %}
 
