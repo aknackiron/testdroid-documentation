@@ -12,5 +12,5 @@ library contains a number of neat methods to use in Robotium tests.
 
 # Latest Binary
 
-Download latest recorder extension here: [recorder-extensions-5.0.jar]({{site.github.url}}/assets/recorder-extensions-5.0.jar).
+Download latest recorder extension here: [recorder-extensions-5.0.jar]({{site.github.url}}/assets/testdroid-cloud-integration/extsolo/recorder-extensions-5.0.jar).
 
