@@ -89,7 +89,7 @@
           subhref: "testdroid-cloud-integration/api/rest-api/"
         - subtitle: "API Examples"
           subhref: "testdroid-cloud-integration/api/examples"
-    - subtitle: "ExtSolo"
+    - subtitle: "ExtSolo Library"
       subhref: "testdroid-cloud-integration/ext-solo/"
 #    - subtitle: "JIRA"
 #      subhref: "jira"      
@@ -100,7 +100,7 @@
   href: "how-tos"
   subcategories:
   - subtitle: "IPA Requirements"
-    subhref: "how-tos/ipa-requirements"      
+    subhref: "how-tos/ipa-requirements"
   
 - title: "User Manuals"
   href: "testdroid-cloud-ui"
