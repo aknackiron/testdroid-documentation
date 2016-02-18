@@ -36,6 +36,11 @@
       subhref: "appium/introduction"        
     - subtitle: "Client vs. Server Execution"
       subhref: "appium/client-server"        
+      subcategories:
+        - subtitle: "Python Server Side Example"
+          subhref: "appium/examples/python/server-side-appium-in-tc"
+        - subtitle: "Java Server Side Example"
+          subhref: "appium/examples/java/server-side-appium-in-tc"
     - subtitle: "Setup"
       subhref: "appium/setup"         
     - subtitle: "Desired Capabilities"
@@ -84,7 +89,7 @@
           subhref: "testdroid-cloud-integration/api/rest-api/"
         - subtitle: "API Examples"
           subhref: "testdroid-cloud-integration/api/examples"
-    - subtitle: "ExtSolo"
+    - subtitle: "ExtSolo Library"
       subhref: "testdroid-cloud-integration/ext-solo/"
 #    - subtitle: "JIRA"
 #      subhref: "jira"      
@@ -95,13 +100,13 @@
   href: "how-tos"
   subcategories:
   - subtitle: "IPA Requirements"
-    subhref: "how-tos/ipa-requirements"      
+    subhref: "how-tos/ipa-requirements"
   
 - title: "User Manuals"
   href: "testdroid-cloud-ui"
-  subcategories:
-    - subtitle: "Testdroid Cloud"
-      subhref: "testdroid-cloud-ui"
+#  subcategories:
+#    - subtitle: "Testdroid Cloud"
+#      subhref: "testdroid-cloud-ui"
 #    - subtitle: "Testdroid Enterprise"
 #      subhref: "testdroid-enterprise"
   

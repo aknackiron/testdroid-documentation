@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Getting Started with Testdroid Cloud Interactive
+title: Getting Started with Testdroid Cloud Manual Testing
 ---
 
-Testdroid Cloud Interactive feature provides users a way to take
-manual access to Testdroid Cloud devices. By clicking Interactive in
-the main menu, user will be directed to the Interactive setup view.
+Testdroid Cloud Manual Testing feature provides users a way to take
+manual access to Testdroid Cloud devices. By clicking Manual Testing in
+the main menu, user will be directed to the Manual Testing setup view.
 
 Users can upload their applications by clicking *Upload new app* on
 top of the widget and then select application for a manual session. It
@@ -31,7 +31,7 @@ without and app*.
 
    ![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_select_device.png)
 
-   After this the Interactive session will be opened with the selected
+   After this the Manual Testing session will be opened with the selected
    application installed on device.
 
    ![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_view.png)
@@ -53,15 +53,15 @@ without and app*.
  
 ## Device logs
  
-The **device logs** for Interactive session will show live log details
-next to the Interactive session widget.
+The **device logs** for Manual Testing session will show live log details
+next to the interactive session widget.
 
 ![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_device_logs.png)
    
 ## Screenshots
  
 The **Taken screenshots** view shows all captured screenshots during the
-Interactive session.
+Manual Testing session.
 
 All captured screenshots can be downloaded by clicking Download
 screenshots button on the top right-corner of the widget.
