@@ -9,7 +9,7 @@ library contains a number of neat methods to use in Robotium tests.
 # Source Code
 
 ExtSolo library was outsourced at the beginning of 2016. Sources can
-be found at [Github](https://github.com/bitbar/robotium-extensions).
+be found at [https://github.com/bitbar/robotium-extensions](https://github.com/bitbar/robotium-extensions).
 
 # ExtSolo Example
 
@@ -47,16 +47,16 @@ imported in your Java project's libraries. Here is an example of a
          }
     }
 
-The content of the `testMethod()` could include the test calls as follows:
+The content of the `testMethod()` could include test calls as follows:
 
-        solo.clickOnText("Button");
-        solo.clickOnText("Settings");
-        Assert.assertTrue(solo.searchText("Settings"));
+    solo.clickOnText("Button");
+    solo.clickOnText("Settings");
+    Assert.assertTrue(solo.searchText("Settings"));
     
-        solo.clearEditText(2);
-        solo.enterText(2, "Robotium ExtSolo Rocks!");
-        solo.goBack();
-        Assert.assertTrue(solo.searchText("Robotium"));
+    solo.clearEditText(2);
+    solo.enterText(2, "Robotium ExtSolo Rocks!");
+    solo.goBack();
+    Assert.assertTrue(solo.searchText("Robotium"));
 
 A real test would have a more interesting steps though. For more
 information on the available API calls, check [ExtSolo API
