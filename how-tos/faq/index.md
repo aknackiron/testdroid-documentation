@@ -19,11 +19,11 @@ The complete list of devices - with all details – can be found under {{site.td
  
 **Q: Where can I find the free test trial and how can I get started with Testdroid Cloud?**
 
- You can create yourself a free account at {{site.td_cloud}} or [testdroid.com](http://testdroid.com). After leaving your email address in any of these forms, you’ll get an activation email. Just click the link and you’ll be guided through the registration process (only basic form is asked to be filled with your information). After this, you can log in to Testdroid Cloud using your credentials and access our free device group (currently 9 different Nexus devices for Android and one iOS device).
+ You can create yourself a free account at {{site.td_cloud}} or [testdroid.com](http://testdroid.com). After leaving your email address in any of these forms, you’ll get an activation email. Just click the link and you’ll be guided through the registration process (only basic form is asked to be filled with your information). After this, you can log in to {{site.td_cloud}} using your credentials and access our free device group.
  
 **Q: My test run failed on most devices. Why was that?**
 
- There are several reasons why test runs fails at Testdroid Cloud. First and the most typical case is that there is something wrong with application, and instrumentation makes it crash. Errors in either app or instrumentation are also typical. Good rule of thumb is that if App Crawler run crashes with your app, then the problem is in app itself. If the execution crashes with your tests, it can be either way. Almost never test run crashes because of Testdroid Cloud infrastructure. More often you see this kind of crash (e.g. device has crashed or is not accessible) as a pending test run start or not providing information about test run status. E.g. Pending in Queue is a normal case and you app is waiting to get executed on device.
+ There are several reasons why test runs fails at {{site.td_cloud}}. First and the most typical case is that there is something wrong with application, and instrumentation makes it crash. Errors in either app or instrumentation are also typical. Good rule of thumb is that if App Crawler run crashes with your app, then the problem is in app itself. If the execution crashes with your tests, it can be either way. Almost never test run crashes because of Testdroid Cloud infrastructure. More often you see this kind of crash (e.g. device has crashed or is not accessible) as a pending test run start or not providing information about test run status. E.g. Pending in Queue is a normal case and you app is waiting to get executed on device.
  
 **Q: Are the devices jail broken/rooted?**
 
@@ -35,11 +35,11 @@ The complete list of devices - with all details – can be found under {{site.td
  
 **Q: The app connects to our internal server. Our IT department will only allow connections from known IP address ranges. Is it possible for you to tell us what IP ranges are used to originate traffic from your test devices?**
 
- This can be handled automatically. Manually we won’t go in these engagements. Automatically this can be implemented e.g. by application. The app should find out what is the IP of that device/connection and then communicate it to some external service than then can open that IP range for database etc. connections.
+ This can be handled automatically. Manually we won’t go in these engagements. Automatically this can be implemented e.g. by application. The app should find out what is the IP of that device/connection and then communicate it to some external service that can open that IP range for database etc. connections. For Private and Enterprise Cloud installations most special network configurations are possible.
  
 **Q: Where is your cloud (test center) located?**
 
- The primary data center (Testdroid Cloud devices) are in Bitbar premises in Wroclaw, Poland. We also have data center in Oulu, Finland.
+ The primary data center (Testdroid Cloud devices) are in Bitbar premises in Wroclaw, Poland. We also have a data center in Oulu, Finland.
  
 **Q: How safe are you?**
 
@@ -51,7 +51,7 @@ The complete list of devices - with all details – can be found under {{site.td
  
 **Q: How long will our projects be online?**
 
- We are not limiting storing of projects, applications, data and results currently anyhow at Testdroid Cloud.
+ We don't guarantee of storing data or results for longer than six months currently. Projects are typically not removed from Testdroid Cloud.
  
 **Q: Can I take pictures, sound recording (mic) with the phones?**
 
@@ -74,12 +74,13 @@ http://www.slideshare.net/bitbar/testdroid-webinar20140107
 ## UIAutomator
 
  
-**Q: As we write scripts we notice that there are subtle differences between the user interfaces of various manufacturers and OS versions. This makes it complicated to deal with the different cases when doing typical tasks such as clicking on items on the Android Settings menu. Do you have a set of libraries that carry out these common tasks? Or a set of existing uiautomator test scripts that we can copy from?**
+**Q: As we write scripts we notice that there are subtle differences between the user interfaces of various manufacturers and OS versions. This makes it complicated to deal with the different cases when doing typical tasks such as clicking on items on the Android Settings menu. Do you have a set of libraries that carry out these common tasks? Or a set of existing Uiautomator test scripts that we can copy from?**
 
  No, but there are plenty of good resources of information for uiautomator provided by Google:
-http://developer.android.com/tools/help/uiautomator/index.html
+[http://developer.android.com/tools/help/uiautomator/index.html](http://developer.android.com/tools/help/uiautomator/index.html)
+
 Bitbar’s info video:
-http://www.youtube.com/watch?v=uA54T6R8nhs
+[http://www.youtube.com/watch?v=uA54T6R8nhs](http://www.youtube.com/watch?v=uA54T6R8nhs)
  
  
 ## iOS Test Automation Frameworks
@@ -97,8 +98,11 @@ We support UI Automation, Jasmine, Calabash and Appium for iOS test automation w
 **Q: Can I test Cocos2d or C++ OpenGL based games?**
 
  Yes, you can. To get this done effectively you have to think what test automation framework fits to best for your needs and will the framework work with your app/game.
+
  
 ## Testdroid Recorder
+
+**Testdroid Recorder is not supported anymore by us. There are newer and better tools for this purpose, eg. [Google search Appium Inspector](https://www.google.com/search?q=appium+inspector&gws_rd=cr,ssl&ei=ZR_XVtmKDInF6AS1na6YCw)"
  
 **Q: My device doesn't connect to Recorder. How to make it work?**
 
@@ -117,9 +121,6 @@ https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/
 
  Of course. You can record any interactions with your app/game and then replay it as Android JUnit Test or Android JUnit Test From APK (under Run As menu) by highlighting the generated test project.
  
-**Q: There is a connection error when I try to use the recorder. Can you help me?**
-
- Yes, of course. Testdroid Recorder even has buttons for sending the error to us. Typically those connection errors are temporary and related to internet connection.
  
 ## Testdroid Enterprise
  
@@ -137,9 +138,9 @@ More information about Testdroid Integration API can be found here:
 Java source code + client can be found at Github repository:
 [https://github.com/bitbar/testdroid-api](https://github.com/bitbar/testdroid-api)
  
-**Q: Do you have an API? Where can I find a documentation? Can I integrate Jenkins or my system to it?  (HP-QT Tool for example)**
+**Q: Do you have an API? Where can I find a documentation? Can I integrate Jenkins or my system to it?**
 
- Yes, the documentation with full API description can be found at [docs.testdroid.com]({{site.github.url}}/testdroid-cloud-integration/api/). You can integrate your CIs or any scripts with Testdroid using these JSON based calls.
+ Yes, the documentation with full API description can be found at [docs.testdroid.com]({{site.github.url}}/testdroid-cloud-integration/api/). You can integrate your CIs or any scripts with Testdroid using API's JSON based calls.
  
 ## Support
  
@@ -149,20 +150,11 @@ Java source code + client can be found at Github repository:
  
 ## Generic Questions
  
-**Q: Is your solution strictly for testing mobile apps (this is how I understand), or is it possible to use it also for testing mobile sites.**
+**Q: Is your solution strictly for testing mobile apps, or is it possible to use it also for testing mobile sites.**
 
- Testdroid products are not limited to apps only. E.g. Testdroid Recorder can be used to record interactions with websites/apps, Testdroid Enterprise has several possibilities to be integrated with other frameworks (e.g. Selenium), and also devices at Testdroid Cloud can be used for mobile app/site testing.
+ Testdroid products are not limited to apps only. E.g. Appium framework can be used to test mobile websites using Testdroid device cloud.
  
 **Q: How many people are you? And where are you located? Are you guys like 5 guys in garage or...**
 
- Currently (mid Feb 2014), we’re about 35 in headcount, located in 3 countries. We have two major R&D sites and two sales bigger sales offices. Totally 5 different offices in the USA, Finland and Poland.
+ Currently (mid Feb 2016), we’re about 55 in headcount, located in 4 countries. We have two major R&D sites and two bigger sales offices. Totally 5 different offices in the USA, Finland and Poland.
  
-## Commercial Questions
- 
-**Q: On the price list: What means "Projects"?**
-
- Project means one application, game or service you are building. Any project can have unlimited number of versions and we’re not limiting that anyhow. Project is also platform-specific so one game for Android and iOS equals with 2 projects.
- 
-**Q: What is your cancellation time of a subscription?**
-
- Minimum commitment for any Testdroid Cloud plan is 30 days. You can unsubscribe any time and one day before the new month plan to start counts as successful unsubscribe.
