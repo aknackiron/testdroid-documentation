@@ -101,6 +101,8 @@
   subcategories:
   - subtitle: "IPA Requirements"
     subhref: "how-tos/ipa-requirements"
+  - subtitle: "Testdroid FAQ"
+    subhref: "how-tos/faq"
   
 - title: "User Manuals"
   href: "testdroid-cloud-ui"
