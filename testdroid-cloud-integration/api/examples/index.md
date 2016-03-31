@@ -2470,7 +2470,7 @@ Response:
 
 **Request:**
 
-    GET /api/v2/me/projects/{projectId}/runs/{runId}/states
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/states
   
 Request body:
 
@@ -2551,7 +2551,7 @@ Get device run state
 
 **Request:**
 
-    GET /api/v2/me/projects/{projectId}/runs/{runId}/states/{stateId}  
+    GET /api/v2/me/projects/{projectId}/runs/{runId}/device-runs/{deviceRunId}/states/{stateId}  
   
 Request body:
 
