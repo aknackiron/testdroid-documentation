@@ -46,6 +46,33 @@ information on how to use annotations](using-annotations) to execute subsets of 
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-build-step-2.png)
 
+___
+
+The following fields are only for Android Instrumentation runs:
++ Device group        
++ Device language     
++ Screenshots configuration   
++ Custom test runner  
+* Tests with annotation   
++ Tests without annotation    
++ Use test cases from
+
+___
+
+**Note** 
+
+Calabash Android and iOS:
++ Application  
+   
+   This field defines the path to .apk or .ipa file (this is relative to job workspace)
+   
++ Test 
+   
+  This field defines the path to .zip file which contains the feature files. 
+  See http://docs.testdroid.com/calabash/creating-calabash-tests/ for more details how to create calabash test zip
+
+___
+
 There's 2 ways to get notification from Testdroid your test runs are finished.
  
 ### API CALL
