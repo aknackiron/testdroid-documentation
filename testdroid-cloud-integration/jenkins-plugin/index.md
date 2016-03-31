@@ -56,15 +56,21 @@ The following fields are only for Android Instrumentation runs:
 * Tests with annotation   
 + Tests without annotation    
 + Use test cases from
+
 ___
 
 **Note** 
+
 Calabash Android and iOS:
-+ Application 
-⋅⋅* This field defines the path to .apk or .ipa file (this is relative to job workspace)
++ Application  
+   
+   This field defines the path to .apk or .ipa file (this is relative to job workspace)
+   
 + Test 
-⋅⋅* Thisfield defins the path to .zip file which contains the feature files. 
-...See http://docs.testdroid.com/calabash/creating-calabash-tests/ for more details how to create calabash test zip
+   
+  This field defines the path to .zip file which contains the feature files. 
+  See http://docs.testdroid.com/calabash/creating-calabash-tests/ for more details how to create calabash test zip
+
 ___
 
 There's 2 ways to get notification from Testdroid your test runs are finished.
