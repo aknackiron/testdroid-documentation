@@ -43,33 +43,8 @@ debugging purposes and further analysis, detailed information about
 test runs, with logcats, screenshots and performance metrics are
 delivered.
 
-## Screens
 
-### Dashboard
-
-[Welcome to Testdroid Cloud! Testdroid Cloud provides practical,
-reliable, and easy-to-access platform for mob...](dashboard/)
-
-### Projects
-
-[Projects Under Projects view users are able to create, remove and
-manage their projects.](projects/)
-
-### Reports
-
-[The Reports view provides users a way to generate reports of
-their test runs...](reports/)
-
-### Device Groups
-
-[Testdroid Cloud enables its users to create a specific device groups
-for particular testing needs.](device-groups/)
-
-### Manual Testing
-
-[Use Testdroid Cloud devices for manual testing of your apps and web sites.](manual-testing/)
-
-### Video Tutorials
+## Video Tutorials
 
 [A set of great video tutorials for user Testdroid Cloud.](video-tutorials/)
 

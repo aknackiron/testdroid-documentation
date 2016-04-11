@@ -99,18 +99,27 @@
 - title: "How-To Articles"
   href: "how-tos"
   subcategories:
-  - subtitle: "IPA Requirements"
-    subhref: "how-tos/ipa-requirements"
-  - subtitle: "Testdroid FAQ"
-    subhref: "how-tos/faq"
+    - subtitle: "IPA Requirements"
+      subhref: "how-tos/ipa-requirements"
+    - subtitle: "Testdroid FAQ"
+      subhref: "how-tos/faq"
   
 - title: "User Manuals"
   href: "testdroid-cloud-ui"
-#  subcategories:
-#    - subtitle: "Testdroid Cloud"
-#      subhref: "testdroid-cloud-ui"
-#    - subtitle: "Testdroid Enterprise"
-#      subhref: "testdroid-enterprise"
+  subcategories:
+    - subtitle: "Testsdroid Cloud"
+      subhref: "testdroid-cloud-ui"
+      subcategories:
+        - subtitle: "Projects"
+          subhref: "testdroid-cloud-ui/projects/"
+        - subtitle: "Manual Testing"
+          subhref: "testdroid-cloud-ui/manual-testing/"
+        - subtitle: "Device Groups"
+          subhref: "testdroid-cloud-ui/device-groups/"
+        - subtitle: "Reports"
+          subhref: "testdroid-cloud-ui/reports/"
+    - subtitle: "Testsdroid Enterprise"
+      subhref: "testdroid-enterprise"
   
 #- title: "Robotium Tutorial"
 #  href: "robotium"

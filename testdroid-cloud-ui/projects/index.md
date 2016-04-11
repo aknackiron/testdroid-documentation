@@ -97,19 +97,24 @@ Upload your application
 ## Test run / Overview
 
 User can access **Test Run view** either by starting a test run or
-clicking any of older test runs is dashboard or projects view. In this
-view test run execution information, execution time as well as success
-of test runs is shown in summary type of perspective.
+clicking any of older test runs in projects view. This view presents
+test run execution information, execution time as well as success of
+test runs is shown in summary type of perspective.
 
-The Testdroid Cloud test run starts always with device cleaning
+A Testdroid Cloud test run starts always with device cleaning
 (removing all content from devices, cleaning SD card and rebooting
-devices), followed by installation and launch of the app and tests.
+device), followed by installation and launch of the app and tests.
 
-The first widget in Test Run View is summary.
+The first widget in Test Run View is summary about tests success ratio and devices execution.
 
-![Picture. Test run view summary -widget]({{site.github.url}}/assets/testdroid-cloud-ui/projects_run_overview.png)
+![Picture. Test run view summary -widget]({{site.github.url}}/assets/testdroid-cloud-ui/projects_run_overview.png) ![Picture. Test run view devices summary -widget]({{site.github.url}}/assets/testdroid-cloud-ui/projects_run_overview-device.png)
 
-Overall statuses
+Tests success statuses
+
+* shows percentage of successful tests
+* shows number of passed tests / number of total tests in test run
+
+Overall device execution statuses
 
 * Finished - No errors, everything went fine
 * Finished with failures - finished but some of test cases failed.
@@ -117,21 +122,28 @@ Overall statuses
   is for example application or device crash.
 
 In addition to summary information you can download the application
-and test files as well as as all the log files.  You can also access
-Test Case and Screenshots comparison views from the Summary widget.
+and test files as well as all log files. You can also access
+screenshots comparison views, compare screenshots by devices or
+compare screenshots by test steps (for Calabash runs only) from the
+Summary widget. Device specific logs are available by going to each
+device run.
 
 Test run view details -widget contains summary information for each device.
 
 ![Picture. Test run view details -widget]({{site.github.url}}/assets/testdroid-cloud-ui/projects_run_details.png)
 
-On the top-right of the test run widget, user can filter data shown in
+* On the top-right of the test run widget, user can filter data shown in
 widget. For example, user can filter passed, failed, excluded, and not
-executed devices for the widget.  More specific error of test
-execution from test run can be seen when mouse is hovered on the top
-of red colored error message.  User can focus on each device run by
-clicking the device row.  User can open all device runs by clicking
-Show all X devices where X indicated the number of used devices in the
-test run.  User can also retry the test run for visible devices.
+executed devices for the widget. 
+* More specific error of device execution from test run can be seen when clicking on the info icon on
+device line. 
+* User can focus on each device run by clicking the device
+row. 
+* User can also retry the test run for a single device by clicking
+the retry button at the and of a device line, or by selecting checkbox
+of one or multiple devices. 
+* Clicking on the checkbox column title,
+user can select also not visible devices for retry.
 
 ![Picture. Retry.]({{site.github.url}}/assets/testdroid-cloud-ui/projects_retry_listed.png)
 
