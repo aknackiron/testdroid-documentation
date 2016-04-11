@@ -116,6 +116,8 @@
           subhref: "testdroid-cloud-ui/manual-testing/"
         - subtitle: "Device Groups"
           subhref: "testdroid-cloud-ui/device-groups/"
+        - subtitle: "Account Settings"
+          subhref: "testdroid-cloud-ui/account-settings/"
         - subtitle: "Reports"
           subhref: "testdroid-cloud-ui/reports/"
     - subtitle: "Testsdroid Enterprise"
