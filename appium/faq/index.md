@@ -75,7 +75,21 @@ tests on multiple iOS devices at the same time.
 # Where do I get configuration info about Appium servers running at Testdroid Cloud?
 
 You can check basic configurations at
-http://appium.testdroid.com/info. (βeta)
+[http://appium.testdroid.com/info](http://appium.testdroid.com/info).
+
+# How can I get screenshots to my cloud project?
+
+Appium test runs' screenshots are stored under your device run in
+cloud.
+
+If you are web testing using Chromedriver then you need to switch your test context to NATIVE_APP before taking the screenshot to have the screenshots visible in your Tesdroid cloud device run view. 
+We suggest you create your own screenshot method that makes the switch between NATIVE_APP and WEBVIEW when taking a screenshot.
+
+       driver.switch_to.context("NATIVE_APP")
+       driver.save_screenshot(screenshot_name)
+       driver.switch_to.context("WEBVIEW") # only needed if continuing web testing
+
+To check a full example have a look at the example (in Python) on our Github repo: [testdroid_chrome.py](https://github.com/bitbar/testdroid-samples/blob/master/appium/sample-scripts/python/testdroid_chrome.py).
 
 # What version of Appium Server is running at Testdroid Cloud?
 
