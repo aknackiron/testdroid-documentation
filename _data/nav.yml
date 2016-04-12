@@ -107,7 +107,7 @@
 - title: "User Manuals"
   href: "testdroid-cloud-ui"
   subcategories:
-    - subtitle: "Testsdroid Cloud"
+    - subtitle: "Testdroid Cloud"
       subhref: "testdroid-cloud-ui"
       subcategories:
         - subtitle: "Projects"
@@ -120,7 +120,7 @@
           subhref: "testdroid-cloud-ui/account-settings/"
         - subtitle: "Reports"
           subhref: "testdroid-cloud-ui/reports/"
-    - subtitle: "Testsdroid Enterprise"
+    - subtitle: "Testdroid Enterprise"
       subhref: "testdroid-enterprise"
   
 #- title: "Robotium Tutorial"

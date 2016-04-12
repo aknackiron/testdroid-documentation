@@ -98,23 +98,23 @@ Upload your application
 
 User can access **Test Run view** either by starting a test run or
 clicking any of older test runs in projects view. This view presents
-test run execution information, execution time as well as success of
-test runs is shown in summary type of perspective.
+test run execution information, execution time as well as a summary of
+test runs.
 
 A Testdroid Cloud test run starts always with device cleaning
 (removing all content from devices, cleaning SD card and rebooting
 device), followed by installation and launch of the app and tests.
 
-The first widget in Test Run View is summary about tests success ratio and devices execution.
+The first widget in Test Run View shows a summary about device sessions and their success ratio.
 
 ![Picture. Test run view summary -widget]({{site.github.url}}/assets/testdroid-cloud-ui/projects_run_overview.png) ![Picture. Test run view devices summary -widget]({{site.github.url}}/assets/testdroid-cloud-ui/projects_run_overview-device.png)
 
-Tests success statuses
+Tests success status
 
 * shows percentage of successful tests
 * shows number of passed tests / number of total tests in test run
 
-Overall device execution statuses
+Overall device execution status
 
 * Finished - No errors, everything went fine
 * Finished with failures - finished but some of test cases failed.

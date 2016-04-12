@@ -8,8 +8,8 @@ title: Account Settings
 User information is available under **My Account** from under the avatar icon from the right upper corner of Testdroid Cloud. This contains important information like:
 
 * change you password
-* your API key and reseting it. You can use your API key to identify yourself in test scripts without having to disclose your personal credentials. It is also easy to regenerate a new key if for some reason you no longer want to use the previous one.
-* define how ofter you want to receive email notification of your finished test runs.
+* your API key and resetting it. You can use your API key to identify yourself in test scripts without having to disclose your personal credentials. It is also easy to regenerate a new key if for some reason you no longer want to use the previous one.
+* define how often you want to receive email notification of your finished test runs.
 * update some of your personal information
 * change your default view in Testdroid Cloud
 

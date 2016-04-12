@@ -9,7 +9,7 @@ device group configuration can be found under the main menu - **Device
 Groups**.
 
 Creation of a device group starts by selecting one or multiple devices
-by checking the checkbox in the device cell. Draging the selected
+by checking the checkbox in the device cell. Dragging the selected
 devices into the blue **New Group** icon creates a new device group
 out of the dragged devices.
 
