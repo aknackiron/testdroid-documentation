@@ -82,8 +82,9 @@ You can check basic configurations at
 Appium test runs' screenshots are stored under your device run in
 cloud.
 
-If you are web testing using Chromedriver then you need to switch your test context to NATIVE_APP before taking the screenshot to have the screenshots visible in your Tesdroid cloud device run view. 
-We suggest you create your own screenshot method that makes the switch between NATIVE_APP and WEBVIEW when taking a screenshot.
+If you are web testing using Chromedriver, then you need to switch your test context to NATIVE_APP before taking a screenshot. This will ensure your screenshot to be taken from the entire device screen as well as to have the screenshot visible in your Testdroid cloud device run view.
+
+Create your own screenshot method that makes the switch between NATIVE_APP and WEBVIEW when taking a screenshot.
 
        driver.switch_to.context("NATIVE_APP")
        driver.save_screenshot(screenshot_name)
