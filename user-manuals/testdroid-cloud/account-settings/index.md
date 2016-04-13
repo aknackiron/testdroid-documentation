@@ -17,7 +17,7 @@ User information is available under **My Account** from under the avatar icon fr
 
 Shows your current Testdroid Cloud plan and allows you to make changes to it. 
 
-![Current plan subscription]({{ site.github.url }}/assets/testdroid-cloud-ui/account-settings/subscriptions-details.png "Subscription details")
+![Current plan subscription]({{ site.github.url }}/assets/user-manuals/account-settings/subscriptions-details.png "Subscription details")
 
 From the subscription details widget the user is able to:
 

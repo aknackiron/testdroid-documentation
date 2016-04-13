@@ -30,7 +30,7 @@ right-hand side. The filter options on the left-hand side, for
 example, OS versions, API levels, CPUs and so on can be used to browse
 specific devices for selection.
 
-![]({{site.github.url}}/assets/testdroid-cloud-ui/device_groups.png)
+![]({{site.github.url}}/assets/user-manuals/device_groups.png)
 
 The third way to modify device groups is by clicking existing device
 group on the right-hand side widget. Devices included in the specific
