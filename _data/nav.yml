@@ -86,11 +86,11 @@
       subhref: "testdroid-cloud-integration/api"
       subcategories:
         - subtitle: "API"
-          subhref: "testdroid-cloud-integration/api/rest-api/"
+          subhref: "testdroid-cloud-integration/api/rest-api"
         - subtitle: "API Examples"
           subhref: "testdroid-cloud-integration/api/examples"
     - subtitle: "ExtSolo Library"
-      subhref: "testdroid-cloud-integration/ext-solo/"
+      subhref: "testdroid-cloud-integration/ext-solo"
 #    - subtitle: "JIRA"
 #      subhref: "jira"      
 #    - subtitle: "Xcode"
@@ -99,18 +99,29 @@
 - title: "How-To Articles"
   href: "how-tos"
   subcategories:
-  - subtitle: "IPA Requirements"
-    subhref: "how-tos/ipa-requirements"
-  - subtitle: "Testdroid FAQ"
-    subhref: "how-tos/faq"
+    - subtitle: "IPA Requirements"
+      subhref: "how-tos/ipa-requirements"
+    - subtitle: "Testdroid FAQ"
+      subhref: "how-tos/faq"
   
 - title: "User Manuals"
-  href: "testdroid-cloud-ui"
-#  subcategories:
-#    - subtitle: "Testdroid Cloud"
-#      subhref: "testdroid-cloud-ui"
-#    - subtitle: "Testdroid Enterprise"
-#      subhref: "testdroid-enterprise"
+  href: "user-manuals"
+  subcategories:
+    - subtitle: "Testdroid Cloud"
+      subhref: "user-manuals/testdroid-cloud"
+      subcategories:
+        - subtitle: "Projects"
+          subhref: "user-manuals/testdroid-cloud/projects"
+        - subtitle: "Manual Testing"
+          subhref: "user-manuals/testdroid-cloud/manual-testing"
+        - subtitle: "Device Groups"
+          subhref: "user-manuals/testdroid-cloud/device-groups"
+        - subtitle: "Account Settings"
+          subhref: "user-manuals/testdroid-cloud/account-settings"
+        - subtitle: "Reports"
+          subhref: "user-manuals/testdroid-cloud/reports"
+    - subtitle: "Testdroid Enterprise"
+      subhref: "user-manuals/testdroid-enterprise"
   
 #- title: "Robotium Tutorial"
 #  href: "robotium"
@@ -124,7 +135,7 @@
 #- title: "Testdroid API"
 #  subcategories:
 #    - subtitle: "API reference"
-#      subhref: "api/apidocs/"
+#      subhref: "api/apidocs"
 #    - subtitle: "Examples"
 #      subhref: "api/examples"
 

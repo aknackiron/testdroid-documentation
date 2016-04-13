@@ -19,7 +19,7 @@ without and app*.
    by starting without. More applications can be uploaded and all are
    shown in this view.
 
-   ![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_choose_application.png)
+   ![]({{site.github.url}}/assets/user-manuals/interactive_choose_application.png)
 
 
 1. Select a device for the session
@@ -29,12 +29,12 @@ without and app*.
    available (used by some other user) it will be shown with grayed
    lock picture on top of it.
 
-   ![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_select_device.png)
+   ![]({{site.github.url}}/assets/user-manuals/interactive_select_device.png)
 
    After this the Manual Testing session will be opened with the selected
    application installed on device.
 
-   ![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_view.png)
+   ![]({{site.github.url}}/assets/user-manuals/interactive_view.png)
 
    During the session, users can use external buttons to do the following
    adjustments for the device, session and tests:
@@ -56,7 +56,7 @@ without and app*.
 The **device logs** for Manual Testing session will show live log details
 next to the interactive session widget.
 
-![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_device_logs.png)
+![]({{site.github.url}}/assets/user-manuals/interactive_device_logs.png)
    
 ## Screenshots
  
@@ -66,4 +66,4 @@ Manual Testing session.
 All captured screenshots can be downloaded by clicking Download
 screenshots button on the top right-corner of the widget.
 
-![]({{site.github.url}}/assets/testdroid-cloud-ui/interactive_screenshots.png)
+![]({{site.github.url}}/assets/user-manuals/interactive_screenshots.png)

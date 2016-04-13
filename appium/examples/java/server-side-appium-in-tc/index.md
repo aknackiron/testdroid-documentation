@@ -74,7 +74,7 @@ Dependencies for running locally:
 * Appium driver fork: [https://github.com/bitbar/testdroid-appium-driver](https://github.com/bitbar/testdroid-appium-driver)
 * Example project folder: [JavaIMGRecognitionParallelScripts.zip](https://www.dropbox.com/s/sqyg6u7a8eyo96x/JavaIMGRecognitionParallelScripts.zip?dl=0)
 * BitbarSampleApp: [BitbarSampleApp.apk](https://www.dropbox.com/s/65zjcyz15l50c4n/BitbarSampleApp.apk?dl=0)
-* OpenCV: [https://github.com/bitbar/testdroid-image-recognition/tree/master/samples/java#installing-dependencies](https://github.com/bitbar/testdroid-image-recognition/tree/master/samples/java#installing-dependencies) (Akaze and OpenCV builds are included in zip)
+* OpenCV: [https://github.com/bitbar/testdroid-samples/tree/master/image-recognition](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition) (Akaze and OpenCV builds are included in zip)
  
 ## Running the scripts
 

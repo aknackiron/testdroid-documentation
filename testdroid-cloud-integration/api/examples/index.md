@@ -3,7 +3,7 @@ layout: default
 title: Testdroid Cloud API
 
 ISO_639-1: <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1</a>
-ISO_3166-1: <a href="http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html">ISO 3166-1</a>
+ISO_3166-1: <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1</a>
 docs_oracle_com: <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Locale.html">docs.oracle.com</a>
 codenomicon: <a href="https://fuzzomatic.codenomicon.com/">Condenomicon</a>
 Compatibility_Test_Suite: <a href="http://source.android.com/compatibility/cts-intro.html">Compatibility Test Suite</a>

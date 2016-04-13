@@ -41,8 +41,8 @@ The output should look something like this:
 
 If your test suite generates a JUnit XML results file, you can upload
 the XML to Testdroid Cloud. Doing this will allow you to check your
-test cases their run statuses on the web UI, and let you download test
-reports in various formats.
+test cases and their run statuses on the Testdroid web UI, and let you
+download test reports in various formats.
 
 1. Add the
 [testdroid_junitWaitTime]({{site.github.url}}/appium/testdroid-desired-caps)
