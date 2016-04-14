@@ -48,6 +48,11 @@ can download it from [here](http://curl.haxx.se/download.html).
 
 ## Examples
 
+
+By default all of the api calls respond in XML format. To switch to JSON_ format, include header `Accept: application/json` to the header.
+
+Note that all request timeouts are in seconds.
+
 ### Authentication/Authorization
 
 This example shows how to get access to {{site.td_cloud}} using the
