@@ -5646,12 +5646,6 @@ API Objects
     }  
  
  
-API Sources
------------
-
-[Testdroid API](http://github.com/bitbar/testdroid-api)
-
-
 Swagger
 -------
 
