@@ -44,7 +44,26 @@ script locally from your own machine, and on receiving a request, the
 Cloud reserves the requested device and creates an Appium session for
 it.
 
+# Why are most of my Test Cases excluded when executing a Suite of tests?
+<!-- tags: appium, best practice, faq -->
+
+There are some best practices to know when writing Appium tests. The test cases of a test suite should re-use the same webdriver between the tests and not recreate a new session every time. 
+
+In Testdroid Cloud after each test case, a closed Appium session, the device under test is put offline for automatic cleanup. This will cause the following tests of the test suite to fail. 
+
+Instead, a test suite should re-use the first webdriver session from first test case in all the test cases or add a proper wait between each test case, poll our API and wait when the device become available again. 
+The app can be closed and restarted without having to close the Appium webdriver session:
+
+    # close current app
+    driver.closeApp() 
+    # re-lauch the app 
+    driver.launchApp()
+    # resets the app ~ re-install
+    driver.resetApp()
+
+
 # Can I use the same TestScript for both my iOS and Android apps?
+
 Although the TestScripts will be written in the same language, and will be almost similar, you would still need to prepare separate TestScripts for iOS and Android, or at least two flavours of the TestScript. This is because of the differences in UI elements on the two platforms. Sometimes the difference is as subtle as having to use different array indices. 
 
 iOS
