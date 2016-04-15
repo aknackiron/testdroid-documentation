@@ -18,6 +18,24 @@ documentation is using responds in JSON format.**
    
 [JSON: http://json.org/](http://json.org/)
 
+
+# Testdroid Cloud API Clients
+
+
+* java: [http://github.com/bitbar/testdroid-api](http://github.com/bitbar/testdroid-api)
+* python: [https://github.com/bitbar/testdroid-api-client-python](https://github.com/bitbar/testdroid-api-client-python)
+* ruby: [https://github.com/bitbar/testdroid-api-client-ruby](https://github.com/bitbar/testdroid-api-client-ruby)
+ 
+# Swagger
+
+**note:**
+   Swagger is available **only for enterprise** customers
+   
+Swagger is a tool which allows developers browse and test a REST API in real-time.
+
+[Open Swagger](https://cloud.testdroid.com/swagger) in your Testdroid Enterprise setup.
+
+
 # Authorization
 
 
@@ -5645,13 +5663,4 @@ API Objects
     "screenshotZipState": "BLANK"    
     }  
  
- 
-Swagger
--------
 
-**note:**
-   Swagger is available **only for enterprise** customers
-   
-Swagger is a tool which allows developers testing API in real-time.
-
-[Open Swagger](https://cloud.testdroid.com/swagger)
