@@ -27,7 +27,7 @@ Description: The password for your Testdroid Cloud account
 
 <strong>“testdroid_target”</strong>
 Mandatory: yes
-Description: The target test type. Use one of the following value. android and ios are for native apps, selendroid when testing a hybrid app and chrome and safari for web testing using the respective web browsers.
+Description: The target test type. Use one of the following value. android and ios are for native apps, selendroid when testing a hybrid app and chrome and safari for web testing using the respective web browsers as well as (API<17).
 Values: android | selendroid | ios | chrome | safari
 
 <strong>“testdroid_project”</strong>
