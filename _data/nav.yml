@@ -120,6 +120,8 @@
           subhref: "user-manuals/testdroid-cloud/account-settings"
         - subtitle: "Reports"
           subhref: "user-manuals/testdroid-cloud/reports"
+        - subtitle: "Dashboard"
+          subhref: "user-manuals/testdroid-cloud/dashboard"
     - subtitle: "Testdroid Enterprise"
       subhref: "user-manuals/testdroid-enterprise"
   
