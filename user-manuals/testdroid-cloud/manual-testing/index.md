@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Getting Started with Testdroid Cloud Manual Testing
+title: Testdroid Cloud Manual Testing
 ---
 
 Testdroid Cloud Manual Testing feature provides users a way to take
@@ -12,6 +12,7 @@ top of the widget and then select application for a manual session. It
 is also possible to simply start using a device by clicking on *Start
 without and app*.
 
+## Getting Started 
 
 1. Select application for the session
 
