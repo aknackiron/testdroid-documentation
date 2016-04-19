@@ -122,6 +122,8 @@
           subhref: "user-manuals/testdroid-cloud/reports"
         - subtitle: "Dashboard"
           subhref: "user-manuals/testdroid-cloud/dashboard"
+        - subtitle: "Video Tutorials"
+          subhref: "user-manuals/video-tutorials"
     - subtitle: "Testdroid Enterprise"
       subhref: "user-manuals/testdroid-enterprise"
   
