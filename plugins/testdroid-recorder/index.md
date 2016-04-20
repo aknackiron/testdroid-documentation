@@ -5,7 +5,7 @@ title: Testdroid Recorder Tutorial
 
 ## Prerequisites
 
-Use [Eclipse (Luna 4.4)](http://www.eclipse.org/downloads/packages/release/luna/sr2) and make sure you have the [Android SDK](http://developer.android.com/sdk/index.html#downloads) and [ADT Plugin](https://dl.google.com/android/ADT-23.0.7.zip).
+Use [Eclipse (Luna 4.4)](http://www.eclipse.org/downloads/packages/release/luna/sr2) and make sure you have the [Android SDK tools](http://developer.android.com/sdk/index.html#downloads) and [ADT Plugin](https://dl.google.com/android/ADT-23.0.7.zip).
 
 Testdroid recorder does not work with Android Studio.
 
