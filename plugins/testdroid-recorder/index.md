@@ -23,8 +23,7 @@ Recorder requires Eclipse 3.6 or greater. If you don't have correct version, you
 
 ## Android SDK 
 
-You need to have [Android SDK](http://developer.android.com/tools/studio/index.html) installed before installing Testdroid Recorder.
-Please, visit [http://developer.android.com/sdk/installing.html](http://developer.android.com/sdk/installing.html) for the comprehensive instructions for downloading and installing the tools.
+You need to have [Android SDK](http://developer.android.com/sdk/index.html#downloads) installed before installing Testdroid Recorder.
 
  
 ## Installation
