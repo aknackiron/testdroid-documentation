@@ -6,7 +6,8 @@ title: Testdroid Recorder Tutorial
 ## Prerequisites
 
 You can use your own installed Eclipse just make sure you have the Android SDK and ADT Plugin.
-Another way is to just download ADT Bundle which has Eclipse with almost everything you need.  You can download the ADT Bundle here: http://developer.android.com/sdk/index.html
+
+Upgrading to the  [Android SDK](http://developer.android.com/sdk/index.html#downloads) is also an option as ADT  is not anymore the default development environment.
 
 ## Installation Video
 
@@ -20,14 +21,11 @@ Testdroid Recorder is provided as an Eclipse plugin.
 Recorder requires Eclipse 3.6 or greater. If you don't have correct version, you can find it on [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/). We recommend the Eclipse Classic configuration.
 
 
-## Android SDK and ADT Plugin for Eclipse
+## Android SDK 
 
-You need to have Android SDK and ADT Plugin for Eclipse installed before installing Testdroid Recorder.
-Please, visit [http://developer.android.com/sdk/installing.html](http://developer.android.com/sdk/installing.html) for the comprehensive instructions for downloading and installing both of the tools.
+You need to have [Android SDK](http://developer.android.com/tools/studio/index.html) installed before installing Testdroid Recorder.
+Please, visit [http://developer.android.com/sdk/installing.html](http://developer.android.com/sdk/installing.html) for the comprehensive instructions for downloading and installing the tools.
 
-## ADT Bundle
-
-ADT Bundle provides everything, what you need to install Testdroid Recorder. You can download it from: [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html).
  
 ## Installation
 
