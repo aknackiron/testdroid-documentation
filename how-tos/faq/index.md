@@ -4,10 +4,81 @@ title: Testdroid - Frequently Asked Questions
 ---
 
 ## Testdroid Cloud & Our Devices
- 
+
+**Q: Do we need to share the source code of the app in the Cloud?**
+
+No you don't, unless you choose to use a test framework that specifically requires this.
+
+**Q: How does Testdroid manage the cleaning of devices?**
+
+Each phone is cleaned of apps that are not expected to be there.
+
+Android browser: we do remove any browser app local data implying there will not be any navigation data on next session. We also uninstall all apps that is possible to unistall and remove files we know are created during tests.
+
+iOS browser: we rely on iOS's own browser history cleaning services to revert Safari to an initial state.
+
+Each device is put through a clean up phase after each test run. Regardless of all these efforts some files or data may stay hidden somewhere on the device in the Public Cloud. For a truly private environment we recommend a Private or Enterprise Cloud installation.
+
+**Q: What are the requirements for signing my iOS applications to use on Testdroid's iOS devices?**
+
+The app needs to be an ad-hoc distribution developer debug build. You can find more information [here](http://docs.testdroid.com/how-tos/ipa-requirements/ ).
+
+**Q: How do you support Testdroid devices communicating with servers behind our firewall?**
+
+For Public cloud the only way is for the customer servers to whitelist our public IPs to allow connections from our devices. For Private Cloud we can implement a VPN or proxy connection. In Enterprise Cloud the customer has complete freedom on implementing the networking as the cloud is in their own premises.
+
+**Q: Do you support turning off and on Wifi on Testdroid devices?**
+
+This is not supported in Public Cloud. There is support for this in Private and Enterprise environments.
+
+**Q: My tests require a Bluetooth (BLE) connection between the device and my external HW. What should I do?**
+
+For Public Cloud you could try to mock the BLE connection data as required by the tests. Otherwise we can pair devices to required Bluetooth devices in Private or Enterprise Cloud environments.
+
+**Q: Do you use emulators or real devices?**
+
+Real devices only.
+
+**Q: A lot of our content will not work outside country X. How can this be solved in the Cloud?**
+
+For Public cloud the only way is for the customer servers to whitelist our public IPs allowing our devices to connect. For private cloud we can implement a VPN or proxy connections. In Enterprise Cloud it is up to the customer to define as the installation is in their own premise.
+
+**Q: Do you support in app purchases?**
+
+In Public Cloud it is complicated to manage Google account cash. If a test account can be used to log in and do the purchase completely inside the tested app, then we can support it. For Private and Enterprise environments we can set accounts controlled by the customer to enable such purchases.
+
+**Q: Do you support testing of push notifications?**
+
+If the used test framework supports testing push notifications, then we can support them too. Triggering of push notifications is up to the customer to handle.
+
+**Q: Can we change device settings on Testdroid?**
+
+In Public Cloud it is not allowed to access device settings at all. For Private and Enterprise environments settingscan be changed through remote access to the device.
+
+**Q: What types of device performance data does Testdroid provide for test runs?**
+
+We provide CPU and Memory usage data. We have also the ability to provide Gamebench statistics on test runs. To get more information about this please contact our <sales@bitbar.com>.
+
+**Q: Can we do remote manual testing with Testdroid devices?**
+
+For most Android models yes, some are incompatible with the VNC technology in use. We are adding this same functionality to iOS devices too for our Private and Enterprise customers.
+
+**Q: Does Testdroid support parallel or concurrent test runs?**
+
+Yes. [Here is more information]({{ site.github.url }}/appium/client-server/). 
+
+
+**Q: Can I use my own Google accounts on Testdroid devices?**
+
+In Public Cloud setting a Google account on the device isn't allowed. Using a Google API/Service to log in to an app with your own account can be done. For Private and Enterprise environments a customer's own Google account can be set on the devices.
+
 **Q: Where can I see a list of your devices? How often are you updating it? And how long does it take you to have new devices?**
 
 The complete list of devices - with all details – can be found under {{site.td_cloud}}. You don’t need to log in to Testdroid Cloud to see all details about our devices. The full list is here [https://cloud.testdroid.com/#public/devices](https://cloud.testdroid.com/#public/devices). We’re constantly updating our device roster, approx.. 5-20 new devices per month, depending on release cycles by OEMs.
+
+**Q: Can Testdroid provide dedicated private devices for my Testing?**
+
+Dedicated devices are available through Private Cloud installations. Here the customer is able to freely select the number and type of devices 
  
 **Q: Can I change or choose the OS on the devices? If not, how do you choose what OS should be on there?**
 
@@ -35,11 +106,13 @@ The complete list of devices - with all details – can be found under {{site.td
  
 **Q: The app connects to our internal server. Our IT department will only allow connections from known IP address ranges. Is it possible for you to tell us what IP ranges are used to originate traffic from your test devices?**
 
- This can be handled automatically. Manually we won’t go in these engagements. Automatically this can be implemented e.g. by application. The app should find out what is the IP of that device/connection and then communicate it to some external service that can open that IP range for database etc. connections. For Private and Enterprise Cloud installations most special network configurations are possible.
+For Public Cloud users this can be implemented e.g. by test app. The app should find what is the current IP of used device/connection and communicate it to external service that can open that IP range for connections. 
+For Private and Enterprise Cloud installations most special network configurations are possible.
  
 **Q: Where is your cloud (test center) located?**
 
- The primary data center (Testdroid Cloud devices) are in Bitbar premises in Wroclaw, Poland. We also have a data center in Oulu, Finland.
+Testdroid devices are located in our data centers in San Jose, CA and Wroclaw, Poland. 
+
  
 **Q: How safe are you?**
 
@@ -72,7 +145,6 @@ http://www.slideshare.net/bitbar/testdroid-webinar20140107
  
  
 ## UIAutomator
-
  
 **Q: As we write scripts we notice that there are subtle differences between the user interfaces of various manufacturers and OS versions. This makes it complicated to deal with the different cases when doing typical tasks such as clicking on items on the Android Settings menu. Do you have a set of libraries that carry out these common tasks? Or a set of existing Uiautomator test scripts that we can copy from?**
 
@@ -85,7 +157,7 @@ Bitbar’s info video:
  
 ## iOS Test Automation Frameworks
  
-We support UI Automation, Jasmine, Calabash and Appium for iOS test automation with Testdroid Cloud.
+We support [KIF](https://github.com/kif-framework/KIF), [UI Automation](https://developer.apple.com/library/tvos/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/UIAutomation.html), [Jasmine](http://jasmine.github.io/), [Calabash](http://calaba.sh/) and [Appium](http://appium.io/) for iOS test automation with Testdroid Cloud.
  
 **Q: Is iOS Test based on UI Automation, which means it can only test UIKit components or?**
 
@@ -99,10 +171,14 @@ We support UI Automation, Jasmine, Calabash and Appium for iOS test automation w
 
  Yes, you can. To get this done effectively you have to think what test automation framework fits to best for your needs and will the framework work with your app/game.
 
- 
+**Q: Is there support to automatically handle iOS dialogues?**
+
+Currently the handling of iOS dialogues is handled through used test framework. We're working on ways to handle such dialogues outside testrun scope as well.
+
+
 ## Testdroid Recorder
 
-**Testdroid Recorder is not supported anymore by us. There are newer and better tools for this purpose, eg. [Google search Appium Inspector](https://www.google.com/search?q=appium+inspector&gws_rd=cr,ssl&ei=ZR_XVtmKDInF6AS1na6YCw)"
+**Testdroid Recorder is not supported anymore by us. There are newer and better tools for this purpose, eg. [Google search Appium Inspector](https://www.google.com/search?q=appium+inspector&gws_rd=cr,ssl&ei=ZR_XVtmKDInF6AS1na6YCw)**
  
 **Q: My device doesn't connect to Recorder. How to make it work?**
 
@@ -142,15 +218,23 @@ Java source code + client can be found at Github repository:
 
  Yes, the documentation with full API description can be found at [docs.testdroid.com]({{site.github.url}}/testdroid-cloud-integration/api/). You can integrate your CIs or any scripts with Testdroid using API's JSON based calls.
  
+**Q: Do you provide Jenkins and other CI plug-ins for Testdroid?**
+
+We provide a Jenkins plugin, which is available at [JenkinsCI Github](https://github.com/jenkinsci/testdroid-run-in-cloud-plugin).
+
 ## Support
  
 **Q: Where is your support located/What are the business hours?  Is it email support or also call?**
 
  Our support is located in USA, Finland and Poland. We provide 24/5 (business days) support for all test runs on devices at Testdroid Cloud as well as an email answers for any questions related to Testdroid products. Business hours – as defined in Pricing – apply for European CET time zone 9am-5pm.
+
+**Q: Do you offer devices with pre-released OS versions of Android and iOS?**
+
+Not for regular app testing. Maintaining pre-release OS is problematic as such releases can be very unstable and out of our hands to handle.
  
 ## Generic Questions
  
-**Q: Is your solution strictly for testing mobile apps, or is it possible to use it also for testing mobile sites.**
+**Q: Is your solution strictly for testing mobile apps, or is it possible to use it also for testing mobile sites?**
 
  Testdroid products are not limited to apps only. E.g. Appium framework can be used to test mobile websites using Testdroid device cloud.
  
@@ -158,3 +242,8 @@ Java source code + client can be found at Github repository:
 
  Currently (mid Feb 2016), we’re about 55 in headcount, located in 4 countries. We have two major R&D sites and two bigger sales offices. Totally 5 different offices in the USA, Finland and Poland.
  
+
+**Q: Testing manually is very slow.**
+
+Manual remote testing is powered by a direct VNC connection. Latency can be expected as the connection is live.
+

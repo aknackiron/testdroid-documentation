@@ -66,13 +66,15 @@ The app can be closed and restarted without having to close the Appium webdriver
 
 Although the TestScripts will be written in the same language, and will be almost similar, you would still need to prepare separate TestScripts for iOS and Android, or at least two flavours of the TestScript. This is because of the differences in UI elements on the two platforms. Sometimes the difference is as subtle as having to use different array indices. 
 
-iOS
-buttons = driver.find_elements_by_tag_name('button')
-buttons[0].click()
+iOS:
+
+    buttons = driver.find_elements_by_tag_name('button')
+    buttons[0].click()
 
 Android:
-buttons = driver.find_elements_by_tag_name('button')
-buttons[1].click()
+
+    buttons = driver.find_elements_by_tag_name('button')
+    buttons[1].click()
 
 # Can I use a script to test my app on multiple devices simultaneously?
 
@@ -168,3 +170,16 @@ repo (https://github.com/bitbar/testdroid-samples).
 # Testdroid Desired Capabilities
 
 Testdroid specific Appium desired capabilities are [described here]({{ site.github.url }}/appium/testdroid-desired-caps).
+
+# Do you support Appium with TestNG, Ruby or C#?
+
+Yes. For C# server side support through Mono is coming soon.
+
+# Can we select to use a specific version of Appium on Testdroid?
+
+When using server side Appium tests it is possible to select a specific version of Appium. We have plans on a more unified way of choosing the used Appium version.
+
+# What versions of Appium does Testdroid support?
+
+Default Appium version is 1.4.16. In Server side Appium runs versions 1.4.3 and 1.3.2 are also available for use at the moment. Appium 1.5 is under way.
+
