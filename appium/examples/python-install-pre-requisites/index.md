@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Appium With Python
+title: Installing Python Pre-requisites
 ---
 
 # Prerequisites

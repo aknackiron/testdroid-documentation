@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Move Your Java Tests to Cloud
+title: Java Server Side Example
 ---
 
 When using server-side Appium execution, you can run standard Appium
@@ -22,7 +22,7 @@ Dependencies for running locally:
 * Appium driver fork: [https://github.com/bitbar/testdroid-appium-driver](https://github.com/bitbar/testdroid-appium-driver)
 * Example project folder: [JavaParallelScripts.zip](https://www.dropbox.com/s/9tglr5kezvfk48n/PythonParallelScripts.zip?dl=0)
 * BitbarSampleApp: [BitbarSampleApp.apk](https://www.dropbox.com/s/65zjcyz15l50c4n/BitbarSampleApp.apk?dl=0)
- 
+
 ## Running the scripts
 
 In *run-tests.sh* you will need to make sure that the *${TEST}* variable
@@ -65,7 +65,7 @@ appium tests.
   another path.
 * run *'mvn test'* or *'mvn clean test'* from the project
   root folder
- 
+
 # Example **with** Image Recognition
 
 Dependencies for running locally:
@@ -75,7 +75,7 @@ Dependencies for running locally:
 * Example project folder: [JavaIMGRecognitionParallelScripts.zip](https://www.dropbox.com/s/sqyg6u7a8eyo96x/JavaIMGRecognitionParallelScripts.zip?dl=0)
 * BitbarSampleApp: [BitbarSampleApp.apk](https://www.dropbox.com/s/65zjcyz15l50c4n/BitbarSampleApp.apk?dl=0)
 * OpenCV: [https://github.com/bitbar/testdroid-samples/tree/master/image-recognition](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition) (Akaze and OpenCV builds are included in zip)
- 
+
 ## Running the scripts
 
 In *run-tests.sh* you will need to make sure that the *${TEST}*
@@ -95,7 +95,7 @@ mac build when running on mac and linux build on linux. In cloud,
 android devices use linux environment and iOS devices use mac
 environment. The desired akaze folder needs to be named as "akaze" in
 your project folder.**
- 
+
 ## Running on cloud
 
 * Compress all the used files into a zip: (these can be found from
@@ -115,7 +115,7 @@ launch point of your testing process:**
 * Upload the zip with scripts through the "Upload test file" tab
 * Choose the devices you wish to use
 * Start testrun.
- 
+
 ## Running locally
 
 * Launch appium server as you would normally do when running local
