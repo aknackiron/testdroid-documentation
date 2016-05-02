@@ -1,9 +1,14 @@
 ---
 layout: default
-title: Running a Test Script
+title: Python Client Side Example
 ---
 
-Make sure you have setup your machine following the [prerequisite guide]({{site.github.url}}/appium/examples/python/).
+Appium testing supports writing tests in multiple programming
+languages, including Python. Testing can be done against native or
+hybrid apps or responsive web pages on both iOS and Android
+devices. Only the test setups differ.
+
+Make sure you have setup your machine following the [prerequisite guide]({{site.github.url}}/appium/examples/python-install-pre-requisites/).
 
 Clone the [Testdroid Appium
 Sample](https://github.com/bitbar/testdroid-samples) scripts from
@@ -20,7 +25,7 @@ To upload your app to Testdroid Cloud use the following curl-script:
 # Step 1: Set credentials and other parameters
 
 Open the TestScript testdroid_ios.py in any text editor.  Set the
-screenshotDir path to where you want the screenshots to be saved on
+screenshot_dir path to where you want the screenshots to be saved on
 your machine.  Set your credentials to /testdroid_username/ and
 /testdroid_password/ in the desired capabilities.  Set the myAppFile
 identifier from [Step 0](#step-0-upload-your-app-to-cloud) against testdroid_app desired capability.
@@ -56,7 +61,7 @@ use Curl to upload the XML to Cloud:
 
         curl -s -F result=@"/absolute/file/path/TestOutput.xml" "http://appium.testdroid.com/upload/result?sessionId=<sessionId>"
 
-    
+
 # Step 4: Get results from Testdroid Cloud
 
 The screenshots are available locally on your machine inside the
