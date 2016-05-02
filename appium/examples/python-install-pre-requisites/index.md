@@ -3,7 +3,7 @@ layout: default
 title: Appium With Python
 ---
 
-# Prerequisites 
+# Prerequisites
 
 You need to have a PC or MAC machine with Linux, Windows or OSX installed.
 
@@ -39,7 +39,7 @@ Variables > Edit 'Path', and insert
 “C:\Python27\;C:\Python27\Scripts\” in the end. (Assuming you
 installed Python at default location) Make sure to restart the command
 prompt for new environment variables to come in effect.
- 
+
 ## Install pip
 
 Check if Python's package installer 'pip' is already installed.
@@ -68,10 +68,10 @@ $ python get-pip.py
 $ del get-pip.py
 ```
 
-## Install Python 'selenium' module
+## Install Python Client for Appium
 
 ```
-$ pip install selenium
+$ pip install Appium-Python-Client
 ```
 
 ## Install Git
@@ -102,10 +102,6 @@ Windows application from http://windows.github.com.  Next check out
 our step by step guides on how to test native, hybrid or web apps on
 Android or iOS using Appium.
 
-# Running a Test Script 
+# Running a Test Script
 
-A basic step by step example on [running a test script](running-the-test-script) from the command line using Python.
-
-# Testing Your Native, Hybrid or Web App
-
-A step by step example on [testing your native, hybrid or web app](native-hybrid-web-app-testing)
+A basic step by step example on [Python Client Side Example]({{ site.github.url }}/appium/examples/python-client-side-example) from the command line using Python.
