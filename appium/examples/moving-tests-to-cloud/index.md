@@ -90,7 +90,7 @@ has been established) using: driver.session_id()
 1. After your test run has finished, and JUnit XML has been generated,
 use Curl to upload the XML to Cloud:
 
-        curl -s -F result=@"/absolute/file/path/TestOutput.xml" "{{ page.webdriver }}/upload/result?sessionId=<sessionId>"
+        curl -s -F result=@"/absolute/file/path/TestOutput.xml" http://appium.testdroid.com/upload/result?sessionId=<sessionId>
 
 # Step 6: Get results from Cloud
 
