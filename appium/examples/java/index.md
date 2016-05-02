@@ -13,7 +13,7 @@ Java, check out [our
 tutorial](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/java)
 on Github.
 
-An interesting blog post on various Appium test setup configurations
-with desired capabilities, can be found
-[here](http://help.testdroid.com/customer/portal/articles/1507074-testdroid_-desired-capabilities).
- 
+All Testdroid Cloud specific desired capabilities can be found
+[here]({{site.github.url}}/appium/testdroid-desired-caps). For a full list of default
+built-in Appium desired capabilities can be found from [Appium Documentation](http://appium.io/slate/en/master/?java#appium-server-capabilities)
+page.
