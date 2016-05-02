@@ -5,59 +5,64 @@
   href: "products"
   subcategories:
     - subtitle: "Testdroid Cloud"
-      subhref: "products/testdroid-cloud.html"        
+      subhref: "products/testdroid-cloud.html"
     - subtitle: "Testdroid Privatecloud"
-      subhref: "products/testdroid-privatecloud.html"        
+      subhref: "products/testdroid-privatecloud.html"
     - subtitle: "Testdroid Enterprise"
-      subhref: "products/testdroid-enterprise.html"        
+      subhref: "products/testdroid-enterprise.html"
 
 - title: "Prerequisites & Concepts"
   href: "prereq-and-concepts"
   subcategories:
     - subtitle: "Account"
-      subhref: "prereq-and-concepts/account.html"    
+      subhref: "prereq-and-concepts/account.html"
     - subtitle: "Devices"
-      subhref: "prereq-and-concepts/devices.html"        
+      subhref: "prereq-and-concepts/devices.html"
     - subtitle: "Terminology"
-      subhref: "prereq-and-concepts/terminology.html"      
+      subhref: "prereq-and-concepts/terminology.html"
     - subtitle: "Test Automation"
-      subhref: "prereq-and-concepts/testautomation.html"      
+      subhref: "prereq-and-concepts/testautomation.html"
     - subtitle: "Remote Manual Access"
-      subhref: "prereq-and-concepts/remote.html"        
+      subhref: "prereq-and-concepts/remote.html"
     - subtitle: "REST API"
-      subhref: "prereq-and-concepts/rest-api.html"      
+      subhref: "prereq-and-concepts/rest-api.html"
     - subtitle: "Supported Technologies"
-      subhref: "prereq-and-concepts/supported.html"      
+      subhref: "prereq-and-concepts/supported.html"
 
 - title: "Appium Tutorial"
   href: "appium"
   subcategories:
     - subtitle: "Introduction & Prerequisites"
-      subhref: "appium/introduction"        
+      subhref: "appium/introduction"
     - subtitle: "Client vs. Server Execution"
-      subhref: "appium/client-server"        
-      subcategories:
-        - subtitle: "Python Server Side Example"
-          subhref: "appium/examples/python/server-side-appium-in-tc"
-        - subtitle: "Java Server Side Example"
-          subhref: "appium/examples/java/server-side-appium-in-tc"
+      subhref: "appium/client-server"
     - subtitle: "Setup"
-      subhref: "appium/setup"         
+      subhref: "appium/setup"
     - subtitle: "Desired Capabilities"
       subhref: "appium/testdroid-desired-caps"
     - subtitle: "App & Environment Requirements"
-      subhref: "appium/environment"     
+      subhref: "appium/environment"
     - subtitle: "Appium FAQ"
-      subhref: "appium/faq"        
+      subhref: "appium/faq"
     - subtitle: "Examples"
       subhref: "appium/examples"
       subcategories:
-        - subtitle: "Moving Tests To Cloud"
-          subhref: "appium/examples/moving-tests-to-cloud"      
         - subtitle: "Python"
           subhref: "appium/examples/python"
+          subcategories:
+            - subtitle: "Python Client Side Native App Example"
+              subhref: "appium/examples/python/running-the-test-script"
+            - subtitle: "Python Client Side Hybrid App Example"
+              subhref: "appium/examples/python/native-hybrid-web-app-testing"
+            - subtitle: "Python Server Side Example"
+              subhref: "appium/examples/python/server-side-appium-in-tc"
         - subtitle: "Java"
           subhref: "appium/examples/java"
+          subcategories:
+            - subtitle: "Java Server Side Example"
+              subhref: "appium/examples/java/server-side-appium-in-tc"
+        - subtitle: "Moving Tests To Cloud"
+          subhref: "appium/examples/moving-tests-to-cloud"
 
 - title: "Calabash Tutorial"
   href: "calabash"
@@ -65,13 +70,13 @@
     - subtitle: "Introduction & Prerequisites"
       subhref: "calabash/introduction"
     - subtitle: "Features, Steps and Scenarios"
-      subhref: "calabash/features-steps-scenarios"           
+      subhref: "calabash/features-steps-scenarios"
     - subtitle: "Getting Started"
       subhref: "calabash/getting-started"
     - subtitle: "Calabash Android Details"
       subhref: "calabash/examples/details-of-calabash-android-support"
     - subtitle: "Creating Calabash Tests"
-      subhref: "calabash/creating-calabash-tests"         
+      subhref: "calabash/creating-calabash-tests"
     - subtitle: "Examples"
       subhref: "calabash/examples"
 
@@ -92,7 +97,7 @@
     - subtitle: "ExtSolo Library"
       subhref: "testdroid-cloud-integration/ext-solo"
 #    - subtitle: "JIRA"
-#      subhref: "jira"      
+#      subhref: "jira"
 #    - subtitle: "Xcode"
 #      subhref: "xcode"
 
@@ -103,7 +108,7 @@
       subhref: "how-tos/ipa-requirements"
     - subtitle: "Testdroid FAQ"
       subhref: "how-tos/faq"
-  
+
 - title: "User Manuals"
   href: "user-manuals"
   subcategories:
@@ -128,7 +133,7 @@
           subhref: "user-manuals/testdroid-cloud/security"
     - subtitle: "Testdroid Enterprise"
       subhref: "user-manuals/testdroid-enterprise"
-  
+
 #- title: "Robotium Tutorial"
 #  href: "robotium"
 #  subcategories:
@@ -171,10 +176,9 @@
 
 #- title: "Example Test"
 #  href: "example-test"
-#  subcategories: 
+#  subcategories:
 #    - subtitle: "Example Test Subpage"
 #      subhref: "example-test/example-test-subpage"
 #      subcategories:
 #        - subtitle: "Example Test Subpage's Subpage"
 #          subhref: "example-test/example-test-subpage/example-test-subpages-subpage"
-          
