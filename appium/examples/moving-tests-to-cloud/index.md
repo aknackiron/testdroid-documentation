@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Moving Appium Test To Testdroid Cloud
-webui: <a href="https://cloud.testdroid.com">\<WebUI\></a>
-webdriver: <a href="http://appium.testdroid.com">\<WebDriver\></a>
+webui: <a href="https://cloud.testdroid.com">https://cloud.testdroid.com</a>
+webdriver: <a href="http://appium.testdroid.com">http://appium.testdroid.com</a>
 ---
 
 To switch from using Appium on localhost to using Appium at
@@ -16,8 +16,8 @@ environment should be set up as described
 
 The addresses that are needed below are defined as such:
 
-{{ page.webui }}: https://cloud.testdroid.com    
-{{ page.webdriver }}: http://appium.testdroid.com 
+WebUI: {{ page.webui }}  
+WebDriver: {{ page.webdriver }}
 
 
 # Step 0: Upload you app to Testdroid Cloud
@@ -33,7 +33,7 @@ POST request.
 
 You can also just upload the app using curl:
 
-``` 
+```
 $ curl -s --user 'user.name@cloudaccount.com:password' -F myAppFile=@"/path/to/app/file.apk" http://appium.testdroid.com/upload
 ```
 
@@ -73,8 +73,26 @@ After making the above changes in your test script, you can proceed
 with running it exactly the same way as you would do with Appium
 Server running on your localhost.
 
-# Step 5: Get results from Cloud
+# Step 5 (optional): Upload your Test Suite output to Cloud
+
+If your test suite generates a JUnit XML results file, you can upload
+the XML to Testdroid Cloud. Doing this will allow you to check your
+test cases and their run statuses on the Testdroid web UI, and let you
+download test reports in various formats.
+
+1. Add the
+[testdroid_junitWaitTime]({{site.github.url}}/appium/testdroid-desired-caps)
+Desired Capability in your TestScript.
+
+1. Get Appium sessionId from your script (after the WebDriver connection
+has been established) using: driver.session_id()
+
+1. After your test run has finished, and JUnit XML has been generated,
+use Curl to upload the XML to Cloud:
+
+        curl -s -F result=@"/absolute/file/path/TestOutput.xml" "{{ page.webdriver }}/upload/result?sessionId=<sessionId>"
+
+# Step 6: Get results from Cloud
 
 Get the screenshots, Appium.log and Logcat (Android) or Trace (iOS)
 output from {{ page.webui }}.
-
