@@ -30,6 +30,8 @@ without and app*.
    available (used by some other user) it will be shown with grayed
    lock picture on top of it.
 
+   Some rare Android devices do not support the used remote connection technology and for this reason are not visible in the manual testing device selector. Manual testing on iOS devices is not supported on public cloud devices. We are bringing this functionality to Enterprise and Private Cloud customers.
+
    ![]({{site.github.url}}/assets/user-manuals/interactive_select_device.png)
 
    After this the Manual Testing session will be opened with the selected
