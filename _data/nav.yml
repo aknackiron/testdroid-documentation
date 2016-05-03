@@ -98,8 +98,6 @@
   subcategories:
     - subtitle: "IPA Requirements"
       subhref: "how-tos/ipa-requirements"
-    - subtitle: "Testdroid FAQ"
-      subhref: "how-tos/faq"
     - subtitle: "Test Automation"
       subhref: "how-tos/testautomation"
 
@@ -131,6 +129,9 @@
           subhref: "user-manuals/testdroid-cloud/security"
     - subtitle: "Testdroid Enterprise"
       subhref: "user-manuals/testdroid-enterprise"
+
+- title: "Testdroid FAQ"
+  href: "testdroid-faq"
 
 #- title: "Robotium Tutorial"
 #  href: "robotium"
