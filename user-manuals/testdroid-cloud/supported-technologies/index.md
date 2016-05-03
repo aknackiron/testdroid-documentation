@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Test Automation
+title: Supported Technologies
 ---
-
 
 ## Test Automation
 
@@ -76,9 +75,8 @@ scripts that test precisely the aspects of your app that you want to
 test.
 
 * **Record and Playback Approach** - This approach is
-less error-prone because nothing needs to be written in code, but it
-is typically more limited in functionality. Tests can be quickly
-recorded and then played back again and again against different OS
+typically limited in functionality. Tests can be
+recorded and played back again and again against different OS
 versions and device configurations. These tests focus on user
 interactions and user-driven activities. Some things might fall beyond
 a test’s scope (such as integration with other technologies and
