@@ -10,6 +10,8 @@
       subhref: "products/testdroid-privatecloud.html"
     - subtitle: "Testdroid Enterprise"
       subhref: "products/testdroid-enterprise.html"
+    - subtitle: "Testdroid Releases"
+      subhref: "products/testdroid-releases"
 
 #- title: "Prerequisites & Concepts"
 #  href: "prereq-and-concepts"
