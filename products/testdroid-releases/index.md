@@ -7,7 +7,7 @@ title: Testdroid Releases
 ## Release 2.20 May 11, 2016
 
 Technical release mostly intended to fixing some back end
-issues. Release targetted for Enterprise installations.
+issues. Release targeted for Enterprise installations.
 
 ### Fixed bugs
 
