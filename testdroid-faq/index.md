@@ -106,7 +106,7 @@ Dedicated devices are available through Private Cloud installations. Here the cu
  
 ###  The app connects to our internal server. Our IT department will only allow connections from known IP address ranges. Is it possible for you to tell us what IP ranges are used to originate traffic from your test devices?
 
-For Public Cloud users this can be implemented e.g. by test app. The app should find what is the current IP of used device/connection and communicate it to external service that can open that IP range for connections. 
+We have two public cloud data centers with IP ranges 185.75.2.0/28 and 216.38.149.11/32. Public Cloud users can also implement a test app to find the current IP of used device/connection and communicate it to external service that can open that IP for connections.
 For Private and Enterprise Cloud installations most special network configurations are possible.
  
 ###  Where is your cloud (test center) located?
