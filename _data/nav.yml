@@ -116,7 +116,7 @@
         - subtitle: "Device Groups"
           subhref: "user-manuals/testdroid-cloud/device-groups"
         - subtitle: "Account"
-          subhref: "user-manuals/account"
+          subhref: "user-manuals/testdroid-cloud/account"
         - subtitle: "Account Settings"
           subhref: "user-manuals/testdroid-cloud/account-settings"
         - subtitle: "Reports"
