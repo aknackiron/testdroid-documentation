@@ -4,6 +4,28 @@ title: Testdroid Releases
 ---
 
 
+
+## Release 2.21 May 30, 2016
+
+Release has mostly changes important to Enterprise Cloud users.
+
+### Fixed bugs
+
+* Performance fixes to creating new device groups. There was an annoying bug when creating a new device group by dragging new devices to the "New group" icon the group got created but the correct number of devices in the group was slow to get updated.
+
+![]({{site.github.url}}/assets/products/testdroid-releases/2.21/device-groups-improvement.png)
+
+### Added Features
+
+* Jenkins plugin, [Testdroid Run in Cloud Jenkins Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Testdroid+Run+In+Cloud+Plugin) was published to Jenkins Wiki. Also an update release (1.0.12) was made available and can be installed through the Jenkins Manager. 
+
+* Improved the presentation of test steps in View Screenshots by Test Step view. This functionality is available for Calabash users but also for AppCrawler (automated test runner) and Android UiAutomation tests. Now the screenshot comparison view presents erroneous steps and devices. 
+
+The comparison view also got some new icons next to device titles. These show whether there were errors in the tests or running the tests. As elsewhere when everything is good we give it green color, otherwise orange or red when things got really bad.
+
+![]({{site.github.url}}/assets/products/testdroid-releases/2.21/shots-by-test-steps.png)
+
+
 ## Release 2.20 May 11, 2016
 
 Technical release mostly intended to fixing some back end
