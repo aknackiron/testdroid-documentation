@@ -78,7 +78,7 @@ Release for Private and Enterprise installations in mind.
 
 ### Added Features
 
-* Removed old administration interface
+* Administration interface was upgarded. Administrators can now use the same look and feel throughout the whole service.
 
 * [Integration to IBM Marketplace](https://www.ibm.com/marketplace/next/search/us/en-us/?terms=testdroid). IBM Marketplace users can now get started using Testdroid Cloud. 
 
