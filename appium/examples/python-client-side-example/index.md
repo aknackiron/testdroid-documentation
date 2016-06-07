@@ -105,7 +105,7 @@ Common values used in tests:
 # Run the Test Script
 
 ```bash
-$ python run-test.py -k xYY5...PeOA6 -d /tmp/screens/ -p "iOS" -t testdroid_ios -m "" -a "latest"
+$ python run-test.py -k xYY5...PeOA6 -s /tmp/screens/ -p "iOS" -t testdroid_ios -a "latest"
 testSample (testdroid_ios.TestdroidIOS) ... Searching Available Free iOS Device...
 Found device 'Apple iPad Mini A1432 9.2.1'
 
@@ -195,7 +195,7 @@ Additional parameters needed to run a hybrid app:
 The above parameters are already set into the test scripts, so they are not mandatory for the sample tests. For other apps they are.
 
 ```bash
-python run-test.py -k xYY5...PeOA6 -s /tmp/screens/ -t testdroid_android_hybrid -p "Android Hybrid"  -r `date +%R` --app b9608704-b55d-4b71-83d4-d8027c67b49a/Testdroid.apk --device ""
+python run-test.py -k xYY5...PeOA6 -s /tmp/screens/ -t testdroid_android_hybrid -p "Android Hybrid"  -r `date +%R` --app b9608704-b55d-4b71-83d4-d8027c67b49a/Testdroid.apk 
 ```
 
 ## Safari Browser Testing
