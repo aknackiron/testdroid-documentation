@@ -102,6 +102,8 @@ Common values used in tests:
   'f4660af0-10f4-46e9-932b-0622f497b0d2/Testdroid.apk' To rerun using
   last uploaded app, `testdroid_app` can be set to *latest*
 
+In addition to the above capabilities, most Appium capabilities are supported. Here is a list of supported [Desired Capabilities]({{ site.github.url }}/appium/testdroid-desired-caps).
+
 # Run the Test Script
 
 ```bash
