@@ -195,6 +195,7 @@ API Calls:
 
     usedDeviceGroupId, {deviceGroupId} (mandatory, or test run start fails)
 
+
 3) Start new Test Run: POST /api/v2/runs
 
 ## Testdroid Recorder
