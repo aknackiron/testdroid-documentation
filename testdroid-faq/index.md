@@ -182,10 +182,15 @@ iOS Appcrawler isn't available at the moment in Run in Cloud -plugin
 ###  How can I start an iOS Appcrawler using API?
 
 You can do it on iOS UI Automation project -type.
+
 API Calls:
+
 1) Get current project config: GET /api/v2/projects/{projectId}/config
+
 2) Set Project Config: POST /api/v2/projects/{projectId}/config
+
 3) Start new Test Run: POST /api/v2/runs
+
 
 ## Testdroid Recorder
 
