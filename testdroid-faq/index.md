@@ -188,8 +188,11 @@ API Calls:
 1) Get current project config: GET /api/v2/projects/{projectId}/config
 
 2) Set Project Config: POST /api/v2/projects/{projectId}/config
+
     projectId, {projectId}
-    mode, {IOS_CRAWLER}
+
+    mode, "IOS_CRAWLER"
+
     usedDeviceGroupId, {deviceGroupId} (mandatory, or test run start fails)
 
 3) Start new Test Run: POST /api/v2/runs
