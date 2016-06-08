@@ -177,7 +177,27 @@ Currently the handling of iOS dialogues is handled through used test framework. 
 
 ###  How can I start an iOS Appcrawler run using Testdroid RiC?
 
-You can start an Appcrawler run by choosing the right iOS project from Run in Cloud -configuration and leaving the test file configuration field empty.
+iOS Appcrawler isn't available at the moment in Run in Cloud -plugin
+
+###  How can I start an iOS Appcrawler using API?
+
+You can do it on iOS UI Automation project -type.
+
+API Calls:
+
+1) Get current project config: GET /api/v2/projects/{projectId}/config
+
+2) Set Project Config: POST /api/v2/projects/{projectId}/config
+
+    projectId, {projectId}
+
+    mode, "IOS_CRAWLER"
+
+    usedDeviceGroupId, {deviceGroupId} (mandatory, or test run start fails)
+
+
+
+3) Start new Test Run: POST /api/v2/runs
 
 ## Testdroid Recorder
 
