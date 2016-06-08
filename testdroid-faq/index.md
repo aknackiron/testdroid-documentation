@@ -175,6 +175,9 @@ We support [KIF](https://github.com/kif-framework/KIF), [UI Automation](https://
 
 Currently the handling of iOS dialogues is handled through used test framework. We're working on ways to handle such dialogues outside testrun scope as well.
 
+###  How can I start an iOS Appcrawler run using Testdroid RiC?
+
+You can start an Appcrawler run by choosing a right iOS project from Run in Cloud -configuration and leaving the test file configuration field empty.
 
 ## Testdroid Recorder
 
