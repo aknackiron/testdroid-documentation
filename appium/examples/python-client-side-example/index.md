@@ -25,7 +25,7 @@ The prefered way to identify yourself to Testdroid Cloud is using the apiKey, a 
 Testdroid Cloud. 
 
 ```bash
-$ curl -H "Accept: application/json" -u xYY5hc8PXAXsBBd1G3ijnb18wlqPeOA6: -F myAppFile=@"/absolute/file/path/example.apk" http://appium.testdroid.com/upload
+$ curl -H "Accept: application/json" -u xYY5...PeOA6: -F myAppFile=@"/absolute/file/path/example.apk" http://appium.testdroid.com/upload
 
 {"status":0,"sessionId":"bb8d4336-e6ea-4ba7-9b4c-a6824f1c60aa","value":{"message":"uploads successful","uploadCount":1,"rejectCount":0,"expiresIn":1800,"uploads":{"myAppFile":"bb8e4336-e6ea-4ba7-9b4c-a6824f1c60aa/Testdroid.apk"},"rejects":{}}}
 ```
@@ -207,7 +207,7 @@ Does not need any specific settings.
 Example: `testdroid_safari.py`
 
 ```bash
-python run-test.py -k xYY5hc8PXAXsBBd1G3ijnb18wlqPeOA6 -s /tmp/screens/ -t testdroid_safari -p "Safari browser"  -r `date +%R`
+python run-test.py -k xYY5...PeOA6 -s /tmp/screens/ -t testdroid_safari -p "Safari browser"  -r `date +%R`
 ```
 
 ##  Chrome Browser Testing
@@ -217,6 +217,6 @@ Does not need any special settings.
 Example: `testdroid_chrome.py`
 
 ```bash
-python run-test.py -k xYY5hc8PXAXsBBd1G3ijnb18wlqPeOA6 -s /tmp/screens/ -t testdroid_chrome -p "Chrome browser"  -r `date +%R`
+python run-test.py -k xYY5...PeOA6 -s /tmp/screens/ -t testdroid_chrome -p "Chrome browser"  -r `date +%R`
 ```
 
