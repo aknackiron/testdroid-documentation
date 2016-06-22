@@ -74,6 +74,9 @@
     - subtitle: "Examples"
       subhref: "calabash/examples"
 
+- title: "Espresso Tutorial"
+  href: "espresso"
+
 - title: "Integrations"
   href: "testdroid-cloud-integration"
   subcategories:
