@@ -4,6 +4,37 @@ title: Testdroid Releases
 ---
 
 
+## Release 2.22 June 23, 2016
+
+
+
+### Fixed Bugs
+
+* Getting always the same device from device group. Some customers had an issue when running sequential tests on a device group where the test + first device configuration failed. In future the devices from a selected group are proposed in a randomized order to increase success of sequential test runs.
+
+### Added Features
+
+* Enterprise and Private cloud administrators get a new menu element for managing used test frameworks. This gives Testdroid Cloud administrators the possibility of sharing test projects configurations between teams and modify the configurations of a specific test project.
+
+* Calabash test framework is updated to latest version in Enterprise Clouds. Available versions are 0.19.0 for iOS and 0.7.3 for Android Calabash.
+
+* Users are now able to cancel a test run with multiple devices and keep the results for the finished devices. Earlier when canceling a test run, the execution and results processing was canceled for all devices. Even those that had already finished test execution. With this release cancellation cancels only tests for those devices that have not yet started or finished running the tests. Results are presented for device runs that already have results.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.22/abort-test-run.png)
+
+* Throughout the spring there has been updates to better visualize the test results. The last part (for now) comes to end with the updates to the device run view. The view has changed to give a better overall view of the device run. 
+The page is divided in four. First view lets the user to switch which device from the run is inspected and present general relevant information on that device run. 
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.22/device-test-run-view-steps.png)
+
+Logs are in their own widget. Different logs have their own syntax highlighting and everything can be text searched. Switching between various gathered logs is easy. The test framework specific logs are highlighted (eg. Appium and Calabash) and additional logs can be selected from the drop down. 
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.22/device-run-view-logs.png)
+
+### Know Issues
+
+* We have noticed there is an issue with post processing of the test results in our Public Cloud. This release has some fixes for that, as mentioned above but the issue might still persist. We are working on robust solution to get over this issue. More on this when we have the working solution coming out.
+
 
 ## Release 2.21 May 30, 2016
 
