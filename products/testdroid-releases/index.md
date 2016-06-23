@@ -33,7 +33,7 @@ Logs are in their own widget. Different logs have their own syntax highlighting 
 
 ### Know Issues
 
-* We have noticed there is an issue with post processing of the test results in our Public Cloud. This release has some fixes for that, as mentioned above but the issue might still persist. We are working on robust solution to get over this issue. More on this when we have the working solution coming out.
+* There is an issue with post processing of some test results in our Public Cloud. This release fixes part of the problem but there can still be issues with some runs. A robust solution is being implemented. More on this when final solution is coming out.
 
 
 ## Release 2.21 May 30, 2016
