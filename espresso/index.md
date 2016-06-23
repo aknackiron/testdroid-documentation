@@ -74,12 +74,7 @@ Now, the environment should be properly configured to build instrumentation pack
 
 ## Step #2:
 
-Once the test project is configured, build it and upload into Testdroid Cloud. Under test run creation, create a standard "Android" type project, application and test APKs, select wanted device group, and under Advanced configuration (step #4 in Testdroid Cloud) define the custom test runner, as shown on below:
-
-  ![]({{site.github.url}}/assets/espresso/4-configuring-test-runner.png)
-
-
-NOTE! The above dialog doesn't show the whole string but it should be naturally - `android.support.test.runner.AndroidJUnitRunner`
+Once the test project is configured, build it and upload into Testdroid Cloud. Under test run creation, create a standard "Android" type project, upload the application and test APKs and select wanted device group.
 
 ## Step #3:
 
