@@ -20,6 +20,30 @@
             overflow-x: auto;
         }
         
+		table {
+			width:100%;
+			border-collapse:collapse;
+			
+			tr:nth-child(2n){
+				background-color: #f8f8f8;
+			}
+			
+			th, td {
+				text-align:left;
+				padding:5px 10px;
+				border: 1px solid #ddd;
+			}
+
+			dt {
+				color:#444;
+				font-weight:700;
+			}
+
+			th {
+				color:#444;
+			}
+		}
+        
         height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$section-padding-top-and-bottom} * 2));        
         padding: $section-padding-top-and-bottom $section-padding-left-and-right;
         float: none;
