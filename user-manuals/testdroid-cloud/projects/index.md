@@ -149,30 +149,35 @@ user can select also not visible devices for retry.
 
 **Note!** Previous test run information for the device will be
   overwritten!
+
+## Screenshot comparison
+
+The **Screenshot Comparison** view makes it easy to compare captured screenshots from every device test run. The **Compare By Test Steps** comparison is available for Calabash and JUnit tests enabling comparison of test steps between devices.
  
+Users can select screenshots from dropdown menu that gets automatically shown on each device in the test run. Screenshots can be browsed also with arrow button on the top right-corner of the widget. For full screen mode, user can click 'Full screen button' and for downloading all screenshots 'Download screenshots' button.
+
+![]({{site.github.url}}/assets/user-manuals/projects_run_details_sc_comparision.png)
+
 ## Device run details / Test cases
  
 After clicking any row on test run view, user is directed to view
 generic information about tests is shown. By selecting the name of
-test (presented either as green/success of red/failure) the test steps
-will be shown. User can also filter successful test runs by clicking
-the eye icon on the top-right corner.
+test (presented either as green/success or red/failure) the test steps
+will be shown. The device run view presents all main information about the run. This is also the place where user is able to download for example logs and videos of the run. The test steps and errors tabs can be enlarged to full screen making it easier to debug test steps and errors.
 
 ![]({{site.github.url}}/assets/user-manuals/projects_test_steps.png)
+
+When there are more devices clicking on the "Browse all devices" button allows the user to switch the device under inspection. 
 
 ## Device run details / Screenshots
  
 The Screenshots view shows all captured screenshots during the
 selected test. The number on the right-top corner of each screenshot
-indicates the step when screenshot was taken. For example, test run
-may have 22 steps. Each step will include a screenshot and if the step
+indicates the step when screenshot was taken. For example, test run may have 22 steps and each step could include a screenshot. If the step
 includes multiple screenshots, those are named as <number of
 step>.<sub-number>.  (e.g. 6.1, 6.2).
 
-![]({{site.github.url}}/assets/user-manuals/projects_run_details_screenshots.png)
-
-User can download all captured screenshots by clicking Download
-screenshots on the top right-corner of the widget.
+User can download all captured screenshots by clicking "Download screenshots" on the top right-corner of the widget.
 
 ## Device run details / Performance
  
@@ -182,40 +187,9 @@ information about resource consumption.
 
 ![]({{site.github.url}}/assets/user-manuals/projects_run_details_performance.png)
 
-The performance log can be also downloaded by clicking the Download
-performance log button on the top right-corner of the widget.
-
-
 ## Device run details / Logs
 
-The log view provides line-by-line information about the test run. It
-can be configured with types of information user wants to investigate
-and show in Logs view. Available configurations are: Info, Debug,
-Warning, Error, Assert and Verbose.
+The log view provides line-by-line information about the test run. It allows showing the different types of log data available from the test run. These include logcat, Appium and Calabash logs. The logs can be searched by browser search or the widget's own search box. For easier debugging the view can be enlarged to full screen.
 
 ![]({{site.github.url}}/assets/user-manuals/projects_run_details_logs.png)
-
-## Device run details / Device files
  
-If the test or device run includes additional files those can be
-reviewed and download from this view. For example, if test run
-generates additional logs, users can get those files through this view
-after the test run is completed.
-
-![]({{site.github.url}}/assets/user-manuals/projects_run_details_device_files.png)
-
-All additional files can be downloaded by clicking Download all files
-button on the top right-corner of the widget.
- 
-## Screenshot comparison
-
-The **Screenshot Comparison** view makes it easy to compare captured
-screenshots from every test run.
- 
-Users can select screenshots from dropdown menu that gets
-automatically shown on each device in the test run. Screenshots can be
-browsed also with arrow button on the top right-corner of the
-widget. For full-screen mode, user can click Full screen button and
-for downloading all screenshot Download screenshots button.
-
-![]({{site.github.url}}/assets/user-manuals/projects_run_details_sc_comparision.png)
