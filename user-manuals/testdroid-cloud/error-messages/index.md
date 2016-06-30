@@ -7,7 +7,7 @@ title: Typical Error Messages in Testdroid Cloud
 
 | Phase                | Error Message  | Description     | Resolution  |
 | :------------------- | :----------------- | :------------- | : --------------|
-|Execution             | error: Failed to start an Appium session, err was: Error: Bad app: /Path/to/your/application.app | User has defined "app" desired capability, which points to his local file system. This will not work on Testdroid Appium tests | Remove/Comment "app" desired capability from test script.
+|Execution             | Failed to start an Appium session, err was: Error: Bad app: /Path/to/your/application.app | User has defined "app" desired capability, which points to his local file system. This will not work on Testdroid Appium tests | Remove/Comment "app" desired capability from test script.
 
 
 ## Upload Errors
