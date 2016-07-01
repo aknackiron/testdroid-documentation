@@ -20,7 +20,7 @@ Dependencies for running locally:
 
 * Appium server: [https://github.com/bitbar/appium](https://github.com/bitbar/appium)
 * Appium driver fork: [https://github.com/bitbar/testdroid-appium-driver](https://github.com/bitbar/testdroid-appium-driver)
-* Example project folder: [JavaParallelScripts.zip](https://www.dropbox.com/s/9tglr5kezvfk48n/PythonParallelScripts.zip?dl=0)
+* Example project folder: [JavaParallelScripts.zip](https://www.dropbox.com/s/zmr0ls8enjgupsa/JavaParallelScripts.zip?dl=0)
 * BitbarSampleApp: [BitbarSampleApp.apk](https://www.dropbox.com/s/65zjcyz15l50c4n/BitbarSampleApp.apk?dl=0)
 
 ## Running the scripts
