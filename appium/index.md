@@ -42,12 +42,14 @@ cloud once they are executed and user is notified by email.
 
 ## Appium with Python
 
-[Running tests in Testdroid Cloud (Python).]({{site.github.url}}/appium/examples/python/server-side-appium-in-tc)
+* Example to run Python Appium [client side]({{site.github.url}}/appium/examples/python-client-side-example/)
+* Example to run Python Appium [server side]({{site.github.url}}/appium/examples/server-side-appium-in-tc-python/)
+
 
 ## Appium with Java
 
-[Running tests in Testdroid Cloud
-(Java).]({{site.github.url}}/appium/examples/java/server-side-appium-in-tc)
+* Example to run Java Appium [client side]({{site.github.url}}/appium/examples/java-client-side-example/) and 
+* Example to run Java Appium on [server side]({{site.github.url}}/appium/examples/server-side-appium-in-tc-java/)
 
 # Testdroid Cloud Desired Capabilities
 
