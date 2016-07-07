@@ -4,9 +4,30 @@ title: Testdroid Releases
 ---
 
 
+## Release 2.23 July 5, 2016
+
+### Fixed Bugs
+
+* Results processing in some cases was taking a long time or even failed. Test results processing problem was solved and solution improved.
+
+### Added Features
+
+* AppCrawler - Testdroid Cloud has had since its very early days an automated app tester that crawls through an app, checking for correct behavior. AppCrawler can be accessed directly from the main menu, or by creating a new project. When creating a new project the user has more options on guiding AppCrawler forward.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.23/new_app_crawler.png)
+
+  To smoke test an application the app needs to be uploaded, then choose project to include the results or create a new one and select the number of devices the app needs to be tested on. If device groups are defined then these can also be used. Clicking 'Go' starts the test run. 
+  Free users are limited to running on only one free device at a time. 
+
+* The view to read and debug a test run's test steps or error logs can now be enlarged for better clarity. Once the view enlarged it's easy to use the search box to find keywords. Of course browser's own search is also supported.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.23/drv_expanded_steps.png)
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.23/drv_expanded_errors.png)
+
+* A better support for presenting results as test steps for users using Cucumber with Appium. 
+
+
 ## Release 2.22 June 23, 2016
-
-
 
 ### Fixed Bugs
 
