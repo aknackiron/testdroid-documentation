@@ -70,7 +70,8 @@
                 padding: $content-padding-top-bottom $content-padding-left-right; 
                 height: calc(100% - (#{$content-padding-top-bottom} * 2));
                 overflow-y: auto;
-                max-width: $content-max-width;
+                width: calc(100% - 780px);
+
                 /* Fix for content growing too wide */
                 > *{
 					max-width: 100%;
@@ -109,6 +110,16 @@
 					}
                 }
             }
+
+            #toc {
+                position: fixed;
+                right: 10px;
+                width: 340px;
+                top: 60px;
+                max-height: calc(100vh - 140px);
+                overflow: auto;
+                padding: 10px;
+            }
             &:after {
               clear: both;
               content: '';
@@ -118,4 +129,12 @@
             @import "search";
         }
     }
-    
+
+    @media (max-width: 1280px) {
+      .content-section .wrapper .content {
+          width: calc(100% - 420px);
+      }
+      .content-section .wrapper #toc {
+        display: none;
+      }
+    }
