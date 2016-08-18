@@ -4,6 +4,48 @@ title: Testdroid Releases
 ---
 
 
+## Release 2.24 August 15, 2016
+
+### Added Features
+
+* New project types for server side runs available to all users. To create a server side Appium project, simply select Appium iOS or Android Server side project type from the project drop down list.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/server-side-project.png)
+
+
+* Appium client side testing picks similar available device by default
+
+  We updated our client side Appium to work in a way where the user does not need to provide an exact device name. The Appium client will search for a device that matches the requested device but does not guarantee that the requested device is used. The used device is visible in Testdroid Cloud test run view.
+  
+  For example by passing "iPhone" as testdroid_device capability name, Testdroid Appium client will pick any of the available iPhone devices, regardless of iOS or iPhone version. The test could be run on an iPhone 5s or iPhone 6.
+  
+  If the user wants to turn off this feature and use a specific device then the `testdroid_findDevice` Appium desired capability needs to be set to `True` like below Python example. By default this is `False`. 
+
+    ```
+    desired_capabilities_cloud['testdroid_findDevice'] = True
+    ```
+
+* Enterprise cloud admin users are now able to manage project ownership through the admin panel. Go to Admin - Projects, select the project that you want to move to other user and click on the "Project owner" icon. 
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_change_owner.png)
+
+    You can then change the owner by selecting new user from the list.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_owner.png)
+
+* Appium 1.5.x is available for server side test runs. By default test runs are run using older version Appium 1.4.16. To run server side Appium tests using Appium 1.5.x, the path to Appium needs to be updated.
+
+  The test run files `run-tests_ios.sh` or `run-tests_android.sh` from [PythonParallelScripts.zip](https://www.dropbox.com/s/9tglr5kezvfk48n/PythonParallelScripts.zip?dl=0) found in the [Appium server side examples]({{site.github.url}}/appium/examples/server-side-appium-in-tc-python/) needs to be updated with paths to Appium 1.5.x.
+
+  * `run-tests_ios.sh` Appium path needs to be update from `/opt/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/build/lib/main.js`
+
+  * `run-tests_android.sh` Appium path needs to be update from `/opt/appium/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/bin/appium.js`
+
+* Support for iOS 9.3.x devices using XCode 7.3.
+
+* Python version 3.5.1 is available for server side runs.
+
+
 ## Release 2.23 July 5, 2016
 
 ### Fixed Bugs
