@@ -33,17 +33,10 @@ title: Testdroid Releases
 
     ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_owner.png)
 
-* Appium 1.5.x is available for server side test runs. By default test runs are run using older version Appium 1.4.16. To run server side Appium tests using Appium 1.5.x, the path to Appium needs to be updated.
-
-  The test run files `run-tests_ios.sh` or `run-tests_android.sh` from [PythonParallelScripts.zip](https://www.dropbox.com/s/9tglr5kezvfk48n/PythonParallelScripts.zip?dl=0) found in the [Appium server side examples]({{site.github.url}}/appium/examples/server-side-appium-in-tc-python/) needs to be updated with paths to Appium 1.5.x.
-
-  * `run-tests_ios.sh` Appium path needs to be update from `/opt/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/build/lib/main.js`
-
-  * `run-tests_android.sh` Appium path needs to be update from `/opt/appium/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/build/lib/main.js`
 
 * Support for iOS 9.3.x devices using XCode 7.3.
 
-* Python version 3.5.1 is available for server side runs.
+* Python version 3.5.1 is available for server side runs. To use it, just call your Python scripts with `python3 your_test.py`.
 
 * A touch or personalization is always fun. Testdroid Cloud now supports avatars through the [Gravatar service](https://en.gravatar.com/).
 
