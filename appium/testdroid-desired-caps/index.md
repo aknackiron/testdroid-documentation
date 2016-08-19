@@ -96,6 +96,14 @@ Description: This is used with testdroid_testrunId -capability. Testdroid will r
 Default: false
 Example: true
 
+<strong>"testdroid_findDevice"</strong>
+Scope: Public, Private and Enterprise
+Mandatory: no
+Description: This can be used to turn off Appium client's feature of finding a close match to request device. This allows the requested device name to not be a perfect match but Appium client will search for a similar device.
+Default: false
+Example: true
+
+
 <strong>bundleId</strong>
 Mandatory: Yes (for all iOS runs), No (for any Android runs)
 Description: The reason is the difference in mechanism to install ipa in Testdroid compared to local case. Appium framework maps bundle ID automatically in case of local run/installation. In cloud case we must notify Appium framework about the correct bundle ID.
