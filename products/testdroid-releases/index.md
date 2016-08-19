@@ -19,7 +19,7 @@ title: Testdroid Releases
   
   For example by passing "iPhone" as testdroid_device capability name, Testdroid Appium client will pick any of the available iPhone devices, regardless of iOS or iPhone version. The test could be run on an iPhone 5s or iPhone 6.
   
-  If the user wants to turn off this feature and use a specific device then the `testdroid_findDevice` Appium desired capability needs to be set to `True` like below Python example. By default this is `False`. 
+  If the user wants to turn off this feature and use a specific device then the `testdroid_findDevice` Appium desired capability needs to be set to `True` like in below Python example. By default this is `False`.
 
     ```
     desired_capabilities_cloud['testdroid_findDevice'] = True
@@ -45,6 +45,7 @@ title: Testdroid Releases
 
 * Python version 3.5.1 is available for server side runs.
 
+* A touch or personalization is always fun. Testdroid Cloud now supports avatars through the [Gravatar service](https://en.gravatar.com/).
 
 ## Release 2.23 July 5, 2016
 
