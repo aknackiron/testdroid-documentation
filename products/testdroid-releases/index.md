@@ -8,10 +8,9 @@ title: Testdroid Releases
 
 ### Added Features
 
-* New project types for server side runs available to all users. To create a server side Appium project, simply select Appium iOS or Android Server side project type from the project drop down list.
+* New project types for server side runs available to all users with SOLO plan or up. To create a server side Appium project, simply select Appium iOS or Android Server side project type from the project drop down list.
 
   ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/server-side-project.png)
-
 
 * Appium client side testing picks similar available device by default
 
