@@ -39,7 +39,7 @@ title: Testdroid Releases
 
   * `run-tests_ios.sh` Appium path needs to be update from `/opt/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/build/lib/main.js`
 
-  * `run-tests_android.sh` Appium path needs to be update from `/opt/appium/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/bin/appium.js`
+  * `run-tests_android.sh` Appium path needs to be update from `/opt/appium/appium/bin/appium.js` to `/opt/appium/appium-1.5.3-testdroid/build/lib/main.js`
 
 * Support for iOS 9.3.x devices using XCode 7.3.
 
