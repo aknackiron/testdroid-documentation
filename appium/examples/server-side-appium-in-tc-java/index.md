@@ -45,7 +45,7 @@ On [Testdroid Cloud](cloud.testdroid.com):
 
 * Create an Appium Server side project (either iOS or Android)
 * Creating new testrun inside of new server side project
-* Upload your application (apk/ipa) through the "Application" step
+* Upload tested application (apk/ipa) through the "Application" step
 * Upload the zip with scripts through the "Upload test file" step
 * Choose the device group to use or create a new group for this test run
 * Start testrun
@@ -84,7 +84,7 @@ file of the actual tests.
 ## Running in Cloud
 
 * Compress all the used files into a zip: (example can be found from
-[JavaIMGRecognitionParallelScripts.zip](https://www.dropbox.com/s/sqyg6u7a8eyo96x/JavaIMGRecognitionParallelScripts.zip?dl=0)) - **Make sure that at that *run-tests.sh* file is in the root of your zip! This script is the launch point of your testing process:**
+[JavaIMGRecognitionParallelScripts.zip](https://www.dropbox.com/s/sqyg6u7a8eyo96x/JavaIMGRecognitionParallelScripts.zip?dl=0)) - **Make sure that at that *run-tests.sh* file is in the root of zip package! This script is the launch point of the testing process:**
   * akaze/ (Rename the akaze_mac or akaze_linux to akaze as needed)
   * pom.xml
   * queryimages/
@@ -95,7 +95,7 @@ file of the actual tests.
 On [Testdroid cloud](cloud.testdroid.com)
 
 * Create an Appium server side project
-* Create new testrun in your new server side project
+* Create a new testrun in new server side project
 * Upload tested application (apk/ipa) through the "Application" step
 * Upload the zip with scripts through the "Upload test file" step
 * Choose device group to use or create a new group for this run
@@ -103,6 +103,6 @@ On [Testdroid cloud](cloud.testdroid.com)
 
 ## Running locally
 
-* Launch Appium server as you would normally do when running local Appium tests
-* Make sure that the apk/ipa is named as *application.apk* or *application.ipa* at the root of your working directory. Alternatively edit *testdroid.properties* file to use another path
+* Launch Appium server as normally do when running local Appium tests
+* Make sure that the apk/ipa is named as *application.apk* or *application.ipa* at the root of working directory. Alternatively edit *testdroid.properties* file to use another path
 * run `mvn test` or `mvn clean test` from the project root folder
