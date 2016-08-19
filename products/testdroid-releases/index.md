@@ -4,6 +4,42 @@ title: Testdroid Releases
 ---
 
 
+## Release 2.24 August 15, 2016
+
+### Added Features
+
+* New project types for server side runs available to all users. To create a server side Appium project, simply select Appium iOS or Android Server side project type from the project drop down list.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/server-side-project.png)
+
+
+* Appium client side testing picks similar available device by default
+
+  We updated our client side Appium to work in a way where the user does not need to provide an exact device name. The Appium client will search for a device that matches the requested device but does not guarantee that the requested device is used. The used device is visible in Testdroid Cloud test run view.
+  
+  For example by passing "iPhone" as testdroid_device capability name, Testdroid Appium client will pick any of the available iPhone devices, regardless of iOS or iPhone version. The test could be run on an iPhone 5s or iPhone 6.
+  
+  If the user wants to turn off this feature and use a specific device then the `testdroid_findDevice` Appium desired capability needs to be set to `True` like in below Python example. By default this is `False`.
+
+    ```
+    desired_capabilities_cloud['testdroid_findDevice'] = True
+    ```
+
+* Enterprise cloud admin users are now able to manage project ownership through the admin panel. Go to Admin - Projects, select the project that you want to move to other user and click on the "Project owner" icon. 
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_change_owner.png)
+
+    You can then change the owner by selecting new user from the list.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_owner.png)
+
+
+* Support for iOS 9.3.x devices using XCode 7.3.
+
+* Python version 3.5.1 is available for server side runs. To use it, just call your Python scripts with `python3 your_test.py`.
+
+* A touch or personalization is always fun. Testdroid Cloud now supports avatars through the [Gravatar service](https://en.gravatar.com/).
+
 ## Release 2.23 July 5, 2016
 
 ### Fixed Bugs
