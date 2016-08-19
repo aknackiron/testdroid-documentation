@@ -9,9 +9,7 @@ cloud rather than through an active connection from remote machine to
 the cloud. For this reason scripts don't need to use testdroid
 capabilities at all and instead use only Appium capabilities.
 
-When using server-side Appium execution, you can run standard Appium
-tests on hundreds of devices in parallel without any need for complex
-set-ups at the client side.
+When using server-side Appium execution, tests can be run using standard Appium on hundreds of devices in parallel without any need for complex set-ups at the client side.
 
 **NOTE!** Server side Appium test runs on Testdroid Cloud are
   available starting from [SOLO](http://testdroid.com/pricing)
@@ -33,14 +31,13 @@ Dependencies for running locally:
 
 ## Running the scripts
 
-In *run-tests.sh* you will need to make sure that the *${TEST}* variable
-has correct name in it. This is the name of the python script file of
-your actual tests. To get screenshots and test results visible to the
-cloud, you'll need to make sure your screenshots can be found from
-"screenshots" directory from the root of your test files
-directory. This applies also to JUnit result files, which have to be
-named as "TEST-all.xml" and located in the root of your test files
-directory.
+In *run-tests.sh* make sure that the *${TEST}* variable has correct
+name in it. This is the name of the python script file of the actual
+tests. To get screenshots and test results visible to the cloud, make
+sure screenshots can be found from "screenshots" directory at the
+root of the test files directory. This applies also to JUnit result
+files, which have to be named as "TEST-all.xml" and also located in the
+root of the test files directory.
 
 ## Running in cloud
 
@@ -66,7 +63,7 @@ On [Testdroid Cloud](https://cloud.testdroid.com):
 
 * Create a new Appium Server side project (either iOS or Android)
 * Create a new test run inside of new server side project 
-  * Upload your application (apk/ipa) in the "Application" step
+  * Upload tested application (apk/ipa) in the "Application" step
   * Upload the above created zip using the "Upload test file" step
   * Choose the device group to use or create a new group for this run
   * Start testrun
