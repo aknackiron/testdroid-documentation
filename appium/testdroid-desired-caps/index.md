@@ -100,8 +100,8 @@ Example: true
 Scope: Public, Private and Enterprise
 Mandatory: no
 Description: This can be used to turn off Appium client's feature of finding a close match to request device. This allows the requested device name to not be a perfect match but Appium client will search for a similar device.
-Default: false
-Example: true
+Default: true
+Example: false
 
 
 <strong>bundleId</strong>
