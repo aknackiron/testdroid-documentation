@@ -4,6 +4,37 @@ title: Testdroid Releases
 ---
 
 
+## Release 2.25 September 1, 2016
+
+### Added Features
+
+A small back end update focused on upgrading the Appium version used in server side test runs. Default for server side runs is still Appium 1.4.16. Modifying the run tests script `run-tests.sh`, allows using of Appium version 1.5.2.
+
+This is the old approach of starting Appium in the script.
+
+    # on iOS 
+    /opt/appium/bin/appium.js -U ${UDID} --command-timeout 120 >appium.log 2>&1 &
+
+    # on Android
+    /opt/appium/appium/bin/appium.js >appium.log 2>&1 &
+
+To use Appium 1.5, the above lines need to be updated to as below. It is suggested to update the script even if older Appium version is used. The launch procedure has been improved with this new approach.
+
+    # on iOS
+    #appium-1.4 -U ${UDID} --command-timeout 120 >appium.log 2>&1 &
+    appium-1.5 -U ${UDID} --command-timeout 120 >appium.log 2>&1 &
+
+    # on Android
+    #appium-1.4 -U ${UDID} >appium.log 2>&1 &
+    appium-1.5 -U ${UDID}  >appium.log 2>&1 &
+
+Due to how Appium is started there is no more a need for a constant sleep after the launch. The following line should be commented out in the `run-tests.sh` as unnecessary.
+
+    sleep 20 # Sleep for appium to launch properly  #<- this is not needed anymore
+
+For now Appium client side runs continue to use older Appium 1.4 version.
+
+
 ## Release 2.24 August 15, 2016
 
 ### Added Features
