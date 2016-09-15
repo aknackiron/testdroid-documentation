@@ -33,7 +33,7 @@ documentation is using responds in JSON format.**
    
 Swagger is a tool which allows developers browse and test a REST API in real-time.
 
-[Open Swagger](https://cloud.testdroid.com/cloud/swagger-ui.html) in your Testdroid Enterprise setup.
+[Open Swagger](https://cloud.testdroid.com/swagger) in your Testdroid Enterprise setup.
 
 
 # Authorization
