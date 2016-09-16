@@ -7,7 +7,7 @@ title: Testdroid Releases
 
 ### Added Features
 
-* Testdroid Cloud supports recording of server side test runs. This is a premium feature that is available for Team or Business plans. To enable video recording of your test runs, please contact your named service representative or [Bitbar sales](mailto:sales@bitbar.com).
+* Testdroid Cloud supports recording of server side Android test runs. This is a premium feature that is available for Team or Business plans. To enable video recording of your test runs, please contact your named service representative or [Bitbar sales](mailto:sales@bitbar.com). Support for iOS test run recording is coming shortly. 
 
 * AppCrawler quick project creator includes credential fields. Instead of having to go through creating a new AppCrawler test run from the create test run menu, it's now possible to include app credentials also in the quick AppCrawler creator.
 
