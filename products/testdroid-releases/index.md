@@ -3,6 +3,28 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.26 September 14, 2016
+
+### Added Features
+
+* Testdroid Cloud supports recording of server side test runs. This is a premium feature that is available for Team or Business plans. To enable video recording of your test runs, please contact your named service representative or [Bitbar sales](mailto:sales@bitbar.com).
+
+* AppCrawler quick project creator includes credential fields. Instead of having to go through creating a new AppCrawler test run from the create test run menu, it's now possible to include app credentials also in the quick AppCrawler creator.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.26/app_crawler.png)
+
+* Enterprise customers get yet more admin capabilities to manage their dedicated device cloud. Admins can now easily create teams inside of Testsdroid Cloud which allows reporting per team based usage statistics. Getting an answer to which team uses device cloud most is then straight forward.
+
+  * Find the user that needs to be added as sub user and on user information page click on the button to set main user
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.26/sub_user_button.png)
+
+  * It's then possible to select the main user 
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.26/convert_to_sub_user.png)
+
+* Enterprise users can define how many times test runs get retried or not. There's now a new API call that can be used for changing the number of times that a test is retried. There are multiple cases when a test should not be re-run oneven if there's a problem with the test or device. If you have an Enterprise or Private cloud setup please get in touch with your customer success contact person to get more information about this. 
+
 
 ## Release 2.25 September 1, 2016
 
