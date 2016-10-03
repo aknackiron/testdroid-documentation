@@ -3,11 +3,11 @@ layout: default
 title: Testdroid Releases
 ---
 
-## Release 2.29 September 29, 2016
+## Release 2.27 September 29, 2016
 
 ### Added Features
 
-* Dedicate devices - a new service for getting customers devices connected to our public cloud but also available to all other clouds. Use Bitbar Testing's large device range for manual and automated testing, but run regression and continuous integration tests on named devices hosted and managed by Bitbar. To get and pick the dedicated devices, please get in contact with [Bitbar sales](mailto:sales@bitbar.com).
+* Dedicated devices - a new service for getting customers devices connected to our public cloud but also available to all other clouds. Use Bitbar Testing's large device range for manual and automated testing, but run regression and continuous integration tests on named devices hosted and managed by Bitbar. To get and pick the dedicated devices, please get in contact with [Bitbar sales](mailto:sales@bitbar.com).
 
 Enterprise customers can use this functionality to create device pools visible and accessible only to particular teams. 
 
