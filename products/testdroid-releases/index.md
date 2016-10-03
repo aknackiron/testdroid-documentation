@@ -3,11 +3,24 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.29 September 29, 2016
+
+### Added Features
+
+* Dedicate devices - a new service for getting customers devices connected to our public cloud but also available to all other clouds. Use Bitbar Testing's large device range for manual and automated testing, but run regression and continuous integration tests on named devices hosted and managed by Bitbar. To get and pick the dedicated devices, please get in contact with [Bitbar sales](mailto:sales@bitbar.com).
+
+Enterprise customers can use this functionality to create device pools visible and accessible only to particular teams. 
+
+### Known Issues
+
+* Since the past week there have been issues in running tests on our iOS devices. We are investigating the issue and are fighting to get it fixed. We are really sad about this.
+
+
 ## Release 2.26 September 14, 2016
 
 ### Added Features
 
-* Testdroid Cloud supports video recording of server side Android test runs. This is a premium feature that is available for Team and Business plans. To enable video recording of your test runs, please contact your named service representative or [Bitbar sales](mailto:sales@bitbar.com). Support for iOS test run recording is coming shortly. 
+* Testdroid Cloud supports video recording of Android test runs. This is a premium feature that is available for Team and Business plans. To enable video recording of your test runs, please contact your named service representative or [Bitbar sales](mailto:sales@bitbar.com). Support for iOS test run recording is coming shortly. 
 
 * AppCrawler quick project creator includes credential fields. Instead of having to go through creating a new AppCrawler test run from the create test run menu, it's now possible to include app credentials also in the quick AppCrawler creator.
 
