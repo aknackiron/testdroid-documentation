@@ -24,5 +24,5 @@ One of the best things about Appium is that, despite sounding architecturally co
 
 If you are familiar with Selenium, then you’ve got Appium covered. An Appium test is pretty much the same as a Selenium test: They use the same WebDriver, and DesiredCapabilities is used the same way. Configuring an application to run on Appium has a lot of similarities to Selenium — for example, those DesiredCapabilities.
 
-Also, Appium includes a component called the [Appium Inspector](http://testdroid.com/news/appium-tip-13-use-inspector-or-uiautomatorviewer-for-ui-element-inspection). This inspector enables a host of functionality — for example, showing all of those UI elements in the application and enabling basic recording and playback.
+Also, Appium includes a component called the [Appium Inspector](http://bitbar.com/appium-tip-13-use-inspector-or-uiautomatorviewer-for-ui-element-inspection/). This inspector enables a host of functionality — for example, showing all of those UI elements in the application and enabling basic recording and playback.
 

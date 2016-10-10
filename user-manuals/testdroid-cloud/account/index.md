@@ -37,12 +37,12 @@ give you access to all our devices at Testdroid Cloud and more
 features and capabilities to make your test automation and manual
 testing on cloud smoother. For accurate and up-to-date information,
 please check the current available plans and included features from
-[Testdroid Pricing page](http://testdroid.com/pricing).
+[Bitbar Testing Pricing page](http://bitbar.com/testing/pricing/public-cloud/).
 
 ![]({{site.github.url}}/assets/account/account-005.png)
 
 After you have selected a free plan or any paid plans, you'll be asked
-to agree the [License Agreement](http://testdroid.com/tos). This is
+to agree the [License Agreement](http://bitbar.com/end-user-license-agreement/). This is
 the final step in registration and you can finalize it by approving
 these terms.
 
