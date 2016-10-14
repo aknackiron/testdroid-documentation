@@ -29,9 +29,7 @@ documentation is using responds in JSON format.**
 # Swagger
 
 **note:**
-   Swagger is available **only for enterprise** customers
-   
-Swagger is a tool which allows developers browse and test a REST API in real-time.
+   Swagger is available **only for enterprise** customers with administrator priviledges. Swagger is a tool which allows browsing and test a REST API in real-time.
 
 [Open Swagger](https://cloud.testdroid.com/swagger) in your Testdroid Enterprise setup.
 

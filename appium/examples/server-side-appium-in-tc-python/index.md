@@ -12,7 +12,7 @@ capabilities at all and instead use only Appium capabilities.
 When using server-side Appium execution, tests can be run using standard Appium on hundreds of devices in parallel without any need for complex set-ups at the client side.
 
 **NOTE!** Server side Appium test runs on Testdroid Cloud are
-  available starting from [SOLO](http://testdroid.com/pricing)
+  available starting from [SOLO](http://bitbar.com/testing/pricing/public-cloud/)
   plan. Please contact <sales@bitbar.com> for more information.
 
 

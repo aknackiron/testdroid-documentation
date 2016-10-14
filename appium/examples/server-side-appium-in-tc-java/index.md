@@ -8,7 +8,7 @@ When using server-side Appium execution, standard Appium tests can be run on hun
 The examples presented here below are valid for both Android and iOS devices.
 
 **NOTE!** Server side Appium test runs on Testdroid Cloud are
-  available starting from [SOLO](http://testdroid.com/pricing)
+  available starting from [SOLO](http://bitbar.com/testing/pricing/public-cloud/)
   plan. Please contact <sales@bitbar.com> for more information.
 
 # Example **Without** Image Recognition

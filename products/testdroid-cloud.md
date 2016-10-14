@@ -42,7 +42,7 @@ For Android:
 * <a href="http://robotium.com" target="_blank">Robotium</a>
 * <a href="http://developer.android.com/training/testing/ui-testing/espresso-testing.html" target="_blank">Espresso</a>
 * <a href="http://developer.android.com/training/testing/ui-testing/uiautomator-testing.html" target="_blank">uiautomator</a>
-* <a href="http://testdroid.com/news/automatic-ios-app-testing-with-testdroid-app-crawler" target="_blank">App Crawler</a>
+* <a href="http://bitbar.com/automatic-ios-app-testing-with-testdroid-app-crawler/" target="_blank">App Crawler</a>
 
 For iOS:
 

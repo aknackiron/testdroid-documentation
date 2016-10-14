@@ -90,7 +90,7 @@ Dedicated devices are available through Private Cloud installations. Here the cu
  
 ###  Where can I find the free test trial and how can I get started with Testdroid Cloud?
 
- You can create yourself a free account at {{site.td_cloud}} or [testdroid.com](http://testdroid.com). After leaving your email address in any of these forms, you’ll get an activation email. Just click the link and you’ll be guided through the registration process (only basic form is asked to be filled with your information). After this, you can log in to {{site.td_cloud}} using your credentials and access our free device group.
+ You can create yourself a free account at {{site.td_cloud}} or [bitbar.com](http://bitbar.com). After leaving your email address in any of these forms, you’ll get an activation email. Just click the link and you’ll be guided through the registration process (only basic form is asked to be filled with your information). After this, you can log in to {{site.td_cloud}} using your credentials and access our free device group.
  
 ###  My test run failed on most devices. Why was that?
 
@@ -138,7 +138,7 @@ Appium, Calabash, Espresso, Robotium, uiautomator:
 http://www.slideshare.net/bitbar/different-android-test-automation-framework-what-works-you-the-best
  
 Robotium vs. uiautomator:
-http://testdroid.com/testdroid/4684/the-pros-and-cons-of-different-android-testing-methods
+http://bitbar.com/the-pros-and-cons-of-different-android-testing-methods
  
 Appium:
 http://www.slideshare.net/bitbar/testdroid-webinar20140107
