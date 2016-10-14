@@ -20,7 +20,7 @@ WebUI: {{ page.webui }}
 WebDriver: {{ page.webdriver }}
 
 
-# Step 0: Upload you app to Testdroid Cloud
+# Step 0: Upload your app to Testdroid Cloud
 
 The app has to uploaded to Testdroid Cloud via command line using a
 POST request.

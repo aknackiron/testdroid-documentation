@@ -29,18 +29,34 @@ documentation is using responds in JSON format.**
 # Swagger
 
 **note:**
-   Swagger is available **only for enterprise** customers
-   
-Swagger is a tool which allows developers browse and test a REST API in real-time.
+   Swagger is available **only for enterprise** customers with administrator priviledges. Swagger is a tool which allows browsing and test a REST API in real-time.
 
 [Open Swagger](https://cloud.testdroid.com/swagger) in your Testdroid Enterprise setup.
 
 
 # Authorization
 
+The best authentication method is to identify user
+using the *apiKey* approach. An [apiKey](https://en.wikipedia.org/wiki/Application_programming_interface_key) is a secret token that is
+available from Testdroid Cloud from under *My Account* link. If needed
+the apiKey token can also be re-generate to invalidate old scripts.
+
+```
+curl -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: https://cloud.testdroid.com/api/me
+```
+
+If the apiKey is not available for some reason then registration email
+(*your.email@account.com*) and associated password (*XXXXXXXX*) can
+also be used for authentication.
+
+```
+$ curl -X POST -H "Accept: application/json" -d "client_id=testdroid-cloud-api&grant_type=password&username=your.email@account.com&password=XXXXXXXX" https://cloud.testdroid.com/oauth/token
+```
+
+More examples:
+[Authentication/Authorization](http://docs.testdroid.com/testdroid-cloud-integration/api/#authenticationauthorization)
 
 API v2 uses [OAuth 2.0](http://oauth.net/2/)_ - an open standard for authorization.
-
 
 ## Request
 

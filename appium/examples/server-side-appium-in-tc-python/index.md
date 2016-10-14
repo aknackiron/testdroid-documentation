@@ -3,18 +3,16 @@ layout: default
 title: Python Server Side Example
 ---
 
-Unlike the usual remotely connected Appium setup, parallel test script
-execution is possible in the cloud. The scripts will be run in the
-cloud rather than through an active connection from your machine to
-the cloud. This is why the scripts don't need to use testdroid
+Unlike the remotely connected Appium setup, parallel test script
+execution is possible in the cloud. The scripts are run in the
+cloud rather than through an active connection from remote machine to
+the cloud. For this reason scripts don't need to use testdroid
 capabilities at all and instead use only Appium capabilities.
 
-When using server-side Appium execution, you can run standard Appium
-tests on hundreds of devices in parallel without any need for complex
-set-ups at the client side.
+When using server-side Appium execution, tests can be run using standard Appium on hundreds of devices in parallel without any need for complex set-ups at the client side.
 
 **NOTE!** Server side Appium test runs on Testdroid Cloud are
-  available only with [BUSINESS](http://testdroid.com/pricing)
+  available starting from [SOLO](http://bitbar.com/testing/pricing/public-cloud/)
   plan. Please contact <sales@bitbar.com> for more information.
 
 
@@ -33,44 +31,48 @@ Dependencies for running locally:
 
 ## Running the scripts
 
-In *run-tests.sh* you will need to make sure that the *${TEST}* variable
-has correct name in it. This is the name of the python script file of
-your actual tests. To get screenshots and test results visible to the
-cloud, you'll need to make sure your screenshots can be found from
-"screenshots" directory from the root of your test files
-directory. This applies also to JUnit result files, which have to be
-named as "TEST-all.xml" and located in the root of your test files
-directory.
+In *run-tests.sh* make sure that the *${TEST}* variable has correct
+name in it. This is the name of the python script file of the actual
+tests. To get screenshots and test results visible to the cloud, make
+sure screenshots can be found from "screenshots" directory at the
+root of the test files directory. This applies also to JUnit result
+files, which have to be named as "TEST-all.xml" and also located in the
+root of the test files directory.
 
 ## Running in cloud
 
-* Compress all the used files into a zip: (these can be found from
-[PythonParallelScripts.zip](https://www.dropbox.com/s/9tglr5kezvfk48n/PythonParallelScripts.zip?dl=0)) - Make sure that at least the
-*run-tests.sh* file is in the root of your zip! This script is the
-launch point of your testing process:  
-  * Appium-Python-Client-0.13.tar.gz
-  * BitbarSampleAppTest.py  
-  * run-tests.sh (Rename the run-tests_android.sh or run-tests_ios.sh to run-tests.sh as needed)  
-  * TestdroidAppiumTest.py  
-  *  xmlrunner.tar.gz
-* Create a calabash project at [cloud
-UI](https://cloud.testdroid.com).
-* Don't forget to let us know about your newly made project so that we can configure it for you!  
-* Start creating a new test run in your project at cloud UI
-* Upload your application (apk/ipa) through the "Application" tab
-* Upload the zip with scripts and Appium-Python-Client-0.13.tar.gz through the "Upload
-test file" tab
-* Choose the devices you wish to use
-* Start testrun.
+Test and additional needed files need to be sent to cloud as a zip package. [PythonParallelScripts.zip](https://www.dropbox.com/s/9tglr5kezvfk48n/PythonParallelScripts.zip?dl=0)) is an example package. This only needs to be modified by renaming *run-tests_android.sh* or *run-tests_ios.sh* to *run-tests.sh* depending which environment is being tested. 
+
+Note, *run-tests.sh* needs to always be at the root of the package.
+
+An example zip package content could look like this.
+
+```
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+    13042  2015-02-06 09:57   Appium-Python-Client-0.13.tar.gz
+     2641  2015-03-11 15:27   BitbarSampleAppTest.py
+     1736  2016-08-19 19:44   run-tests.sh
+     4864  2015-03-11 15:07   TestdroidAppiumTest.py
+    15922  2015-02-13 18:11   xmlrunner.tar.gz
+---------                     -------
+    38205                     5 files
+```
+
+On [Testdroid Cloud](https://cloud.testdroid.com):
+
+* Create a new Appium Server side project (either iOS or Android)
+* Create a new test run inside of new server side project 
+  * Upload tested application (apk/ipa) in the "Application" step
+  * Upload the above created zip using the "Upload test file" step
+  * Choose the device group to use or create a new group for this run
+  * Start testrun
+
 
 ## Running locally
 
-* Launch appium server as you would normally do when running local
-appium tests. Appium for iOS will need device id in launch parameters.  
-* Comment out or **remove the line(s)** inside *run-tests.sh* marked with:  
-    ##### Cloud testrun dependencies start  
-    ##### Cloud testrun dependencies end.  
-* Make sure that the apk/ipa is named as application.apk/application.ipa
-at the root of your working directory. Alternatively edit the
-*run-tests.sh* file to use another path.  
-* Launch the tests by running the run-tests.sh script.
+* Launch Appium server as normally when running local Appium tests. Appium for iOS needs device id in launch parameters.
+* In *run-tests.sh* comment out or remove the lines between 
+  *##### Cloud testrun dependencies start* and  *##### Cloud testrun dependencies end.*
+* *run-tests.sh* assumes the tested apk/ipa is named as application.apk or application.ipa and is located at the root of the working directory. Alternatively update *run-tests.sh* to use another path.
+* Launch tests by running the *run-tests.sh* script

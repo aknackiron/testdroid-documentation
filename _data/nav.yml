@@ -132,6 +132,8 @@
           subhref: "user-manuals/testdroid-cloud/supported-technologies"
         - subtitle: "Security"
           subhref: "user-manuals/testdroid-cloud/security"
+        - subtitle: "Error Messages"
+          subhref: "user-manuals/testdroid-cloud/error-messages"
     - subtitle: "Testdroid Enterprise"
       subhref: "user-manuals/testdroid-enterprise"
 

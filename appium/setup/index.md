@@ -179,7 +179,7 @@ In this Java example, you only really need to configure <code>testdroid_username
 
 <h1>Running Your First Test</h1>
 
-Before the test can start you need to upload you application to <a title="Testdroid Cloud" href="https://cloud.testdroid.com/" target="_blank">Testdroid Cloud</a>. This can be done either via <a title="API" href="http://testdroid.com/tech/the-powerful-api-for-your-mobile-app-game-and-web-testing" target="_blank">API</a> or you can do it <a title="Manual upload" href="http://testdroid.com/news/free-android-app-game-and-web-testing-on-intel-devices" target="_blank">manually</a> as well.
+Before the test can start you need to upload the application under test to <a title="Testdroid Cloud" href="https://cloud.testdroid.com/" target="_blank">Bitbar Testing</a>. This can be done either via <a title="API" href="http://docs.testdroid.com/testdroid-cloud-integration/api/examples/#project-files" target="_blank">API</a> or you can do it <a title="Manual upload" href="http://docs.testdroid.com/user-manuals/testdroid-cloud/projects/" target="_blank">manually</a> as well.
 
 <h2>Python</h2>
 

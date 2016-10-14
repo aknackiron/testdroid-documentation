@@ -3,10 +3,132 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.27 September 29, 2016
+
+### Added Features
+
+* Dedicated devices - a new service for getting customers devices connected to our public cloud but also available to all other clouds. Use Bitbar Testing's large device range for manual and automated testing, but run regression and continuous integration tests on named devices hosted and managed by Bitbar. To get and pick the dedicated devices, please get in contact with [Bitbar sales](mailto:sales@bitbar.com).
+
+Enterprise customers can use this functionality to create device pools visible and accessible only to particular teams. 
+
+### Known Issues
+
+* Since the past week there have been issues in running tests on our iOS devices. We are investigating the issue and are fighting to get it fixed. We are really sad about this.
+
+
+## Release 2.26 September 14, 2016
+
+### Added Features
+
+* Testdroid Cloud supports video recording of Android test runs. This is a premium feature that is available for Team and Business plans. To enable video recording of your test runs, please contact your named service representative or [Bitbar sales](mailto:sales@bitbar.com). Support for iOS test run recording is coming shortly. 
+
+* AppCrawler quick project creator includes credential fields. Instead of having to go through creating a new AppCrawler test run from the create test run menu, it's now possible to include app credentials also in the quick AppCrawler creator.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.26/app_crawler.png)
+
+* Enterprise customers get yet more admin capabilities to manage their dedicated device cloud. Admins can now easily create teams inside of Testsdroid Cloud which allows reporting per team based usage statistics. Getting an answer to which team uses device cloud most is then straight forward.
+
+  * Find the user that needs to be added as sub user and on user information page click on the button to set main user
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.26/sub_user_button.png)
+
+  * It's then possible to select the main user 
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.26/convert_to_sub_user.png)
+
+* Enterprise users can define how many times test runs get retried or not. There's now a new API call that can be used for changing the number of times that a test is retried. There are multiple cases when a test should not be re-run even if there's a problem with the test or device. If you have an Enterprise or Private cloud setup please be in touch with your customer success contact person to get more information about this. 
+
+
+## Release 2.25 September 1, 2016
+
+### Added Features
+
+A small back end update focused on upgrading the Appium version used in server side test runs. Default for server side runs is still Appium 1.4.16. Modifying the run tests script `run-tests.sh`, allows using of Appium version 1.5.2.
+
+This is the old approach of starting Appium in the script.
+
+    # on iOS 
+    /opt/appium/bin/appium.js -U ${UDID} --command-timeout 120 >appium.log 2>&1 &
+
+    # on Android
+    /opt/appium/appium/bin/appium.js >appium.log 2>&1 &
+
+To use Appium 1.5, the above lines need to be updated to as below. It is suggested to update the script even if older Appium version is used. The launch procedure has been improved with this new approach.
+
+    # on iOS
+    #appium-1.4 -U ${UDID} --command-timeout 120 >appium.log 2>&1 &
+    appium-1.5 -U ${UDID} --command-timeout 120 >appium.log 2>&1 &
+
+    # on Android
+    #appium-1.4 -U ${UDID} >appium.log 2>&1 &
+    appium-1.5 -U ${UDID}  >appium.log 2>&1 &
+
+Due to how Appium is started there is no more a need for a constant sleep after the launch. The following line should be commented out in the `run-tests.sh` as unnecessary.
+
+    sleep 20 # Sleep for appium to launch properly  #<- this is not needed anymore
+
+For now Appium client side runs continue to use older Appium 1.4 version.
+
+
+## Release 2.24 August 15, 2016
+
+### Added Features
+
+* New project types for server side runs available to all users with SOLO plan or up. To create a server side Appium project, simply select Appium iOS or Android Server side project type from the project drop down list.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/server-side-project.png)
+
+* Appium client side testing picks similar available device by default
+
+  We updated our client side Appium to work in a way where the user does not need to provide an exact device name. The Appium client will search for a device that matches the requested device but does not guarantee that the requested device is used. The used device is visible in Testdroid Cloud test run view.
+  
+  For example by passing "iPhone" as testdroid_device capability name, Testdroid Appium client will pick any of the available iPhone devices, regardless of iOS or iPhone version. The test could be run on an iPhone 5s or iPhone 6.
+  
+  If the user wants to turn off this feature and use a specific device then the `testdroid_findDevice` Appium desired capability needs to be set to `True` like in below Python example. By default this is `False`.
+
+    ```
+    desired_capabilities_cloud['testdroid_findDevice'] = True
+    ```
+
+* Enterprise cloud admin users are now able to manage project ownership through the admin panel. Go to Admin - Projects, select the project that you want to move to other user and click on the "Project owner" icon. 
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_change_owner.png)
+
+    You can then change the owner by selecting new user from the list.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.24/project_owner.png)
+
+
+* Support for iOS 9.3.x devices using XCode 7.3.
+
+* Python version 3.5.1 is available for server side runs. To use it, just call your Python scripts with `python3 your_test.py`.
+
+* A touch or personalization is always fun. Testdroid Cloud now supports avatars through the [Gravatar service](https://en.gravatar.com/).
+
+## Release 2.23 July 5, 2016
+
+### Fixed Bugs
+
+* Results processing in some cases was taking a long time or even failed. Test results processing problem was solved and solution improved.
+
+### Added Features
+
+* AppCrawler - Testdroid Cloud has had since its very early days an automated app tester that crawls through an app, checking for correct behavior. AppCrawler can be accessed directly from the main menu, or by creating a new project. When creating a new project the user has more options on guiding AppCrawler forward.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.23/new_app_crawler.png)
+
+  To smoke test an application the app needs to be uploaded, then choose project to include the results or create a new one and select the number of devices the app needs to be tested on. If device groups are defined then these can also be used. Clicking 'Go' starts the test run. 
+  Free users are limited to running on only one free device at a time. 
+
+* The view to read and debug a test run's test steps or error logs can now be enlarged for better clarity. Once the view enlarged it's easy to use the search box to find keywords. Of course browser's own search is also supported.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.23/drv_expanded_steps.png)
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.23/drv_expanded_errors.png)
+
+* A better support for presenting results as test steps for users using Cucumber with Appium. 
+
 
 ## Release 2.22 June 23, 2016
-
-
 
 ### Fixed Bugs
 
