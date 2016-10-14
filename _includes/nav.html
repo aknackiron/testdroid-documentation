@@ -7,36 +7,36 @@
         {% assign navHref = nav.href %}
 
         {% if nav.subcategories != null %}
-            {% if nav.title == page.title or navHref == current[1] %}  
+            {% if nav.title == page.title or navHref == current[1] %}
         <li class="navigation-open {% if current[2] contains 'index.html' %} active {% endif %} {% unless current[2] %} active {% endunless %}">
-            {% else %}   
+            {% else %}
         <li class="navigation-closed">
             {% endif %}
-            <span class="navigation-icon float-left"></span><a href="{{ site.github.url }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+            <span class="navigation-icon float-left"></span><a href="{{ site.github.url }}/{{ nav.href }}">{{ nav.title }}</a>
           <ul>
             {% for subcategory in nav.subcategories %}
 				{% unless current[3] %}
                     {% capture currentSub %}{{current[1]}}/{{current[2]}}{% endcapture %}
-                {% endunless %}  
+                {% endunless %}
                 {% if current[3] contains '.' or current[2] contains '.html' %}
                     {% capture currentSub %}{{current[1]}}/{{current[2]}}{% endcapture %}
-                {% endif %}                             
+                {% endif %}
                 {% if subcategory.subcategories != null %}
                 <li class="{% if currentSub == subcategory.subhref %} navigation-open active {% else %} navigation-closed {% endif %} ">
-                    <span class="navigation-icon float-left"></span><a href="{{ site.github.url }}/{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
+                    <span class="navigation-icon float-left"></span><a href="{{ site.github.url }}/{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
                     <ul>
                     {% for subsubcategory in subcategory.subcategories %}
                         {% capture currentSubSub %}{{current[1]}}/{{current[2]}}/{{current[3]}}{% endcapture %}
-                        <li {% if currentSubSub == subsubcategory.subhref %} class="active" {% endif %} >                           
-                            <a href="{{ site.github.url }}/{{ site.url }}{{ subsubcategory.subhref }}">{{ subsubcategory.subtitle }}</a>
+                        <li {% if currentSubSub == subsubcategory.subhref %} class="active" {% endif %} >
+                            <a href="{{ site.github.url }}/{{ subsubcategory.subhref }}">{{ subsubcategory.subtitle }}</a>
                         </li>
                     {% endfor %}
                     </ul>
                 </li>
                 {% else %}
                 <li class="{% if currentSub == subcategory.subhref %} active {% endif %}" >
-                    <a href="{{ site.github.url }}/{{ site.url }}{{ subcategory.subhref }}" > {{ subcategory.subtitle }}</a>
-                {% endif %}                   
+                    <a href="{{ site.github.url }}/{{ subcategory.subhref }}" > {{ subcategory.subtitle }}</a>
+                {% endif %}
                 </li>
             {% endfor %}
           </ul>
@@ -44,7 +44,7 @@
 
         {% else %}
             <li {% if nav.title == page.title or navHref == current[1] %} class="active" {% endif %}>
-              <span class="navigation-icon-placeholder float-left"></span><a href="{{ site.github.url }}/{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+              <span class="navigation-icon-placeholder float-left"></span><a href="{{ site.github.url }}/{{ nav.href }}">{{ nav.title }}</a>
             </li>
         {% endif %}
     {% endfor %}
