@@ -71,30 +71,12 @@ the apiKey token can also be re-generate to invalidate old scripts.
 curl -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: https://cloud.testdroid.com/api/me
 ```
 
-If the apiKey is not available for some reason then registration email
-(*your.email@account.com*) and associated password (*XXXXXXXX*) can
-also be used for authentication.
-
-```
-$ curl -X POST -H "Accept: application/json" -d "client_id=testdroid-cloud-api&grant_type=password&username=your.email@account.com&password=XXXXXXXX" https://cloud.testdroid.com/oauth/token
-```
-
 ### Create a Testdroid Project
-
-On successfull authentication to {{site.td_cloud}} using the above
-command, the response message contains an access_token to use in
-following examples.
 
 To create a new project from the command line using cURL and apiKey:
 
 ```
 curl -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: -X POST -d "name=NewProject"  https://cloud.testdroid.com/api/me/projects
-```
-
-and without apiKey:
-
-```
-$ curl -X POST -d "name=NewProject" -H "Authorization: Bearer abcdefgh-1234-ijkl-m5n6-opqrstuvxyxz" https://cloud.testdroid.com/api/v2/me/projects
 ```
 
 ### Project Listing
@@ -106,12 +88,6 @@ Returns project listing containing details, Test Runs and Device Runs
 curl -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: -X GET https://cloud.testdroid.com/api/me/projects
 ```
 
-and without apiKey
-
-```
-curl -H "Accept: application/json" -H "Authorization: Bearer abcdefgh-1234-ijkl-m5n6-opqrstuvxyxz" https://cloud.testdroid.com/api/v2/me/projects
-```
-
 ### Details of a Specific Project
 
 Query the details of a specific project defined by the project's id PROJECT_ID and authenticating using apiKey:
@@ -119,13 +95,6 @@ Query the details of a specific project defined by the project's id PROJECT_ID a
 ```
 curl -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: -X GET https://cloud.testdroid.com/api/me/projects/PROJET_ID
 ```
-
-or using credentials:
-
-```
-curl -H "Accept: application/json" -H "Authorization: Bearer abcdefgh-1234-ijkl-m5n6-opqrstuvxyxz" https://cloud.testdroid.com/api/v2/projects/PROJECT_ID
-```
-
 
 ### Get Test Run Details
 
@@ -135,22 +104,10 @@ Get a test run's details by authenticating using the apiKey:
 url -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: -X GET   https://cloud.testdroid.com/api/me/projects/PROJECT_ID/runs
 ```
 
-and without apiKey:
-
-```
-curl -H "Accept: application/json" -H "Authorization: Bearer abcdefgh-1234-ijkl-m5n6-opqrstuvxyxz" https://cloud.testdroid.com/api/v2/projects/PROJECT_ID/runs
-```
-
 ### Get Details of Certain Device Run
 
 Authenticating using the API key:
 
 ```
 url -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: -X GET   https://cloud.testdroid.com/api/me/projects/PROJECT_ID/runs/RUN_ID/device-runs
-```
-
-and without apiKey:
-
-```
-curl -H "Accept: application/json" -H "Authorization: Bearer abcdefgh-1234-ijkl-m5n6-opqrstuvxyxz" https://cloud.testdroid.com/api/v2/projects/PROJECT_ID/runs/RUN_ID/device-runs
 ```
