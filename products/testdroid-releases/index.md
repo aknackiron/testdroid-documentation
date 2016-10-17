@@ -3,6 +3,19 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.28 October 17, 2016
+
+### Added Features
+
+Single Sign On (SSO) using Google accounts has been enabled to public cloud. This is especially useful for teams and enterprise customers using Google mail services. It is enough to invite a co-worker to own project in Bitbar Testing cloud after which the invited user is able to SSO and instantly start contributing in testing or debugging of mobile apps. 
+
+### Bug fixes
+
+* Device run logs widget fixed.
+
+* Improvements to iOS test run stability. There are still issues but improvements are being rolled out in phases. 
+
+
 ## Release 2.27 September 29, 2016
 
 ### Added Features
