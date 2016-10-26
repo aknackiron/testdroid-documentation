@@ -84,6 +84,8 @@
       subhref: "testdroid-cloud-integration/jenkins-plugin"
     - subtitle: "Gradle"
       subhref: "testdroid-cloud-integration/gradle"
+    - subtitle: "Jira"
+      subhref: "testdroid-cloud-integration/jira"
     - subtitle: "Rest API"
       subhref: "testdroid-cloud-integration/api"
       subcategories:
