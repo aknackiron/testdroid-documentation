@@ -45,8 +45,8 @@ When the logo is clicked, a personalized view is opened allowing the user to cre
 
 8) The fields in JIRA's dialog:
 
-  * 'Project' menu shows the available project types from JIRA. 
-  * 'Issue Type' allows to set the type of the issue to be created. 
-  * 'Summary' field captures the essential description of the issue. 
-  * 'Priority' is severity of an issue (e.g. Critical, Cosmetic) and
-  * 'Description' contains all details about the issue with links back to Bitbar Testing cloud project/defect so that developers can quickly investigate the issue.
+  * **Project** menu shows the available project types from JIRA. 
+  * **Issue Type** allows to set the type of the issue to be created. 
+  * **Summary** field captures the essential description of the issue. 
+  * **Priority** is severity of an issue (e.g. Critical, Cosmetic) and
+  * **Description** contains all details about the issue with links back to Bitbar Testing cloud project/defect so that developers can quickly investigate the issue.
