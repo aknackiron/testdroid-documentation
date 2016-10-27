@@ -7,13 +7,13 @@ JIRA integration enables creating JIRA issues directly from Bitbar Testing with 
 
 # Integration Steps
 
-The basic steps to set up a personal or corporate JIRA environment up and running with Testdroid Cloud projects are as follows:
+The basic steps to set a personal or corporate JIRA environment up and running with Testdroid Cloud projects are as follows:
 
 1) Login to [Bitbar Testing cloud](https://cloud.testdroid.com/).
 
 2) Click your avatar in right top corner and select 'My Account'.
 
-3) On 'My Account' page enable use the 'Connect to JIRA' button. Clicking this opens the following configuration:
+3) On 'My Account' page use the 'Connect to JIRA' button. Clicking this opens the following configuration:
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-connection.png)
 
@@ -21,7 +21,7 @@ The basic steps to set up a personal or corporate JIRA environment up and runnin
 
 5) Add the certificate. Location of the certificate varies depending on operating system, used web browser and so on. Windows users, can get the certificate from the web browser whereas Mac users can use Keychain Access tool to obtain the file. 
 
-Also if you have `open_ssl` in use the certificate can be retrieved from command line.
+Also, if you have `open_ssl` in use the certificate can be retrieved from command line.
 
 ```
 echo -n | openssl s_client -connect {HOSTNAME}:{PORT}  | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/jira_server.cer
@@ -29,11 +29,11 @@ echo -n | openssl s_client -connect {HOSTNAME}:{PORT}  | sed -ne '/-BEGIN CERTIF
 
 The above command stores JIRA server's certificate to `/tmp/jira_server.cer` file that needs to be uploaded to Bitbar Testing.
 
-When everything is configured properly this should be visible:
+When everything is configured properly, this should be visible:
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-update.png)
 
-6) The connection between Bitbar Testing and JIRA is now setup successfully. Changing credentials, certificate deletion can be done in this view.
+6) The connection between Bitbar Testing and JIRA is now setup successfully. Changing credentials and certificate deletion can be done in this view.
 
 7) In order to use the JIRA integration while working on Bitbar Testing, look for JIRA logos at the top right corner of each window and view. 
 
