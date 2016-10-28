@@ -13,6 +13,10 @@ title: Testdroid Releases
 
   ![]({{site.github.url}}/assets/products/testdroid-releases/2.29/manual-testing-timestamp.png)
 
+* Filtering of tests inside of test run view. To make it easier to debug the cause of failures in apps, it's now possible to filter device runs to show only those where tests have failed. It is possible to have multiple filters enabled at a time making it possible to filter out failed devices and look only at successful test runs.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.29/filter-tests.png)
+
 * The documentation to integrate JIRA with Bitbar Testing is updated and can be found in docs at [Integrations/jira](http://docs.testdroid.com/testdroid-cloud-integration/jira/)
 
 * Big updates in Bitbar's image recognition samples on [Github samples](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition). In addition to library updates, there are a lot of new improvements. iOS screenshots speed was dramatically improved by changing screenshots mechanism to use idevicescreenshot. Image recognition does not need the testdroid-appium-driver anymore, but uses the native Appium driver.
