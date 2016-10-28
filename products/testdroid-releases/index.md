@@ -3,6 +3,27 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.29 October 27, 2016
+
+### Added Features
+
+* Improvements to device filters. The back end behavior for handling various device properties was improved to make sure the search criteria are better up to date and results more accurate than before. It's now easier to add new device labels (for On-Premise installations) and to search for devices from the UI.
+
+* Small changes make a difference. Uploaded apps to manual testing now show the upload date and time making it easy to select the latest uploaded app for testing.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.29/manual-testing-timestamp.png)
+
+* The documentation to integrate JIRA with Bitbar Testing is updated and can be found in docs at [Integrations/jira](http://docs.testdroid.com/testdroid-cloud-integration/jira/)
+
+* Big updates in Bitbar's image recognition samples on [Github samples](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition). In addition to library updates, there are a lot of new improvements. iOS screenshots speed was dramatically improved by changing screenshots mechanism to use idevicescreenshot. Image recognition does not need the testdroid-appium-driver anymore, but uses the native Appium driver.
+
+### Bug fixes
+
+* Improvements in iOS server side test runs. There were multiple reasons with this of which OSX upgrade was one. Work on further stabilization is in progress.
+
+* Appium client side runs were terminated if a test could not find some element. This is now fixed.
+
+
 ## Release 2.28 October 17, 2016
 
 ### Added Features
@@ -20,7 +41,7 @@ Single Sign On (SSO) using Google accounts has been enabled to public cloud. Thi
 
 ### Added Features
 
-* Dedicated devices - a new service for getting customers devices connected to our public cloud but also available to all other clouds. Use Bitbar Testing's large device range for manual and automated testing, but run regression and continuous integration tests on named devices hosted and managed by Bitbar. To get and pick the dedicated devices, please get in contact with [Bitbar sales](mailto:sales@bitbar.com).
+Dedicated devices - a new service for getting customers devices connected to our public cloud but also available to all other clouds. Use Bitbar Testing's large device range for manual and automated testing, but run regression and continuous integration tests on named devices hosted and managed by Bitbar. To get and pick the dedicated devices, please get in contact with [Bitbar sales](mailto:sales@bitbar.com).
 
 Enterprise customers can use this functionality to create device pools visible and accessible only to particular teams. 
 
