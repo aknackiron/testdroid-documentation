@@ -3,6 +3,40 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.30 November 9, 2016
+
+Technical release with reliability updates and preparations for upcoming features.
+
+### Added Features
+
+* For easier screenshot step recognition in device test run view, the screenshot names are attached below the screenshots.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.30/screenshot_names.png)
+
+* Appium server side [image recognition sample](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition) test gets a total rework. The sample project shows step by step how to do image recognition testing using Appium for testing eg. games. 
+
+  Setting up needed environment is much easier to earlier example with less external dependencies and libraries. Used libraries were updated to the latest ones.
+
+  Launching server side tests is simplified by introducing the `launch-tests.sh` script. This script is able to create the test zip, handle uploading of the required files as well as creating a new test project, when needed. Ideally the script is used by CI systems, but manual usage works just as well.
+
+  ```bash
+    $ bash launch-tests.sh 
+    Either -a or -i flag must be provided, but not both!
+    
+    launch-tests.sh - create and upload test project to Testdroid Cloud and run it
+    
+    Usage: launch-tests.sh -a/i -g <DEVICE_GROUP_NAME> -k <API_KEY>
+     -a for Android test
+     -i for iOS test
+    Optional: -p <PROJECT_NAME> to choose a specific profile. If not given, a new project will be created
+    Optional: -t for creating and uploading a new test zip file
+    Optional: -f <APP_FILE_PATH> for uploading a new app file
+    Optional: -e <API_ENDPOINT> for private cloud instances
+  ```
+
+* Sample demo project is removed in Bitbar testing after user creates first new project.
+
+
 ## Release 2.29 October 27, 2016
 
 ### Added Features
