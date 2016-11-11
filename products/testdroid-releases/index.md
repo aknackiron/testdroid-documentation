@@ -34,6 +34,10 @@ Technical release with reliability updates and preparations for upcoming feature
     Optional: -e <API_ENDPOINT> for private cloud instances
   ```
 
+  The `launch-tests.sh` script is already available in [image recognition samples](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition).
+
+* We setup our Maven central proxy making any Maven installs more robust and a lot faster. This is great news for all and especially Java server side mobile test runs. For more information about Maven mirrors check [here](http://maven.apache.org/guides/mini/guide-mirror-settings.html).
+
 * Sample demo project is removed in Bitbar testing after user creates first new project.
 
 
