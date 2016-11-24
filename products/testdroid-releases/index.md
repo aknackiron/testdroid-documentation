@@ -3,6 +3,37 @@ layout: default
 title: Testdroid Releases
 ---
 
+
+## Release 2.31 November 24, 2016
+
+### Added Features
+
+* Calabash environment variables. For better control over Calabash test run executions  environment variables are typically used. In Bitbar Testing it is possible to give values to the two pre-existing environment variables `CALABASH_TAGS` and `CALABASH_PROFILE`, in the advanced settings of a test run. These can be used to better orchestrate in which order tests get executed.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.31/enterprise-env-variables.png)
+
+For private and on-premise installations it is also possible to allow users create their own variable and value pairs.
+
+
+* Project type names were renamed for better clarity. Bitbar Testing solution is very test framework agnostic but we have a number of predefined common project types available. Below is how we have renamed the project types.
+
+  * Android -> Android Instrumentation
+
+    Android's own unit testing framework meant to run on the device for functional testing. 
+
+  * Appium Android -> Appium Android client side
+
+    To unify the naming convention with Appium client and server side projects. Earlier naming was not explicit about the client side approach. 
+
+  * Appium iOS -> Appium iOS client side
+
+    Uniformity to project naming conventions between client and server side projects. 
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.31/project_animated.gif)
+
+* Chromedriver gets a version upgrade to latest version of 2.25.
+
+
 ## Release 2.30 November 9, 2016
 
 Technical release with reliability updates and preparations for upcoming features.
