@@ -25,9 +25,8 @@ The prefered way to identify yourself to Testdroid Cloud is using the apiKey, a 
 Testdroid Cloud. 
 
 ```bash
-$ curl -H "Accept: application/json" -u xYY5...PeOA6: -F myAppFile=@"/absolute/file/path/example.apk" http://appium.testdroid.com/upload
-
-{"status":0,"sessionId":"bb8d4336-e6ea-4ba7-9b4c-a6824f1c60aa","value":{"message":"uploads successful","uploadCount":1,"rejectCount":0,"expiresIn":1800,"uploads":{"myAppFile":"bb8e4336-e6ea-4ba7-9b4c-a6824f1c60aa/Testdroid.apk"},"rejects":{}}}
+    $ curl -H "Accept: application/json" -u xYY5...PeOA6: -F myAppFile=@"/absolute/file/path/example.apk" http://appium.testdroid.com/upload
+    {"status":0,"sessionId":"bb8d4336-e6ea-4ba7-9b4c-a6824f1c60aa","value":{"message":"uploads successful","uploadCount":1,"rejectCount":0,"expiresIn":1800,"uploads":{"myAppFile":"bb8e4336-e6ea-4ba7-9b4c-a6824f1c60aa/Testdroid.apk"},"rejects":{}}}
 ```
 
 Above response is a JSON message where the name of the uploaded app in cloud is the value of `"myAppFile":"bb8e4336-e6ea-4ba7-9b4c-a6824f1c60aa/Testdroid.apk"`. The value "bb8e4336-..." is needed later when defining Appium capabilities.
