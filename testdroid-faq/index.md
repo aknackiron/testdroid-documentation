@@ -128,18 +128,18 @@ Bitbar Testing devices are located in our data centers in San Jose, CA and Wrocl
 ###  How safe are you?
 
  All our user data, applications and results are stored in Amazon Cloud and are very safe. We also use SSL and encrypt the data as seen appropriate. Only users with valid accounts can access their own data and results. We also track all IPs connecting to our Testdroid Cloud.
- 
+
 ###  How long is usually the queue? In each priority group? Do I have to wait for 2 hour or day?
 
  The time between a start of test run and delivering results depends entirely on test case length, current queue, time of the day and a desired device set. Typically we’re talking about 2 to 15 minutes. Sometimes it can be longer if you start multiple test runs on same devices. We have multiple copies of devices at Testdroid Cloud so some devices can ensure results in few minutes (depending on test run length). The customers with higher priority plans (platinum > gold > silver) can get their app running first in case of queue.
  
 ###  How long will our projects be online?
 
- We don't guarantee of storing data or results for longer than six months currently. Projects are typically not removed from Testdroid Cloud.
+ We periodically clean unused projects and project files from our public cloud. For unused projects (where tests have not been run) after three months the project files are removed. After this the whole project is removed after next three months.
  
 ###  Can I take pictures, sound recording (mic) with the phones?
 
- Yes, you can. But our devices are not positioned for any specific photo target or recording of audio can give you arbitrary recording. However, our devices are fully functioning Android and iOS devices, and both mentioned functions are in use.
+ Yes, you can. Our devices are not positioned for any specific photo target and recording of audio can give you arbitrary recording. However, our devices are fully functioning Android and iOS devices, and both mentioned functions are enabled on the devices.
  
 ## Android Test Automation Frameworks
  
@@ -168,11 +168,11 @@ Bitbar’s info video:
  
 ## iOS Test Automation Frameworks
  
-We support [KIF](https://github.com/kif-framework/KIF), [UI Automation](https://developer.apple.com/library/tvos/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/UIAutomation.html), [Jasmine](http://jasmine.github.io/), [Calabash](http://calaba.sh/) and [Appium](http://appium.io/) for iOS test automation with Testdroid Cloud.
- 
+We support [KIF](https://github.com/kif-framework/KIF), [XCTest](https://developer.apple.com/reference/xctest), [XCUITest](https://developer.apple.com/reference/xctest), [Jasmine](http://jasmine.github.io/), [Calabash](http://calaba.sh/) and [Appium](http://appium.io/) for iOS test automation with Testdroid Cloud.
+
 ###  Is iOS Test based on UI Automation, which means it can only test UIKit components or?
 
- UI Automation is only one supported framework in Testdroid Cloud.
+ As of XCode8 release UIAutomation is no longer supported in Bitbar testing public cloud, as Apple has dropped support for it. 
  
 ###  How are you handling the provisioning profiles to be able to test on devices?
 
@@ -184,7 +184,7 @@ We support [KIF](https://github.com/kif-framework/KIF), [UI Automation](https://
 
 ###  Is there support to automatically handle iOS dialogues?
 
-Currently the handling of iOS dialogues is handled through used test framework. We're working on ways to handle such dialogues outside testrun scope as well.
+Currently the handling of iOS dialogues is handled through used test framework. We have internal tools using which we are able to avoid and dismiss OS dialogues outside of test runs.
 
 ###  How can I start an iOS Appcrawler run using Testdroid RiC?
 
