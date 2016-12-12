@@ -45,7 +45,7 @@ For Public cloud the only way is for the customer servers to whitelist our publi
 
 ###  Do you support in app purchases?
 
-In Public Cloud it is complicated to manage Google account cash. If a test account can be used to log in and do the purchase completely inside the tested app, then we can support it. For Private and Enterprise environments we can set accounts controlled by the customer to enable such purchases.
+In Public Cloud it is complicated to manage Google account cash. If a test account can be used to log in and do the purchase completely inside the tested app, then we support it. For Private and Enterprise environments we can set accounts controlled by the customer to enable such purchases.
 
 ###  Do you support testing of push notifications?
 
@@ -70,7 +70,17 @@ Yes. [Here is more information]({{ site.github.url }}/appium/client-server/).
 
 ###  Can I use my own Google accounts on Testdroid devices?
 
-In Public Cloud setting a Google account on the device isn't allowed. Using a Google API/Service to log in to an app with your own account can be done. For Private and Enterprise environments a customer's own Google account can be set on the devices.
+ In Public Cloud setting a Google account on the device isn't allowed. Using a Google API/Service to log in to an app with your own account can be done. For Private and Enterprise environments a customer's own Google account can be set on the devices.
+
+### Which Google Play account is used on your devices?
+
+ In Bitbar Testing public cloud a number of Google accounts are in use. These Google accounts may appear when runing tests in Bitbar Testing public cloud.
+
+  * play@bitbar.com
+  * play-x@bitbar.com where x is in 1...18
+  * play-USx@bitbar.com where x is either 1 or 2
+  * play.us1.public@gmail.com
+  * patchcordX@gmail.com where X > 18
 
 ###  Where can I see a list of your devices? How often are you updating it? And how long does it take you to have new devices?
 
@@ -78,7 +88,8 @@ The complete list of devices - with all details – can be found under {{site.td
 
 ###  Can Testdroid provide dedicated private devices for my Testing?
 
-Dedicated devices are available through Private Cloud installations. Here the customer is able to freely select the number and type of devices 
+Dedicated devices are available through Private Cloud installations or as part of the public cloud. In a private cloud installation the customer is able to freely select the number and type of devices and these are managed by Bitbar.
+Dedicated devices is a service enabling customers to reserve one or multiple devices to their use only in the public cloud. For more information please contact sales.
  
 ###  Can I change or choose the OS on the devices? If not, how do you choose what OS should be on there?
 
@@ -88,30 +99,30 @@ Dedicated devices are available through Private Cloud installations. Here the cu
 
  Yes, but your application needs to be configured to receive email. The regular email application in device cannot be currently configured for sending/receiving emails.
  
-###  Where can I find the free test trial and how can I get started with Testdroid Cloud?
+###  Where can I find the free test trial and how can I get started with Bitbar Testing Cloud?
 
- You can create yourself a free account at {{site.td_cloud}} or [bitbar.com](http://bitbar.com). After leaving your email address in any of these forms, you’ll get an activation email. Just click the link and you’ll be guided through the registration process (only basic form is asked to be filled with your information). After this, you can log in to {{site.td_cloud}} using your credentials and access our free device group.
+ You can create yourself a free account at {{site.td_cloud}} or [bitbar.com](http://bitbar.com/testing/try-for-free/). After leaving your email address in any of these forms, you’ll get an activation email. Just click the link and you’ll be guided through the registration process. You can now log in to {{site.td_cloud}} using your new credentials and access our free device group.
  
 ###  My test run failed on most devices. Why was that?
 
- There are several reasons why test runs fails at {{site.td_cloud}}. First and the most typical case is that there is something wrong with application, and instrumentation makes it crash. Errors in either app or instrumentation are also typical. Good rule of thumb is that if App Crawler run crashes with your app, then the problem is in app itself. If the execution crashes with your tests, it can be either way. Almost never test run crashes because of Testdroid Cloud infrastructure. More often you see this kind of crash (e.g. device has crashed or is not accessible) as a pending test run start or not providing information about test run status. E.g. Pending in Queue is a normal case and you app is waiting to get executed on device.
+ There are several reasons why test runs fails at {{site.td_cloud}}. First and the most typical case is that there is something wrong with application, and instrumentation makes it crash. A good rule of thumb is that if AppCrawler run crashes with your app, then the problem is in app itself. If the execution crashes with your tests, it can be either way. Device problems is typically seen as pending test runs.
  
 ###  Are the devices jail broken/rooted?
 
  No. None of our devices are jail broken or rooted.
  
-###  Our app requests Device Administrator privileges from the user. After the user grants the app Device Admin privileges these privileges cannot be removed without first entering a password. It is conceivable that some of our tests may leave the app on the device. Does any of this cause a problem for your test environment?
+###  Our app requests Device Administrator privileges from the user. After the user grants the app Device Admin privileges these privileges cannot be removed without first entering a password. It is conceivable that some tests may leave an app on the device. Does any of this cause a problem for your test environment?
 
- No, it doesn’t cause problems to our devices or environment. Our system automatically cleans, reboots and hard resets devices before any test run.
+ No, this does not cause problems to our devices or environment. Our system automatically cleans, reboots and hard resets devices before any new test run.
  
 ###  The app connects to our internal server. Our IT department will only allow connections from known IP address ranges. Is it possible for you to tell us what IP ranges are used to originate traffic from your test devices?
 
 We have two public cloud data centers with IP ranges 185.75.2.0/28 and 216.38.149.11/32. Public Cloud users can also implement a test app to find the current IP of used device/connection and communicate it to external service that can open that IP for connections.
 For Private and Enterprise Cloud installations most special network configurations are possible.
  
-###  Where is your cloud (test center) located?
+###  Where are your devices located?
 
-Testdroid devices are located in our data centers in San Jose, CA and Wroclaw, Poland. 
+Bitbar Testing devices are located in our data centers in San Jose, CA and Wroclaw, Poland. 
 
  
 ###  How safe are you?

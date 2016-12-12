@@ -141,46 +141,10 @@
 
 - title: "Testdroid FAQ"
   href: "testdroid-faq"
+  subcategories:
+    - subtitle: "ASDFASDFDF"
+      subhref: "user-manuals/testdroid-enterprise"
 
-#- title: "Robotium Tutorial"
-#  href: "robotium"
-#  subcategories:
-#    - subtitle: "Introduction & Prerequisites"
-#    - subtitle: "ExtSolo"
-#    - subtitle: "Getting Started"
-#    - subtitle: "Robotium FAQ"
-#    - subtitle: "Examples"
-
-#- title: "Testdroid API"
-#  subcategories:
-#    - subtitle: "API reference"
-#      subhref: "api/apidocs"
-#    - subtitle: "Examples"
-#      subhref: "api/examples"
-
-#- title: "Troubleshooting"
-#  href: ""
-#  subcategories:
-#    - subtitle: "Bugs & Known Issues"
-#      subhref: "bugs"
-#    - subtitle: "FAQ"
-#      subhref: "faq"
-#    - subtitle: "Appium"
-#      subhref: "technical-docs/appium"
-#    - subtitle: "Calabash"
-#      subhref: "technical-docs/calabash"
-
-#- title: "Useful Links"
-#  subcategories:
-#    - subtitle: "Testdroid Blog"
-#    - subtitle: "Testdroid Resource Library"
-#    - subtitle: "Github Repository"
-#    - subtitle: "Official Appium Documentation"
-#    - subtitle: "Official Calabash Documentation"
-#    - subtitle: "Cloud API"
-#      subhref: "testdroid-cloud-integration/api/index.html"
-#    - subtitle: "Jenkins"
-#      subhref: "testdroid-cloud-integration/jenkins-plugin.html"
 
 #- title: "Example Test"
 #  href: "example-test"
