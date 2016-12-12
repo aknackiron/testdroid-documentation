@@ -4,28 +4,24 @@ title: Using Calabash on Testdroid Cloud
 ---
 
 
-If you are interested to start testing your apps with Calabash, please
-contact us at <sales@bitbar.com> and we’ll be happy to enable it for
-you. Here are some basic details of Calabash and how to use it in
-Testdroid.
-
 ![Calabash]({{site.github.url}}/assets/calabash/new-calabash-logo.png)
 
 # Getting Calabash for Android
 
 [https://github.com/calabash/calabash-android](https://github.com/calabash/calabash-android)
 
-# Installation
+# Getting Calabash for iOS
 
-The general installation guide for Calabash is found here
-[https://github.com/calabash/calabash-android/blob/master/documentation/installation.md](https://github.com/calabash/calabash-android/blob/master/documentation/installation.md). Check
-that you have the needed tools installed. These are basically Ruby and
-Android SDK. Then you can do:
+[https://github.com/calabash/calabash-ios](https://github.com/calabash/calabash-ios)
 
+# General Installation Steps
+
+The general installation guide for Calabash for Android is found here
+[https://github.com/calabash/calabash-android/blob/master/documentation/installation.md](https://github.com/calabash/calabash-android/blob/master/documentation/installation.md). Once all the needed tools are installed (Ruby and Android SDK), then:
 
     $ sudo gem install calabash-android
 
-and you should have command *calabash-android* in your path.
+and command *calabash-android* should be available in path.
 
 # Creating a New Test
 
@@ -33,15 +29,10 @@ and you should have command *calabash-android* in your path.
     $ cd new-calabash-test
     $ calabash-android gen
 
-Now you should have a new *features*-directory inside
-*new-calabash-test* directory. Features directory contains
-*my_first.feature-file*, *step_definitions-directory* and
-*support-directory*. For a simple test you will need to only edit
-*my_first.feature-file*. Here is the list of predefined steps
-required:
+This generates a new *features*-directory inside *new-calabash-test* directory. Features directory contains *my_first.feature-file*, *step_definitions-directory* and *support-directory*. For a simple test only edit *my_first.feature-file*. Here is the list of predefined steps required:
 [https://github.com/calabash/calabash-android/blob/master/ruby-gem/lib/calabash-android/canned_steps.md](https://github.com/calabash/calabash-android/blob/master/ruby-gem/lib/calabash-android/canned_steps.md)
 
-# Running Your First Test
+# Running The First Test
 
 Here is an example Calabash test: 
 
@@ -133,6 +124,13 @@ on over 250 Android devices:
 1. Run the project
 1. Verify results
  
-# Additional Information
 
-If you need some particular Ruby gem for your tests please contact <support@bitbar.com>.
+# Advanced Settings
+
+When creating a Calabash test project, it is possible to defined some environment variables to be used during test execution.
+
+In Bitbar Testing it is possible to give values to the two pre-existing environment variables `CALABASH_TAGS` and `CALABASH_PROFILE`, in the advanced settings of a test run. These can be used to better orchestrate in which order tests get executed.
+
+  ![]({{site.github.url}}/assets/products/testdroid-releases/2.31/enterprise-env-variables.png)
+
+Users of Private and Enterprise Bitbar Testing clouds can create their own additional variables. 

@@ -71,8 +71,6 @@
       subhref: "calabash/examples/details-of-calabash-android-support"
     - subtitle: "Creating Calabash Tests"
       subhref: "calabash/creating-calabash-tests"
-    - subtitle: "Examples"
-      subhref: "calabash/examples"
 
 - title: "Espresso Tutorial"
   href: "espresso"
