@@ -141,9 +141,6 @@
 
 - title: "Testdroid FAQ"
   href: "testdroid-faq"
-  subcategories:
-    - subtitle: "ASDFASDFDF"
-      subhref: "user-manuals/testdroid-enterprise"
 
 
 #- title: "Example Test"
