@@ -55,6 +55,8 @@
           subhref: "appium/examples/java-client-side-example"
         - subtitle: "Java Server Side Example"
           subhref: "appium/examples/server-side-appium-in-tc-java"
+        - subtitle: "Java Image Recognition Example"
+          subhref: "appium/examples/server-side-appium-java-imagerecognition"
         - subtitle: "Moving Tests To Cloud"
           subhref: "appium/examples/moving-tests-to-cloud"
 
@@ -139,9 +141,6 @@
 
 - title: "Testdroid FAQ"
   href: "testdroid-faq"
-  subcategories:
-    - subtitle: "ASDFASDFDF"
-      subhref: "user-manuals/testdroid-enterprise"
 
 
 #- title: "Example Test"
