@@ -74,6 +74,14 @@
     - subtitle: "Creating Calabash Tests"
       subhref: "calabash/creating-calabash-tests"
 
+- title: "XCode Support"
+  href: "xcode"
+  subcategories:
+    - subtitle: "XCTest"
+      subhref: "xcode/xctest"
+#    - subtitle: "Client vs. Server Execution"
+#      subhref: "appium/client-server"
+
 - title: "Espresso Tutorial"
   href: "espresso"
 

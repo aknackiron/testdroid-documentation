@@ -19,3 +19,5 @@ Accessibility allows tests to interact with the app as an user would.
 What's needed to get started?
 
   * UI test is a target type
+
+ 
