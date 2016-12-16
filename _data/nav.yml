@@ -77,6 +77,8 @@
 - title: "XCode Support"
   href: "xcode"
   subcategories:
+    - subtitle: "Creating iOS App Package"
+      subhref: "xcode/ipa"
     - subtitle: "XCTest"
       subhref: "xcode/xctest"
 #    - subtitle: "Client vs. Server Execution"
