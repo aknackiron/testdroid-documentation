@@ -4,20 +4,11 @@ title: Apple Testing Frameworks
 ---
 
 
-Apps created for Apple iOS devices can be tested with multiple different testing frameworks. Apple supports only its own testing frameworks XCTest and XCUITest. These frameworks are also supported by Bitbar Testing cloud.
+Applications created for Apple iOS devices can be tested with multiple different testing frameworks of which Apple only supports its own testing frameworks XCTest and XCUITest. These frameworks are also available and supported by Bitbar Testing cloud. XCTest and XCUITest are integrated with XCode and support writing of test suites with subclasses, methods and assertions.
 
-XCTest is integrated with XCode and supports writing of test case subclasses, test methods and assertions.
+Tests are run directly from Xcode and are writen with either Swift or Objective C. XCUITest make use of the application's accessibility functionality, which allows tests to interact with the app as a real user would.
 
-Running tests directly from your source code.
+There are separate documentations for [preparing the application](./ipa/) for testing through Xcode and how to [package XCTest tests](./xctest/). 
 
-Swift or Objective C
 
-Since XCode 7 also UI testing supported
-
-Accessibility allows tests to interact with the app as an user would.
-
-What's needed to get started?
-
-  * UI test is a target type
-
- 
+  ![]({{site.github.url}}/assets/xcode/apple-xcode-logo.png)
