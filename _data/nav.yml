@@ -110,13 +110,14 @@
 #    - subtitle: "Xcode"
 #      subhref: "xcode"
 
-- title: "How-To Articles"
-  href: "how-tos"
-  subcategories:
-    - subtitle: "IPA Requirements"
-      subhref: "how-tos/ipa-requirements"
-    - subtitle: "Test Automation"
-      subhref: "how-tos/testautomation"
+# Removed Dec-16 with introduction of xcode & xctest parts
+#- title: "How-To Articles"
+#  href: "how-tos"
+#  subcategories:
+#    - subtitle: "IPA Requirements"
+#      subhref: "how-tos/ipa-requirements"
+#    - subtitle: "Test Automation"
+#      subhref: "how-tos/testautomation"
 
 - title: "User Manuals"
   href: "user-manuals"
