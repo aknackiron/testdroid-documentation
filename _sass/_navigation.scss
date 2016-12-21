@@ -69,10 +69,10 @@
                 width: 14px;
                 text-align: center;
             }
-            .navigation-closed .navigation-icon:after, .navigation-icon-placeholder:after  {
+            .navigation-closed .navigation-icon:after  {
                 content: "\f105";
             }
-            .navigation-open .navigation-icon:after {
+            .navigation-open >.navigation-icon:after {
                 content: "\f107"
             }
         }
