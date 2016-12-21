@@ -70,8 +70,7 @@
                 padding: $content-padding-top-bottom $content-padding-left-right; 
                 height: calc(100% - (#{$content-padding-top-bottom} * 2));
                 overflow-y: auto;
-                max-width: 860px;
-                width: 100%;
+                width: calc(100% - 780px);
 
                 /* Fix for content growing too wide */
                 > *{
@@ -131,8 +130,6 @@
         }
         .wrapper {
             .frontpage-template {
-                max-width: 860px;
-                width: 100%;
                 > ul {
                     list-style-type: none;
                     overflow: hidden;
@@ -218,9 +215,7 @@
 
     @media (max-width: 1280px) {
       .content-section .wrapper .content {
-          width: calc(100% - 350px);
-          box-sizing: border-box;
-          padding-right: 40px;
+          width: calc(100% - 420px);
       }
       .content-section .wrapper #toc {
         display: none;

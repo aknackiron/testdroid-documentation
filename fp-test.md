@@ -15,7 +15,7 @@ title: frontpage-testing
 - For any technical feedback get in touch through <support@bitbar.com>.
 	- &#xf003;
 
-<div class="fp-para-frame" style="background-image: url('/assets/testdroid-blur.jpg'); background-size: cover;">
+<div class="fp-para-frame" style="background-image: url('{{ site.github.url }}/assets/testdroid-blur.jpg'); background-size: cover;">
 <div>
 	<p>Looking for more information about <a href="http://bitbar.com/testing/">mobile app testing</a> with real Android and iOS devices? Bitbar Testing and Testdroid technology got you covered.</p>
 </div>
