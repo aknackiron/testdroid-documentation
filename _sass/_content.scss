@@ -70,7 +70,8 @@
                 padding: $content-padding-top-bottom $content-padding-left-right; 
                 height: calc(100% - (#{$content-padding-top-bottom} * 2));
                 overflow-y: auto;
-                width: calc(100% - 780px);
+                max-width: 860px;
+                width: 100%;
 
                 /* Fix for content growing too wide */
                 > *{
@@ -217,9 +218,6 @@
 
     @media (max-width: 1280px) {
       .content-section .wrapper .content {
-          width: calc(100% - 420px);
-      }
-      .content-section .wrapper .frontpage-template {
           width: calc(100% - 350px);
           box-sizing: border-box;
           padding-right: 40px;
