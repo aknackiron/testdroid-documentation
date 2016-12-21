@@ -1,6 +1,7 @@
     .navigation-control-placeholder{
         position: relative;
         height: calc(100% - 1px);
+        left: 0 !important;
         /*width: $navigation-width;*/
         .navigation-control{
             position: absolute;
@@ -36,7 +37,70 @@
 				-webkit-animation: border-pulsate 4s infinite;
 				animation: border-pulsate 4s infinite;
 			}
-			
+        }
+    }
+
+    #resizable-navigation-right {
+        .navigation-control {
+            right: auto;
+            left: 0;
+        }
+        .navigation {
+            margin-right: 0;
+            margin-left: auto;
+            nav {
+                padding-top: 40px;
+                box-sizing: border-box;
+            }
+            li {
+                padding: 0;
+                a {
+                    padding-left: 5px; 
+                    color: #acd036;
+                    text-transform: uppercase;
+                    width: calc(100% - (34px));
+                }
+
+                ul li a:only-child {
+                    padding-left: 44px;
+                    text-transform: capitalize;
+                }
+                &:hover {
+                    background-color: #252525;
+                }
+            }
+            .navigation-icon, .navigation-icon-placeholder {
+                padding: 0 5px 0 10px;
+                color: #acd036;
+                font-family: "FontAwesome";
+                width: 14px;
+                text-align: center;
+            }
+            .navigation-closed .navigation-icon:after, .navigation-icon-placeholder:after  {
+                content: "\f105";
+            }
+            .navigation-open .navigation-icon:after {
+                content: "\f107"
+            }
+        }
+        .ui-resizable-w {
+            width: 20px;
+            left: -5px;
+        }
+        &.resizing {
+            .navigation {
+                border-right: 0;
+                border-left: $navigation-border-right solid $blue;
+                box-shadow: -5px 0px 5px 0px $blue !important;
+                -webkit-animation: border-pulsate-right 4s infinite;
+                animation: border-pulsate-right 4s infinite;
+            }
+        }
+        .navigation-open, .active {
+            background-color: #252525;
+            > ul {
+                background-color: #363636;
+            }
         }
     }
 

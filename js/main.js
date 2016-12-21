@@ -96,6 +96,12 @@ $(document).ready(function(){
     }); 
     
     var $resizableNavigation = $( "#resizable-navigation" );
+    var $altNav = false;
+    if ($resizableNavigation.length === 0) {
+      $resizableNavigation = $( "#resizable-navigation-right" );
+      $altNav = true;
+    }
+
     var windowWidth = $( window ).width();
     
     var navigationMaxWidth = windowWidth < 370 ? $( window ).width() - 20 : 350;
@@ -112,12 +118,23 @@ $(document).ready(function(){
 		$(ui.element[0]).removeClass('resizing');
 	}
     
-    $resizableNavigation.resizable({
+    if ($altNav) {
+      $resizableNavigation.resizable({
+        handles: 'w',
+        maxWidth: navigationMaxWidth,
+        start: resizing,
+        stop: stoppedResizing
+      });
+    }
+    else {
+      $resizableNavigation.resizable({
         handles: 'e',
         maxWidth: navigationMaxWidth,
         start: resizing,
         stop: stoppedResizing
-    });
+      });
+    }
+    
     
     // hide resize icon if not touch device
     if (!Modernizr.touch){
