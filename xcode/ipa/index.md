@@ -19,7 +19,7 @@ In Finder right click the .app file and copy its location for later use. This lo
 
 ![]({{site.github.url}}/assets/xcode/ipa/xc-copy-in-finder.png)
 
-The IPA package needed to uploade to Bitbar Testing is a zip package and it's creation can be automated and made part of a CI integration. Open a terminal and create the IPA.
+The IPA package needed for XCTests in Bitbar Testing is a zip package and its creation can be automated and made part of a CI integration. Open a terminal and create the IPA.
 
     $ mkdir /tmp/Payload
     $ cd /tmp/Payload
