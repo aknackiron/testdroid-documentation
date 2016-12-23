@@ -74,6 +74,16 @@
     - subtitle: "Creating Calabash Tests"
       subhref: "calabash/creating-calabash-tests"
 
+- title: "XCode Support"
+  href: "xcode"
+  subcategories:
+    - subtitle: "Creating iOS App Package"
+      subhref: "xcode/ipa"
+    - subtitle: "XCTest"
+      subhref: "xcode/xctest"
+#    - subtitle: "Client vs. Server Execution"
+#      subhref: "appium/client-server"
+
 - title: "Espresso Tutorial"
   href: "espresso"
 
@@ -100,13 +110,14 @@
 #    - subtitle: "Xcode"
 #      subhref: "xcode"
 
-- title: "How-To Articles"
-  href: "how-tos"
-  subcategories:
-    - subtitle: "IPA Requirements"
-      subhref: "how-tos/ipa-requirements"
-    - subtitle: "Test Automation"
-      subhref: "how-tos/testautomation"
+# Removed Dec-16 with introduction of xcode & xctest parts
+#- title: "How-To Articles"
+#  href: "how-tos"
+#  subcategories:
+#    - subtitle: "IPA Requirements"
+#      subhref: "how-tos/ipa-requirements"
+#    - subtitle: "Test Automation"
+#      subhref: "how-tos/testautomation"
 
 - title: "User Manuals"
   href: "user-manuals"

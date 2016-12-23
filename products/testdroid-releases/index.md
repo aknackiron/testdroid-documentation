@@ -4,6 +4,27 @@ title: Testdroid Releases
 ---
 
 
+## Release 2.32 December 22, 2016
+
+### Added Features
+
+* XCTest for iOS10 devices available to all paid plans. iOS10 devices were introduced to public cloud about a month ago and now the support for running XCTest test on them is available to all users. For more information on how to build the app IPA and how to package the tests is available in [our documentation]({{site.github.url}}/xcode)
+
+  Bitbar's [Github sample repository](https://github.com/bitbar/testdroid-samples/tree/master/xcode) also contains an example XCTest project that can be used as a starting point with the above documentation, when starting out.
+
+  With the support for XCTest project type, it is now also possible to run KIF tests in Bitbar Testing public cloud. The same has been available for a long time in Private and Enterprise installations.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.32/dropdown.gif)
+
+  XCTest is available only on newer iOS devices with iOS version 10 or above. Support for older devices is coming in the following weeks.
+
+* Calabash project type available to all new users regardless of the registered plan. Free users are limited by number of available free devices. Existing free users get access to Calabash projects by upgrading to a [paid plan](https://cloud.testdroid.com/#public/buy).
+
+* iOS manual testing support is now part of default Bitbar Testing. Manual testing with iOS devices was until now enabled per device for dedicated devices and for Private and Enterprise installations. Testing how the app looks and behaves on real Apple devices is now easier than ever. 
+
+* [Jenkins Run in Cloud plugin](https://wiki.jenkins-ci.org/display/JENKINS/Bitbar+Testing+Run+In+Cloud+Plugin) updated to verion 1.0.17. This fixes issues with downloading results and starting Appium server test runs.  
+
+
 ## Release 2.31 November 24, 2016
 
 ### Added Features
