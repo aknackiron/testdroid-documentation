@@ -61,7 +61,7 @@ We provide CPU and Memory usage data. We have also the ability to provide Gamebe
 
 ###  Can we do remote manual testing with Testdroid devices?
 
-For most Android models yes, some are incompatible with the VNC technology in use. We are adding this same functionality to iOS devices too for our Private and Enterprise customers.
+Yes, for most Android and iOS devices. Some models are incompatible with the VNC technology in use. Manual testing on iOS devices is supported on public cloud through dedicated devices. Enterprise and Private cloud users can decide which users get access to manual testing.
 
 ###  Does Testdroid support parallel or concurrent test runs?
 
