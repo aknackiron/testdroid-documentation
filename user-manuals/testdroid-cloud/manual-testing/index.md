@@ -3,7 +3,7 @@ layout: default
 title: Testdroid Cloud Manual Testing
 ---
 
-Testdroid Cloud Manual Testing feature provides users a way to take
+Bitbar Testing Cloud Manual Testing feature provides users a way to take
 manual access to Testdroid Cloud devices. By clicking Manual Testing in
 the main menu, user will be directed to the Manual Testing setup view.
 
@@ -12,13 +12,15 @@ top of the widget and then select application for a manual session. It
 is also possible to simply start using a device by clicking on *Start
 without and app*.
 
+Bitbar Testing supports manual testing for Android and iOS devices. Android manual testing is available to all users, but iOS manual testing is available through dedicated devices in public cloud. Enterprise and private cloud customers can decide to make iOS devices available to all or not.
+
 ## Getting Started 
 
 1. Select application for the session
 
    The interactive session gets started by clicking the application or
    by starting without. More applications can be uploaded and all are
-   shown in this view.
+   visible in this view. Both Android and iOS application are supported.
 
    ![]({{site.github.url}}/assets/user-manuals/interactive_choose_application.png)
 
