@@ -96,6 +96,7 @@ $(document).ready(function(){
     }); 
     
     var $resizableNavigation = $( "#resizable-navigation" );
+
     var windowWidth = $( window ).width();
     
     var navigationMaxWidth = windowWidth < 370 ? $( window ).width() - 20 : 350;
@@ -113,11 +114,12 @@ $(document).ready(function(){
 	}
     
     $resizableNavigation.resizable({
-        handles: 'e',
-        maxWidth: navigationMaxWidth,
-        start: resizing,
-        stop: stoppedResizing
+      handles: 'e',
+      maxWidth: navigationMaxWidth,
+      start: resizing,
+      stop: stoppedResizing
     });
+    
     
     // hide resize icon if not touch device
     if (!Modernizr.touch){
