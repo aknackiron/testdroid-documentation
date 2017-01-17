@@ -3,6 +3,35 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.33 January 17, 2017
+
+During the past month there have been multiple updates done to Bitbar public cloud. Some have been visible to end users and some not. The below list of enhancements are avaible on the public cloud but also available to our On-Premise and Private cloud customers. To get all latest features whole or parts of On-Premise or Private cloud needs to be updated. Please contact your dedicated support contact.
+
+### Added Features
+
+* XCTest and XCUITest frameworks are available to all users of Bitbar Testing cloud! These have been available to a limit number of users already since December but now all public cloud users get access to these. Bitbar [Github samples](https://github.com/bitbar/testdroid-samples/tree/master/xcode) present an example test project with both XCTest and XCUITest test steps.
+
+    The documentation on how to prepare your Xcode project for these frameworks is available [here]({{site.github.url}}/xcode/xctest).
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.33/projects.gif)
+
+* Latest stable Appium version 1.6.3, supporting newest iOS and Android devices has been installed to public cloud. This is the default Appium available for client side and server side test executions. On Android server side it is still possible to select some older version if required. For iOS, this is the only supported version.
+
+    iOS side Appium Safari testing and iOS AppCrawler support are introduced to public cloud in few weeks with separate updates.
+
+    Users still using older versions of Appium need to update their test scripts.
+
+    Next major Appium version upgrade on Bitbar Testing is done towards end of Q1 2017.
+
+* Public cloud iOS devices are upgraded to latest available and Apple supported versions. As with earlier version of iOS most users have already updated their devices to the latest iOS 10.2 version. In public cloud, only a limited number of devices with older iOS versions 6, 7 or 8 remain.
+
+  [![Mixpanel stats for iOS10 adoption until Jan 2017]({{site.github.url}}/assets/products/testdroid-releases/2.33/mixpanel-ios10.png)](https://mixpanel.com/trends/#report/ios_10)
+
+* Support for Java 8 is available for test runs.
+
+* Chromedriver was updated to 2.27.440175. This update was done already before Christmas, but we had a bug and the update didn't go through everywhere as it should have. 
+
+
 
 ## Release 2.32 December 22, 2016
 
