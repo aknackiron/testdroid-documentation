@@ -15,11 +15,11 @@ During the past month there have been multiple updates done to Bitbar public clo
 
     ![]({{site.github.url}}/assets/products/testdroid-releases/2.33/projects.gif)
 
-* Latest stable Appium version 1.6.3, supporting newest iOS and Android devices has been installed to public cloud. This is the default Appium available for client side and server side test executions. On Android server side it is still possible to select some older version if required. For iOS, this is the only supported version.
+* Latest stable [Appium version 1.6.3](https://github.com/appium/appium/releases/tag/v1.6.3), supporting newest iOS and Android devices has been installed to public cloud. This is the default Appium available for client side and server side test executions. On Android server side it is still possible to select some older version if required. For iOS, this is the only supported version.
 
     iOS side Appium Safari testing and iOS AppCrawler support are introduced to public cloud in few weeks with separate updates.
 
-    Users still using older versions of Appium need to update their test scripts.
+    **Attention** Users using older versions of Appium (before 1.5) may need to update their test scripts. Appium has made changes to default desired capabilities and deprecated some methods since Appium version 1.4. For example with Android tests, the method `find_element_by_name(<some string>)` has been depracated and needs to be updated with `find_element_by_android_uiautomator('new UiSelector().text(<some string>))`. Please check our [sample tests online](https://github.com/bitbar/testdroid-samples) for updated tests or [Appium release notes](https://github.com/appium/appium/releases/tag/v1.5.0).
 
     Next major Appium version upgrade on Bitbar Testing is done towards end of Q1 2017.
 
