@@ -81,8 +81,8 @@
       subhref: "xcode/ipa"
     - subtitle: "XCTest"
       subhref: "xcode/xctest"
-#    - subtitle: "Client vs. Server Execution"
-#      subhref: "appium/client-server"
+    - subtitle: "XCUITest"
+      subhref: "xcode/xcuitest"
 
 - title: "Espresso Tutorial"
   href: "espresso"
