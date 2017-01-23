@@ -30,5 +30,12 @@ The IPA package needed for XCTests in Bitbar Testing is a zip package and its cr
     -rw-r--r--  1 username  staff  0 Dec 16 12:42 LocalizationDemo.ipa
 
 
+## Good to Know
+
+If building for iPhone 5 or iPhone 5C (having Armv7 32 bit processor) devices then an additional step is needed before creating the build. Starting from Xcode7 onwards armv7s is [no more part of the default](https://github.com/jverkoey/iOS-Framework/issues/115) `$(ARCHS_STANDARD)` and so should be added as target build architecture.
+
+![]({{site.github.url}}/assets/xcode/ipa/xc-armv7-build-option.png)
+
+
 <!-- ![]({{site.github.url}}/assets/xcode/ipa/xc-cli-create-ipa.png) -->
 
