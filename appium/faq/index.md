@@ -109,8 +109,7 @@ For a working Chrome up to date examples (in Python) on our Github repository: [
 
 There should always be the latest 'tested' Appium version running in
 the cloud. This means that although there may be a newer release
-available, it might not yet be available in Cloud. Currently available
-version is visible from the [above web address](http://appium.testdroid.com/info) variable `'appiumBroker.appiumVersion'` value.
+available, it might not yet be available in Cloud. Current default version is Appium 1.6.3. for Android and iOS runs.
 
 # What is the difference between testdroid_project and testdroid_testrun?
 
@@ -166,10 +165,6 @@ Testdroid specific Appium desired capabilities are [described here]({{ site.gith
 # Do you support Appium with TestNG, Ruby or C#?
 
 Yes. For C# server side support through Mono is coming soon.
-
-# Can we select to use a specific version of Appium on Testdroid?
-
-When using server side Appium tests it is possible to select a specific version of Appium. We have plans on a more unified way of choosing the used Appium version.
 
 # What versions of Appium does Testdroid support?
 
