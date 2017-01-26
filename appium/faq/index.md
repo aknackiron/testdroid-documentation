@@ -101,24 +101,15 @@ You can check basic configurations at
 # How can I get screenshots to my cloud project?
 
 Appium test runs' screenshots are stored under your device run in
-cloud.
+cloud. If running a client side test run, screenshots are stored on your local machine where you are executing the Appium test scripts from.
 
-If you are web testing using Chromedriver, then you need to switch your test context to NATIVE_APP before taking a screenshot. This will ensure your screenshot to be taken from the entire device screen as well as to have the screenshot visible in your Testdroid cloud device run view.
-
-Create your own screenshot method that makes the switch between NATIVE_APP and WEBVIEW when taking a screenshot.
-
-       driver.switch_to.context("NATIVE_APP")
-       driver.save_screenshot(screenshot_name)
-       driver.switch_to.context("WEBVIEW") # only needed if continuing web testing
-
-To check a full example have a look at the example (in Python) on our Github repo: [testdroid_chrome.py](https://github.com/bitbar/testdroid-samples/blob/master/appium/sample-scripts/python/testdroid_chrome.py).
+For a working Chrome up to date examples (in Python) on our Github repository: [testdroid_chrome.py](https://github.com/bitbar/testdroid-samples/blob/master/appium/sample-scripts/python/testdroid_chrome.py). This repository also has examples for native or hybrid mobile app testing using Appium.
 
 # What version of Appium Server is running at Testdroid Cloud?
 
 There should always be the latest 'tested' Appium version running in
 the cloud. This means that although there may be a newer release
-available, it might not yet be available in Cloud. Currently available
-version is returned by the above web address ('appiumBroker.version').
+available, it might not yet be available in Cloud. Current default version is Appium 1.6.3. for Android and iOS runs.
 
 # What is the difference between testdroid_project and testdroid_testrun?
 
@@ -175,11 +166,6 @@ Testdroid specific Appium desired capabilities are [described here]({{ site.gith
 
 Yes. For C# server side support through Mono is coming soon.
 
-# Can we select to use a specific version of Appium on Testdroid?
-
-When using server side Appium tests it is possible to select a specific version of Appium. We have plans on a more unified way of choosing the used Appium version.
-
 # What versions of Appium does Testdroid support?
 
-Default Appium version is 1.4.16. In Server side Appium runs versions 1.4.3 and 1.3.2 are also available for use at the moment. Appium 1.5 is under way.
-
+Default Appium version is 1.6.3 for server and client side runs. With Android server side runs, it is possible to use an older version (1.4 or 1.5).
