@@ -3,9 +3,39 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.34 February 1, 2017
+
+* iOS AppCrawler enabled again. Due to the iOS side updates that were done since the beginning of the year, now the AppCrawler was done from scratch. Because of this the AppCrawler won't work exactly the same as the old one. Also, for now, it won't be able to fill in login or other forms.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/ios-appcrawler.png)
+
+* UI modifications and improvements. Notably changes in the My Account page which now contains available and enabled integrations and the list of account users. Account users are users that are allowed to run test runs billed to the current user.
+
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/integrations.png)
+
+* Interested in getting deeper hardware statistics about how apps behave on various devices in Bitbar Testing? It's now possible by providing existing Gamebench credentials to get device and app statistics gathered from each test run in Bitbar Testing. This same Gamebench integration is also supported on On-premise and private cloud setups.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-integration.png)
+
+  Once a testrun is executed and Gamebench has been enabled then a link to the results is presented in the test run results page. 
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-results-link.png)
+
+  This link will take you directly to the Gamebench portal where the results for the used devices are presented.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-page.png)
+
+* A ton of small fixed here and there, especially on our iOS side Appium execution.
+
+
 ## Release 2.33 January 17, 2017
 
 During the past month there have been multiple updates done to Bitbar public cloud. Some have been visible to end users and some not. The below list of enhancements are avaible on the public cloud but also available to our On-Premise and Private cloud customers. To get all latest features whole or parts of On-Premise or Private cloud needs to be updated. Please contact your dedicated support contact.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-integration.png)
+
+
 
 ### Added Features
 
