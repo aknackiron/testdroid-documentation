@@ -3,6 +3,86 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.34 February 1, 2017
+
+* iOS AppCrawler enabled again. Due to the iOS side updates that were done since the beginning of the year, now the AppCrawler was done from scratch. Because of this the AppCrawler won't work exactly the same as the old one. Also, for now, it won't be able to fill in login or other forms.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/ios-appcrawler.png)
+
+* UI modifications and improvements. Notably changes in the My Account page which now contains available and enabled integrations and the list of account users. Account users are users that are allowed to run test runs billed to the current user.
+
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/integrations.png)
+
+* Interested in getting deeper hardware statistics about how apps behave on various devices in Bitbar Testing? It's now possible by providing existing Gamebench credentials to get device and app statistics gathered from each test run in Bitbar Testing. This same Gamebench integration is also supported on On-premise and private cloud setups.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-integration.png)
+
+  Once a testrun is executed and Gamebench has been enabled then a link to the results is presented in the test run results page. 
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-results-link.png)
+
+  This link will take you directly to the Gamebench portal where the results for the used devices are presented.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-page.png)
+
+* A ton of small fixed here and there, especially on our iOS side Appium execution.
+
+
+## Release 2.33 January 17, 2017
+
+During the past month there have been multiple updates done to Bitbar public cloud. Some have been visible to end users and some not. The below list of enhancements are avaible on the public cloud but also available to our On-Premise and Private cloud customers. To get all latest features whole or parts of On-Premise or Private cloud needs to be updated. Please contact your dedicated support contact.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.34/gb-integration.png)
+
+
+
+### Added Features
+
+* XCTest and XCUITest frameworks are available to all users of Bitbar Testing cloud! These have been available to a limit number of users already since December but now all public cloud users get access to these. Bitbar [Github samples](https://github.com/bitbar/testdroid-samples/tree/master/xcode) present an example test project with both XCTest and XCUITest test steps.
+
+    The documentation on how to prepare your Xcode project for these frameworks is available [here]({{site.github.url}}/xcode/xctest).
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.33/projects.gif)
+
+* Latest stable [Appium version 1.6.3](https://github.com/appium/appium/releases/tag/v1.6.3), supporting newest iOS and Android devices has been installed to public cloud. This is the default Appium available for client side and server side test executions. On Android server side it is still possible to select some older version if required. For iOS, this is the only supported version.
+
+    iOS side Appium Safari testing and iOS AppCrawler support are introduced to public cloud in few weeks with separate updates.
+
+    **Attention** Users using older versions of Appium (before 1.5) may need to update their test scripts. Appium has made changes to default desired capabilities and deprecated some methods since Appium version 1.4. For example with Android tests, the method `find_element_by_name(<some string>)` has been depracated and needs to be updated with `find_element_by_android_uiautomator('new UiSelector().text(<some string>))`. Please check our [sample tests online](https://github.com/bitbar/testdroid-samples) for updated tests or [Appium release notes](https://github.com/appium/appium/releases/tag/v1.5.0).
+
+    Next major Appium version upgrade on Bitbar Testing is done towards end of Q1 2017.
+
+* Public cloud iOS devices are upgraded to latest available and Apple supported versions. As with earlier version of iOS most users have already updated their devices to the latest iOS 10.2 version. In public cloud, only a limited number of devices with older iOS versions 6, 7 or 8 remain.
+
+  [![Mixpanel stats for iOS10 adoption until Jan 2017]({{site.github.url}}/assets/products/testdroid-releases/2.33/mixpanel-ios10.png)](https://mixpanel.com/trends/#report/ios_10)
+
+* Support for Java 8 is available for test runs.
+
+* Chromedriver was updated to 2.27.440175. This update was done already before Christmas, but we had a bug and the update didn't go through everywhere as it should have. 
+
+
+
+## Release 2.32 December 22, 2016
+
+### Added Features
+
+* XCTest for iOS10 devices available to all paid plans. iOS10 devices were introduced to public cloud about a month ago and now the support for running XCTest test on them is available to all users. For more information on how to build the app IPA and how to package the tests is available in [our documentation]({{site.github.url}}/xcode)
+
+  Bitbar's [Github sample repository](https://github.com/bitbar/testdroid-samples/tree/master/xcode) also contains an example XCTest project that can be used as a starting point with the above documentation, when starting out.
+
+  With the support for XCTest project type, it is now also possible to run KIF tests in Bitbar Testing public cloud. The same has been available for a long time in Private and Enterprise installations.
+
+    ![]({{site.github.url}}/assets/products/testdroid-releases/2.32/dropdown.gif)
+
+  XCTest is available only on newer iOS devices with iOS version 10 or above. Support for older devices is coming in the following weeks.
+
+* Calabash project type available to all new users regardless of the registered plan. Free users are limited by number of available free devices. Existing free users get access to Calabash projects by upgrading to a [paid plan](https://cloud.testdroid.com/#public/buy).
+
+* iOS manual testing support is now part of default Bitbar Testing. Manual testing with iOS devices was until now enabled per device for dedicated devices and for Private and Enterprise installations. Testing how the app looks and behaves on real Apple devices is now easier than ever. 
+
+* [Jenkins Run in Cloud plugin](https://wiki.jenkins-ci.org/display/JENKINS/Bitbar+Testing+Run+In+Cloud+Plugin) updated to verion 1.0.17. This fixes issues with downloading results and starting Appium server test runs.  
+
 
 ## Release 2.31 November 24, 2016
 

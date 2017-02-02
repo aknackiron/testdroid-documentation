@@ -8,8 +8,8 @@ The repository with a working sample for image recognition with Appium is availa
 
 Dependencies for running locally:
 
-* Sampe app: .ipa or .apk file found at apps/builds-directory in cloned sample repository
-* OpenCV: [https://github.com/bitbar/testdroid-samples/tree/master/image-recognition](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition)
+* Sample app: .ipa or .apk file found at apps/builds-directory in cloned sample repository
+* Sample project: [https://github.com/bitbar/testdroid-samples/tree/master/image-recognition](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition)
 * Akaze: can be found and built from Bitbar's [Akaze project fork](https://github.com/bitbar/akaze)
 * Appium server. 
 

@@ -13,8 +13,8 @@ Compiling Unit tests - This should be the default setting, but it's worth double
 
 
 In order for the classes under test to be available within the test bundle, they need to be included with test target membership. 
-In the example project, MyModel.swift was a class under test, so it needed to be added to the test target membership.  This isn't technically required 
-in a Swift world with the `@testable` annotation for importing modules. 
+In the example project, MyModel.swift was a class under test, so it needed to be added to the test target membership. Normally this isn't required with Swift, because the `@testable` annotation imports the required modules.
+
 
 ![]({{site.github.url}}/assets/xcode/xctest/xc-xctest-2.png)
 
@@ -35,7 +35,7 @@ Then go to the Plugins folder and right click top of the .xctest and select comp
 
 ![]({{site.github.url}}/assets/xcode/xctest/xc-xctest-6.png)
 
-Now the  XCtest package(zip) exists that can be uploaded to Bitbar Testing cloud with the IPA package created earlier.
+Now the  XCtest package (zip) exists and can be uploaded to Bitbar Testing cloud with the IPA package created earlier.
 
 ![]({{site.github.url}}/assets/xcode/xctest/xc-xctest-7.png)
 

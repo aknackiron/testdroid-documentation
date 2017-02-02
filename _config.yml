@@ -5,5 +5,11 @@ highlighter: rouge
 #baseurl: /testdroid-documentation
 gems:
   - jekyll-sitemap
+exclude:
+  - fix-image.sh
+  - Gemfile
+  - Gemfile.lock
+  
+
 td_link: "[Bitbar Testing](http://bitbar.com/)"
 td_cloud: "[Testdroid Cloud](http://cloud.testdroid.com/)"
