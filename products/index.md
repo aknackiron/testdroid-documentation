@@ -1,18 +1,18 @@
 ---
 layout: default
-title: About Testdroid
+title: About Bitbar Testing
 ---
 
 
-<h1>The different flavours of Testdroid</h1>
+## Different Flavours
 
-Testdroid is a cloud product that is served in three different flavours.
+Bitbar Testing is a cloud product served in three different flavours.
 
-* [Testdroid Cloud](testdroid-cloud.html)
+* [Bitbar Cloud]({{site.github.url}}/products/testing)
 
-* [Testdroid Private Cloud](testdroid-privatecloud.html)
+* [Bitbar Private Cloud]({{site.github.url}}/products/private)
 
-* [Testdroid Enterprise](testdroid-enterprise.html)
+* [Bitbar On-premise]({{site.github.url}}/products/on-premise)
 
 
 If you have any questions, please leave us a note at
