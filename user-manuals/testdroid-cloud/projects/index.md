@@ -193,3 +193,22 @@ The log view provides line-by-line information about the test run. It allows sho
 
 ![]({{site.github.url}}/assets/user-manuals/projects_run_details_logs.png)
  
+## AppCrawler
+
+AppCrawler functionality provides easy self-contained option to test mobile application against automated 
+test procedure.
+Bitbar testing provides solution to run AppCrawler for both Android and iOS environments. 
+Solution to achieve valuable tests is that AppCrawler will try to mimic human behavior. In order to achieve reliable tests, AppCrawler will try to mimic human behavior
+AppCrawler will try to navigate through application trying to interact with elements contained within.
+
+#Usage
+
+There are two possible ways to use AppCrawler in Bitbar testing:
+You can navigate through Projects to look for either new or existing project of type 
+Android instrumentation or iOS UI Automation, then  proceed with new Test Run and add desired application and proceed to
+next step. On the second step you should select App Crawler option. After selecting the devices on which test should
+be performed you can start the test.
+Second solution would be to navigate directly to AppCrawler button on menu in the top of the screen.
+Upload application project and devices and execute test.
+In both cases results of test execution with screenshots will be collected as it would be in regular test execution.
+
