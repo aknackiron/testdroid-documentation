@@ -30,11 +30,11 @@
 - title: "Appium Tutorial"
   href: "appium"
   subcategories:
-    - subtitle: "Introduction & Prerequisites"
+    - subtitle: "Appium Introduction"
       subhref: "appium/introduction"
     - subtitle: "Client vs. Server Execution"
       subhref: "appium/client-server"
-    - subtitle: "Setup"
+    - subtitle: "Environment Setup"
       subhref: "appium/setup"
     - subtitle: "Desired Capabilities"
       subhref: "appium/testdroid-desired-caps"
