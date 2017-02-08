@@ -38,8 +38,6 @@
       subhref: "appium/setup"
     - subtitle: "Desired Capabilities"
       subhref: "appium/testdroid-desired-caps"
-    - subtitle: "App & Environment Requirements"
-      subhref: "appium/environment"
     - subtitle: "Appium FAQ"
       subhref: "appium/faq"
     - subtitle: "Examples"
