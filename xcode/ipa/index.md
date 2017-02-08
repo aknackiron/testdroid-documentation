@@ -32,9 +32,27 @@ The IPA package needed for XCTests in Bitbar Testing is a zip package and its cr
 
 ## Good to Know
 
+### Armv7
+
 If building for iPhone 5 or iPhone 5C (having Armv7 32 bit processor) devices then an additional step is needed before creating the build. Starting from Xcode7 onwards armv7s is [no more part of the default](https://github.com/jverkoey/iOS-Framework/issues/115) `$(ARCHS_STANDARD)` and so should be added as target build architecture.
 
 ![]({{site.github.url}}/assets/xcode/ipa/xc-armv7-build-option.png)
+
+### iOS 9.3.5
+
+By default Xcode8 builds apps against the latest available iOS (10.2 at the time of writing). For testing against devices running previous iOS versions the app and the tests need to be built for these separately.
+
+First the project level *Deployment Target* needs to be set to 9.3.
+
+![]({{site.github.url}}/assets/xcode/ipa/project-target-version.png)
+
+Then the same needs to be done for the app target (Calculator in these example screenshots) 
+
+![]({{site.github.url}}/assets/xcode/ipa/app-target-version.png)
+
+and still for the tests (CalculatorUITests).
+
+![]({{site.github.url}}/assets/xcode/ipa/test-target-version.png)
 
 
 <!-- ![]({{site.github.url}}/assets/xcode/ipa/xc-cli-create-ipa.png) -->
