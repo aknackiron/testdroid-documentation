@@ -1,220 +1,194 @@
 ---
 layout: default
-title: Appium Setup 
+title: Starting With Appium
 ---
 
 
+There are a number of samples on [Bitbar Github](https://github.com/bitbar/testdroid-samples/) repository that help getting started with running Appium tests either remotely or as server side tests in Bitbar Testing cloud.
 
-To get started, you can first download our [Appium examples from Github](https://github.com/bitbar/testdroid-samples.git). These examples are available in C#, Python, Java and Ruby, and we’ll be using these as a basis for some of these tutorials. Depending on which programming language you will be using, select the appropriate client library as listed below.
+To get started with the samples, the user should have Git installed and the programming language of choice. Below steps guide in installing Git on different environments followed by rought guides on getting different programming languages set up.
 
-There are different examples available for regular app testing, game testing and some web-related testing using Appium. To make most out of the existing samples you should have Git installed. If you are new to Git, there is a very good guide on how to install Git on popular operating system here. 
+* Mac OS X
 
-<h2>Mac OS X</h2>
+  Download the latest Git command line tool from [http://git-scm.com/download/mac](http://git-scm.com/download/mac) and install it using the normal Mac installation procedure.
 
-Download the latest Git command line tool from [http://git-scm.com/download/mac](http://git-scm.com/download/mac) and install it using the normal Mac installation procedure.
+* Linux
 
-<h2>Linux</h2>
+  Use the following command to get Git installed on your Linux machine:
 
-Use the following command to get Git installed on your Linux machine:
+  ```
+  $ sudo apt-get install git
+  ```
 
-<pre>$ sudo apt-get install git</pre>
+* Windows
 
-<h2>Windows</h2>
+  The easiest and the most straightforward way is to install the [Github Desktop application](https://desktop.github.com/) for Windows.
 
-The easiest and the most straightforward way is to install the Github Windows application.
 
-<h1>PYTHON</h1>
+# Installing Python
 
-<h2>Mac OS X and Linux</h2>
+## Python on Mac OS X and Linux
 
-Our Python samples have been created with 2.7.x version in use, so best compatibility can be expected with the same. Check that newest Python 2.7.x version is installed by using the following command:
+Bitbar Appium Python samples use Python version 2.7.x and will not work with Python 3.. To know the currently installed version run the below command.
 
-<pre>$ python --version</pre>
+```
+$ python --version</pre>
+```
 
-If not installed, you can install Python by using the following commands:
+If Python is not installed, it can be installed by using the following commands:
 
-<pre>Linux: $ sudo apt-get install python2.7
-OSX: $ brew install python</pre>
+```
+# on Linux
+$ sudo apt-get install python2.7
 
-Brew is a handy package manager tool, similar to apt-get. If you don’t have it, check the brew website for its one-liner installation.
+# on Mac OSX
+$ brew install python
+```
 
-Then, check if ‘pip’ module is installed. Use the following command:
+Brew is a handy package manager tool, similar to apt-get. More information available at the [brew website](http://brew.sh/) for its one-liner installation.
 
-<pre>$ pip --version</pre>
+For easier Python package management ‘pip’ should also be installed. Use the following command:
 
-If ‘pip’ is appropriately installed, you’ll see something like this:
+```
+$ pip --version
+```
 
-<code>pip 1.5.6 from /Library/Python/2.7/site-packages (Python 2.7)</code>
+If ‘pip’ is appropriately installed, it should print something like this:
 
-If not, use the following command to install it:
+```
+pip 1.5.6 from /Library/Python/2.7/site-packages (Python 2.7)
+```
 
-<pre>Linux: $ sudo apt-get install python-pip
-OSX: $ sudo easy_install pip</pre>
+If not, pip can be installed as follows:
 
-Next, install the Selenium module for Python:
+```
+# on Linux
+$ sudo apt-get install python-pip
+# on Mac
+$ sudo easy_install pip
+```
 
-<pre>$ pip install selenium</pre>
+With Pip installed, let's install the Selenium module needed by Appium tests.
+
+```
+$ pip install selenium
+```
 
 And finally, verify that Selenium got installed:
 
-<pre>$ pip list | grep selenium</pre>
+```
+$ pip list | grep selenium
+```
 
-<h2>Windows</h2>
+## Python on Windows
 
-Ensure that the latest Python (2.7.x or newer) version is installed. Go to command line and use the following:
+Ensure the latest Python version 2 (2.7.x or newer) is installed. Go to command line and use the following:
 
-<pre><code>&gt; python --version</code></pre>
+```
+> python --version
+```
 
-If Python 2.7 or newer is not installed, download and run the setup from [Python Download Center](https://www.python.org/downloads/). To add Python into environment variables, go to Windows “System properties” → “Advanced System Settings” → “Environment Variables” → “System Variables” →  choose “Path” and press "Edit..." and then insert (assuming you have installed Python in the default location) <code>;C:\Python27;C:\Python27\Scripts</code> at the end separating each path with semicolon ; . Make sure to re-launch the command prompt to bring new environment variables into effect.
+If Python 2.7 is not installed, download and run the setup from [Python Download Center](https://www.python.org/downloads/). To add Python into environment variables, go to Windows “System properties” → “Advanced System Settings” → “Environment Variables” → “System Variables” → choose “Path” and press "Edit..." and then insert (assuming you have installed Python in the default location) `;C:\Python27;C:\Python27\Scripts` at the end separating each path with semicolon ';' . Make sure to re-launch the command prompt to bring new environment variables into effect.
 
 Then, check whether Python’s pip module is already installed:
 
-<pre><code>&gt; pip --version</code></pre>
+```
+> pip --version
+```
 
 Install pip if it’s not already (we assume here that you have cURL installed. If not, check the [cURL Instruction and Installation](http://curl.haxx.se/) out.
 
-<pre><code>&gt; curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py &gt; get-pip.py
-&gt; python get-pip.py
-&gt; del get-pip.py</code></pre>
+```
+curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py > get-pip.py
+python get-pip.py
+del get-pip.py
+```
 
-Install Python’s Selenium module:
+Now that Python and Pip are available let's install Python’s Selenium module:
 
-<pre><code>$ pip install selenium</code></pre>
+```
+$ pip install selenium
+```
 
-<h1>Java</h1>
+# Installing Java
 
-Appium testing supports writing tests in multiple programming languages, including Java. Testing can be done against native or hybrid apps or responsive web pages on both iOS and Android devices. Only the test setups differ.
+Appium testing supports writing tests in multiple programming languages, including Java. The Java [installation guide](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) helps in getting Java working on the environment of choice.
 
-With Java, things are pretty simple and you only need to configure your test file accordingly. You can use [Testdroid Configuration for Java file](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/java) as an example/template.
+With Java, things are simple and only the configure test file needs to be updated accordingly. Use the Bitbar [Configuration for Java file](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/java) `pom.xml` as example/template.
 
-In case you don't have an IDE with Maven included and would like to launch the example from command line, you will need to make sure that Maven is properly installed. Here's a link to the [Maven](https://maven.apache.org/install.html) installation instructions.
+In case no IDE is used, Maven can be used to launch the example from command line. Make sure  Maven is properly installed. Here's a link to  [Maven](https://maven.apache.org/install.html) installation instructions.
 
-<h1>C#</h1>
+# Installing C\#
 
-<h2>Windows</h2>
+## C# on Windows
 
 Launch the [AppiumTest.sln file](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/csharp) on Visual Studio and make sure that NUnit Test Adapter is installed through the Extension Manager. Use Test Explorer to run your tests.
 
-<h2>Linux/OSX</h2>
+## C# on Linux/OSX
 
 First, install [Monodevelop](http://www.monodevelop.com/download/) for C# support. Then, download dependencies using [Nuget](https://www.nuget.org/):
 
-<pre><code>$ nuget install Test123/packages.config -OutputDirectory packages</code></pre>
+```
+$ nuget install Test123/packages.config -OutputDirectory packages
+```
 
-To build the package, simply use the following command on correct path:
+To build the package on Mac OSX, simply use the following command on correct path:
 
-<pre><code>$ xbuild</code></pre>
+```
+$ xbuild
+```
 
-<h1>Ruby</h1>
+# Installing Ruby
 
 First, install the latest stable release of Ruby:
 
-<pre><code>$ curl -sSL https://get.rvm.io | bash -s stable
-$ rvm install ruby</code></pre>
+```
+$ curl -sSL https://get.rvm.io | bash -s stable
+$ rvm install ruby
+```
 
-Then, make sure RVM is using the correct Ruby by default:
+Let's make sure RVM is using the correct Ruby by default:
 
-<pre><code>$ rvm list
-$ rvm --default use 2.1.1</code></pre>
+```
+$ rvm list
+$ rvm --default use 2.1.1
+```
 
-In case you have an old Ruby/RVM, you can upgrade those with the following commands:
+In case of old Ruby/RVM, it can be upgraded with the following commands:
 
-<pre><code>$ rvm get head
+```
+$ rvm get head
 $ rvm autolibs homebrew
 $ rvm install ruby</code></pre>
+```
 
 Check that it’s installed properly by printing out the Ruby version:
 
-<pre><code>$ ruby --version</code></pre>
+```
+$ ruby --version
+```
 
 Update RubyGems and Bundler:
 
-<pre><code>$ gem update --system
+```
+$ gem update --system
 $ gem install --no-rdoc --no-ri bundler
 $ gem update
-$ gem cleanup</code></pre>
+$ gem cleanup
+```
 
-Check that RubyGems is &gt;= 2.1.5
+Check that RubyGems is >= 2.1.5
 
-<pre><code>$ gem --version</code></pre>
+```
+$ gem --version
+```
 
 Run bundler at the [Ruby example](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/ruby) to install dependencies:
 
-<pre><code>$ bundle install</code></pre>
+```
+$ bundle install
+```
 
-<h1>All Programming Languages: How to Configure Testdroid Specific Settings</h1>
-
-If you used any of those example files as a template, add your Testdroid user credentials in this script. You can also use environmental variables TESTDROID_USERNAME and TESTDROID_PASSWORD to get your credentials used:
-
-<pre><code>String testdroid_username = env.get("TESTDROID_USERNAME");
-String testdroid_password = env.get("TESTDROID_PASSWORD");
-</code></pre>
-
-Or alternatively, you can edit <code>testdroid_username</code> and <code>testdroid_password</code> in your source file:
-
-<pre><code>capabilities.setCapability("testdroid_username", 'john.doe@bitbar.com');
-capabilities.setCapability("testdroid_password", 'secretPassword123');</code></pre>
-
-If you are new with desired capabilities or if you are looking for more information on how to use those efficiently, take a look at [Testdroid Desired Capabilities]({{ site.github.url }}/appium/testdroid-desired-caps).
-
-Also, if you want to run tests against your application, make sure to change a file path to your application binary (whether you are running against APK or IPA):
-
-<pre><code>private static final String TARGET_APP_PATH = "../../../apps/builds/BitbarSampleApp.apk";</code></pre>
-
-In addition, there are lots of possible ways to configure your test run for our devices. In order to do this, you need to configure those desired capabilities. We'll get the bottom of this later in the blog series, but the current examples are as follows:
-
-<pre><code>DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("platformName", "Android");
-capabilities.setCapability("testdroid_target", "Android");
-capabilities.setCapability("deviceName", "Android Device");
-
-capabilities.setCapability("testdroid_project", "LocalAppium");
-capabilities.setCapability("testdroid_testrun", "Android Run 1");
-
-// See available devices at: https://cloud.testdroid.com/#public/devices
-capabilities.setCapability("testdroid_device", "Samsung Galaxy Nexus GT-I9250 4.2.2"); 
-capabilities.setCapability("testdroid_app", fileUUID); </code></pre>
-
-In this Java example, you only really need to configure <code>testdroid_username</code> and <code>testdroid_password</code>, since sample application upload is included.
-
-<h1>Running Your First Test</h1>
-
-Before the test can start you need to upload the application under test to <a title="Testdroid Cloud" href="https://cloud.testdroid.com/" target="_blank">Bitbar Testing</a>. This can be done either via <a title="API" href="http://docs.testdroid.com/testdroid-cloud-integration/api/examples/#project-files" target="_blank">API</a> or you can do it <a title="Manual upload" href="http://docs.testdroid.com/user-manuals/testdroid-cloud/projects/" target="_blank">manually</a> as well.
-
-<h2>Python</h2>
-
-To upload your app file (either APK or IPA) to Testdroid Cloud, open and configure the <a title="upload.py file" href="https://github.com/bitbar/testdroid-samples/blob/master/appium/sample-scripts/python/upload.py" target="_blank"><code>upload.py</code></a> script. As we walked it through, you only need to configure your username (email) and password that you registered with to Testdroid Cloud. Also, you need to set the full path to your mobile app. This can be an Android or iOS application. Then execute this:
-
-<pre><code>$ python upload.py</code></pre>
-
-To run a test:
-
-<pre><code>$ python testdroid_android.py</code></pre>
-
-<h2>Java</h2>
-
-You can run test from your IDE or directly from command line using Maven:
-
-<pre><code>&gt; mvn clean test -Dtest=SampleAppiumTest</code></pre>
-
-Or to be more precise:
-
-<pre><code>&gt; mvn clean test -Dtest=com.testdroid.appium.android.sample.SampleAppiumTest</code></pre>
-or run all the tests:
-
-<pre><code>&gt; mvn clean test </code></pre>
-
-<h2>C#</h2>
-
-To run tests, either launch them in Visual Studio via the Text Explorer or use the nunit console command:
-
-<pre><code>$ nunit-console Test123/bin/Debug/TestdroidAndroidSample.dll</code></pre>
-
-<h2>Ruby</h2>
-
-Run the tests with rspec:
-
-<pre><code>$ rspec testdroid_android.rb</code></pre>
 
 
 
