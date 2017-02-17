@@ -53,7 +53,7 @@ API v2 uses [OAuth 2.0](http://oauth.net/2/)_ - an open standard for authorizati
 
 ## Request
 
-    GET /oauth/token
+    POST /oauth/token
 
 Request body:
 
