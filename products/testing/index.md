@@ -3,8 +3,6 @@ layout: default
 title: Public Cloud
 ---
 
-
-
 ![]({{site.github.url}}/assets/logos/testing-cloud.png)
 
 [Bitbar Testing](https://cloud.testdroid.com/) provides the largest

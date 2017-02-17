@@ -3,8 +3,6 @@ layout: default
 title: Bitbar On-premise
 ---
 
-
-
 ![]({{site.github.url}}/assets/logos/onpremise-cloud.png)
 
 Bitbar On-premise is an on-premises solution that connects with own devices and provides an “in-house cloud” for development and testing teams. Typical users of Bitbar On-premise are companies that cannot use public cloud service(s) or wants to build an internal device farm. Also, Bitbar Testing On-premise is a great option for any app/game developer if they have invested in devices already and are willing to operate their own in-house development and testing lab.
