@@ -1,16 +1,16 @@
 - title: "What's New?"
   href: ""
 
-- title: "About Testdroid"
+- title: "Bitbar Testing"
   href: "products"
   subcategories:
-    - subtitle: "Testdroid Cloud"
-      subhref: "products/testdroid-cloud.html"
-    - subtitle: "Testdroid Privatecloud"
-      subhref: "products/testdroid-privatecloud.html"
-    - subtitle: "Testdroid Enterprise"
-      subhref: "products/testdroid-enterprise.html"
-    - subtitle: "Testdroid Releases"
+    - subtitle: "Public Cloud"
+      subhref: "products/testing"
+    - subtitle: "Private Cloud"
+      subhref: "products/private"
+    - subtitle: "On-premise Cloud"
+      subhref: "products/on-premise"
+    - subtitle: "Release Notes"
       subhref: "products/testdroid-releases"
 
 #- title: "Prerequisites & Concepts"
@@ -82,6 +82,7 @@
     - subtitle: "XCUITest"
       subhref: "xcode/xcuitest"
 
+
 - title: "Espresso Tutorial"
   href: "espresso"
 
@@ -120,7 +121,7 @@
 - title: "User Manuals"
   href: "user-manuals"
   subcategories:
-    - subtitle: "Testdroid Cloud"
+    - subtitle: "Public Cloud"
       subhref: "user-manuals/testdroid-cloud"
       subcategories:
         - subtitle: "Projects"
@@ -145,10 +146,8 @@
           subhref: "user-manuals/testdroid-cloud/security"
         - subtitle: "Error Messages"
           subhref: "user-manuals/testdroid-cloud/error-messages"
-    - subtitle: "Testdroid Enterprise"
-      subhref: "user-manuals/testdroid-enterprise"
 
-- title: "Testdroid FAQ"
+- title: "Frequently Asked Questions"
   href: "testdroid-faq"
 
 
