@@ -3,6 +3,19 @@ layout: default
 title: Testdroid Releases
 ---
 
+## Release 2.35 February 16, 2017
+
+This release consisted mostly of technical improvements to our iOS test runs infrastructure. With the last releases of Xcode there has been a lot of changes in [mobile testing behavior](http://bitbar.com/whats-trending-with-mobile-test-automation-frameworks/).
+
+Old Apple UI Automation framework got removed from the supported test frameworks as it hasn't been supported by Apple either for years.
+
+There are visible UI changes on the My Account page. For those interested in the reasons behind the changes [can be read here](http://bitbar.com/from-the-desk-of-the-developer-bitbar-ui-update-2-35/).
+
+Support for integrating to Gamebench service directly from the UI. Also note that the other possible integrations are now grouped here under My account.
+
+![]({{site.github.url}}/assets/products/testdroid-releases/2.35/my-integrations.png)
+
+
 ## Release 2.34 February 1, 2017
 
 * iOS AppCrawler enabled again. Due to the iOS side updates that were done since the beginning of the year, now the AppCrawler was done from scratch. Because of this the AppCrawler won't work exactly the same as the old one. Also, for now, it won't be able to fill in login or other forms.
