@@ -3,7 +3,7 @@ layout: default
 title: Bitbar Private
 ---
 
-![]({{site.github.url}}/assets/logos/Testdroid_PRIVATECLOUD_logo-HORIZONTAL_800px.png)
+![]({{site.github.url}}/assets/logos/private-cloud.png)
 
 Bitbar Private provides dedicated and reserved devices hosted by Bitbar's operation team in Bitbar's server rooms. This dedicated device access provides easy and handy way to make sure devices accessible 24/7 by any team members. Typical users are companies wanting or needing access to devices at any time and typically for vertically distributed teams, and does not want to host their own devices.
 
