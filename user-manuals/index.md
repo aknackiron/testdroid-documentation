@@ -3,7 +3,7 @@ layout: default
 title: Testdroid Cloud UI
 ---
 
-![]({{site.github.url}}/assets/logos/Testdroid_CLOUD_logo-HORIZONTAL_800px.png)
+![]({{site.github.url}}/assets/logos/testing-cloud.png)
 
 Testdroid Cloud provides the largest device farm of real mobile devices, gathered from different regions globally. Testdroid Cloud provides a test automation environment, remote manual access and REST API to access, run and manage any tests with these devices.
 
