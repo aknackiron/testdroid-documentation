@@ -6,12 +6,12 @@ title: Python Server Side Example
 Unlike the remotely connected Appium setup, parallel test script
 execution is possible in the cloud. The scripts are run in the
 cloud rather than through an active connection from remote machine to
-the cloud. For this reason scripts don't need to use testdroid
+the cloud. For this reason scripts don't need to use `testdroid_*`
 capabilities at all and instead use only Appium capabilities.
 
 When using server-side Appium execution, tests can be run using standard Appium on hundreds of devices in parallel without any need for complex set-ups at the client side.
 
-**NOTE!** Server side Appium test runs on Testdroid Cloud are
+**NOTE!** Server side Appium test runs on Bitbar Testing are
   available starting from [SOLO](http://bitbar.com/testing/pricing/public-cloud/)
   plan. Please contact <sales@bitbar.com> for more information.
 
@@ -59,7 +59,7 @@ An example zip package content could look like this.
     38205                     5 files
 ```
 
-On [Testdroid Cloud](https://cloud.testdroid.com):
+On [Bitbar Testing](https://cloud.testdroid.com):
 
 * Create a new Appium Server side project (either iOS or Android)
 * Create a new test run inside of new server side project 

@@ -3,13 +3,13 @@ layout: default
 title: Python Client Side Example
 ---
 
-Testdroid can be used to run Appium tests against real devices to test
+Bitbar Testing can be used to run Appium tests against real devices to test
 native Android or iOS applications, hybrid (Android & iOS) or for web
 testing (Safari on iOS and Chrome on Android).
 
 You'll find here all steps you need to start running your mobile tests
-against real devices in Testdroid Cloud. Before continuing with running with
-these scripts you should register with [Testdroid service](https://cloud.testdroid.com/).
+against real devices in Bitbar Testing. Before continuing with running with
+these scripts you should register with [Bitbar Testing service](https://cloud.testdroid.com/).
 
 For more detailed guides on Appium please refer to their excellent
 [documentation
@@ -17,12 +17,12 @@ online](http://appium.io/slate/en/master/?python#about-appium).
 
 # Upload Your App To Cloud
 
-Before starting testing, the app under test needs to be uploaded to Testdroid Cloud. This can be done either using curl from the command line as below or using a script to automate the process as shown next.
+Before starting testing, the app under test needs to be uploaded to Bitbar Testing. This can be done either using curl from the command line as below or using a script to automate the process as shown next.
 
 ### Using Curl
 
-The prefered way to identify yourself to Testdroid Cloud is using the apiKey, a user unique token that can be changed at any time from user's settings in Testdroid Cloud. This token is found from under "My Account" in
-Testdroid Cloud. 
+The prefered way to identify yourself to Bitbar Testing is using the apiKey, a user unique token that can be changed at any time from user's settings in Bitbar Testing. This token is found from under "My Account" in
+Bitbar Testing. 
 
 ```bash
     $ curl -H "Accept: application/json" -u xYY5...PeOA6: -F myAppFile=@"/absolute/file/path/example.apk" http://appium.testdroid.com/upload
@@ -33,17 +33,17 @@ Above response is a JSON message where the name of the uploaded app in cloud is 
 
 ### Using Python Scripts
 
-Following examples and scripts are located on [Testdroid Github samples](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/python). They contain example scripts for running tests against Testdroid Cloud but also to upload files.
+Following examples and scripts are located on [Bitbar Testing Github samples](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/python). They contain example scripts for running tests against Bitbar Testing but also to upload files.
 
 Using the `upload.py` script from the samples can be used to upload your app to cloud and get the file handle to it. The uploaded app can be an Android or iOS application.
 
-The default settings uploads Testdroid example Android app.
+The default settings uploads the example Android app.
 
 ```bash
 $ python upload.py -h
 usage: upload.py [-h] [-k APIKEY] [-a APP_PATH] [-u URL]
 
-Upload a mobile app to Testdroid Cloud and get a handle to it
+Upload a mobile app to Bitbar Testing and get a handle to it
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -54,7 +54,7 @@ optional arguments:
                         Path to app to upload or set environment variable
                         TESTDROID_APP_PATH. Current value is:
                         '../../../apps/builds/Testdroid.apk'
-  -u URL, --url URL     Testdroid Cloud url to upload app or set environment
+  -u URL, --url URL     Bitbar Testing url to upload app or set environment
                         variable TESTDROID_UPLOAD_URL. Current value is:
                         'http://appium.testdroid.com/upload'
 
@@ -80,17 +80,17 @@ Common values used in tests:
 * *screenshot_dir* - where should screenshots be stored on your local drive
 
 * *testdroid_apiKey* - a personal unique key allowing you to connect
-   to Testdroid Cloud without using username and passwords in
-   tests. Api key is found under "My account" in [Testdroid
+   to Bitbar Testing without using username and passwords in
+   tests. Api key is found under "My account" in [Bitbar Testing
    Cloud](https://cloud.testdroid.com/) UI.
 
 * *testdroid_username* - your email that you registered with to
-   Testdroid Cloud.  **Rather use testdroid_apiKey.**
+   Bitbar Testing.  **Rather use testdroid_apiKey.**
 
-* *testdroid_password* - your Testdroid Cloud password. **Rather use
+* *testdroid_password* - your Bitbar Testing password. **Rather use
    testdroid_apiKey.**
 
-* *testdroid_project* - the project name in Testdroid Cloud. Each
+* *testdroid_project* - the project name in Bitbar Testing. Each
   project must have a unique name, which can be modified (in Cloud)
 
 * *testdroid_testrun* - name of this test run inside of
@@ -136,7 +136,7 @@ ok
 
 # Upload Test Suite Output to Cloud 
 
-If your test suite generates a JUnit XML results file, you can upload the XML to Testdroid Cloud. Doing this will allow you to check your test cases and their run statuses on the Testdroid web UI, and let you download test reports in various formats.
+If your test suite generates a JUnit XML results file, you can upload the XML to Bitbar Testing. Doing this will allow you to check your test cases and their run statuses on the Bitbar Testing web UI, and let you download test reports in various formats.
 
 Add the `testdroid_junitWaitTime` desired capability in your test script.
 
