@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Testdroid Cloud API
+title: Bitbar Testing API
 
 ISO_639-1: <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1</a>
 ISO_3166-1: <a href="http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html">ISO 3166-1</a>
@@ -1379,7 +1379,7 @@ Response:
  
 ## Project sharing
 
-This feature allows you to share your project with another Testdroid Cloud user.
+This feature allows you to share your project with another Bitbar Testing user.
 
 **note:** Please remember to put your **access_token** to HTTP **request URL**
 
@@ -1397,7 +1397,7 @@ Request body:
 |==============+==========+==========+================================================+
  | projectId    | Number   |   yes    | Project ID                                     |
 |--------------|----------|----------|------------------------------------------------| 
- | email        | String   |   yes    | Testdroid Cloud user e-mail                    |
+ | email        | String   |   yes    | Bitbar Testing user e-mail                    |
 |--------------|----------|----------|------------------------------------------------|
  
  
@@ -5447,9 +5447,9 @@ API Objects
 |==================+=========+===========================================================+
  | id               | Number  | Share ID                                                  |
 |------------------|---------|-----------------------------------------------------------|
- | userId           | Number  | Testdroid Cloud user ID                                   |
+ | userId           | Number  | Bitbar Testing user ID                                   |
 |------------------|---------|-----------------------------------------------------------|
- | userEmail        | String  | Testdroid Cloud user e-mail address                       |
+ | userEmail        | String  | Bitbar Testing user e-mail address                       |
 |------------------|---------|-----------------------------------------------------------|
  
 **Example:**
@@ -5653,7 +5653,7 @@ API Objects
 API Sources
 -----------
 
-[Testdroid API](http://github.com/bitbar/testdroid-api)
+[Bitbar Testing API](http://github.com/bitbar/testdroid-api)
 
 
 Swagger

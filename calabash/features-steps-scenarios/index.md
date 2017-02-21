@@ -39,7 +39,7 @@ Scenario: As a valid user I can start using the app
   I wait for text "Hello"
   Then I wait for activity "HomeTabActivity"
   Then I press view with id "menu_compose_tweet"
-  Then I enter text "Testdroid" into field with id "edit"
+  Then I enter text "Bitbar Testing" into field with id "edit"
   Then I press view with id "composer_post"
 </pre>
 

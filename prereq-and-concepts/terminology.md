@@ -4,7 +4,7 @@ title: Terminology
 ---
 
 
-All Testdroid products use the same terminology when it comes to
+All Bitbar products use the same terminology when it comes to
 testing, assets, test types, runs, projects and so on:
 
 **Project** - This is a project workspace that contains test runs,

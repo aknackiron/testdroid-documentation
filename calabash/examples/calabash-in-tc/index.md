@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Using Calabash on Testdroid Cloud
+title: Using Calabash on Bitbar Testing
 ---
 
 
 If you are interested to start testing your apps with Calabash, please
 contact us at <sales@bitbar.com> and we’ll be happy to enable it for
 you. Here are some basic details of Calabash and how to use it in
-Testdroid.
+Bitbar Testing.
 
 ![Calabash]({{site.github.url}}/assets/calabash/calabash.png)
 
@@ -111,13 +111,13 @@ Output should look something like this:
 
 If your test takes screenshots they should be as png-files in *new-calabash-test-directory*.
 
-# Run Calabash Android Test in Testdroid Cloud
+# Run Calabash Android Test in Bitbar Testing
 
-Access [Testdroid Cloud](https://cloud.testdroid.com/) and login. The
+Access [Bitbar Testing](https://cloud.testdroid.com/) and login. The
 following steps will help you get your Calabash tests up and running
 on over 250 Android devices:
  
-1. Login to Testdroid Cloud
+1. Login to Bitbar Testing
 1. Create a new project
    ![create new project]({{site.github.url}}/assets/calabash/calabash-android-new-project.png)
 1. Upload your application (.APK)

@@ -9,12 +9,12 @@ Bitbar Run In Cloud Jenkins plugin can be used to launch test runs directly from
 
 ## Configuration Instructions
 
-To install Run in Cloud (RiC) Plugin navigate to Jenkins main page. From there navigate to: *Manage Jenkins -> Manage plugins -> Available* and search for Testdroid. After plugin installation and restarting Jenkins, plugin can be configured in Jenkins Configuration page. The plugin adds a new build step that can be used in any Jenkins job to launch builds in Bitbar Testing cloud.
+To install Run in Cloud (RiC) Plugin navigate to Jenkins main page. From there navigate to: *Manage Jenkins -> Manage plugins -> Available* and search for Bitbar Testing. After plugin installation and restarting Jenkins, plugin can be configured in Jenkins Configuration page. The plugin adds a new build step that can be used in any Jenkins job to launch builds in Bitbar Testing cloud.
 
 ## Configure
 
 Open Jenkins main configuration page(*Manage Jenkins -> Configure System*)
-in Testdroid Cloud section and fill necessary Bitbar Testing account information. Click *Authorize* button to validate account details.
+in Bitbar Testing section and fill necessary Bitbar Testing account information. Click *Authorize* button to validate account details.
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-main-config.png)
 
@@ -26,7 +26,7 @@ configuration add a new build step.
 
 To run tests in Bitbar Testing select a target project, upload a new application
 or/and instrumentation package to that project and define file name
-in corresponding field. If you need to customize projects settings click "Edit project on Testdroid Cloud website" button and it will open Cloud.
+in corresponding field. If you need to customize projects settings click "Edit project on Bitbar Testing website" button and it will open Cloud.
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-build-step.png)
 

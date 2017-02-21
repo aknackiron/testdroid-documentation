@@ -3,11 +3,11 @@ layout: default
 title: Subscriptions
 ---
 
-How to add new subscriptions to your Testdroid Cloud account.
+How to add new subscriptions to your Bitbar Testing cloud account.
 
-## Creating a sub account user
+## Creating a Sub Account User
 
-A user having a paid plan is called main user in Testdroid. He's able
+A user having a paid plan is called main user in Bitbar Testing. He's able
 to add subaccount users whose runs he's willing to pay. Subaccount
 users will inherit the same plan and roles than the main user.
  
@@ -16,7 +16,7 @@ users will inherit the same plan and roles than the main user.
  
 You can add a subaccount user following these steps.
  
-## Go to subscription menu
+## Go To Subscription Menu
 
 ![]({{site.github.url}}/assets/user-manuals/subscriptions/subscriptions_link.png)
 
@@ -24,7 +24,7 @@ You can add a subaccount user following these steps.
 
 ![]({{site.github.url}}/assets/user-manuals/subscriptions/subscriptions_select_account.png)
  
-## Create a new user as a subaccount user
+## Create a New User as a Subaccount User
 
 New user will receive an email in order to activate his account.
 

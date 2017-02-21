@@ -13,10 +13,10 @@ app — is never agile, which is why test automation has shown
 tremendous growth among app and game developers, speeding up their
 doings and yielding robust and better results.
 
-All Testdroid product have been built for test automation. The remote
+All Bitbar products have been built for test automation. The remote
 manual access to devices on our data centers complements this offering
 and occasionally developers want to make sure their apps work just
-like they've planned - and this is where our Testdroid Interactive is
+like they've planned - and this is where our Bitbar Testing manual testing is
 extremely useful.
 
 Test Automation relies real mobile devices (Android, iOS) and offers

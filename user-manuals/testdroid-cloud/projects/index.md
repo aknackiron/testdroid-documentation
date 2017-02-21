@@ -11,13 +11,13 @@ iOS UI Automation, Android UIAutomator, Calabash Android, and Calabash
 iOS.
 
 **NOTE!** Appium projects are generated on the fly and automatically
-detected by Testdroid Cloud. These projects cannot be created manually
+detected by Bitbar Testing. These projects cannot be created manually
 in this view.
 
 ![]({{site.github.url}}/assets/user-manuals/projects_projects.png)
 
 On the right hand side, users can create project specific test runs,
-reports or share projects with other valid Testdroid Cloud user
+reports or share projects with other valid Bitbar Testing user
 accounts.
  
 In test run section users can edit, insert tags or delete test
@@ -41,7 +41,7 @@ Upload your application
 
 1. Select the test type
 
-   Testdroid Cloud provides a feature called App Crawler that
+   Bitbar Testing provides a feature called App Crawler that
    automatically crawls through the app and tests its functionality by
    exercising UI components (e.g. button clicks, opening menus,
    changing views). App Crawler automatically handles the screenshot
@@ -101,7 +101,7 @@ clicking any of older test runs in projects view. This view presents
 test run execution information, execution time as well as a summary of
 test runs.
 
-A Testdroid Cloud test run starts always with device cleaning
+A Bitbar Testing test run starts always with device cleaning
 (removing all content from devices, cleaning SD card and rebooting
 device), followed by installation and launch of the app and tests.
 

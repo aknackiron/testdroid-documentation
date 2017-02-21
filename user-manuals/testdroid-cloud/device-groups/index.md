@@ -3,7 +3,7 @@ layout: default
 title: Device Groups
 ---
 
-Testdroid Cloud enables its users to create specific device groups
+Bitbar Testing enables its users to create specific device groups
 used to point out on which devices tests are executed. The
 device group configuration can be found under the main menu - **Device
 Groups**.

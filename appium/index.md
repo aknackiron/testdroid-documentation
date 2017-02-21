@@ -3,15 +3,15 @@ layout: default
 title: Appium Test Framework
 ---
 
-Testdroid Cloud allows testers to use various testing frameworks to
-run their automated tests on against real devices in the Testdroid
+Bitbar Testing allows testers to use various testing frameworks to
+run their automated tests on against real devices in the Bitbar Testing
 cloud. Appium is one of these frameworks.
 
 You can run your tests either remotely from your localhost or in
 Testdrdoid Cloud.
 
 Typically testing is started with developing tests on localhost and
-running them using the Appium client against a device in Testdroid
+running them using the Appium client against a device in Bitbar Testing
 Cloud. Once the tests work on one device it's time to move testing
 against multiple devices in the cloud. Here tests are executed in
 parallel against all chosen devices.
@@ -31,7 +31,7 @@ Github](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-sc
 in different programming languages to help set up the environment and
 run your first tests.
 
-# Running Appium in Testdroid Cloud
+# Running Appium in Bitbar Testing
 
 [Tests can also be run in parallel in
 cloud]({{site.github.url}}/appium/examples/moving-tests-to-cloud). The
@@ -51,12 +51,12 @@ cloud once they are executed and user is notified by email.
 * Example to run Java Appium [client side]({{site.github.url}}/appium/examples/java-client-side-example/) and 
 * Example to run Java Appium on [server side]({{site.github.url}}/appium/examples/server-side-appium-in-tc-java/)
 
-# Testdroid Cloud Desired Capabilities
+# Bitbar Testing Desired Capabilities
 
 [Appium desired capabilities](testdroid-desired-caps/)
 
 # Requirements for .ipa
 
 [Here is the procedure]({{site.github.url}}/how-tos/ipa-requirements) to create your iOS
-mobile application (.ipa files) to run your app in Testdroid Cloud.
+mobile application (.ipa files) to run your app in Bitbar Testing.
 

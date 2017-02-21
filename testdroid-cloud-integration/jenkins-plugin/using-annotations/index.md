@@ -36,7 +36,7 @@ Then annotate your test method:
     } 
 
 
-When running your tests in Testdroid Cloud, open the run's *Advanced
+When running your tests in Bitbar Testing, open the run's *Advanced
 options -> Test case options* and define your annotation class in the
 Test cases with specific annotations.
 
@@ -45,7 +45,7 @@ Tests are then executed including or excluding given annotation used
 in configurations.
 
 Annotations can be mixed with package or class. Those settings are
-also available from Testdroid Run in Cloud plug-in with Jenkins
+also available from Bitbar Testing Run in Cloud plug-in with Jenkins
 
 ## Example
 

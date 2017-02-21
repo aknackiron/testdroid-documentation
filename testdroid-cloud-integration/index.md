@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Testdroid Cloud Integration API
+title: Bitbar Testing Integration API
 ---
 
 For continued mobile development project you'll want to integrate
-Testdroid cloud to your continuous integration environment and run
+Bitbar Testing cloud to your continuous integration environment and run
 your tests through API rather than manually uploading and configuring
 your test projects.
 
-# Testdroid Cloud API
+# Bitbar Testing API
 
-[Testdroid Cloud API](api/index.html)
+[Bitbar Testing API](api/index.html)
 
-# Testdroid Run In Cloud Jenkins Plugin
+# Bitbar Testing Run In Cloud Jenkins Plugin
 
 [Jenkins plugin enabling you to launch your test runs directly from Jenkins.](jenkins-plugin/index.html)
 

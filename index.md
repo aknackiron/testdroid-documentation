@@ -1,10 +1,8 @@
 ---
 layout: frontpage
-title: Home
+title: Welcome to Bitbar Testing Cloud Online Documentation
 ---
 
-
-# Welcome to Testdroid Cloud Online Documentation!
 
 - In addition to the documentation on these pages, check [our available](https://github.com/bitbar/testdroid-samples/) code on	Github. There are samples, code snippets and guides.
 	- &#xf113;
@@ -19,6 +17,6 @@ title: Home
 
 <div class="fp-para-frame" style="background-image: url('{{ site.github.url }}/assets/testdroid-blur.jpg'); background-size: cover;">
 <div>
-	<p>Looking for more information about <a href="http://bitbar.com/testing/">mobile app testing</a> with real Android and iOS devices? Bitbar Testing and Testdroid technology got you covered.</p>
+	<p>Looking for more information about <a href="http://bitbar.com/testing/">mobile app testing</a> with real Android and iOS devices? Bitbar Testing technology has you covered.</p>
 </div>
 </div>

@@ -35,7 +35,7 @@ us to take care of the Appium server side and maintain the devices in
 the cloud, while you can run your TestScripts locally from your
 machine.
 
-# How is running Appium different than other frameworks available at Testdroid Cloud?
+# How is running Appium different than other frameworks available at Bitbar Testing?
 
 Appium TestScripts can either be run as "Live" or uploaded for the
 cloud to run. This means that you do not need to upload the TestScript
@@ -49,7 +49,7 @@ it.
 
 There are some best practices to know when writing Appium tests. The test cases of a test suite should re-use the same webdriver between the tests and not recreate a new session every time. 
 
-In Testdroid Cloud after each test case, a closed Appium session, the device under test is put offline for automatic cleanup. This will cause the following tests of the test suite to fail. 
+In Bitbar Testing after each test case, a closed Appium session, the device under test is put offline for automatic cleanup. This will cause the following tests of the test suite to fail. 
 
 Instead, a test suite should re-use the first webdriver session from first test case in all the test cases or add a proper wait between each test case, poll our API and wait when the device become available again. 
 The app can be closed and restarted without having to close the Appium webdriver session:
@@ -84,16 +84,16 @@ device), it cannot communicate with multiple servers simultaneously,
 or control multiple devices at the same time. You can however fire
 multiple instances of the TestScript, each targeting a separate
 device. More information on this at running parallel Appium tests in
-Testdroid Cloud.
+Bitbar Testing.
 
 # Can I also use the same method to test my app on multiple iOS devices?
 
 Yes. On your localhost this is not possible because Appium uses native
 Instruments, which is allowed for only one of the device connected to
-a Mac at a given time. At Testdroid Cloud however, you can run your
+a Mac at a given time. At Bitbar Testing however, you can run your
 tests on multiple iOS devices at the same time.
 
-# Where do I get configuration info about Appium servers running at Testdroid Cloud?
+# Where do I get configuration info about Appium servers running at Bitbar Testing?
 
 You can check basic configurations at
 [http://appium.testdroid.com/info](http://appium.testdroid.com/info).
@@ -105,7 +105,7 @@ cloud. If running a client side test run, screenshots are stored on your local m
 
 For a working Chrome up to date examples (in Python) on our Github repository: [testdroid_chrome.py](https://github.com/bitbar/testdroid-samples/blob/master/appium/sample-scripts/python/testdroid_chrome.py). This repository also has examples for native or hybrid mobile app testing using Appium.
 
-# What version of Appium Server is running at Testdroid Cloud?
+# What version of Appium Server is running at Bitbar Testing?
 
 There should always be the latest 'tested' Appium version running in
 the cloud. This means that although there may be a newer release
@@ -129,15 +129,15 @@ see the question above) nor recommended.
 
 # Why is the Appium test waiting for device and finally timeouts?
 
-Testdroid Appium has maximum waiting time for device set to 10
+Bitbar Testing Appium has maximum waiting time for device set to 10
 minutes. If there is an ongoing test from another Cloud user timeout
 is very likely to happen. Try again later, or with another
-device. NOTE! Testdroid Free devices are very busy and it might be
+device. NOTE! Bitbar Testing Free devices are very busy and it might be
 hard to find run time for Appium tests on those devices.
 
 # Why is the Appium test failing with timeout?
 
-Testdroid Cloud has a test run time limit set to 10 minutes. This
+Bitbar Testing has a test run time limit set to 10 minutes. This
 limit is applicable for Free Plan users. If you need to run longer
 tests, please upgrade your subscription.
 
@@ -149,7 +149,7 @@ http://appium.testdroid.com/info.
 # Why I'm getting an error "Project <...> cannot be used for type APPIUM_ANDROID"?
 
 Appium projects must be either "Appium Android" or "Appium iOS" by
-project type in Testdroid. Simpliest way is to let Testdroid to create
+project type in Bitbar Testing. Simpliest way is to let Bitbar Testing to create
 the project for you. This can be done easily by using a new project
 name in your Appium script.
 
@@ -158,14 +158,14 @@ name in your Appium script.
 Examples written in java, python and ruby are available on Bitbar's
 repo (https://github.com/bitbar/testdroid-samples).
 
-# Testdroid Desired Capabilities
+# Bitbar Testing Desired Capabilities
 
-Testdroid specific Appium desired capabilities are [described here]({{ site.github.url }}/appium/testdroid-desired-caps).
+Bitbar Testing specific Appium desired capabilities are [described here]({{ site.github.url }}/appium/testdroid-desired-caps).
 
 # Do you support Appium with TestNG, Ruby or C#?
 
 Yes. For C# server side support through Mono is coming soon.
 
-# What versions of Appium does Testdroid support?
+# What versions of Appium does Bitbar Testing support?
 
 Default Appium version is 1.6.3 for server and client side runs. With Android server side runs, it is possible to use an older version (1.4 or 1.5).

@@ -4,10 +4,10 @@ title: Espresso Testing
 ---
 
 
-Testdroid Cloud has had Espresso support since its first versions.
+Bitbar Testing has had Espresso support since its first versions.
 
 
-# Espresso and Testdroid
+# Espresso and Bitbar Testing
 
 This guide shows how to setup Android Studio and Espresso v2.0. Same or similar setup should work also for Eclipse and Android SDk.
 
@@ -60,9 +60,9 @@ The **AndroidJUnitRunner** is a new unbundled test runner for Android, which is 
 
 The User Guide for AndroidJUnitRunner can be found [here](https://developer.android.com/reference/android/support/test/runner/AndroidJUnitRunner.html).
 
-# How to use Espresso v2.0 tests at Testdroid Cloud
+# How to use Espresso v2.0 tests at Bitbar Testing
 
-To get the tested app running on Testdroid Cloud using Espresso scripts some steps are needed. 
+To get the tested app running on Bitbar Testing using Espresso scripts some steps are needed. 
 
 ## Step #1:
 
@@ -74,7 +74,7 @@ Now, the environment should be properly configured to build instrumentation pack
 
 ## Step #2:
 
-Once the test project is configured, build it and upload into Testdroid Cloud. Under test run creation, create a standard "Android" type project, upload the application and test APKs and select wanted device group.
+Once the test project is configured, build it and upload into Bitbar Testing. Under test run creation, create a standard "Android" type project, upload the application and test APKs and select wanted device group.
 
 ## Step #3:
 

@@ -7,13 +7,13 @@ title: Remote Manual Access
 ## Remote Manual Access
 
 Remote manual access allows you to start a session on any mobile
-device we host at Testdroid Cloud. This provides a comprehensive way
+device we host at Bitbar Testing. This provides a comprehensive way
 to manually test your mobile apps, games and web-related products. As
 all these devices are real you can install other applications, use
 available browsers, internet access, and also Google Play / App Store
 to download and configure your device session.
 
-The feature is called Testdroid Interactive. By clicking *Manual testing*
+The feature is called Bitbar Testing Manual Testing. By clicking *Manual testing*
 in the main menu, user will be directed to the *Manual testing* setup view.
 
 Users can upload their applications by clicking *Upload file* on top of

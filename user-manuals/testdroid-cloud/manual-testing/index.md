@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Testdroid Cloud Manual Testing
+title: Bitbar Testing Manual Testing
 ---
 
 Bitbar Testing Cloud Manual Testing feature provides users a way to take
-manual access to Testdroid Cloud devices. By clicking Manual Testing in
+manual access to Bitbar Testing devices. By clicking Manual Testing in
 the main menu, user will be directed to the Manual Testing setup view.
 
 Users can upload their applications by clicking *Upload new app* on

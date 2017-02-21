@@ -6,9 +6,9 @@ title: Account
 
 ## Account
 
-In order to use any of Testdroid products, run and review tests, or
+In order to use any of Bitbar products, run and review tests, or
 access our devices user needs an user account. This can be created in
-few minutes at [Testdroid Cloud](https://cloud.testdroid.com). First,
+few minutes at [Bitbar Testing](https://cloud.testdroid.com). First,
 click <i>Register</i> on the front page:
 
 ![]({{site.github.url}}/assets/account/account-001.png)
@@ -33,7 +33,7 @@ at.
 ![]({{site.github.url}}/assets/account/account-004.png)
 
 The next step is to select a plan you want to use. These plans will
-give you access to all our devices at Testdroid Cloud and more
+give you access to all our devices at Bitbar Testing and more
 features and capabilities to make your test automation and manual
 testing on cloud smoother. For accurate and up-to-date information,
 please check the current available plans and included features from
@@ -49,7 +49,7 @@ these terms.
 ![]({{site.github.url}}/assets/account/account-006.png)
 
 **Congratulations!** You've now activated and registered your
-Testdroid account and you'll be redirected and logged in to Testdroid
-Cloud. Please see [Testdroid Cloud User
+Bitbar account and you'll be redirected and logged in to Bitbar
+Cloud. Please see [Bitbar Testing User
 Manual]({{site.github.url}}/testdroid-cloud-ui) for details on how to use
 it.

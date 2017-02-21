@@ -40,7 +40,7 @@ will only run tests marked with smoke tag
 
 Currently only default profile is supported. If you have other
 profiles locally you need to edit cucumber.yml to use default profile
-before testing in Testdroid Cloud.
+before testing in Bitbar Testing.
 
 # Why RESET_BETWEEN_SCENARIOS Is Not Working?
 

@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Using Gradle With Testdroid
+title: Using Gradle With Bitbar Testing
 ---
 
 Regardless if you are using Android Studio (where Gradle is the
 default build system) you may use Gradle with other development
 tools. Here are the basic steps and instructions of how to use
-[Testdroid Gragle
+[Bitbar Testing Gragle
 plugin](https://github.com/bitbar/testdroid-gradle-plugin) to build an
 instant and seamless bridge between your development environment and
-our devices at Testdroid Cloud.
+our devices at Bitbar Testing.
 
-Testdroid Gradle Plugin takes care of automatically uploading your
-latest builds to Testdroid Cloud.
+Bitbar Testing Gradle Plugin takes care of automatically uploading your
+latest builds to Bitbar Testing.
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle_testdroid.jpg)
 
 
-## Step #1 - Install and Configure Testdroid Gradle Plugin
+## Step #1 - Install and Configure Bitbar Testing Gradle Plugin
 
 The installation of any Gradle compatible plugin is
 straightforward. There are two different gradle.build files - one
@@ -35,9 +35,9 @@ follows:
 
 Applying a plugin to the project allows the plugin to extend the
 project's capabilities. For example, this allows adding tasks to
-projects (compile and upload the latest APK to Testdroid Cloud).
+projects (compile and upload the latest APK to Bitbar Testing).
 
-Next one is to configure your Testdroid credentials and Testdroid
+Next one is to configure your Bitbar Testing credentials and Bitbar Testing
 Cloud setups:
 
     testdroid {  
@@ -47,9 +47,9 @@ Cloud setups:
               mode "FULL_RUN"  
               }
 
-Insert existing Testdroid login credentials for `username` and
+Insert existing Bitbar Testing login credentials for `username` and
 `password`. Also, set up the device group against which you want to
-run your APK in Testdroid Cloud. For example, `MyTestDevices` is a
+run your APK in Bitbar Testing. For example, `MyTestDevices` is a
 demo user specific device group (not available as a default device
 group) and includes 8 pre-selected devices.
 
@@ -69,18 +69,18 @@ buildscript -> dependencies:
                      }
         }
 
-That's it! All Gradle build are now executable in Testdroid Cloud
+That's it! All Gradle build are now executable in Bitbar Testing
 against the defined device group.
 
-## Step #2 - Running Tests on Testdroid Cloud Devices
+## Step #2 - Running Tests on Bitbar Testing Devices
 
 The above configuration uploads specified application and possible
-instrumentation package into Testdroid Cloud and test run is launched
+instrumentation package into Bitbar Testing and test run is launched
 using device from group 'MyTestDevices'. There are additional options
 to control test run creation and execution below.
 
 There are basically two quick ways to set app (and instrumentation
-app) up and running on Testdroid Cloud. It can either be done from
+app) up and running on Bitbar Testing. It can either be done from
 command line by going to a project specific path
 (e.g. `/Users/vvhelppi/AndroidStudioProjects/MyApplication2`) and
 executing the following command:
@@ -94,14 +94,14 @@ or using the Android Studio's Gradle Projects view and double-clicking
 
 Now, the project will be compiled, all dependencies will be fetched
 (done only once on the first time) and app + possible instrumentation
-package will be uploaded to Testdroid Cloud. The Run log should look
+package will be uploaded to Bitbar Testing. The Run log should look
 something like this:
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle-step2-2.png)
 
 ## Step #3: All Done
 
-Within Testdroid Cloud, all details of a test run, such as logs,
+Within Bitbar Testing, all details of a test run, such as logs,
 screenshots, performance stats and much more - are conveniently shown
 in an easy-to-use UI.
 

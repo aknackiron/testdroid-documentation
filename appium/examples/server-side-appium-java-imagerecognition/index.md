@@ -86,7 +86,7 @@ The `launch-tests.sh` script is to make it easier to package, upload files and s
     $ ./launch-tests.sh
     Either -a or -i flag must be provided, but not both!
     
-    ./launch-tests.sh - create and upload test project to Testdroid Cloud and run it
+    ./launch-tests.sh - create and upload test project to Bitbar Testing and run it
     
     Usage: ./launch-tests.sh -a/i -g <DEVICE_GROUP_NAME> -k <API_KEY>
      -a for Android test

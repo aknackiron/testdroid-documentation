@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Testdroid - Frequently Asked Questions
+title: Bitbar Testing - Frequently Asked Questions
 ---
 
-## Testdroid Cloud & Our Devices
+## Bitbar Testing & Our Devices
 
 ###  Do we need to share the source code of the app in the Cloud?
 
 No you don't, unless you choose to use a test framework that specifically requires this.
 
-###  How does Testdroid manage the cleaning of devices?
+###  How does Bitbar Testing manage the cleaning of devices?
 
 Each phone is cleaned of apps that are not expected to be there.
 
@@ -19,15 +19,15 @@ iOS browser: we rely on iOS's own browser history cleaning services to revert Sa
 
 Each device is put through a clean up phase after each test run. Regardless of all these efforts some files or data may stay hidden somewhere on the device in the Public Cloud. For a truly private environment we recommend a Private or Enterprise Cloud installation.
 
-###  What are the requirements for signing my iOS applications to use on Testdroid's iOS devices?
+###  What are the requirements for signing my iOS applications to use on Bitbar Testing's iOS devices?
 
 The app needs to be an ad-hoc distribution developer debug build. You can find more information [here](http://docs.testdroid.com/how-tos/ipa-requirements/ ).
 
-###  How do you support Testdroid devices communicating with servers behind our firewall?
+###  How do you support Bitbar Testing devices communicating with servers behind our firewall?
 
 For Public cloud the only way is for the customer servers to whitelist our public IPs to allow connections from our devices. For Private Cloud we can implement a VPN or proxy connection. In Enterprise Cloud the customer has complete freedom on implementing the networking as the cloud is in their own premises.
 
-###  Do you support turning off and on Wifi on Testdroid devices?
+###  Do you support turning off and on Wifi on Bitbar Testing devices?
 
 This is not supported in Public Cloud. There is support for this in Private and Enterprise environments.
 
@@ -51,24 +51,24 @@ In Public Cloud it is complicated to manage Google account cash. If a test accou
 
 If the used test framework supports testing push notifications, then we can support them too. Triggering of push notifications is up to the customer to handle.
 
-###  Can we change device settings on Testdroid?
+###  Can we change device settings on Bitbar Testing?
 
 In Public Cloud it is not allowed to access device settings at all. For Private and Enterprise environments settingscan be changed through remote access to the device.
 
-###  What types of device performance data does Testdroid provide for test runs?
+###  What types of device performance data does Bitbar Testing provide for test runs?
 
 We provide CPU and Memory usage data. We have also the ability to provide Gamebench statistics on test runs. To get more information about this please contact our <sales@bitbar.com>.
 
-###  Can we do remote manual testing with Testdroid devices?
+###  Can we do remote manual testing with Bitbar Testing devices?
 
 Yes, for most Android and iOS devices. Some models are incompatible with the VNC technology in use. Manual testing on iOS devices is supported on public cloud through dedicated devices. Enterprise and Private cloud users can decide which users get access to manual testing.
 
-###  Does Testdroid support parallel or concurrent test runs?
+###  Does Bitbar Testing support parallel or concurrent test runs?
 
 Yes. [Here is more information]({{ site.github.url }}/appium/client-server/). 
 
 
-###  Can I use my own Google accounts on Testdroid devices?
+###  Can I use my own Google accounts on Bitbar Testing devices?
 
  In Public Cloud setting a Google account on the device isn't allowed. Using a Google API/Service to log in to an app with your own account can be done. For Private and Enterprise environments a customer's own Google account can be set on the devices.
 
@@ -84,9 +84,9 @@ Yes. [Here is more information]({{ site.github.url }}/appium/client-server/).
 
 ###  Where can I see a list of your devices? How often are you updating it? And how long does it take you to have new devices?
 
-The complete list of devices - with all details – can be found under {{site.td_cloud}}. You don’t need to log in to Testdroid Cloud to see all details about our devices. The full list is here [https://cloud.testdroid.com/#public/devices](https://cloud.testdroid.com/#public/devices). We’re constantly updating our device roster, approx.. 5-20 new devices per month, depending on release cycles by OEMs.
+The complete list of devices - with all details – can be found under {{site.td_cloud}}. You don’t need to log in to Bitbar Testing to see all details about our devices. The full list is here [https://cloud.testdroid.com/#public/devices](https://cloud.testdroid.com/#public/devices). We’re constantly updating our device roster, approx.. 5-20 new devices per month, depending on release cycles by OEMs.
 
-###  Can Testdroid provide dedicated private devices for my Testing?
+###  Can Bitbar Testing provide dedicated private devices for my Testing?
 
 Dedicated devices are available through Private Cloud installations or as part of the public cloud. In a private cloud installation the customer is able to freely select the number and type of devices and these are managed by Bitbar.
 Dedicated devices is a service enabling customers to reserve one or multiple devices to their use only in the public cloud. For more information please contact sales.
@@ -127,11 +127,11 @@ Bitbar Testing devices are located in our data centers in San Jose, CA and Wrocl
  
 ###  How safe are you?
 
- All our user data, applications and results are stored in Amazon Cloud and are very safe. We also use SSL and encrypt the data as seen appropriate. Only users with valid accounts can access their own data and results. We also track all IPs connecting to our Testdroid Cloud.
+ All our user data, applications and results are stored in Amazon Cloud and are very safe. We also use SSL and encrypt the data as seen appropriate. Only users with valid accounts can access their own data and results. We also track all IPs connecting to our Bitbar Testing.
 
 ###  How long is usually the queue? In each priority group? Do I have to wait for 2 hour or day?
 
- The time between a start of test run and delivering results depends entirely on test case length, current queue, time of the day and a desired device set. Typically we’re talking about 2 to 15 minutes. Sometimes it can be longer if you start multiple test runs on same devices. We have multiple copies of devices at Testdroid Cloud so some devices can ensure results in few minutes (depending on test run length). The customers with higher priority plans (platinum > gold > silver) can get their app running first in case of queue.
+ The time between a start of test run and delivering results depends entirely on test case length, current queue, time of the day and a desired device set. Typically we’re talking about 2 to 15 minutes. Sometimes it can be longer if you start multiple test runs on same devices. We have multiple copies of devices at Bitbar Testing so some devices can ensure results in few minutes (depending on test run length). The customers with higher priority plans (platinum > gold > silver) can get their app running first in case of queue.
  
 ###  How long will our projects be online?
 
@@ -168,7 +168,7 @@ Bitbar’s info video:
  
 ## iOS Test Automation Frameworks
  
-We support [KIF](https://github.com/kif-framework/KIF), [XCTest](https://developer.apple.com/reference/xctest), [XCUITest](https://developer.apple.com/reference/xctest), [Jasmine](http://jasmine.github.io/), [Calabash](http://calaba.sh/) and [Appium](http://appium.io/) for iOS test automation with Testdroid Cloud.
+We support [KIF](https://github.com/kif-framework/KIF), [XCTest](https://developer.apple.com/reference/xctest), [XCUITest](https://developer.apple.com/reference/xctest), [Jasmine](http://jasmine.github.io/), [Calabash](http://calaba.sh/) and [Appium](http://appium.io/) for iOS test automation with Bitbar Testing.
 
 ###  Is iOS Test based on UI Automation, which means it can only test UIKit components or?
 
@@ -186,7 +186,7 @@ We support [KIF](https://github.com/kif-framework/KIF), [XCTest](https://develop
 
 Currently the handling of iOS dialogues is handled through used test framework. We have internal tools using which we are able to avoid and dismiss OS dialogues outside of test runs.
 
-###  How can I start an iOS Appcrawler run using Testdroid RiC?
+###  How can I start an iOS Appcrawler run using Bitbar Testing RiC?
 
 iOS Appcrawler isn't available at the moment in Run in Cloud -plugin
 
@@ -210,17 +210,17 @@ API Calls:
 
 3) Start new Test Run: POST /api/v2/runs
 
-## Testdroid Recorder
+## Bitbar Testing Recorder
 
-**Testdroid Recorder is not supported anymore by us. There are newer and better tools for this purpose, eg. [Google search Appium Inspector](https://www.google.com/search?q=appium+inspector&gws_rd=cr,ssl&ei=ZR_XVtmKDInF6AS1na6YCw)**
+**Bitbar Testing Recorder is not supported anymore by us. There are newer and better tools for this purpose, eg. [Google search Appium Inspector](https://www.google.com/search?q=appium+inspector&gws_rd=cr,ssl&ei=ZR_XVtmKDInF6AS1na6YCw)**
  
 ###  My device doesn't connect to Recorder. How to make it work?
 
- Testdroid Recorder is just a plug-in to Eclipse so if Eclipse/ADB cannot find your device this has an implication also in Testdroid Recorder. The common trick to get your device recognized and usable with Testdroid Recorder, please always make sure appropriate options (e.g. Developer options in older Android versions) are enabled and try unplugging-plugging again if device cannot be found. Typically adb provides information about misfunctioning in Eclipse views.
+ Bitbar Testing Recorder is just a plug-in to Eclipse so if Eclipse/ADB cannot find your device this has an implication also in Bitbar Testing Recorder. The common trick to get your device recognized and usable with Bitbar Testing Recorder, please always make sure appropriate options (e.g. Developer options in older Android versions) are enabled and try unplugging-plugging again if device cannot be found. Typically adb provides information about misfunctioning in Eclipse views.
  
-###  Is it possible to download the Testdroid Recorder in more than one machine with the same account?
+###  Is it possible to download the Bitbar Testing Recorder in more than one machine with the same account?
 
- Yes, but only one concurrent Testdroid Recorder can be authorized at the time. There is an authorization step at the beginning when launching Testdroid Recorder. This will take connection to Testdroid Cloud and ensure user has a right to use the product (unlimited steps). In other cases, Testdroid Recorder is limited to 30 steps.
+ Yes, but only one concurrent Bitbar Testing Recorder can be authorized at the time. There is an authorization step at the beginning when launching Bitbar Testing Recorder. This will take connection to Bitbar Testing and ensure user has a right to use the product (unlimited steps). In other cases, Bitbar Testing Recorder is limited to 30 steps.
  
 ###  Do you have a recorder for iOS? If not, will you have that soon?
 
@@ -232,16 +232,16 @@ https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/
  Of course. You can record any interactions with your app/game and then replay it as Android JUnit Test or Android JUnit Test From APK (under Run As menu) by highlighting the generated test project.
  
  
-## Testdroid Enterprise
+## Bitbar Testing Enterprise
  
-###  Can I cluster my Testdroid Enterprise device set over various locations? E.g. 15 Android devices in UK, 10 iOS in India? And is that one installation?
+###  Can I cluster my Bitbar Testing Enterprise device set over various locations? E.g. 15 Android devices in UK, 10 iOS in India? And is that one installation?
 
- Yes, of course. This depends how you want to set up your environment. You can have one server connecting a certain device group (e.g. Android devices in UK) and another one in India for iOS devices. Those two servers can be grouped together in Testdroid Enterprise under your firewall and results can be viewed anywhere in your premises/locations.
+ Yes, of course. This depends how you want to set up your environment. You can have one server connecting a certain device group (e.g. Android devices in UK) and another one in India for iOS devices. Those two servers can be grouped together in Bitbar Testing Enterprise under your firewall and results can be viewed anywhere in your premises/locations.
  
  
-## Testdroid API
+## Bitbar Testing API
  
-More information about Testdroid Integration API can be found here:
+More information about Bitbar Testing Integration API can be found here:
 [docs.testdroid.com/testdroid-cloud-integration/api/]({{site.github.url}}/testdroid-cloud-integration/api/)
 <!-- http://help.testdroid.com/customer/portal/topics/810087-testdroid-cloud-integration-api/articles  -->
   
@@ -250,9 +250,9 @@ Java source code + client can be found at Github repository:
  
 ###  Do you have an API? Where can I find a documentation? Can I integrate Jenkins or my system to it?
 
- Yes, the documentation with full API description can be found at [docs.testdroid.com]({{site.github.url}}/testdroid-cloud-integration/api/). You can integrate your CIs or any scripts with Testdroid using API's JSON based calls.
+ Yes, the documentation with full API description can be found at [docs.testdroid.com]({{site.github.url}}/testdroid-cloud-integration/api/). You can integrate your CIs or any scripts with Bitbar Testing using API's JSON based calls.
  
-###  Do you provide Jenkins and other CI plug-ins for Testdroid?
+###  Do you provide Jenkins and other CI plug-ins for Bitbar Testing?
 
 We provide a Jenkins plugin, which is available at [JenkinsCI Github](https://github.com/jenkinsci/testdroid-run-in-cloud-plugin).
 
@@ -260,7 +260,7 @@ We provide a Jenkins plugin, which is available at [JenkinsCI Github](https://gi
  
 ###  Where is your support located/What are the business hours?  Is it email support or also call?
 
- Our support is located in USA, Finland and Poland. We provide 24/5 (business days) support for all test runs on devices at Testdroid Cloud as well as an email answers for any questions related to Testdroid products. Business hours – as defined in Pricing – apply for European CET time zone 9am-5pm.
+ Our support is located in USA, Finland and Poland. We provide 24/5 (business days) support for all test runs on devices at Bitbar Testing as well as an email answers for any questions related to Bitbar Testing products. Business hours – as defined in Pricing – apply for European CET time zone 9am-5pm.
 
 ###  Do you offer devices with pre-released OS versions of Android and iOS?
 
@@ -270,7 +270,7 @@ Not for regular app testing. Maintaining pre-release OS is problematic as such r
  
 ###  Is your solution strictly for testing mobile apps, or is it possible to use it also for testing mobile sites?
 
- Testdroid products are not limited to apps only. E.g. Appium framework can be used to test mobile websites using Testdroid device cloud.
+ Bitbar Testing products are not limited to apps only. E.g. Appium framework can be used to test mobile websites using Bitbar Testing device cloud.
  
 ###  How many people are you? And where are you located? Are you guys like 5 guys in garage or...
 

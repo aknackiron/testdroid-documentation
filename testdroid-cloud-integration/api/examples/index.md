@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Testdroid Cloud API
+title: Bitbar Testing API
 
 ISO_639-1: <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1</a>
 ISO_3166-1: <a href="https://www.iso.org/obp/ui/#search">ISO 3166-1</a>
@@ -19,7 +19,7 @@ documentation is using responds in JSON format.**
 [JSON: http://json.org/](http://json.org/)
 
 
-# Testdroid Cloud API Clients
+# Bitbar Testing API Clients
 
 
 * java: [http://github.com/bitbar/testdroid-api](http://github.com/bitbar/testdroid-api)
@@ -31,14 +31,14 @@ documentation is using responds in JSON format.**
 **note:**
    Swagger is available **only for enterprise** customers with administrator priviledges. Swagger is a tool which allows browsing and test a REST API in real-time.
 
-[Open Swagger](https://cloud.testdroid.com/swagger) in your Testdroid Enterprise setup.
+[Open Swagger](https://cloud.testdroid.com/swagger) in your Bitbar Testing Enterprise setup.
 
 
 # Authorization
 
 The best authentication method is to identify user
 using the *apiKey* approach. An [apiKey](https://en.wikipedia.org/wiki/Application_programming_interface_key) is a secret token that is
-available from Testdroid Cloud from under *My Account* link. If needed
+available from Bitbar Testing from under *My Account* link. If needed
 the apiKey token can also be re-generate to invalidate old scripts.
 
 ```
@@ -1402,7 +1402,7 @@ Response:
  
 ## Project sharing
 
-This feature allows you to share your project with another Testdroid Cloud user.
+This feature allows you to share your project with another Bitbar Testing user.
 
 **note:** Please remember to put your **access_token** to HTTP **request URL**
 
@@ -1420,7 +1420,7 @@ Request body:
 |==============+==========+==========+================================================+
  | projectId    | Number   |   yes    | Project ID                                     |
 |--------------|----------|----------|------------------------------------------------| 
- | email        | String   |   yes    | Testdroid Cloud user e-mail                    |
+ | email        | String   |   yes    | Bitbar Testing user e-mail                    |
 |--------------|----------|----------|------------------------------------------------|
  
  
@@ -5470,9 +5470,9 @@ API Objects
 |==================+=========+===========================================================+
  | id               | Number  | Share ID                                                  |
 |------------------|---------|-----------------------------------------------------------|
- | userId           | Number  | Testdroid Cloud user ID                                   |
+ | userId           | Number  | Bitbar Testing user ID                                   |
 |------------------|---------|-----------------------------------------------------------|
- | userEmail        | String  | Testdroid Cloud user e-mail address                       |
+ | userEmail        | String  | Bitbar Testing user e-mail address                       |
 |------------------|---------|-----------------------------------------------------------|
  
 **Example:**

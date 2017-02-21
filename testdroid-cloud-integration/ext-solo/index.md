@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Testdroid Ext-Solo
+title: Bitbar Testing Ext-Solo
 ---
 
 Extension Solo is a library extension to Robotium solo objects. The
@@ -18,16 +18,16 @@ imported in your Java project's libraries. Here is an example of a
 `testMethod()`.
 
     import android.test.ActivityInstrumentationTestCase2;
-    import com.bitbar.testdroid.testapp.TestdroidTestAppActivity;
+    import com.bitbar.testdroid.testapp.Bitbar TestingTestAppActivity;
     import com.bitbar.recorder.extensions.ExtSolo;
 
-    public class TestdroidTestAppActivityTest4 extends
-         ActivityInstrumentationTestCase2<TestdroidTestAppActivity> {
+    public class Bitbar TestingTestAppActivityTest4 extends
+         ActivityInstrumentationTestCase2<Bitbar TestingTestAppActivity> {
     
          private ExtSolo solo;
      
-         public TestdroidTestAppActivityTest() {
-             super("com.app.details", TestdroidTestAppActivity.class);
+         public Bitbar TestingTestAppActivityTest() {
+             super("com.app.details", Bitbar TestingTestAppActivity.class);
          }
      
          public void setUp() throws Exception {
@@ -64,7 +64,7 @@ definitions](api/).
 
 # ExtSolo API
 
-[Testdroid ExtSolo API](api/)
+[Bitbar Testing ExtSolo API](api/)
 
 # Latest Binary
 

@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Testdroid Cloud User Manual
+title: Bitbar Testing User Manual
 ---
 
-Testdroid Cloud provides a practical, reliable, and easy-to-access
+Bitbar Testing provides a practical, reliable, and easy-to-access
 platform for mobile app testing using real devices and enabling
 various test automation frameworks, manual testing capabilities and
 API access for specific testing needs.
  
 This section provides an overview of what views are available in
-Testdroid Cloud for the end user and how to use them for creating new
+Bitbar Testing for the end user and how to use them for creating new
 test projects and reviewing test results.
 
-All Testdroid products use the same terminology when it comes to
+All Bitbar Testing products use the same terminology when it comes to
 testing, assets, test types, runs, projects and so on:
 
 **Project** - This is a project workspace that contains test runs,

@@ -1,4 +1,4 @@
-name: Testdroid User Documentation
+name: Bitbar Testing User Documentation
 markdown: kramdown
 highlighter: rouge
 #url: http://docs.testdroid.com
@@ -12,4 +12,4 @@ exclude:
   
 
 td_link: "[Bitbar Testing](http://bitbar.com/)"
-td_cloud: "[Testdroid Cloud](http://cloud.testdroid.com/)"
+td_cloud: "[Bitbar Testing Cloud](http://cloud.testdroid.com/)"

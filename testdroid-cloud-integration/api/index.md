@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Testdroid API
+title: Bitbar Testing API
 ---
 
 ## General 
 
-Testdroid provides a very powerful and useful API for its users to
+Bitbar Testing provides a very powerful and useful API for its users to
 manage all aspects of mobile development and testing
 automatically. The API allows access our device farm, manage projects,
 test runs and results, plus many other things that make mobile app,
@@ -13,12 +13,12 @@ game and web testing smoother, faster and less stressful.
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/api/testdroid_api.jpg)
 
-Testdroid API is an easy-to-use gateway for managing development and
+Bitbar Testing API is an easy-to-use gateway for managing development and
 testing effort on real Android and iOS devices. The API provides all
 infrastructure through a RESTful architecture returning JSON
 structures with appropriate HTTP response codes.
 
-## The Basics - Testdroid Cloud and Testdroid API
+## The Basics - Bitbar Testing and Bitbar Testing API
 
 In case you are unfamiliar with REST APIs,
 [here](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
@@ -56,22 +56,22 @@ Note that all request timeouts are in seconds.
 ### Authentication/Authorization
 
 This example shows how to get access to {{site.td_cloud}} using the
-API. Testdroid API uses OAuth 2.0 - an open standard for
+API. Bitbar Testing API uses OAuth 2.0 - an open standard for
 authorization. The OAuth 2.0 focuses on client developer simplicity
 while providing specific authorization flows for web apps. As it is
-seamlessly used with Testdroid API, you can use it to authorize
+seamlessly used with Bitbar Testing API, you can use it to authorize
 further API calls to our cloud back-end.
 
 An optional, but better suited for shared scripts, is to identify user
 using the *apiKey* approach. An [apiKey](https://en.wikipedia.org/wiki/Application_programming_interface_key) is a secret token that is
-available from Testdroid Cloud from under *My Account* link. If needed
+available from Bitbar Testing from under *My Account* link. If needed
 the apiKey token can also be re-generate to invalidate old scripts.
 
 ```
 curl -H "Accept: application/json" -u xYY5hsdPXAXsBBd1G3ijnb18wlqPeOA6: https://cloud.testdroid.com/api/me
 ```
 
-### Create a Testdroid Project
+### Create a Bitbar Testing Project
 
 To create a new project from the command line using cURL and apiKey:
 

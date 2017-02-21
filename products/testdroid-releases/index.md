@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Testdroid Releases
+title: Bitbar Testing Releases
 ---
 
 ## Release 2.35 February 16, 2017

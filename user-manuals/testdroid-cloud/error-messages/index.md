@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Typical Error Messages in Testdroid Cloud
+title: Typical Error Messages in Bitbar Testing
 ---
 
 ## Appium Errors				
 
 | Phase                | Error Message  | Description     | Resolution  |
 | :------------------- | :----------------- | :------------- | : --------------|
-|Execution             | Failed to start an Appium session, err was: Error: Bad app: /Path/to/your/application.app | User has defined "app" desired capability, which points to his local file system. This will not work on Testdroid Appium tests | Remove/Comment "app" desired capability from test script.
+|Execution             | Failed to start an Appium session, err was: Error: Bad app: /Path/to/your/application.app | User has defined "app" desired capability, which points to his local file system. This will not work on Bitbar Testing Appium tests | Remove/Comment "app" desired capability from test script.
 
 
 ## Upload Errors
@@ -28,7 +28,7 @@ Execution   | Testrun failed to complete. Expected 14 tests received 0 | Test ru
            | Instrumentation run failed due to "process crashed" | Typically device or instrumentation related problem. Process crashed because of some unknown reason. The best way to find this reason is to check the device logcat and find the moment when it happens
            | Instrumentation run failed due to "android.content.ActivityNotFoundException" | An activity expected by the test script was not found. | Take a look at the logs and look for which activity was not found
            | Instrumentation run failed due to "process crashed" | Application has crashed |  
-           | Timeout for running tests exceeded. | Test execution took too long and the run was killed by Testdroid
+           | Timeout for running tests exceeded. | Test execution took too long and the run was killed by Bitbar Testing
 Execution  | Instrumentation timed out after 600 seconds | | 
            | Instrumentation run failed due to 'java.lang.NullPointerException' | This usually means some variable or object in the test was unexpectedly null | Inspect the stacktrace, find the error and fix it
            | Instrumentation run failed due to 'java.lang.ClassNotFoundException' | Bad `.apk` build  | Rebuild your application and retry
@@ -40,8 +40,8 @@ Install    | Server build has failed [Failure [INSTALL_FAILED_ALREADY_EXISTS]] |
 Install    | Server build has failed [Failure [INSTALL_FAILED_UID_CHANGED]] | Android Error. According to [Stackoverflow](http://stackoverflow.com/questions/16277422/android-install-failed-uid-changed) /data/data/<USER_PACKAGE_NAME> has some trash files and the installation fails. Please contact *support AT bitbar.com* | 
 Launch     | Unable to find instrumentation info for: ComponentInfo( com.example.android.apis.test/android.<br />test.Instrumentation.Testrunner) | Testrunner didn't find tests file | 
 
-## Testdroid Cloud Errors
+## Bitbar Testing Errors
 
 Phase                    | Error Message                               | Description                | Resolution
 :---------               | :------------------------------------------ | :------------------------- | :------------------------------------------------
-Login to Testdroid Cloud | Oops, something went wrong                  | Error message received after login to Testdroid Cloud | Try again and verify you are using correct credentials. It's also possible Cloud is under maintenance. Please check [Cloud status](http://bitbar.com/testdroid-status)
+Login to Bitbar Testing | Oops, something went wrong                  | Error message received after login to Bitbar Testing | Try again and verify you are using correct credentials. It's also possible Cloud is under maintenance. Please check [Cloud status](http://bitbar.com/testdroid-status)

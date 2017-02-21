@@ -7,13 +7,13 @@ JIRA integration enables creating JIRA issues directly from Bitbar Testing with 
 
 # Integration Steps
 
-The basic steps to set a personal or corporate JIRA environment up and running with Testdroid Cloud projects are as follows:
+The basic steps to set a personal or corporate JIRA environment up and running with Bitbar Testing projects are as follows:
 
 1) Login to [Bitbar Testing cloud](https://cloud.testdroid.com/).
 
 2) Click your avatar in right top corner and select 'My Account'.
 
-3) On 'My Account' page use the 'Connect to JIRA' button. Clicking this opens the following configuration:
+3) On 'My Account' under 'My Integrations' use the JIRA button. Clicking this opens the following configuration:
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-connection.png)
 
