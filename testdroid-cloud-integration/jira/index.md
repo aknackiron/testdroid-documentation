@@ -13,7 +13,7 @@ The basic steps to set a personal or corporate JIRA environment up and running w
 
 2) Click your avatar in right top corner and select 'My Account'.
 
-3) On 'My Account' under 'My Integrations' use the JIRA button. Clicking this opens the following configuration:
+3) On 'My Account' under 'My Integrations' use the JIRA button.
 
 ![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-connection.png)
 
