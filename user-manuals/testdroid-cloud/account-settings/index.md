@@ -7,8 +7,12 @@ title: Account Settings
 
 User information is available under **My Account** from under the avatar icon from the right upper corner of Bitbar Testing. This contains important information like:
 
-* change you password
-* your API key and resetting it. You can use your API key to identify yourself in test scripts without having to disclose your personal credentials. It is also easy to regenerate a new key if for some reason you no longer want to use the previous one.
+* user information details
+* possibility to change password
+* API key and resetting it. You can use your API key to identify yourself in test scripts without having to disclose your personal credentials. It is also easy to regenerate a new key if for some reason you no longer want to use the previous one.
+  
+  ![]({{site.github.url}}/assets/user-manuals/account-settings/apikey-button.png)
+  ![]({{site.github.url}}/assets/user-manuals/account-settings/apikey-change.png)
 * define how often you want to receive email notification of your finished test runs.
 * update some of your personal information
 * change your default view in Bitbar Testing
