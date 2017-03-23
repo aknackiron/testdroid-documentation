@@ -2,7 +2,8 @@
 layout: default
 title: Device Groups
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/device-groups/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/device-groups/"/>
 Bitbar Testing enables its users to create specific device groups
 used to point out on which devices tests are executed. The
 device group configuration can be found under the main menu - **Device

@@ -2,7 +2,8 @@
 layout: default
 title: Bitbar Testing API
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/api/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/api/"/>
 ## General 
 
 Bitbar Testing provides a very powerful and useful API for its users to
@@ -11,7 +12,7 @@ automatically. The API allows access our device farm, manage projects,
 test runs and results, plus many other things that make mobile app,
 game and web testing smoother, faster and less stressful.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/api/testdroid_api.jpg)
+![]({{site.github.url}}/assets/cloud-integrations/api/testdroid_api.jpg)
 
 Bitbar Testing API is an easy-to-use gateway for managing development and
 testing effort on real Android and iOS devices. The API provides all
@@ -29,9 +30,9 @@ hosts and clients and supports a variety of network
 configurations. The communication usually takes place over TCP/IP, but
 any reliable transport can be used.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/api/http-req-resp.png)
+![]({{site.github.url}}/assets/cloud-integrations/api/http-req-resp.png)
 
-Full API documentation is available [here.]({{site.github.url}}/testdroid-cloud-integration/api/rest-api/)
+Full API documentation is available [here.]({{site.github.url}}/cloud-integrations/api/rest-api/)
 
 ### HTTP Request - Response
 

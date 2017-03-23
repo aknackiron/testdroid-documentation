@@ -2,7 +2,8 @@
 layout: default
 title: Jira With Bitbar Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/cloud-integrations/jira/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/cloud-integrations/jira/"/>
 JIRA integration enables creating JIRA issues directly from Bitbar Testing with links back to projects, test runs and even single device runs.
 
 # Integration Steps
@@ -15,7 +16,7 @@ The basic steps to set a personal or corporate JIRA environment up and running w
 
 3) On 'My Account' under 'My Integrations' use the JIRA button.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-connection.png)
+![]({{site.github.url}}/assets/cloud-integrations/jira/jira-integration-connection.png)
 
 4) Add proper JIRA URL, username and password.
 
@@ -31,17 +32,17 @@ The above command stores JIRA server's certificate to `/tmp/jira_server.cer` fil
 
 When everything is configured properly, this should be visible:
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-update.png)
+![]({{site.github.url}}/assets/cloud-integrations/jira/jira-integration-update.png)
 
 6) The connection between Bitbar Testing and JIRA is now setup successfully. Changing credentials and certificate deletion can be done in this view.
 
 7) In order to use the JIRA integration while working on Bitbar Testing, look for JIRA logos at the top right corner of each window and view. 
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira_logo_in_cloud.png)
+![]({{site.github.url}}/assets/cloud-integrations/jira/jira_logo_in_cloud.png)
 
 When the logo is clicked, a personalized view is opened allowing the user to create a new bug or story to JIRA.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/jira/jira-integration-create-issue.png)
+![]({{site.github.url}}/assets/cloud-integrations/jira/jira-integration-create-issue.png)
 
 8) The fields in JIRA's dialog:
 

@@ -2,7 +2,8 @@
 layout: default
 title: Reports
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/reports/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/reports/"/>
 The **Reports** view provides users a way to generate reports of their
 test runs, including key metrics or even full details of each test
 runs.

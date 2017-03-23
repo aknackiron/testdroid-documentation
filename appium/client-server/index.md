@@ -2,7 +2,8 @@
 layout: default
 title: Client vs. Server Side Execution 
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/client-server/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/client-server/"/>
 
 ## Client vs. Server Side Execution
 

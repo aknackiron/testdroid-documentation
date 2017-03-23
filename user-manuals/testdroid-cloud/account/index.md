@@ -2,7 +2,8 @@
 layout: default
 title: Account
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/account/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/account/"/>
 
 ## Account
 

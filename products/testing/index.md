@@ -2,7 +2,8 @@
 layout: default
 title: Public Cloud
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/products/testing/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/products/testing/"/>
 ![]({{site.github.url}}/assets/logos/testing-cloud.png)
 
 [Bitbar Testing](https://cloud.testdroid.com/) provides the largest

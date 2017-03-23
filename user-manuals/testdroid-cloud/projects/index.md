@@ -2,7 +2,8 @@
 layout: default
 title: Projects
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/projects/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/projects/"/>
 
 Under **Projects** view users are able to create, remove and manage their
 projects.  By clicking '+' button new projects can be created after

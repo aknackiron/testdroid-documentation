@@ -2,7 +2,8 @@
 layout: default
 title: About Bitbar Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/products/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/products/"/>
 
 ## Different Flavours
 

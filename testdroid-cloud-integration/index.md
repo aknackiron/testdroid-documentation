@@ -2,6 +2,8 @@
 layout: default
 title: Bitbar Testing Integration API
 ---
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/cloud-integrations/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/cloud-integrations/"/>
 
 For continued mobile development project you'll want to integrate
 Bitbar Testing cloud to your continuous integration environment and run

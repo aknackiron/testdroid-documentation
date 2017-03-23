@@ -2,7 +2,8 @@
 layout: default
 title: Starting With Appium
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/setup/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/setup/"/>
 
 There are a number of samples on [Bitbar Github](https://github.com/bitbar/testdroid-samples/) repository that help getting started with running Appium tests either remotely or as server side tests in Bitbar Testing cloud.
 

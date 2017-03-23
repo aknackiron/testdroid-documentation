@@ -2,7 +2,8 @@
 layout: default
 title: iOS Application Package
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/xcode/ipa/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/xcode/ipa/"/>
 Regardless of whether testing with XCTest or XCUITest, the application under test needs to be built and imported to Bitbar Testing cloud. The below steps present how to create the appropriate IPA build. 
 
 ## Create Test IPA

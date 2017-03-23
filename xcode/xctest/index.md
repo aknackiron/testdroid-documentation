@@ -2,7 +2,8 @@
 layout: default
 title: XCTest Sample
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/xcode/xctest/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/xcode/xctest/"/>
 Guide on getting existing XCTest test projects running on Bitbar Testing cloud. To start testing on cloud the application package and the test package need to be uploaded to cloud. 
 
 

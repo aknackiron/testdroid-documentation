@@ -2,7 +2,8 @@
 layout: default
 title: Bitbar Testing Releases
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/products/testdroid-releases/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/products/testdroid-releases/"/>
 ## Release 2.35 February 16, 2017
 
 This release consisted mostly of technical improvements to our iOS test runs infrastructure. With the last releases of Xcode there has been a lot of changes in [mobile testing behavior](http://bitbar.com/whats-trending-with-mobile-test-automation-frameworks/).

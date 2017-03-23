@@ -2,7 +2,8 @@
 layout: default
 title: Supported Technologies
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/supported-technologies/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/supported-technologies/"/>
 ## Test Automation
 
 Developing mobile applications is very different from developing PC

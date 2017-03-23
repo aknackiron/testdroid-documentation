@@ -2,7 +2,8 @@
 layout: default
 title: Security
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/security/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/security/"/>
 ## Device Cleaning
 
 Bitbar takes security seriously. The service is SSL encrypted and all uploaded content as well as all test results are visible only to their owner and administrators. All devices in Testing Cloud are real physical Android or iOS devices where all user data and all non-system applications are erased after each test run and SD-cards are formatted. The devices are also rebooted before each new test run. All this is carried out automatically to ensure there is no test data visible from one user to another and that each test run is executed on identical environment.

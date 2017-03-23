@@ -2,7 +2,8 @@
 layout: default
 title: Java Server Side Example
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/server-side-appium-in-tc-java/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/server-side-appium-in-tc-java/"/>
 When using server-side Appium execution, standard Appium tests can be run on hundreds of devices in parallel without any need for complex set-ups at the client side.
 
 The examples presented here below are valid for both Android and iOS devices. Server side Appium test runs are available for all plans on Bitbar Testing cloud.

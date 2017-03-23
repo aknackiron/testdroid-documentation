@@ -4,7 +4,8 @@ title: Moving Appium Test To Testdroid Cloud
 webui: <a href="https://cloud.testdroid.com">https://cloud.testdroid.com</a>
 webdriver: <a href="http://appium.testdroid.com">http://appium.testdroid.com</a>
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/moving-tests-to-cloud/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/moving-tests-to-cloud/"/>
 To switch from using Appium on localhost to using Appium at
 {{site.td_cloud}}, a couple of minor changes in your test scripts need
 to be made.

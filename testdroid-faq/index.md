@@ -2,6 +2,8 @@
 layout: default
 title: Bitbar Testing - Frequently Asked Questions
 ---
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/faq/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/faq/"/>
 
 ## Bitbar Testing & Our Devices
 

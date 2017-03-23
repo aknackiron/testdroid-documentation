@@ -2,7 +2,8 @@
 layout: default
 title: Subscriptions
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/subscriptions/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/subscriptions/"/>
 How to add new subscriptions to your Bitbar Testing cloud account.
 
 ## Creating a Sub Account User

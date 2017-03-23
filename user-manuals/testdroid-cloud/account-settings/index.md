@@ -2,7 +2,8 @@
 layout: default
 title: Account Settings
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/account-settings/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/account-settings/"/>
 ## Personal Information
 
 User information is available under **My Account** from under the avatar icon from the right upper corner of Bitbar Testing. This contains important information like:

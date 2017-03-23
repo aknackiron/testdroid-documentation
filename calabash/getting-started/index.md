@@ -2,7 +2,8 @@
 layout: default
 title: Using Calabash on Bitbar Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/calabash/getting-started/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/calabash/getting-started/"/>
 
 ![Calabash]({{site.github.url}}/assets/calabash/new-calabash-logo.png)
 

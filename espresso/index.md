@@ -2,7 +2,8 @@
 layout: default
 title: Espresso Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/espresso/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/espresso/"/>
 
 Bitbar Testing has had Espresso support since its first versions.
 

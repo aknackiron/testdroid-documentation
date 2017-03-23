@@ -2,7 +2,8 @@
 layout: default
 title: Java Server Side With Image Recognition
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/server-side-appium-java-imagerecognition/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/server-side-appium-java-imagerecognition/"/>
 
 The repository with a working sample for image recognition with Appium is available at [Bitbar Samples](https://github.com/bitbar/testdroid-samples/tree/master/image-recognition). For more technical steps and guides, please refer to the repository's readme. Before continuing any further it makes sense to clone this repository locally. 
 

@@ -2,7 +2,8 @@
 layout: default
 title: Python Server Side Example
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/server-side-appium-in-tc-python/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/server-side-appium-in-tc-python/"/>
 Unlike the remotely connected Appium setup, parallel test script
 execution is possible in the cloud. The scripts are run in the
 cloud rather than through an active connection from remote machine to

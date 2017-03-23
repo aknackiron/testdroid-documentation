@@ -2,7 +2,8 @@
 layout: default
 title: Java Client Side Example
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/java-client-side-example/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/java-client-side-example/"/>
 For a guide on how to get started with remote Appium testing using Java, check out [our
 sample](https://github.com/bitbar/testdroid-samples/tree/master/appium/sample-scripts/java) on Github.
 
@@ -75,7 +76,8 @@ Running the above commands will print output similar to the following..
         [INFO] Finished at: 2016-12-14T22:29:57+02:00
         [INFO] Final Memory: 24M/315M
         [INFO] ------------------------------------------------------------------------
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/java-client-side-example/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/java-client-side-example/"/>
 ## Checking Results in Cloud
 
 After test executions has finished, the test results are available in Bitbar Testing cloud for later review or checking of captured screenshots.

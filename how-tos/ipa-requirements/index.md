@@ -2,7 +2,8 @@
 layout: default
 title: Requirements For .IPA
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/how-tos/ipa-requirements/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/how-tos/ipa-requirements/"/>
 In order to run .IPA-files on Bitbar Testing iOS devices, it must be
 Ad Hoc Distribution version. These steps guide to build the correct
 IPA:

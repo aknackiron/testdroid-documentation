@@ -2,7 +2,8 @@
 layout: default
 title: Using annotations in Android instrumentation tests
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/cloud-integrations/jenkins-plugin/using-annotations/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/cloud-integrations/jenkins-plugin/using-annotations/"/>
 Android InstrumentationTestRunner allows you to filter test runs from
 specific Java package or class, but in addition, you can also use
 custom Java annotations in your test methods to filter tests runs.
@@ -49,6 +50,6 @@ also available from Bitbar Testing Run in Cloud plug-in with Jenkins
 
 ## Example
 
-[Here]({{site.github.url}}/assets/testdroid-cloud-integration/annotations.zip)
+[Here]({{site.github.url}}/assets/cloud-integrations/annotations.zip)
 is an example Eclipse project with annotations in use.
 

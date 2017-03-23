@@ -2,7 +2,8 @@
 layout: default
 title: Introduction and Prerequisites
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/calabash/features-steps-scenarios/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/calabash/features-steps-scenarios/"/>
 
 ## Introduction and Prerequisites
 

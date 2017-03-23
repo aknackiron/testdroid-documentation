@@ -2,7 +2,8 @@
 layout: default
 title: Typical Error Messages in Bitbar Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/error-messages/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/error-messages/"/>
 ## Appium Errors				
 
 | Phase                | Error Message  | Description     | Resolution  |

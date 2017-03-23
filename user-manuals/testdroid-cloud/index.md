@@ -2,6 +2,8 @@
 layout: default
 title: Bitbar Testing User Manual
 ---
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/"/>
 
 Bitbar Testing provides a practical, reliable, and easy-to-access
 platform for mobile app testing using real devices and enabling

@@ -2,7 +2,8 @@
 layout: default
 title: Dashboard
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/dashboard/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/dashboard/"/>
 
 **Dashboard** links back the landing page where summary of projects
 and test runs will be shown.

@@ -2,7 +2,8 @@
 layout: default
 title: Bitbar Testing Ext-Solo
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/cloud-integrations/ext-solo/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/cloud-integrations/ext-solo/"/>
 Extension Solo is a library extension to Robotium solo objects. The
 library contains a number of neat methods to use in Robotium tests.
 
@@ -69,5 +70,5 @@ definitions](api/).
 # Latest Binary
 
 Download latest recorder extension here:
-[recorder-extensions-5.0.jar]({{site.github.url}}/assets/testdroid-cloud-integration/extsolo/recorder-extensions-5.0.jar).
+[recorder-extensions-5.0.jar]({{site.github.url}}/assets/cloud-integrations/extsolo/recorder-extensions-5.0.jar).
 

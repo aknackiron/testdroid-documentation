@@ -2,7 +2,8 @@
 layout: default
 title: Using Gradle With Bitbar Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/cloud-integrations/gradle/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/cloud-integrations/gradle/"/>
 Regardless if you are using Android Studio (where Gradle is the
 default build system) you may use Gradle with other development
 tools. Here are the basic steps and instructions of how to use
@@ -14,7 +15,7 @@ our devices at Bitbar Testing.
 Bitbar Testing Gradle Plugin takes care of automatically uploading your
 latest builds to Bitbar Testing.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle_testdroid.jpg)
+![]({{site.github.url}}/assets/cloud-integrations/gradle/gradle_testdroid.jpg)
 
 
 ## Step #1 - Install and Configure Bitbar Testing Gradle Plugin
@@ -25,7 +26,7 @@ specific for Project and one for Module. To make it easier to
 adopt these configurations for variety of different projects, modify
 the Module specific **gradle.build** file.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle-step1.png)
+![]({{site.github.url}}/assets/cloud-integrations/gradle/gradle-step1.png)
  
 This file can be further modified with different setups for
 {{site.td_cloud}}, but the basic three required configurations are as
@@ -90,14 +91,14 @@ executing the following command:
 or using the Android Studio's Gradle Projects view and double-clicking
 `testdroidUpload` under Tasks (`app -> verification`):
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle-step2.png)
+![]({{site.github.url}}/assets/cloud-integrations/gradle/gradle-step2.png)
 
 Now, the project will be compiled, all dependencies will be fetched
 (done only once on the first time) and app + possible instrumentation
 package will be uploaded to Bitbar Testing. The Run log should look
 something like this:
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle-step2-2.png)
+![]({{site.github.url}}/assets/cloud-integrations/gradle/gradle-step2-2.png)
 
 ## Step #3: All Done
 
@@ -105,7 +106,7 @@ Within Bitbar Testing, all details of a test run, such as logs,
 screenshots, performance stats and much more - are conveniently shown
 in an easy-to-use UI.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/gradle/gradle-step3.png)
+![]({{site.github.url}}/assets/cloud-integrations/gradle/gradle-step3.png)
 
 The example above shows a test run from an empty Android Studio app
 project on 8 devices. The Test Execution time is minuscule as there

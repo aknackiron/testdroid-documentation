@@ -2,7 +2,8 @@
 layout: default
 title: Test Automation
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/how-tos/testautomation/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/how-tos/testautomation/"/>
 
 ## Test Automation
 

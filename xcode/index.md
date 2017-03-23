@@ -2,7 +2,8 @@
 layout: default
 title: Apple Testing Frameworks
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/xcode/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/xcode/"/>
 
 Applications created for Apple iOS devices can be tested with multiple different testing frameworks of which Apple only supports its own testing frameworks XCTest and XCUITest. These frameworks are also available and supported by Bitbar Testing cloud. XCTest and XCUITest are integrated with XCode and support writing of test suites with subclasses, methods and assertions.
 

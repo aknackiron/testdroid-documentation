@@ -2,7 +2,8 @@
 layout: default
 title: Appium Test Framework
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/"/>
 Bitbar Testing allows testers to use various testing frameworks to
 run their automated tests on against real devices in the Bitbar Testing
 cloud. Appium is one of these frameworks.

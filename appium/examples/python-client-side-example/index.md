@@ -2,7 +2,8 @@
 layout: default
 title: Python Client Side Example
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/python-client-side-example/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/python-client-side-example/"/>
 Bitbar Testing can be used to run Appium tests against real devices to test
 native Android or iOS applications, hybrid (Android & iOS) or for web
 testing (Safari on iOS and Chrome on Android).

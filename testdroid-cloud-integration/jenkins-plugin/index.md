@@ -2,7 +2,8 @@
 layout: default
 title: Bitbar Testing Run In Cloud Plugin
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/cloud-integrations/jenkins-plugin/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/cloud-integrations/jenkins-plugin/"/>
 
 Bitbar Run In Cloud Jenkins plugin can be used to launch test runs directly from Jenkins job. It is an open source project [available](https://github.com/jenkinsci/testdroid-run-in-cloud-plugin) on Github.
 
@@ -16,7 +17,7 @@ To install Run in Cloud (RiC) Plugin navigate to Jenkins main page. From there n
 Open Jenkins main configuration page(*Manage Jenkins -> Configure System*)
 in Bitbar Testing section and fill necessary Bitbar Testing account information. Click *Authorize* button to validate account details.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-main-config.png)
+![]({{site.github.url}}/assets/cloud-integrations/ric-main-config.png)
 
 
 ## Run In Cloud - Build step
@@ -28,13 +29,13 @@ To run tests in Bitbar Testing select a target project, upload a new application
 or/and instrumentation package to that project and define file name
 in corresponding field. If you need to customize projects settings click "Edit project on Bitbar Testing website" button and it will open Cloud.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-build-step.png)
+![]({{site.github.url}}/assets/cloud-integrations/ric-build-step.png)
 
 Annotations can be configured in the following section. [Here is more
 information on how to use annotations](using-annotations) to execute subsets of tests.
 
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-build-step-2.png)
+![]({{site.github.url}}/assets/cloud-integrations/ric-build-step-2.png)
 
 ___
 
@@ -72,7 +73,7 @@ There are two ways to get notification from Bitbar Testing about finished test r
 
 Jenkins is polling Bitbar Testing for results. Test results are copied to Jenkins workspace after the tests are finished.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-api-call.png)
+![]({{site.github.url}}/assets/cloud-integrations/ric-api-call.png)
 
 ### HOOK URL
 
@@ -84,5 +85,5 @@ POST message body:
 
 **Note!** This requires HOOK URL to be reachable from Internet ie. Jenkins instance can be reached from Bitbar Testing.
 
-![]({{site.github.url}}/assets/testdroid-cloud-integration/ric-hook-url.png)
+![]({{site.github.url}}/assets/cloud-integrations/ric-hook-url.png)
 

@@ -2,7 +2,8 @@
 layout: default
 title: Using Calabash on Bitbar Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/calabash/examples/calabash-in-tc/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/calabash/examples/calabash-in-tc/"/>
 
 If you are interested to start testing your apps with Calabash, please
 contact us at <sales@bitbar.com> and we’ll be happy to enable it for

@@ -2,7 +2,8 @@
 layout: default
 title: Installing Python Pre-requisites
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/examples/python-install-pre-requisites/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/examples/python-install-pre-requisites/"/>
 # Prerequisites
 
 You need to have a PC or MAC machine with Linux, Windows or OSX installed.

@@ -2,7 +2,8 @@
 layout: default
 title: Prerequisites
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/prereq-and-concepts/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/prereq-and-concepts/"/>
 
 <h1>Good to Know Before Starting</h1>
 

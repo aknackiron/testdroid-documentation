@@ -2,7 +2,8 @@
 layout: frontpage
 title: Welcome to Bitbar Testing Cloud Online Documentation
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/products/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/products/"/>
 
 - In addition to the documentation on these pages, check [our available](https://github.com/bitbar/testdroid-samples/) code on	Github. There are samples, code snippets and guides.
 	- &#xf113;

@@ -2,7 +2,8 @@
 layout: default
 title: XCUITest
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/xcode/xcuitest/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/xcode/xcuitest/"/>
 XCUITest testing framework is the default framework promoted by Apple for testing iOS applications. Typically XCUITest framework is used for functional testing, automating testing of common workflows, demo sequences or behavior of customer views.
 
 To try out the framework one can try to use XCUITest Recorder for recording the first steps of the automated test. To find elements, their properties and navigating through the elements tree of the application one can also make use of the interface builder. 

@@ -2,7 +2,8 @@
 layout: default
 title: Bitbar Testing Manual Testing
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/user-manuals/manual-testing/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/user-manuals/manual-testing/"/>
 Bitbar Testing Cloud Manual Testing feature provides users a way to take
 manual access to Bitbar Testing devices. By clicking Manual Testing in
 the main menu, user will be directed to the Manual Testing setup view.

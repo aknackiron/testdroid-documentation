@@ -2,7 +2,8 @@
 layout: default
 title: Desired Capabilities
 ---
-
+<meta http-equiv="refresh" content="0; url=http://docs.bitbar.com/testing/appium/testdroid-desired-caps/">
+<link rel="canonical" href="http://docs.bitbar.com/testing/appium/testdroid-desired-caps/"/>
 ## Desired Capabilities
 
 Desired capabilities are a set of keys and values sent to the Appium server to tell the server what kind of automation session should be started. There are also various capabilities to modify the behavior of the server during automation. For example the platformName capability can be set to 'iOS' to tell Appium an iOS session is needed, rather than an Android one. Or the safariAllowPopups capability can be set to true in order to ensure that, during a Safari automation session, JavaScript is allowed to open up new windows. 
